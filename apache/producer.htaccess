@@ -2,14 +2,19 @@
 RewriteEngine on
 #INDEX
 RewriteRule ^index\.html$ index.php [L]
+
+
+#SEO
 RewriteRule ^rss\.xml$ seo.php?xml=rss [L]
-RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
+RewriteRule ^dublincore\.xml$ seo.php?xml=dublincore [L]
 RewriteRule ^sitemap\.xml$ seo.php?xml=sitemap [L]
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
+
 RewriteRule ^robots\.txt$ seo.php?txt=robots [L]
 RewriteRule ^humans\.txt$ seo.php?txt=humans [L]
 RewriteRule ^ads\.txt$ seo.php?txt=ads [L]
 
+RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
 
 </IfModule>
 
