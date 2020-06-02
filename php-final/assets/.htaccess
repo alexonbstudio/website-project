@@ -1,0 +1,15 @@
+<FilesMatch ".*\.(js|css|png|gif|jpg|scss|svg|ttf|woff2|woff|eot)$">
+	Order deny,allow
+	Deny from all
+	Allow from www.alexonbstudio.fr
+	Allow from alexonbstudio.fr
+	Allow from shop.alexonbstudio.fr
+	Allow from blog.alexonbstudio.fr
+	Allow from globnations.alexonbstudio.fr
+	Allow from dev.alexonbstudio.fr
+	Allow from astuces-lifes.alexonbstudio.fr
+</FilesMatch>
+
+
+
+
