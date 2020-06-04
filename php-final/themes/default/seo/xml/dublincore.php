@@ -7,7 +7,7 @@
 	xmlns:dcmitype="http://purl.org/dc/dcmitype/"
 	xmlns:admin="http://webns.net/mvcb/">
 
-<rdf:Description rdf:about="'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'">
+<rdf:Description rdf:about="'.$protocols.'://'.$sites['domain'].'">
 	<dc:title>'.$website['info']['site']['name'].'</dc:title>
 	<dc:description>'.$trad['default']['index']['description'].'</dc:description>
 	<dc:subject>
@@ -24,9 +24,9 @@
 		</rdf:Bag>
 	</dc:subject>
 	<dc:language>fr</dc:language>
-	<dc:creator dc:source="'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'" rdfs:Literal="Alexon Balangue" />
-	<dc:publisher dc:source="'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'" rdfs:Literal="Alexon Balangue" />
-	<dc:license dc:source="'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'" rdfs:Literal="CC" />
+	<dc:creator dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="Alexon Balangue" />
+	<dc:publisher dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="Alexon Balangue" />
+	<dc:license dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="CC" />
 	<dcterms:Created><dcterms:W3CDTF><rdf:value>2020-06-01</rdf:value></dcterms:W3CDTF></dcterms:Created>
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Collection" />
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Dataset" />

@@ -1,10 +1,6 @@
 <?php header('Content-Type: text/html; charset=utf-8'); ?>
 User-agent: *
-Disallow: /assets/
-Disallow: /inc/
-Disallow: /blocker/
-Disallow: /langs/
-Disallow: /pages/
-Disallow: /download/
+Disallow: /themes/
+Disallow: /libs/
 
-Sitemap: <?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/sitemap.xml
+Sitemap: <?php echo $protocols.'://'.$sites['domain']; ?>/sitemap.xml

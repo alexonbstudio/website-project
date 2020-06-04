@@ -1,6 +1,6 @@
 <?php
 
-$markets = array(
+$restaurant = array(
 	'france' => array(
 		'paris' => array(
 			'' => ''
@@ -11,6 +11,6 @@ $markets = array(
 	)
 );
 
-$JE_markets = json_encode($markets);
+$JE_restaurant = json_encode($restaurant);
 
 ?>

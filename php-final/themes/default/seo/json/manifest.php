@@ -7,72 +7,72 @@
 	"start_url": "/",
     "icons": [
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/apple-touch-icon-57x57.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/apple-touch-icon-57x57.png",
             "sizes": "57x57",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/apple-touch-icon-60x60.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/apple-touch-icon-60x60.png",
             "sizes": "60x60",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/apple-touch-icon-72x72.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/apple-touch-icon-72x72.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/apple-touch-icon-76x76.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/apple-touch-icon-76x76.png",
             "sizes": "76x76",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/apple-touch-icon-114x114.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/apple-touch-icon-114x114.png",
             "sizes": "114x114",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/mstile-70x70.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/mstile-70x70.png",
             "sizes": "70x70",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/mstile-144x144.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/mstile-144x144.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/mstile-150x150.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/mstile-150x150.png",
             "sizes": "150x150",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/mstile-310x150.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/mstile-310x150.png",
             "sizes": "310x150",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/mstile-310x310.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/mstile-310x310.png",
             "sizes": "310x310",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/android-chrome-192x192.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/android-chrome-512x512.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/favicon-16x16.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-16x16.png",
             "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url']; ?>/assets/images/pinned/favicon-32x32.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-32x32.png",
             "sizes": "32x32",
             "type": "image/png"
         }

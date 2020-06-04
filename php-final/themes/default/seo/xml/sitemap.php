@@ -7,62 +7,62 @@
 
 
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['index']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['index']['url-full'].'</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['projet']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['projet']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['sponsor']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['sponsor']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['programme']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['programme']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['server']['default']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['server']['default']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['market']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['market']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['invest']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['invest']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['cv']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['cv']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['télécharger']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['télécharger']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['legal']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['legal']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['contact']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['contact']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['server']['default']['url-full'].'</loc>
+		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['server']['default']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>

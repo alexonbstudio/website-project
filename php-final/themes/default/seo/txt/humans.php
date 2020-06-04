@@ -1,4 +1,5 @@
 <?php header('Content-Type: text/html; charset=utf-8'); ?>
+exemple need the configuration
 /* TEAM */
 	function: <?php echo $offices['all']['siege-social']['status']; ?> 
 	Contact: <?php echo $offices['all']['siege-social']['full-name']; ?>

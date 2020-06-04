@@ -5,62 +5,62 @@
 		<description>'.$trad['default']['index']['description'].'</description>
 		<title>'.$website['info']['site']['name'].'</title>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['index']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['index']['url-full'].'</link>
 			<description>'.$trad['pages']['index']['description'].'</description>
 			<title>'.$trad['pages']['index']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['projet']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['projet']['url-full'].'</link>
 			<description>'.$trad['pages']['projet']['description'].'</description>
 			<title>'.$trad['pages']['projet']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['sponsor']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['sponsor']['url-full'].'</link>
 			<description>'.$trad['pages']['sponsor']['description'].'</description>
 			<title>'.$trad['pages']['sponsor']['url-full'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['server']['default']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['server']['default']['url-full'].'</link>
 			<description>'.$trad['server']['default']['description'].'</description>
 			<title>'.$trad['server']['default']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['programme']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['programme']['url-full'].'</link>
 			<description>'.$trad['pages']['programme']['description'].'</description>
 			<title>'.$trad['pages']['programme']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['market']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['market']['url-full'].'</link>
 			<description>'.$trad['pages']['market']['description'].'</description>
 			<title>'.$trad['pages']['market']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['invest']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['invest']['url-full'].'</link>
 			<description>'.$trad['pages']['invest']['description'].'</description>
 			<title>'.$trad['pages']['invest']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['cv']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['cv']['url-full'].'</link>
 			<description>'.$trad['cv']['description'].'</description>
 			<title>'.$trad['cv']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['télécharger']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['télécharger']['url-full'].'</link>
 			<description>'.$trad['télécharger']['description'].'</description>
 			<title>'.$trad['télécharger']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['legal']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['legal']['url-full'].'</link>
 			<description>'.$trad['pages']['legal']['description'].'</description>
 			<title>'.$trad['pages']['legal']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['pages']['contact']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['contact']['url-full'].'</link>
 			<description>'.$trad['pages']['contact']['description'].'</description>
 			<title>'.$trad['pages']['contact']['title'].'</title>
 		</item>
 		<item>
-			<link>'.$website['info']['langs']['protocol'].'://'.$website['info']['site']['default-url'].'/'.$trad['server']['default']['url-full'].'</link>
+			<link>'.$protocols.'://'.$sites['domain'].'/'.$trad['server']['default']['url-full'].'</link>
 			<description>'.$trad['server']['default']['description'].'</description>
 			<title>'.$trad['server']['default']['title'].'</title>
 		</item>
