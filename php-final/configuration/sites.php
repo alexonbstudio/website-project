@@ -15,7 +15,8 @@ $sites = array(
 		'sponsor' => 'spon@email.tld',
 		'partner' => 'part@email.tld',
 		'business' => 'buz@email.tld'
-	)
+	),
+	'template' => 'default'
 );
 
 $JE_sites = json_encode($sites);

@@ -1,4 +1,5 @@
 <?php
+# exemple $translate['auto']['seo']
 
 $translate = array(
 	'auto' => array(

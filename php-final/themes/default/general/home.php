@@ -1,0 +1,1 @@
+<p>Hello World: <?php echo $translate['auto']['files']; ?></p>

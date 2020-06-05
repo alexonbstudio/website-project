@@ -4,8 +4,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
 	<url>
 		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['index']['url-full'].'</loc>
 		<changefreq>monthly</changefreq>
@@ -13,56 +11,6 @@
 	</url>
 	<url>
 		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['projet']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['sponsor']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['programme']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['server']['default']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['market']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['invest']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['cv']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['télécharger']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['legal']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['pages']['contact']['url-full'].'</loc>
-		<changefreq>weekly</changefreq>
-		<priority>1</priority>
-	</url>
-	<url>
-		<loc>'.$protocols.'://'.$sites['domain'].'/'.$trad['server']['default']['url-full'].'</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>

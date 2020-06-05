@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#Translate French
+RewriteRule ^fr/accueil.html$ general.php?lang=fr&pages=index [L]
+
+
+
+#Translate English
+RewriteRule ^en/home.html$ general.php?lang=en&pages=index [L]
+
+
+</IfModule>
