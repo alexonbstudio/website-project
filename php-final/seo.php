@@ -5,51 +5,97 @@ ini_set("display_errors", 1);
 #require 'inc/compress.php'; 
 #configuration
 include_once 'configuration/sites.php';
+include_once 'configuration/social.php';
+include_once 'configuration/sponsor.php';
+include_once 'configuration/translate.php';
+include_once 'configuration/version.php';
+include_once 'configuration/seo.php';
+include_once 'configuration/private.php';
+include_once 'configuration/partner.php';
+include_once 'configuration/hosting.php';
+include_once 'configuration/credits.php';
+include_once 'configuration/marketing.php';
+/*
+include_once 'configuration/business.php';
+include_once 'configuration/market.php';
+include_once 'configuration/restaurant.php';
+*/
+
 
 #Decode
 $sites = json_decode($JE_sites, true);
 $translate = json_decode($JE_translate, true);
-
-#Languages
+$credits = json_decode($JE_credits, true);
+$private = json_decode($JE_private, true);
+$seo = json_decode($JE_seo, true);
+$partner = json_decode($JE_partner, true);
+$social = json_decode($JE_social, true);
+$hosting = json_decode($JE_hosting, true);
+$marketing = json_decode($JE_marketing, true);
+/*
+#Supplémentaire
+$business = json_decode($JE_business, true);
+$markets = json_decode($JE_markets, true);
+$restaurant = json_decode($JE_restaurant, true);
+*/
+#Translate
 $general = json_decode($JE_translate_general, true);
+$partner = json_decode($JE_translate_partner, true);
+$sponsor = json_decode($JE_translate_sponsor, true);
+$law = json_decode($JE_translate_law, true);
 
 #Configuration
 $lang_finales = 'languages/'.$translate['auto']['files'].'/general.php';
 if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
 } else {
 	include_once 'languages/fr/general.php'; 
+    include_once 'languages/fr/partner.php'; 
+    include_once 'languages/fr/sponsor.php'; 
+    include_once 'languages/fr/law.php'; 
 }
 #Syslink
 $protocols = $sites['protocol'];
 
+#frontend
 if(isset($_GET['xml'])){
 	if($_GET['xml'] == 'sitemap'){
-		include_once('themes/'.$sites['template'].'/seo/xml/sitemap.php');		
+		include_once('themes/seo/xml/sitemap.php');		
 	} else if($_GET['xml'] == 'badge'){
-		include_once('themes/'.$sites['template'].'/seo/xml/badge.php');		
+		include_once('themes/seo/xml/badge.php');		
 	} else if($_GET['xml'] == 'dublincore'){
-		include_once('themes/'.$sites['template'].'/seo/xml/dublincore.php';		
+		include_once('themes/seo/xml/dublincore.php';		
 	} else if($_GET['xml'] == 'rss'){
-		include_once('themes/'.$sites['template'].'/seo/xml/rss.php');
+		include_once('themes/seo/xml/rss.php');
+	} else if($_GET['xml'] == 'crossdomain'){
+		include_once('themes/seo/xml/crossdomain.php');
+	} else if($_GET['xml'] == 'bingsiteauth'){
+		include_once('themes/seo/xml/BingSiteAuth.php');
 	} else {
 		header('Location: '.$protocols.'://'.$sites['domain']);
 		exit();
 	}
 } else if(isset($_GET['txt'])){
 	if($_GET['txt'] == 'robots'){
-		include_once('themes/'.$sites['template'].'/seo/txt/robots.php');		
+		include_once('themes/seo/txt/robots.php');		
 	} else if($_GET['txt'] == 'ads'){
-		include_once('themes/'.$sites['template'].'/seo/txt/ads.php');		
+		include_once('themes/seo/txt/ads.php');		
 	} else if($_GET['txt'] == 'humans'){
-		include_once('themes/'.$sites['template'].'/seo/txt/humans.php');		
+		include_once('themes/seo/txt/humans.php');		
+	} else if($_GET['txt'] == 'brave-rewards-verification'){
+		include_once('themes/seo/txt/brave-rewards-verification.php');		
 	} else {
 		header('Location: '.$protocols.'://'.$sites['domain']);
 		exit();
 	}
 } else if(isset($_GET['json'])){
 	if($_GET['json'] == 'manifest'){
-		include_once('themes/'.$sites['template'].'/seo/json/manifest.php');		
+		include_once('themes/seo/json/manifest.php');		
+	} else if($_GET['json'] == 'microsoft-identity-association'){
+		include_once('themes/seo/json/microsoft-identity-association.php');		
 	} else {
 		header('Location: '.$protocols.'://'.$sites['domain']);
 		exit();

@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: alexonbstudio.fr
-Token: 4451d832bcfc59988ca2e9ad4c4cfd80512460d65764632b7fef46bb7fd7891e

@@ -13,6 +13,16 @@ $credits = array(
 			'url' => 'alexonbstudio.fr'
 		)
 	),
+	'webdesigner' = array(
+		'startbootstrap' => array(
+			'name' => 'startbootstrap',
+			'url' => 'startbootstrap.com'
+		),
+		'bootstrapmade' => array(
+			'name' => 'bootstrapmade',
+			'url' => 'bootstrapmade.com'
+		)
+	),
 	'photographer' = array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',

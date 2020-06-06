@@ -8,9 +8,7 @@ $translate = array(
 	),
 	'manual' => array(
 		'french' => 'fr',
-		'english' => 'en',
-		'spanish' => 'es',
-		'german' => 'de'
+		'english' => 'en'
 	)
 );
 

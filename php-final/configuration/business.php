@@ -25,7 +25,14 @@ $business = array(
 			'normal' => '(0)',
 			'number' => '1234567891',
 		),
-		'e-mail' => 'team@exemple.tld',
+		'mail' => array(
+			'contact' => 'con@email.tld',
+			'support' => 'supp@@email.tld',
+			'commercial' => 'comm@@email.tld',
+			'sponsor' => 'spon@email.tld',
+			'partner' => 'part@email.tld',
+			'business' => 'buz@email.tld'
+		)
 	),
 	'external' => array(
 		/*Add here*/

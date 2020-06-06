@@ -1,8 +1,8 @@
 <?php header('Content-Type: application/json; charset=utf-8'); ?>
 {
-    "name": "<?php echo $website['info']['site']['name']; ?>",
-    "short_name": "<?php echo $website['info']['site']['name']; ?>",
-	"description": "<?php echo $trad['default']['index']['description']; ?>",
+    "name": "<?php echo $sites['name']; ?>",
+    "short_name": "<?php echo $general['index']['title']; ?>",
+	"description": "<?php echo $general['index']['description']; ?>",
 	"display": "standalone",
 	"start_url": "/",
     "icons": [

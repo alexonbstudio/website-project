@@ -2,13 +2,17 @@
 RewriteEngine on
 #seo
 RewriteRule ^rss\.xml$ seo.php?xml=rss [L]
+RewriteRule ^BingSiteAuth\.xml$ seo.php?xml=bingsiteauth [L]
+RewriteRule ^crossdomain\.xml$ seo.php?xml=crossdomain [L]
 RewriteRule ^sitemap\.xml$ seo.php?xml=sitemap [L]
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
 RewriteRule ^dublincore\.xml$ seo.php?xml=dublincore [L]
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
 RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
+RewriteRule ^microsoft-identity-association\.json$ seo.php?json=microsoft-identity-association [L]
 RewriteRule ^robots\.txt$ seo.php?txt=robots [L]
 RewriteRule ^humans\.txt$ seo.php?txt=humans [L]
+RewriteRule ^brave-rewards-verification\.txt$ seo.php?txt=brave-rewards-verification [L]
 RewriteRule ^ads\.txt$ seo.php?txt=ads [L]
 
 </IfModule>

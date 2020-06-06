@@ -8,26 +8,19 @@
 	xmlns:admin="http://webns.net/mvcb/">
 
 <rdf:Description rdf:about="'.$protocols.'://'.$sites['domain'].'">
-	<dc:title>'.$website['info']['site']['name'].'</dc:title>
-	<dc:description>'.$trad['default']['index']['description'].'</dc:description>
+	<dc:title>'.$sites['name'].' '.$general['index']['title'].'</dc:title>
+	<dc:description>'.$general['index']['description'].'</dc:description>
 	<dc:subject>
 		<rdf:Bag>
 			<rdf:li>alexonbstudio</rdf:li>
-			<rdf:li>alexonb studio</rdf:li>
-			<rdf:li>alexon balangue</rdf:li>
-			<rdf:li>Dépannage informatique</rdf:li>
-			<rdf:li>assistant informatique</rdf:li>
-			<rdf:li>technicien informatique</rdf:li>
-			<rdf:li>webmestre</rdf:li>
-			<rdf:li>IT</rdf:li>
-			<rdf:li>internet</rdf:li>
+			<rdf:li>'.$sites['name'].'</rdf:li>
 		</rdf:Bag>
 	</dc:subject>
 	<dc:language>fr</dc:language>
-	<dc:creator dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="Alexon Balangue" />
-	<dc:publisher dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="Alexon Balangue" />
-	<dc:license dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="CC" />
-	<dcterms:Created><dcterms:W3CDTF><rdf:value>2020-06-01</rdf:value></dcterms:W3CDTF></dcterms:Created>
+	<dc:creator dc:source="'.$protocols.'://alexonbstudio.fr" rdfs:Literal="alexonbstudio" />
+	<dc:publisher dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="'.$sites['name'].'" />
+	<dc:license dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="CC-BY-SA" />
+	<dcterms:Created><dcterms:W3CDTF><rdf:value>'.$sites['update']['rdf'].' '.$sites['name'].'</rdf:value></dcterms:W3CDTF></dcterms:Created>
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Collection" />
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Dataset" />
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Event" />

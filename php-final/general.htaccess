@@ -3,10 +3,26 @@ RewriteEngine on
 #Translate French
 RewriteRule ^fr/accueil.html$ general.php?lang=fr&pages=index [L]
 
+########## LAW ########## 
+RewriteRule ^fr/law\.html$ law.php?lang=fr&pages=law [L]
+RewriteRule ^fr/cgu\.html$ law.php?lang=fr&pages=law&full=cgu [L]
+RewriteRule ^fr/cgv\.html$ law.php?lang=fr&pages=law&full=cgv [L]
+RewriteRule ^fr/dmca\.html$ law.php?lang=fr&pages=law&full=dmca [L]
+RewriteRule ^fr/legal\.html$ law.php?lang=fr&pages=law&full=legal [L]
+RewriteRule ^fr/policy-privacy\.html$ law.php?lang=fr&pages=law&full=policy-privacy [L]
+RewriteRule ^fr/rgpd\.html$ law.php?lang=fr&pages=law&full=rgpd [L]
 
 
 #Translate English
 RewriteRule ^en/home.html$ general.php?lang=en&pages=index [L]
 
 
+########## LAW ########## 
+RewriteRule ^en/law\.html$ law.php?lang=en&pages=law [L]
+RewriteRule ^en/cgu\.html$ law.php?lang=en&pages=law&full=cgu [L]
+RewriteRule ^en/cgv\.html$ law.php?lang=en&pages=law&full=cgv [L]
+RewriteRule ^en/dmca\.html$ law.php?lang=en&pages=law&full=dmca [L]
+RewriteRule ^en/legal\.html$ law.php?lang=en&pages=law&full=legal [L]
+RewriteRule ^en/policy-privacy\.html$ law.php?lang=en&pages=law&full=policy-privacy [L]
+RewriteRule ^en/rgpd\.html$ law.php?lang=en&pages=law&full=rgpd [L]
 </IfModule>
