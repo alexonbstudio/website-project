@@ -5,6 +5,7 @@ $local_production = 'assets/production/';
 $cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/';
 $cdn_custom = 'https://cdn.alexonbstudio.fr/assets/';
 $cdn_production = 'https://cdn.alexonbstudio.fr/assets/';
+
 $version => array(
 	'internal' => array(
 		'bootstrap' => array(

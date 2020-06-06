@@ -10,7 +10,7 @@ $sites = array(
 	'domain' => 'domain.tld',
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'default',
-	'creat' => array(),
+	'create' => array(),
 	'update' => array(
 		'rdf' => '2020-06-07'
 	),

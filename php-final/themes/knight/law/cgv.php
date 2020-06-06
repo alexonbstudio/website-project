@@ -1,4 +1,8 @@
 
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
   <!-- Page Content -->
   <div class="container">
 
@@ -29,3 +33,7 @@
 
   </div>
   <!-- /.container -->
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
