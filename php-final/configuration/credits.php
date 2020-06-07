@@ -1,19 +1,19 @@
 <?php
 
 $credits = array(
-	'developper' = array(
+	'developper' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
 	),
-	'designer' = array(
+	'designer' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
 	),
-	'webdesigner' = array(
+	'webdesigner' => array(
 		'startbootstrap' => array(
 			'name' => 'startbootstrap',
 			'url' => 'startbootstrap.com'
@@ -23,40 +23,40 @@ $credits = array(
 			'url' => 'bootstrapmade.com'
 		)
 	),
-	'photographer' = array(
+	'photographer' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
 	),
-	'images' = array(
+	'images' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
 	),
-	'marketing' = array(
+	'marketing' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
 	),
-	'webmaster' = array(
+	'webmaster' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)	
 	),
-	'video' = array(
+	'video' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
 	),
-	'version' = array(
-		'stable' => '~*~'
-		'beta' => '~*~'
-		'alpha' => '0.3'
+	'version' => array(
+		'stable' => '~*~',
+		'beta' => '1.0',
+		'alpha' => '0.2'
 	)
 );
 

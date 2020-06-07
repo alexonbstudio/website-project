@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-require 'inc/compress.php'; 
+require 'libs/custom/compress.php'; 
 #configuration
 include_once 'configuration/sites.php';
 include_once 'configuration/social.php';
@@ -45,18 +45,15 @@ $sponsor = json_decode($JE_translate_sponsor, true);
 $law = json_decode($JE_translate_law, true);
 
 #Configuration
-$lang_finales = 'languages/'.$translate['auto']['files'].'/general.php';
-if (file_exists($lang_finales)) {
+$lang_finales = 'languages/en-US/general.php';
+if (!file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
-} else {
-	include_once 'languages/fr/general.php'; 
-    include_once 'languages/fr/partner.php'; 
-    include_once 'languages/fr/sponsor.php'; 
-    include_once 'languages/fr/law.php'; 
+
 }
+
 #Syslink
 $protocols = $sites['protocol'];
 

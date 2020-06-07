@@ -79,7 +79,7 @@ if(!empty($seo['google']['analystics'])){
 if(!empty($marketing['33Across']['key'])){
 	echo '<!-- Begin 33Across RevCTRL InView -->
 		<script>
-		var Tynt=Tynt||[];Tynt.push(\''.$marketing['33Across']['jey'].'\');
+		var Tynt=Tynt||[];Tynt.push(\''.$marketing['33Across']['key'].'\');
 		Tynt.cmd=Tynt.cmd||[];Tynt.cmd.push(function(){
 		Tynt.ads.display(\'\',\'\',\'inview\');});
 		(function(){var h,s=document.createElement(\'script\');
@@ -90,7 +90,7 @@ if(!empty($marketing['33Across']['key'])){
 	<!-- End 33Across RevCTRL InView -->
 	<!-- Begin 33Across SiteCTRL -->
 		<script>
-		var Tynt=Tynt||[];Tynt.push(\''.$marketing['33Across']['jey'].'\');
+		var Tynt=Tynt||[];Tynt.push(\''.$marketing['33Across']['key'].'\');
 		(function(){var h,s=document.createElement(\'script\');
 		s.src=\'https://cdn.tynt.com/ti.js\';
 		h=document.getElementsByTagName(\'script\')[0];

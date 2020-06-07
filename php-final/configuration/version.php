@@ -6,7 +6,7 @@ $cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/';
 $cdn_custom = 'https://cdn.alexonbstudio.fr/assets/';
 $cdn_production = 'https://cdn.alexonbstudio.fr/assets/';
 
-$version => array(
+$version = array(
 	'internal' => array(
 		'bootstrap' => array(
 			'css' => $local_vendor.'bootstrap/css/bootstrap.min.css',
@@ -51,7 +51,7 @@ $version => array(
 		),
 		'custom' => array(
 			'css' => array(
-				'default' => $local_custom.'css/default.css'
+				'default' => $local_custom.'css/default.css',
 				'knight' => $local_custom.'css/knight.css'
 			),
 			'js' => array(
@@ -96,7 +96,6 @@ $version => array(
 		'isotope-layout' => array(
 			'js' => $cdn_production.'vendor/isotope-layout/isotope.pkgd.min.js'
 		),
-		
 		'jquery.easing' => array(
 			'js' => $cdn_vendor.'jquery-easing/1.4.1/jquery.easing.min.js'
 		),
@@ -116,7 +115,7 @@ $version => array(
 		),
 		'custom' => array(
 			'css' => array(
-				'default' => $cdn_custom.'custom/css/default.css'
+				'default' => $cdn_custom.'custom/css/default.css',
 				'knight' => $cdn_custom.'custom/css/knight.css'
 			),
 			'js' => array(
@@ -137,6 +136,6 @@ $version => array(
 	)
 );
 
-$JE_version => json_encode($version);
+$JE_version = json_encode($version);
 
 ?>

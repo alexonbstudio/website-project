@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-#require 'inc/compress.php'; 
+#require 'libs/custom/compress.php'; 
 #configuration
 include_once 'configuration/sites.php';
 include_once 'configuration/social.php';

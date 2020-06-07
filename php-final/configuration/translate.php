@@ -3,12 +3,19 @@
 
 $translate = array(
 	'auto' => array(
-		'files' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2),
-		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 3, 5)
+		'files' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5),
+		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)
 	),
 	'manual' => array(
-		'french' => 'fr',
-		'english' => 'en'
+		'backend' => array(
+			'french' => 'fr-FR',
+			'english' => 'en-US'
+		),
+		'frontend' => array(
+			'french' => 'fr',
+			'english' => 'en'		
+		)
+
 	)
 );
 

@@ -7,7 +7,7 @@ exemple $sites['e-mail']['contact'];
 */
 $sites = array(
 	'name' => 'Name',
-	'domain' => 'domain.tld',
+	'domain' => 'website-project.test', /*domain: exemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'default',
 	'create' => array(),
