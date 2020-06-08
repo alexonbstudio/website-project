@@ -55,7 +55,7 @@ $credits = array(
 	),
 	'version' => array(
 		'stable' => '~*~',
-		'beta' => '1.0',
+		'beta' => '1.1',
 		'alpha' => '0.2'
 	)
 );
