@@ -45,18 +45,19 @@ $sponsor = json_decode($JE_translate_sponsor, true);
 $law = json_decode($JE_translate_law, true);
 
 #Configuration
-$lang_finales = 'languages/'.$translate['auto']['files'].'/general.php';
+$lang_finales = 'languages/'.$translate['manual']['backend']['english'].'/general.php';
 if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
 } else {
-	include_once 'languages/fr-FR/general.php'; 
-    include_once 'languages/fr-FR/partner.php'; 
-    include_once 'languages/fr-FR/sponsor.php'; 
-    include_once 'languages/fr-FR/law.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/general.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/partner.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
 }
+
 #Syslink
 $protocols = $sites['protocol'];
 
@@ -68,8 +69,9 @@ if(isset($_GET['lang'])){
 				$title = $general['index']['title'];
 				$description = $general['index']['description'];
 				$keyword = $general['index']['keyword'];
-				$urls = $general['index']['url'];
-				$translator = $general['index']['url-full'];
+				$urls = $general['index']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/general/home.php');
 				include('themes/'.$sites['template'].'/footer.php');	

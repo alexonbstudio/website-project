@@ -1,5 +1,6 @@
 <?php
-# exemple $translate['auto']['seo']
+# exemple $translate['manual']['backend']['french']
+# exemple $translate['manual']['frontend']['french']
 
 $translate = array(
 	'auto' => array(

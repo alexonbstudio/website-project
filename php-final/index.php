@@ -45,13 +45,17 @@ $sponsor = json_decode($JE_translate_sponsor, true);
 $law = json_decode($JE_translate_law, true);
 
 #Configuration
-$lang_finales = 'languages/en-US/general.php';
-if (!file_exists($lang_finales)) {
+$lang_finales = 'languages/'.$translate['manual']['backend']['english'].'/general.php';
+if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
-
+} else {
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/general.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/partner.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
 }
 
 #Syslink
@@ -63,8 +67,9 @@ if(isset($_GET['pages'])){
 		$title = $general['index']['title'];
 		$description = $general['index']['description'];
 		$keyword = $general['index']['keyword'];
-		$urls = $general['index']['url'];
-		$translator = $general['index']['url-full'];
+		$urls = $general['index']['url']['default'];
+		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
+		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
 		include('themes/'.$sites['template'].'/header.php');
 		include_once('themes/'.$sites['template'].'/general/home.php');
 		include('themes/'.$sites['template'].'/footer.php');
@@ -77,8 +82,9 @@ if(isset($_GET['pages'])){
 				$title = $law['cgu']['title'];
 				$description = $law['cgu']['description'];
 				$keyword = $law['cgu']['keyword'];
-				$urls = $law['cgu']['url'];
-				$translator = $law['cgu']['url-full'];
+				$urls = $law['cgu']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['cgu']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['cgu']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/cgu.php');
 				include('themes/'.$sites['template'].'/footer.php');	
@@ -86,8 +92,9 @@ if(isset($_GET['pages'])){
 				$title = $law['cgv']['title'];
 				$description = $law['cgv']['description'];
 				$keyword = $law['cgv']['keyword'];
-				$urls = $law['cgv']['url'];
-				$translator = $law['cgv']['url-full'];
+				$urls = $law['cgv']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['cgv']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['cgv']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/cgv.php');
 				include('themes/'.$sites['template'].'/footer.php');	
@@ -95,8 +102,9 @@ if(isset($_GET['pages'])){
 				$title = $law['dmca']['title'];
 				$description = $law['dmca']['description'];
 				$keyword = $law['dmca']['keyword'];
-				$urls = $law['dmca']['url'];
-				$translator = $law['dmca']['url-full'];
+				$urls = $law['dmca']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['dmca']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['dmca']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/dmca.php');
 				include('themes/'.$sites['template'].'/footer.php');	
@@ -104,8 +112,9 @@ if(isset($_GET['pages'])){
 				$title = $law['legal']['title'];
 				$description = $law['legal']['description'];
 				$keyword = $law['legal']['keyword'];
-				$urls = $law['legal']['url'];
-				$translator = $law['legal']['url-full'];
+				$urls = $law['legal']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['legal']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['legal']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/legal.php');
 				include('themes/'.$sites['template'].'/footer.php');	
@@ -113,8 +122,9 @@ if(isset($_GET['pages'])){
 				$title = $law['policy-privacy']['title'];
 				$description = $law['policy-privacy']['description'];
 				$keyword = $law['policy-privacy']['keyword'];
-				$urls = $law['policy-privacy']['url'];
-				$translator = $law['policy-privacy']['url-full'];
+				$urls = $law['policy-privacy']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['policy-privacy']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['policy-privacy']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/policy-privacy.php');
 				include('themes/'.$sites['template'].'/footer.php');	
@@ -122,8 +132,9 @@ if(isset($_GET['pages'])){
 				$title = $law['rgpd']['title'];
 				$description = $law['rgpd']['description'];
 				$keyword = $law['rgpd']['keyword'];
-				$urls = $law['rgpd']['url'];
-				$translator = $law['rgpd']['url-full'];
+				$urls = $law['rgpd']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['rgpd']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['rgpd']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/rgpd.php');
 				include('themes/'.$sites['template'].'/footer.php');	
@@ -135,8 +146,9 @@ if(isset($_GET['pages'])){
 			$title = $law['pages']['title'];
 			$description = $law['pages']['description'];
 			$keyword = $law['pages']['keyword'];
-			$urls = $law['pages']['url'];
-			$translator = $law['pages']['url-full'];
+			$urls = $law['pages']['url']['default'];
+			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['pages']['url']['fr']);
+			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['pages']['url']['en']);
 			include('themes/'.$sites['template'].'/header.php');
 			include_once('themes/'.$sites['template'].'/law/full.php');
 			include('themes/'.$sites['template'].'/footer.php');
@@ -149,8 +161,9 @@ if(isset($_GET['pages'])){
 	$title = $general['index']['title'];
 	$description = $general['index']['description'];
 	$keyword = $general['index']['keyword'];
-	$urls = $general['index']['url'];
-	$translator = $general['index']['url-full'];
+	$urls = $general['index']['url']['default'];
+	define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
+	define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
 	include('themes/'.$sites['template'].'/header.php');
 	include_once('themes/'.$sites['template'].'/general/home.php');
 	include('themes/'.$sites['template'].'/footer.php');	

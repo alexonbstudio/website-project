@@ -1,7 +1,4 @@
-  <main id="main">
 
-    <section id="about" class="about">
-	
   <!-- Page Content -->
   <div class="container">
 
@@ -27,8 +24,4 @@
     <!-- /.row -->
 
   </div>
-  <!-- /.container -->	
-	<section>
-  </main><!-- End #main -->
-
-
+  <!-- /.container -->

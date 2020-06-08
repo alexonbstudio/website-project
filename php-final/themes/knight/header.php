@@ -27,7 +27,20 @@
 
 
 
+<!--HUMANS NOT ROBOTS-->
+<link type="text/plain" rel="author" href="<?php echo $protocols.'://'.$sites['domain']; ?>/humans.txt" />
+
+
+<!--Multi Language-->
+<link rel="alternate" hreflang="x-default" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
+<link rel="alternate" hreflang="<?php echo $translate['manual']['frontend']['french']; ?>" href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_FR_URL__; ?>" />
+<link rel="alternate" hreflang="<?php echo $translate['manual']['frontend']['english']; ?>" href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_EN_URL__; ?>" />
+
+
 <!--SEO-->
+<link rel="canonical" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
+<link rel="alternate" type="application/ld+json" href="<?php echo $protocols.'://'.$sites['domain']; ?>/json-ld.json" />
+
 
 <meta property="og:site_name" content="<?php echo $title; ?>">
 <meta property="og:url" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>">
@@ -68,10 +81,15 @@ if(!empty($seo['google']['analystics'])){
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag(\'js\', new Date());
 
-		  gtag(\'config\', \'UA-153512940-1\');
+		  gtag(\'config\', \''.$seo['google']['analystics'].'\');
 		</script>';
 }
 
+if(!empty($seo['yandex']['analystics'])){
+	echo '<!-- Yandex.Metrika counter --> 
+	<script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym('.$seo['yandex']['analystics'].', "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/'.$seo['yandex']['analystics'].'" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+	<!-- /Yandex.Metrika counter -->';
+}
 
 ?>
 <!--Marketing-->
