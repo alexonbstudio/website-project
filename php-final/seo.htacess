@@ -6,6 +6,11 @@ RewriteRule ^rss\.xml$ seo.php?xml=rss [L]
 RewriteRule ^BingSiteAuth\.xml$ seo.php?xml=bingsiteauth [L]
 RewriteRule ^crossdomain\.xml$ seo.php?xml=crossdomain [L]
 RewriteRule ^sitemap\.xml$ seo.php?xml=sitemap [L]
+##SITEMAP - Translate##
+RewriteRule ^sitemap-index\.xml$ seo.php?xml=sitemap&translate=default [L]
+RewriteRule ^sitemap-en\.xml$ seo.php?xml=sitemap&translate=en [L]
+RewriteRule ^sitemap-fr\.xml$ seo.php?xml=sitemap&translate=fr [L]
+
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
 RewriteRule ^dublincore\.xml$ seo.php?xml=dublincore [L]
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]

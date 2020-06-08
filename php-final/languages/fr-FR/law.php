@@ -6,6 +6,7 @@ $law = array(
 			'footer' => 'Tous Droits Réservés.'
 		)
 	),
+	###################PAGE URL#####################
 	'pages' => array(
 		'title' => 'Règles',
 		'description' => '',
@@ -18,6 +19,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'cgu' => array(
@@ -32,6 +36,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'cgv' => array(
@@ -46,6 +53,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'dmca' => array(
@@ -60,6 +70,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'legal' => array(
@@ -74,6 +87,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'policy-privacy' => array(
@@ -88,6 +104,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'rgpd' => array(
@@ -102,6 +121,9 @@ $law = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'img/imag.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	)
 );

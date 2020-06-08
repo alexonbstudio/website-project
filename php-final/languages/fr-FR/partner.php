@@ -13,6 +13,9 @@ $partner = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'imag.jpg'  /*directory images from <exemple.tld>/assets */
 		)
 	)
 );

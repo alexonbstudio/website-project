@@ -10,11 +10,15 @@ $translate = array(
 	'manual' => array(
 		'backend' => array(
 			'french' => 'fr-FR',
-			'english' => 'en-US'
+			'english' => 'en-US',
+			'spanish' => 'es-ES',
+			'german' => 'de-DE'
 		),
 		'frontend' => array(
 			'french' => 'fr',
-			'english' => 'en'		
+			'english' => 'en'	,
+			'spanish' => 'es',
+			'german' => 'de'	
 		)
 
 	)

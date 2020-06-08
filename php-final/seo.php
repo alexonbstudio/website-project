@@ -58,13 +58,32 @@ if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
 }
 
+#SEO sitemap
+$lang_finales = 'themes/seo/xml/translate/default.php';
+if (file_exists($lang_finales)) {
+    include_once 'themes/seo/xml/translate/'.$translate['auto']['seo'].'.php'; 
+} else {
+    include_once 'themes/seo/xml/translate/'.$translate['manual']['frontend']['french'].'.php'; 
+}
+
 #Syslink
 $protocols = $sites['protocol'];
 
 #frontend
 if(isset($_GET['xml'])){
 	if($_GET['xml'] == 'sitemap'){
-		include_once('themes/seo/xml/sitemap.php');		
+		if(isset($_GET['translate'])){
+			if($_GET['translate'] == 'default'){
+				include_once('themes/seo/xml/translate/default.php');	
+			} else if($_GET['translate'] == $translate['auto']['seo']){
+				include_once('themes/seo/xml/translate/'.$translate['auto']['seo'].'.php');	
+			} else {
+				header('Location: '.$protocols.'://'.$sites['domain']);
+				exit();
+			}
+		} else {
+			include_once('themes/seo/xml/sitemap.php');	
+		}
 	} else if($_GET['xml'] == 'badge'){
 		include_once('themes/seo/xml/badge.php');		
 	} else if($_GET['xml'] == 'dublincore'){
