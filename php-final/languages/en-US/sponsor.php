@@ -5,12 +5,15 @@ $sponsor = array(
 		'title' => '',
 		'description' => '',
 		'keyword' => '',
-		'url' => '.html',
-		'url-full' => 'en/.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'sponsor.html',
+			'fr' => 'sponsorisé.html',
+			'en' => 'sponsor.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	)
 );
 

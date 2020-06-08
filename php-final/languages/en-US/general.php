@@ -5,12 +5,15 @@ $general = array(
 		'title' => '',
 		'description' => '',
 		'keyword' => '',
-		'url' => '.html',
-		'url-full' => 'en/.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'index.html',
+			'fr' => 'accueil.html',
+			'en' => 'home.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	)
 );
 

@@ -75,6 +75,32 @@ if(isset($_GET['pages'])){
 		include('themes/'.$sites['template'].'/footer.php');
 		
 		
+	} else if($_GET['pages'] == 'sponsor'){
+		/**########## SPONSOR DIR ##########**/	
+		$title = $sponsor['index']['title'];
+		$description = $sponsor['index']['description'];
+		$keyword = $sponsor['index']['keyword'];
+		$urls = $sponsor['index']['url']['default'];
+		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sponsor['index']['url']['fr']);
+		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sponsor['index']['url']['en']);
+		include('themes/'.$sites['template'].'/header.php');
+		include_once('themes/'.$sites['template'].'/sponsor/full.php');
+		include('themes/'.$sites['template'].'/footer.php');
+		
+		
+	} else if($_GET['pages'] == 'partner'){
+		/**########## PARTNER DIR ##########**/	
+		$title = $partner['index']['title'];
+		$description = $partner['index']['description'];
+		$keyword = $partner['index']['keyword'];
+		$urls = $partner['index']['url']['default'];
+		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$partner['index']['url']['fr']);
+		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$partner['index']['url']['en']);
+		include('themes/'.$sites['template'].'/header.php');
+		include_once('themes/'.$sites['template'].'/partner/full.php');
+		include('themes/'.$sites['template'].'/footer.php');
+		
+		
 	} else if($_GET['pages'] == 'law'){
 		/**########## LAW DIR ##########**/	
 		if(isset($_GET['full'])){

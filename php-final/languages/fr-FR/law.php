@@ -1,27 +1,33 @@
 <?php
-
+# $law['full']['content']['footer']
 $law = array(
+	'full' => array(
+		'content' => array(
+			'footer' => 'Tous Droits Réservés.'
+		)
+	),
 	'pages' => array(
-		'title' => 'law',
+		'title' => 'Règles',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'law.html',
-			'fr' => 'law.html',
-			'en' => '.html'
+			'default' => 'rules.html',
+			'fr' => 'règles.html',
+			'en' => 'rules.html'
 		),
 		'content' => array(
 			'' => ''
 			/*custom your own*/
 		)
-	),'cgu' => array(
-		'title' => 'cgu',
+	),
+	'cgu' => array(
+		'title' => 'Conditions générales d\'utilisation',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
 			'default' => 'cgu.html',
-			'fr' => 'cgu.html',
-			'en' => 'cgu.html'
+			'fr' => 'conditions-générales-utilisation.html',
+			'en' => 'terms-and-conditions.html'
 		),
 		'content' => array(
 			'' => ''
@@ -29,13 +35,13 @@ $law = array(
 		)
 	),
 	'cgv' => array(
-		'title' => 'cgv',
+		'title' => 'Conditions générales de vente',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
 			'default' => 'cgv.html',
-			'fr' => 'cgv.html',
-			'en' => 'cgv.html'
+			'fr' => 'conditions-générales-de-vente.html',
+			'en' => 'terms-and-conditions-of-sale.html'
 		),
 		'content' => array(
 			'' => ''
@@ -43,7 +49,7 @@ $law = array(
 		)
 	),
 	'dmca' => array(
-		'title' => 'dmca',
+		'title' => 'DMCA',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
@@ -57,12 +63,12 @@ $law = array(
 		)
 	),
 	'legal' => array(
-		'title' => 'legal',
+		'title' => 'Mentions légales',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
 			'default' => 'legal.html',
-			'fr' => 'legal.html',
+			'fr' => 'mentions-légales.html',
 			'en' => 'legal.html'
 		),
 		'content' => array(
@@ -71,13 +77,13 @@ $law = array(
 		)
 	),
 	'policy-privacy' => array(
-		'title' => 'policy privacy',
+		'title' => 'Politique de confidentialité',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'policy-privacy.html',
-			'fr' => 'policy-privacy.html',
-			'en' => 'policy-privacy.html'
+			'default' => 'privacy-policy.html',
+			'fr' => 'politique-de-confidentialité.html',
+			'en' => 'privacy-policy.html'
 		),
 		'content' => array(
 			'' => ''
@@ -85,13 +91,13 @@ $law = array(
 		)
 	),
 	'rgpd' => array(
-		'title' => 'rgpd',
+		'title' => 'RGPD',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'rgpd.html',
+			'default' => 'grpd.html',
 			'fr' => 'rgpd.html',
-			'en' => 'rgpd.html'
+			'en' => 'grpd.html'
 		),
 		'content' => array(
 			'' => ''

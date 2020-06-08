@@ -1,12 +1,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 #law
-RewriteRule ^law\.html$ index.php?pages=law [L]
+RewriteRule ^rules\.html$ index.php?pages=law [L]
 RewriteRule ^cgu\.html$ index.php?pages=law&full=cgu [L]
 RewriteRule ^cgv\.html$ index.php?pages=law&full=cgv [L]
 RewriteRule ^dmca\.html$ index.php?pages=law&full=dmca [L]
 RewriteRule ^legal\.html$ index.php?pages=law&full=legal [L]
 RewriteRule ^policy-privacy\.html$ index.php?pages=law&full=policy-privacy [L]
-RewriteRule ^rgpd\.html$ index.php?pages=law&full=rgpd [L]
+RewriteRule ^grpd\.html$ index.php?pages=law&full=rgpd [L]
 
 </IfModule>

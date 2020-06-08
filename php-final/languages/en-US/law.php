@@ -1,81 +1,108 @@
 <?php
 
 $law = array(
+	'full' => array(
+		'content' => array(
+			'footer' => 'All Right Reserved.'
+		)
+	),
 	'pages' => array(
-		'title' => 'law',
+		'title' => 'Rules',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'law.html',
-		'url-full' => 'en/law.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
-	),'cgu' => array(
-		'title' => 'cgu',
+		'url' => array(
+			'default' => 'rules.html',
+			'fr' => 'règles.html',
+			'en' => 'rules.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
+	),
+	'cgu' => array(
+		'title' => 'Terms and Conditions',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'cgu.html',
-		'url-full' => 'en/cgu.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'cgu.html',
+			'fr' => 'conditions-générales-utilisation.html',
+			'en' => 'terms-and-conditions.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	),
 	'cgv' => array(
-		'title' => 'cgv',
+		'title' => 'Terms and conditions of sale',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'cgv.html',
-		'url-full' => 'en/cgv.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'cgv.html',
+			'fr' => 'conditions-générales-de-vente.html',
+			'en' => 'terms-and-conditions-of-sale.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	),
 	'dmca' => array(
-		'title' => 'dmca',
+		'title' => 'DMCA',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'dmca.html',
-		'url-full' => 'en/dmca.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'dmca.html',
+			'fr' => 'dmca.html',
+			'en' => 'dmca.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	),
 	'legal' => array(
-		'title' => 'legal',
+		'title' => 'Legal',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'legal.html',
-		'url-full' => 'en/legal.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'legal.html',
+			'fr' => 'mentions-légales.html',
+			'en' => 'legal.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	),
 	'policy-privacy' => array(
-		'title' => 'policy privacy',
+		'title' => 'Privacy Policy',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'policy-privacy.html',
-		'url-full' => 'en/policy-privacy.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'privacy-policy.html',
+			'fr' => 'politique-de-confidentialité.html',
+			'en' => 'privacy-policy.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	),
 	'rgpd' => array(
-		'title' => 'rgpd',
+		'title' => 'GRPD',
 		'description' => '',
 		'keyword' => '',
-		'url' => 'rgpd.html',
-		'url-full' => 'en/rgpd.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'grpd.html',
+			'fr' => 'rgpd.html',
+			'en' => 'grpd.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	)
 );
 

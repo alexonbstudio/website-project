@@ -6,9 +6,9 @@ $general = array(
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => '.html',
-			'fr' => '.html',
-			'en' => '.html'
+			'default' => 'index.html',
+			'fr' => 'accueil.html',
+			'en' => 'home.html'
 		),
 		'content' => array(
 			'' => ''

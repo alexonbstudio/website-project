@@ -5,12 +5,15 @@ $partner = array(
 		'title' => '',
 		'description' => '',
 		'keyword' => '',
-		'url' => '.html',
-		'url-full' => 'en/.html',
-			'content' => array(
-				'' => ''
-				/*custom your own*/
-			)
+		'url' => array(
+			'default' => 'partner.html',
+			'fr' => 'partenaire.html',
+			'en' => 'partner.html'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		)
 	)
 );
 

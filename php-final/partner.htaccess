@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#Partner
+RewriteRule ^partner\.html$ index.php?pages=partner [L]
+
+</IfModule>
