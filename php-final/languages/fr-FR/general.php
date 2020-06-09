@@ -2,7 +2,7 @@
 
 $general = array(
 	'index' => array(
-		'title' => '',
+		'title' => 'Accueil',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
