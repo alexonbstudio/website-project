@@ -15,17 +15,20 @@
 	<?php } else { ?>
 		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
 	<?php }?>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>">
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['small']; ?>">
 	<link rel="manifest" href="<?php echo $protocols.'://'.$sites['domain']; ?>/manifest.json">	
 
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="194x194" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-194x194.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/android-chrome-192x192.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-16x16.png">
-	<link rel="mask-icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-TileImage" content="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/mstile-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:180x180']; ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:32x32']; ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:192x192']; ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:16x16']; ?>">
+
+<link rel="mask-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['safari']; ?>" color="<?php echo $seo['browsers']['color']['safari']; ?>">
+<meta name="apple-mobile-web-app-title" content="<?php echo $sites['name'].' - '.$title;?>">
+<meta name="application-name" content="<?php echo $sites['name'];?>">
+<meta name="msapplication-TileColor" content="<?php echo $seo['browsers']['color']['title']; ?>">
+<meta name="msapplication-TileImage" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:144x144']; ?>">
+<meta name="theme-color" content="<?php echo $seo['browsers']['color']['theme']; ?>">
 
 
 
