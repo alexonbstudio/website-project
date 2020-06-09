@@ -68,7 +68,7 @@
   <script src="<?php echo $version['external']['aos']['js']; ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?php echo $version['internal']['custom']['js']['knight']; ?>"></script>
+  <script src="<?php echo $version['internal']['production']['js']['knight']; ?>"></script>
   
   
 </body>
