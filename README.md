@@ -7,7 +7,7 @@ Create your own website project
 #### Folder Apache (adapt)
 #### Folder Nginx (adapt)
 #### Folder Php - site vitrine php -- artisanat plumber (french: artisan plombier, chauffagiste, etc....) -- not be continued 
-#### Folder php-final 
+#### Folder php-final - Lastest Release
 ------
 site vitrine (simple)
 ======
