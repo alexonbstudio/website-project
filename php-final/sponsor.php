@@ -15,6 +15,7 @@ include_once 'configuration/partner.php';
 include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
+include_once 'configuration/images.php';
 /*
 include_once 'configuration/business.php';
 include_once 'configuration/market.php';
@@ -32,6 +33,7 @@ $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
+$images = json_decode($JE_images, true);
 /*
 #Supplémentaire
 $business = json_decode($JE_business, true);
@@ -76,6 +78,7 @@ if(isset($_GET['lang'])){
 				$description = $sponsor['index']['description'];
 				$keyword = $sponsor['index']['keyword'];
 				$urls = $sponsor['index']['url']['default'];
+				$imgs = $sponsor['index']['sitemap']['images'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sponsor['index']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sponsor['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');

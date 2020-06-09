@@ -16,6 +16,7 @@ include_once 'configuration/partner.php';
 include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
+include_once 'configuration/images.php';
 /*
 include_once 'configuration/business.php';
 include_once 'configuration/market.php';
@@ -33,6 +34,7 @@ $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
+$images = json_decode($JE_images, true);
 /*
 #Supplémentaire
 $business = json_decode($JE_business, true);
@@ -81,6 +83,7 @@ if(isset($_GET['lang'])){
 				$description = $email['index']['description'];
 				$keyword = $email['index']['keyword'];
 				$urls = $email['index']['url']['default'];
+				$imgs = $email['index']['sitemap']['images'];
 				
 					$msg = '';
 					if (array_key_exists('email', $_POST)) {

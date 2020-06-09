@@ -15,6 +15,7 @@ include_once 'configuration/partner.php';
 include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
+include_once 'configuration/images.php';
 /*
 include_once 'configuration/business.php';
 include_once 'configuration/market.php';
@@ -32,6 +33,7 @@ $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
+$images = json_decode($JE_images, true);
 /*
 #Supplémentaire
 $business = json_decode($JE_business, true);
@@ -64,12 +66,22 @@ if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['manual']['backend']['french'].'/block.php'; 
 }
 
-#SEO sitemap
-$lang_finales = 'themes/seo/xml/translate/default.php';
+#Configuration
+$lang_finales = 'languages/'.$translate['manual']['backend']['english'].'/general.php';
 if (file_exists($lang_finales)) {
-    include_once 'themes/seo/xml/translate/'.$translate['auto']['seo'].'.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/email.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/block.php'; 
 } else {
-    include_once 'themes/seo/xml/translate/'.$translate['manual']['frontend']['french'].'.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/general.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/partner.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/email.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/block.php'; 
 }
 
 #Syslink

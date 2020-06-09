@@ -16,6 +16,7 @@ include_once 'configuration/partner.php';
 include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
+include_once 'configuration/images.php';
 /*
 include_once 'configuration/business.php';
 include_once 'configuration/market.php';
@@ -33,6 +34,7 @@ $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
+$images = json_decode($JE_images, true);
 /*
 #Supplémentaire
 $business = json_decode($JE_business, true);
@@ -77,6 +79,7 @@ if(isset($_GET['lang'])){
 				$description = $block['success']['description'];
 				$keyword = $block['success']['keyword'];
 				$urls = $block['success']['url']['default'];
+				$imgs = $block['success']['sitemap']['images'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['success']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['success']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -87,6 +90,7 @@ if(isset($_GET['lang'])){
 				$description = $block['error']['description'];
 				$keyword = $block['error']['keyword'];
 				$urls = $block['error']['url']['default'];
+				$imgs = $block['error']['sitemap']['images'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['error']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['error']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
