@@ -17,7 +17,8 @@ $sites = array(
 	'copyright' => array(
 		'frontend' => 'Copyright &copy; 2019-'.date('Y'),
 		'rdf' => 'Copyright &copy;'
-	)
+	),
+	'default-timezone' => 'Etc/UTC' /*Docs PHP variable date_default_timezone_set() */
 );
 
 $JE_sites = json_encode($sites);

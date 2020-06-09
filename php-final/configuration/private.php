@@ -1,4 +1,5 @@
 <?php
+# $private['mail']['public']
 
 $private = array(
 	'name' => '',

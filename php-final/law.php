@@ -43,6 +43,8 @@ $general = json_decode($JE_translate_general, true);
 $partner = json_decode($JE_translate_partner, true);
 $sponsor = json_decode($JE_translate_sponsor, true);
 $law = json_decode($JE_translate_law, true);
+$email = json_decode($JE_translate_email, true);
+$block = json_decode($JE_translate_block, true);
 
 #Configuration
 $lang_finales = 'languages/'.$translate['manual']['backend']['english'].'/general.php';
@@ -51,11 +53,15 @@ if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/email.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/block.php'; 
 } else {
     include_once 'languages/'.$translate['manual']['backend']['french'].'/general.php'; 
     include_once 'languages/'.$translate['manual']['backend']['french'].'/partner.php'; 
     include_once 'languages/'.$translate['manual']['backend']['french'].'/sponsor.php'; 
     include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/email.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/block.php'; 
 }
 
 #Syslink

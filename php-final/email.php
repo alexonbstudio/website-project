@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 require 'libs/custom/compress.php'; 
+
 #configuration
 include_once 'configuration/sites.php';
 include_once 'configuration/social.php';
@@ -67,19 +68,56 @@ if (file_exists($lang_finales)) {
 #Syslink
 $protocols = $sites['protocol'];
 
+#Email contact form PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+#use PHPMailer\PHPMailer\Exception; test
+
 #frontend
 if(isset($_GET['lang'])){
 	if($_GET['lang'] == $translate['auto']['seo']){
 		if(isset($_GET['pages'])){
 			if($_GET['pages'] == 'index'){
-				$title = $general['index']['title'];
-				$description = $general['index']['description'];
-				$keyword = $general['index']['keyword'];
-				$urls = $general['index']['url']['default'];
-				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
-				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
+				$title = $email['index']['title'];
+				$description = $email['index']['description'];
+				$keyword = $email['index']['keyword'];
+				$urls = $email['index']['url']['default'];
+				
+					$msg = '';
+					if (array_key_exists('email', $_POST)) {
+						date_default_timezone_set($sites['default-timezone']);
+
+						require 'libs/phpmailer/src/PHPMailer.php';
+
+						$mail = new PHPMailer(true);
+						$mail->setFrom($_POST['email'], $_POST['name']);
+						$mail->addAddress($private['mail']['public'], $sites['domain']);
+						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+							$mail->Subject = $email['index']['title'].' '.$sites['domain'].'.';
+							$mail->isHTML(true);
+							$mail->Body = '
+							<h2>'.$email['index']['title'].'</h2>
+							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'
+							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'
+							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'
+							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+							if (!$mail->send()) {
+							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+							   exit();
+							} else {
+							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['success']['url']['default']);
+							   exit();
+							}
+						} else {
+							header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+							exit();
+
+						}
+					}
+				
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
-				include_once('themes/'.$sites['template'].'/general/home.php');
+				include_once('themes/'.$sites['template'].'/email/full.php');
 				include('themes/'.$sites['template'].'/footer.php');	
 			} else {
 				header('Location: '.$protocols.'://'.$sites['domain']);

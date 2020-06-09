@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 require 'libs/custom/compress.php'; 
+
 #configuration
 include_once 'configuration/sites.php';
 include_once 'configuration/social.php';
@@ -71,15 +72,25 @@ $protocols = $sites['protocol'];
 if(isset($_GET['lang'])){
 	if($_GET['lang'] == $translate['auto']['seo']){
 		if(isset($_GET['pages'])){
-			if($_GET['pages'] == 'index'){
-				$title = $general['index']['title'];
-				$description = $general['index']['description'];
-				$keyword = $general['index']['keyword'];
-				$urls = $general['index']['url']['default'];
-				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
-				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
+			if($_GET['pages'] == 'success'){
+				$title = $block['success']['title'];
+				$description = $block['success']['description'];
+				$keyword = $block['success']['keyword'];
+				$urls = $block['success']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['success']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['success']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
-				include_once('themes/'.$sites['template'].'/general/home.php');
+				include_once('themes/'.$sites['template'].'/block/success.php');
+				include('themes/'.$sites['template'].'/footer.php');	
+			} else if($_GET['pages'] == 'error'){
+				$title = $block['error']['title'];
+				$description = $block['error']['description'];
+				$keyword = $block['error']['keyword'];
+				$urls = $block['error']['url']['default'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['error']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['error']['url']['en']);
+				include('themes/'.$sites['template'].'/header.php');
+				include_once('themes/'.$sites['template'].'/block/error.php');
 				include('themes/'.$sites['template'].'/footer.php');	
 			} else {
 				header('Location: '.$protocols.'://'.$sites['domain']);

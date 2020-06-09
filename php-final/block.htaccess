@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#E-Mail
+RewriteRule ^contact/success\.html$ index.php?pages=success [L]
+RewriteRule ^error\.html$ index.php?pages=error [L]
+
+
+</IfModule>

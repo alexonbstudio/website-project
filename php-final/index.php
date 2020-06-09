@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 require 'libs/custom/compress.php'; 
+
 #configuration
 include_once 'configuration/sites.php';
 include_once 'configuration/social.php';
@@ -43,6 +44,8 @@ $general = json_decode($JE_translate_general, true);
 $partner = json_decode($JE_translate_partner, true);
 $sponsor = json_decode($JE_translate_sponsor, true);
 $law = json_decode($JE_translate_law, true);
+$email = json_decode($JE_translate_email, true);
+$block = json_decode($JE_translate_block, true);
 
 #Configuration
 $lang_finales = 'languages/'.$translate['manual']['backend']['english'].'/general.php';
@@ -51,15 +54,23 @@ if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/email.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/block.php'; 
 } else {
     include_once 'languages/'.$translate['manual']['backend']['french'].'/general.php'; 
     include_once 'languages/'.$translate['manual']['backend']['french'].'/partner.php'; 
     include_once 'languages/'.$translate['manual']['backend']['french'].'/sponsor.php'; 
     include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/email.php'; 
+    include_once 'languages/'.$translate['manual']['backend']['french'].'/block.php'; 
 }
 
 #Syslink
 $protocols = $sites['protocol'];
+
+#Email contact form PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+#use PHPMailer\PHPMailer\Exception; test
 
 #frontend
 if(isset($_GET['pages'])){
@@ -75,6 +86,50 @@ if(isset($_GET['pages'])){
 		include('themes/'.$sites['template'].'/footer.php');
 		
 		
+	} else if($_GET['pages'] == 'email'){
+		/**########## EMAIL DIR ##########**/	
+		$title = $email['index']['title'];
+		$description = $email['index']['description'];
+		$keyword = $email['index']['keyword'];
+		$urls = $email['index']['url']['default'];
+				
+			$msg = '';
+			if (array_key_exists('email', $_POST)) {
+				date_default_timezone_set($sites['default-timezone']);
+
+				require 'libs/phpmailer/src/PHPMailer.php';
+
+				$mail = new PHPMailer(true);
+				$mail->setFrom($_POST['email'], $_POST['name']);
+				$mail->addAddress($private['mail']['public'], $sites['domain']);
+				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+					$mail->Subject = $email['index']['title'].' '.$sites['domain'].'.';
+					$mail->isHTML(true);
+					$mail->Body = '
+					<h2>'.$email['index']['title'].'</h2>
+					<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'
+					<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'
+					<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'
+					<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+					if (!$mail->send()) {
+					   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+					   exit();
+					} else {
+					   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['success']['url']['default']);
+					   exit();
+					}
+				} else {
+					header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+					exit();
+
+				}
+			}
+				
+		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
+		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
+		include('themes/'.$sites['template'].'/header.php');
+		include_once('themes/'.$sites['template'].'/email/full.php');
+		include('themes/'.$sites['template'].'/footer.php');	
 	} else if($_GET['pages'] == 'sponsor'){
 		/**########## SPONSOR DIR ##########**/	
 		$title = $sponsor['index']['title'];
@@ -101,6 +156,41 @@ if(isset($_GET['pages'])){
 		include('themes/'.$sites['template'].'/footer.php');
 		
 		
+	} else if($_GET['pages'] == 'email'){
+		/**########## EMAIL DIR ##########**/	
+		$title = $email['index']['title'];
+		$description = $email['index']['description'];
+		$keyword = $email['index']['keyword'];
+		$urls = $email['index']['url']['default'];
+		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
+		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
+		include('themes/'.$sites['template'].'/header.php');
+		include_once('themes/'.$sites['template'].'/email/full.php');
+		include('themes/'.$sites['template'].'/footer.php');
+		
+		
+	} else if($_GET['pages'] == 'success'){
+		/**########## EMAIL - RECEIVE SUCCESS / BLOCK DIR ##########**/	
+			$title = $block['success']['title'];
+			$description = $block['success']['description'];
+			$keyword = $block['success']['keyword'];
+			$urls = $block['success']['url']['default'];
+			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['success']['url']['fr']);
+			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['success']['url']['en']);
+			include('themes/'.$sites['template'].'/header.php');
+			include_once('themes/'.$sites['template'].'/block/success.php');
+			include('themes/'.$sites['template'].'/footer.php');
+	} else if($_GET['pages'] == 'error'){
+		/**########## ERROR PAGE / BLOCK DIR ##########**/	
+			$title = $block['error']['title'];
+			$description = $block['error']['description'];
+			$keyword = $block['error']['keyword'];
+			$urls = $block['error']['url']['default'];
+			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['error']['url']['fr']);
+			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['error']['url']['en']);
+			include('themes/'.$sites['template'].'/header.php');
+			include_once('themes/'.$sites['template'].'/block/error.php');
+			include('themes/'.$sites['template'].'/footer.php');	
 	} else if($_GET['pages'] == 'law'){
 		/**########## LAW DIR ##########**/	
 		if(isset($_GET['full'])){

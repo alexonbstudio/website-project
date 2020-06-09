@@ -27,6 +27,21 @@ RewriteRule ^fr/sponsorisé\.html$ sponsor.php?lang=fr&pages=index [L]
 ########## PARTNER - French ##########
 RewriteRule ^fr/partenaire\.html$ partner.php?lang=fr&pages=index [L]
 
+
+
+
+
+########## CONTACT - French ##########
+RewriteRule ^fr/contactez\.html$ email.php?lang=fr&pages=index [L]
+
+
+
+
+########## BLOCK - French ##########
+RewriteRule ^fr/contact/success\.html$ block.php?lang=fr&pages=success [L]
+RewriteRule ^fr/erreur\.html$ block.php?lang=fr&pages=error [L]
+
+
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################
@@ -56,6 +71,19 @@ RewriteRule ^en/sponsor\.html$ sponsor.php?lang=en&pages=index [L]
 ########## PARTNER - English ##########
 RewriteRule ^en/partner\.html$ partner.php?lang=en&pages=index [L]
 
+
+
+
+
+########## CONTACT - English ##########
+RewriteRule ^en/contact\.html$ email.php?lang=en&pages=index [L]
+
+
+
+
+########## BLOCK - English ##########
+RewriteRule ^en/contact/success\.html$ block.php?lang=en&pages=success [L]
+RewriteRule ^en/error\.html$ block.php?lang=en&pages=error [L]
 
 
 
