@@ -21,15 +21,15 @@ How want a simple website not very complicated without using DB server only a si
 + -CSS
 + -JS
 + -HTML
-- -Nginx
-- -Apache (htaccess)
++ -Nginx
++ -Caddy (v2)
++ -Apache (htaccess)
 ------
 * integrated: 
 + -SEO 
 + -Referencial links 
 + -Contact form 
 + -translate 
-+ -Google Map
 
 
 You can support me to make a donation on https://alexonbstudio.fr/donation.html
