@@ -19,7 +19,7 @@
 You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 
-Copyright &copy; AlexonbStudio Create by Alexon Balangue CC-BY-SA
+Copyright &copy; AlexonbStudio CC-BY-SA
 ------
 LICENSE:
 ======
