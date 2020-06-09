@@ -1,9 +1,9 @@
 <?php
 
 $private = array(
-	'name' => 'AlexonbStudio',
+	'name' => '',
 	'address' => '',
-	'postal' => '75017',
+	'postal' => '75000',
 	'city' => 'Paris',
 	'contry' => 'France',
 	'phone' => array(
@@ -23,7 +23,7 @@ $private = array(
 	),
 	'mail' => array(
 		'public' => 'contact@exemple.tld',
-		'private' => 'private@exemple.tld'
+		'private' => 'exemple@gmal.tld'
 	)
 );
 
