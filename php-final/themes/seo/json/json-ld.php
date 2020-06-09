@@ -13,15 +13,15 @@
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
-	"logo": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/logo.png"
+	"logo": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>logo.png"
 },
     {
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "image": [
-        "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/1x1/photo.jpg",
-        "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/4x3/photo.jpg",
-        "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/16x9/photo.jpg"
+        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>1x1/photo.jpg",
+        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>4x3/photo.jpg",
+        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>16x9/photo.jpg"
        ],
       "@id": "<?php echo $protocols.'://'.$sites['domain']; ?>",
       "name": "<?php echo $business['local']['name']; ?>",

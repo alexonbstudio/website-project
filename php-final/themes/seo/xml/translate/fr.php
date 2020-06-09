@@ -9,7 +9,7 @@
 		<?php 
 		if(!empty($general['index']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$general['index']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$general['index']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$general['index']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -23,7 +23,7 @@
 		<?php 
 		if(!empty($sponsor['index']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$sponsor['index']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$sponsor['index']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$sponsor['index']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -37,7 +37,7 @@
 		<?php 
 		if(!empty($partner['index']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$partner['index']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$partner['index']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$partner['index']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -51,7 +51,7 @@
 		<?php 
 		if(!empty($law['pages']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['pages']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['pages']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['pages']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -64,7 +64,7 @@
 		<?php 
 		if(!empty($law['cgu']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['cgu']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['cgu']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['cgu']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -77,7 +77,7 @@
 		<?php 
 		if(!empty($law['cgv']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['cgv']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['cgv']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['cgv']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -90,7 +90,7 @@
 		<?php 
 		if(!empty($law['dmca']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['dmca']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['dmca']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['dmca']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -103,7 +103,7 @@
 		<?php 
 		if(!empty($law['legal']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['legal']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['legal']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['legal']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -116,7 +116,7 @@
 		<?php 
 		if(!empty($law['policy-privacy']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['policy-privacy']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['policy-privacy']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['policy-privacy']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -129,7 +129,7 @@
 		<?php 
 		if(!empty($law['rgpd']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/assets/images/'.$law['rgpd']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['rgpd']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['rgpd']['title'].']]></image:title>
 		</image:image>';
 		}

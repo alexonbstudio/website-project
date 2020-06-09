@@ -10,10 +10,12 @@
   <meta name="author" content="<?php echo $sites['name']; ?>">
 	<meta name="format-detection" content="telephone=yes">
 	<meta name="robots" content="noopd, noydir">
-	<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
-	<!--
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/production/images/logo-small.png">
-	//-->
+	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
+		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['icon']; ?>">
+	<?php } else { ?>
+		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
+	<?php }?>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>">
 	<link rel="manifest" href="<?php echo $protocols.'://'.$sites['domain']; ?>/manifest.json">	
 
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-32x32.png">
@@ -51,7 +53,7 @@
       },
       "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
       "image": [
-        "<?php echo $protocols.'://'.$sites['domain'].'/assets/images/'.$imgs; ?>"
+        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$imgs; ?>"
        ]<?php } ?><?php if(!empty($private['name'])){ ?>,
       "author": {
         "@type": "Person",
@@ -62,7 +64,7 @@
         "name": "<?php echo $business['name']; ?>",
         "logo": {
           "@type": "ImageObject",
-          "url": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/logo.png"
+          "url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>"
         }
       }<?php } ?>
     }
@@ -72,7 +74,7 @@
 <meta property="og:title" content="<?php echo $title; ?>">
 <meta property="og:type" content="website">
 <meta property="og:description" content="<?php echo $description; ?>">
-<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/production/images/logo-small.png">
+<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['small']; ?>">
 
  <meta content="<?php echo $translate['auto']['seo']; ?>" property="og:locale"/>
 <?php 

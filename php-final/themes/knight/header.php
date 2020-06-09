@@ -10,10 +10,12 @@
   <meta name="author" content="<?php echo $sites['name']; ?>">
 	<meta name="format-detection" content="telephone=yes">
 	<meta name="robots" content="noopd, noydir">
-	<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
-	<!--
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/production/images/logo-small.png">
-	//-->
+	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
+		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['icon']; ?>">
+	<?php } else { ?>
+		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
+	<?php }?>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>">
 	<link rel="manifest" href="<?php echo $protocols.'://'.$sites['domain']; ?>/manifest.json">	
 
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/pinned/favicon-32x32.png">
@@ -50,7 +52,7 @@
       },
       "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
       "image": [
-        "<?php echo $protocols.'://'.$sites['domain'].'/assets/images/'.$imgs; ?>"
+        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$imgs; ?>"
        ]<?php } ?><?php if(!empty($private['name'])){ ?>,
       "author": {
         "@type": "Person",
@@ -61,7 +63,7 @@
         "name": "<?php echo $business['name']; ?>",
         "logo": {
           "@type": "ImageObject",
-          "url": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/logo.png"
+          "url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>"
         }
       }<?php } ?>
     }
@@ -73,7 +75,7 @@
 <meta property="og:title" content="<?php echo $title; ?>">
 <meta property="og:type" content="website">
 <meta property="og:description" content="<?php echo $description; ?>">
-<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain']; ?>/assets/production/images/logo-small.png">
+<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['small']; ?>">
 
  <meta content="<?php echo $translate['auto']['seo']; ?>" property="og:locale"/>
 <?php 
@@ -191,7 +193,7 @@ if(!empty($marketing['google']['adsense'])){
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <a href="<?php echo $protocols.'://'.$sites['domain']; ?>" class="hero-logo" data-aos="zoom-in"><img src="assets/img/hero-logo.png" alt=""></a>
+      <a href="<?php echo $protocols.'://'.$sites['domain']; ?>" class="hero-logo" data-aos="zoom-in"><img src="<?php echo $images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
       <h1 data-aos="zoom-in"><?php echo $sites['name']; ?></h1>
       <h2 data-aos="fade-up"><?php echo $description; ?></h2>
       <a data-aos="fade-up" href="#about" class="btn-get-started scrollto">Get Started</a>
@@ -204,7 +206,7 @@ if(!empty($marketing['google']['adsense'])){
 
       <!-- The main logo is shown in mobile version only. The centered nav-logo in nav menu is displayed in desktop view  -->
       <div class="logo d-block d-lg-none">
-        <a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $images['manager']['logo']['small'];?>" alt="<?php echo $sites['name'];?>" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -228,7 +230,7 @@ if(!empty($marketing['google']['adsense'])){
           </li>
           <li><a href="#services">Services</a></li>
 
-          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="assets/img/logo.png" alt="" class="img-fluid"></a></li>
+          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $images['manager']['logo']['normal'];; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
 
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#pricing">Pricing</a></li>

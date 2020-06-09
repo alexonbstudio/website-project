@@ -1,13 +1,20 @@
 <?php header('Content-Type: text/html; charset=utf-8'); ?>
 <?php if(!empty($private['name'])){ ?>
 /* OWNER */
-	name: <?php echo $private['name']; ?>
-	Contact: <?php echo $private['mail']['public']; ?> 
-	Site: <?php echo $sites['domain']; ?> 
-	Twitter: @<?php echo $social['twitter']['name']; ?>
-	Facebook: <?php echo $social['facebook']['name']; ?> 
-	Instagram: <?php echo $social['instagram']['name']; ?> 
-	Linkedin: <?php echo $social['linkedin']['name']; ?>
+	name: <?php echo $private['name']; } ?>
+	Contact: <?php echo $private['mail']['public']; } ?> 
+	Site: <?php echo $sites['domain']; } ?>
+	<?php if(!empty($social['twitter']['name'])){ ?>Twitter: @<?php echo $social['twitter']['name']; } ?>
+	<?php if(!empty($social['dailymotion']['name'])){ ?>Facebook: <?php echo $social['facebook']['name']; } ?>
+	<?php if(!empty($social['facebook']['name'])){ ?>Instagram: <?php echo $social['instagram']['name']; } ?> 
+	<?php if(!empty($social['linkedin']['name'])){ ?>Linkedin: <?php echo $social['linkedin']['name']; } ?>
+	<?php if(!empty($social['youtube']['name'])){ ?>Youtube: <?php echo $social['youtube']['name']; } ?>
+	<?php if(!empty($social['twitch']['name'])){ ?>Twitch: <?php echo $social['twitch']['name']; } ?>
+	<?php if(!empty($social['github']['name'])){ ?>Github: <?php echo $social['github']['name']; } ?>
+	<?php if(!empty($social['discord']['name'])){ ?>Discord: <?php echo $social['discord']['name']; } ?>
+	<?php if(!empty($social['viadeo']['name'])){ ?>Viadeo: <?php echo $social['viadeo']['name']; } ?>
+	<?php if(!empty($social['mixcloud']['name'])){ ?>Mixcloud: <?php echo $social['mixcloud']['name']; } ?>
+	<?php if(!empty($social['dailymotion']['name'])){ ?>Dailymotion: <?php echo $social['dailymotion']['name']; } ?>
 	From: <?php echo $private['local']['name'].' '.$private['local']['address'].' '.$private['local']['postal'].' '.$business['local']['city'].' '.$private['local']['contry']; ?>
 <?php } ?>
 <?php if(!empty($business['local']['name'])){ ?>
@@ -18,10 +25,17 @@
 	SIRET: <?php echo $business['local']['siret']; ?>
 	Contact: <?php echo $business['local']['mail']['contact']; ?>
 	Site: <?php echo $sites['domain']; ?> 
-	Twitter: @<?php echo $social['twitter']['name']; ?>
-	Facebook: <?php echo $social['facebook']['name']; ?> 
-	Instagram: <?php echo $social['instagram']['name']; ?> 
-	Linkedin: <?php echo $social['linkedin']['name']; ?>
+	<?php if(!empty($social['twitter']['name'])){ ?>Twitter: @<?php echo $social['twitter']['name']; } ?>
+	<?php if(!empty($social['dailymotion']['name'])){ ?>Facebook: <?php echo $social['facebook']['name']; } ?>
+	<?php if(!empty($social['facebook']['name'])){ ?>Instagram: <?php echo $social['instagram']['name']; } ?> 
+	<?php if(!empty($social['linkedin']['name'])){ ?>Linkedin: <?php echo $social['linkedin']['name']; } ?>
+	<?php if(!empty($social['youtube']['name'])){ ?>Youtube: <?php echo $social['youtube']['name']; } ?>
+	<?php if(!empty($social['twitch']['name'])){ ?>Twitch: <?php echo $social['twitch']['name']; } ?>
+	<?php if(!empty($social['github']['name'])){ ?>Github: <?php echo $social['github']['name']; } ?>
+	<?php if(!empty($social['discord']['name'])){ ?>Discord: <?php echo $social['discord']['name']; } ?>
+	<?php if(!empty($social['viadeo']['name'])){ ?>Viadeo: <?php echo $social['viadeo']['name']; } ?>
+	<?php if(!empty($social['mixcloud']['name'])){ ?>Mixcloud: <?php echo $social['mixcloud']['name']; } ?>
+	<?php if(!empty($social['dailymotion']['name'])){ ?>Dailymotion: <?php echo $social['dailymotion']['name']; } ?>
 	From: <?php echo $business['local']['name'].' '.$business['local']['address'].' '.$business['local']['postal'].' '.$business['local']['city'].' '.$business['local']['contry']; ?>
 <?php } ?>
 

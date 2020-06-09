@@ -1,5 +1,5 @@
 <?php
-# exemple $images['']['']
+# exemple $images['dir']
 $root_imgs = 'assets/images'; 
 $images = array(
 	'manager' => array(
@@ -21,8 +21,9 @@ $images = array(
 			'size2' => $root_imgs.'pinned/logo-small.png'
 		),
 		/*Manager Images for SEO FAVICON */
-		'pinned' => array(
-			'size2' => $root_imgs.'pinned/logo-small.png' /*PNG recommended*/
+		'category' => array(
+			'' => ''
+			/*Custom your own*/
 		)
 	),
 	'dir' => $root_imgs
