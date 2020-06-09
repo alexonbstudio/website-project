@@ -6,6 +6,7 @@ $private = array(
 	'address' => '',
 	'postal' => '75000',
 	'city' => 'Paris',
+	'region' => 'Paris',
 	'contry' => 'France',
 	'phone' => array(
 		'code' => '+33',
