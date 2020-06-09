@@ -9,7 +9,12 @@ $business = array(
 		'address' => '',
 		'postal' => '75000',
 		'city' => 'Paris',
+		'region' => 'Paris',
 		'contry' => 'France',
+		'geo' => array(
+			'latitude' => '',
+			'longitude' => ''
+		),
 		'mobile' => array(
 			'code' => '+33',
 			'normal' => '(0)',
