@@ -1,12 +1,14 @@
 <?php header('Content-Type: text/html; charset=utf-8'); ?>
-#Info AlexonbStudio Update 30/05/2020
-google.com, pub-2369775505625185, RESELLER
-tynt.com, bH7bjsLN8r6Oo1aKkv7mNO, RESELLER
-uiz.io, f9d285ef5ae2d3ba2a81e81c1a9fe833ca615e05, RESELLER
-awin.com, pub.510459, RESELLER
-infolinks.com, 3262555, RESELLER
+#Info <?php echo $sites['domain']; ?> Update <?php echo date('d/m/Y'); ?>
+<?php 
+if(!empty($marketing['google']['adsense'])){ echo 'google.com, '.$marketing['google']['adsense'].', RESELLER'; }
+if(!empty($marketing['33Across']['key'])){ echo 'tynt.com, '.$marketing['33Across']['key'].', RESELLER'; }
+if(!empty($marketing['uiz']['key'])){ echo 'uiz.io, '.$marketing['uiz']['key'].', RESELLER'; }
+if(!empty($marketing['awin']['key'])){ echo 'awin.com, pub.'.$marketing['awin']['key'].', RESELLER'; }
+if(!empty($partner['planethoster']['code'])){ echo $partner['planethoster']['sites'].', '.$partner['planethoster']['code'].', RESELLER'; }
+?>
 
-
+<? ##########		IF NOT USE DAILYMOTION (DELETE IT UNTIL THE #END)		########## ?>
 #Daylimotion Offsite 07/2019
 rubiconproject.com, 8769, RESELLER, 0bfd66d529a55807 # video
 google.com, pub-7019376976432612, RESELLER # video
