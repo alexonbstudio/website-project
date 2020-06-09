@@ -2,7 +2,7 @@
 
 $sponsor = array(
 	'index' => array(
-		'title' => '',
+		'title' => 'Sponsorisé',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
