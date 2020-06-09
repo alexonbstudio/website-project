@@ -16,7 +16,7 @@ $translate = array(
 		),
 		'frontend' => array(
 			'french' => 'fr',
-			'english' => 'en'	,
+			'english' => 'en',
 			'spanish' => 'es',
 			'german' => 'de'	
 		)
