@@ -16,6 +16,11 @@
 + https://php.net/
 + https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/?referrer=ampproject.org
 
+## Manifest, all Browser (chrom, safari, wondows, favicon)
++ https://realfavicongenerator.net/
+##compress images
++ https://tinypng.com/
+
 
 You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
