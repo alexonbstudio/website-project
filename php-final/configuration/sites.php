@@ -15,8 +15,8 @@ $sites = array(
 		'rdf' => '2020-06-07'
 	),
 	'copyright' => array(
-		'frontend' => 'Copyright © '.date('Y'),
-		'rdf' => 'Copyright ©'
+		'frontend' => 'Copyright &copy; 2019-'.date('Y'),
+		'rdf' => 'Copyright &copy;'
 	)
 );
 
