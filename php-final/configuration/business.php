@@ -2,14 +2,14 @@
 
 $business = array(
 	'local' => array(
-		'name' => 'Compagny',
+		'name' => '',
 		'siret' => '',
 		'tva' => '',
 		'vat' => '',
 		'address' => '',
-		'postal' => '',
-		'city' => '',
-		'contry' => '',
+		'postal' => '75000',
+		'city' => 'Paris',
+		'contry' => 'France',
 		'mobile' => array(
 			'code' => '+33',
 			'normal' => '(0)',
