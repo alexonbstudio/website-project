@@ -33,3 +33,10 @@ How want a simple website not very complicated without using DB server only a si
 
 
 You can support me to make a donation on https://alexonbstudio.fr/donation.html
+
+
+Copyright &copy; AlexonbStudio Create by Alexon Balangue CC-BY-SA
+------
+LICENSE:
+======
+GPL v3.0
