@@ -41,7 +41,32 @@
 <!--SEO-->
 <link rel="canonical" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
 <link rel="alternate" type="application/ld+json" href="<?php echo $protocols.'://'.$sites['domain']; ?>/json-ld.json" />
-
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>"
+      },
+      "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
+      "image": [
+        "<?php echo $protocols.'://'.$sites['domain'].'/assets/images/'.$imgs; ?>"
+       ]<?php } ?><?php if(!empty($private['name'])){ ?>,
+      "author": {
+        "@type": "Person",
+        "name": "<?php echo $private['name']; ?>"
+      }<?php } ?><?php if(!empty($business['name'])){ ?>,
+       "publisher": {
+        "@type": "Organization",
+        "name": "<?php echo $business['name']; ?>",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/logo.png"
+        }
+      }<?php } ?>
+    }
+    </script>
 <meta property="og:site_name" content="<?php echo $title; ?>">
 <meta property="og:url" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>">
 <meta property="og:title" content="<?php echo $title; ?>">
