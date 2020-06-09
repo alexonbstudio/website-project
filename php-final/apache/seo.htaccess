@@ -12,11 +12,13 @@ RewriteRule ^sitemap-en\.xml$ seo.php?xml=sitemap&translate=en [L]
 RewriteRule ^sitemap-fr\.xml$ seo.php?xml=sitemap&translate=fr [L]
 
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
+RewriteRule ^browserconfig\.xml$ seo.php?xml=badge [L]
 RewriteRule ^dublincore\.xml$ seo.php?xml=dublincore [L]
 RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
 
 ###### JSON ###### 
 RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
+RewriteRule ^site\.webmanifest$ seo.php?json=manifest [L]
 RewriteRule ^json-ld\.json$ seo.php?json=ld [L]
 RewriteRule ^\.well-known/microsoft-identity-association\.json$ seo.php?json=microsoft-identity-association [L]
 

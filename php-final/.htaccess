@@ -7,7 +7,7 @@ RewriteRule ^index.html$ index.php [L]
 
 
 #FOR TESTING - expiremental
-<Files "general.htaccess">
+<Files "apache/general.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -17,7 +17,7 @@ RewriteRule ^index.html$ index.php [L]
 </IfModule>
 </Files>
 
-<Files "law.htaccess">
+<Files "apache/law.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -27,7 +27,7 @@ RewriteRule ^index.html$ index.php [L]
 </IfModule>
 </Files>
 
-<Files "seo.htaccess">
+<Files "apache/seo.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -37,7 +37,7 @@ RewriteRule ^index.html$ index.php [L]
 </IfModule>
 </Files>
 
-<Files "sponsor.htaccess">
+<Files "apache/sponsor.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -47,7 +47,7 @@ RewriteRule ^index.html$ index.php [L]
 </IfModule>
 </Files>
 
-<Files "partner.htaccess">
+<Files "apache/partner.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -57,7 +57,7 @@ RewriteRule ^index.html$ index.php [L]
 </IfModule>
 </Files>
 
-<Files "email.htaccess">
+<Files "apache/email.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
@@ -67,7 +67,7 @@ RewriteRule ^index.html$ index.php [L]
 </IfModule>
 </Files>
 
-<Files "block.htaccess">
+<Files "apache/block.htaccess">
 <IfModule mod_authz_core.c>
 	Require all denied
 </IfModule>
