@@ -4,79 +4,74 @@
     "short_name": "<?php echo $general['index']['title']; ?>",
 	"description": "<?php echo $general['index']['description']; ?>",
 	"display": "standalone",
-	"start_url": "/",
+	"start_url": "<?php echo $protocols.'://'.$sites['domain']; ?>/",
     "icons": [
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/apple-touch-icon-57x57.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:57x57']; ?>",
             "sizes": "57x57",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/apple-touch-icon-60x60.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:60x60']; ?>",
             "sizes": "60x60",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/apple-touch-icon-72x72.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:72x72']; ?>",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/apple-touch-icon-76x76.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:76x76']; ?>",
             "sizes": "76x76",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/apple-touch-icon-114x114.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:114x114']; ?>",
             "sizes": "114x114",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/mstile-70x70.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:70x70']; ?>",
             "sizes": "70x70",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/mstile-144x144.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:144x144']; ?>",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/mstile-150x150.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:150x150']; ?>",
             "sizes": "150x150",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/mstile-310x150.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:310x150']; ?>",
             "sizes": "310x150",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/mstile-310x310.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:310x310']; ?>",
             "sizes": "310x310",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/android-chrome-192x192.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:192x192']; ?>",
             "sizes": "192x192",
             "type": "image/png"
         },
-        {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/favicon-16x16.png",
+		{
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:16x16']; ?>",
             "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>pinned/favicon-32x32.png",
+            "src": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:32x32']; ?>",
             "sizes": "32x32",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff"
+    "theme_color": "<?php echo $seo['browsers']['color']['theme']; ?>",
+    "background_color": "<?php echo $seo['browsers']['color']['background']; ?>"
 }
