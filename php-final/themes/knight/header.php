@@ -40,6 +40,32 @@
 <!--SEO-->
 <link rel="canonical" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
 <link rel="alternate" type="application/ld+json" href="<?php echo $protocols.'://'.$sites['domain']; ?>/json-ld.json" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>"
+      },
+      "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
+      "image": [
+        "<?php echo $protocols.'://'.$sites['domain'].'/assets/images/'.$imgs; ?>"
+       ]<?php } ?><?php if(!empty($private['name'])){ ?>,
+      "author": {
+        "@type": "Person",
+        "name": "<?php echo $private['name']; ?>"
+      }<?php } ?><?php if(!empty($business['name'])){ ?>,
+       "publisher": {
+        "@type": "Organization",
+        "name": "<?php echo $business['name']; ?>",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<?php echo $protocols.'://'.$sites['domain']; ?>/assets/images/logo.png"
+        }
+      }<?php } ?>
+    }
+    </script>
 
 
 <meta property="og:site_name" content="<?php echo $title; ?>">
@@ -138,9 +164,9 @@ if(!empty($marketing['google']['adsense'])){
 
 <!--Template-->
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
-  <link href="<?php echo $version['external']['fontawesome']['css']; ?>" rel="stylesheet">
-  <script defer src="<?php echo $version['external']['fontawesome']['js']; ?>"></script>
-  <link href="<?php echo $version['internal']['custom']['css']['knight']; ?>" rel="stylesheet">
+  <link href="<?php echo $version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
+  <script defer src="<?php echo $version['internal']['fontawesome']['js']; ?>"></script>
+  <link href="<?php echo $version['internal']['production']['css']['knight']; ?>" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -183,7 +209,7 @@ if(!empty($marketing['google']['adsense'])){
 
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
-          <li class="active"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>">Home</a></li>
+          <li class="active"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><?php echo $general['index']['title']; ?></a></li>
           <li class="drop-down"><a href="">About</a>
             <ul>
               <li><a href="#about">About Us</a></li>
