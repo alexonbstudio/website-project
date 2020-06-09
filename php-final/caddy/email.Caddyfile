@@ -1,0 +1,6 @@
+#Preparing Caddyfile * caddyserver v2
+
+rewrite index.php?pages=email /contact.html
+
+
+

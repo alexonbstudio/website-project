@@ -1,0 +1,13 @@
+#Preparing Caddyfile * caddyserver v2
+
+rewrite index.php?pages=law /rules.html
+rewrite index.php?pages=law&full=cgu /cgu.html
+rewrite index.php?pages=law&full=cgv /cgv.html
+rewrite index.php?pages=law&full=dmca /dmca.html
+rewrite index.php?pages=law&full=legal /legal.html
+rewrite index.php?pages=law&full=policy-privacy /policy-privacy.html
+rewrite index.php?pages=law&full=rgpd /grpd.html
+
+
+
+
