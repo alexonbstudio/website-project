@@ -14,6 +14,7 @@
 + https://cssminifier.com/
 + https://javascript-minifier.com/
 + https://php.net/
++ https://winginx.com/en/htaccess
 + https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/?referrer=ampproject.org
 
 ## Manifest, all Browser (chrom, safari, wondows, favicon)
