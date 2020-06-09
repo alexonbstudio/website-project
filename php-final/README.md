@@ -19,6 +19,7 @@
 
 ## Manifest, all Browser (chrom, safari, wondows, favicon)
 + https://realfavicongenerator.net/
+
 ##compress images
 + https://tinypng.com/
 
