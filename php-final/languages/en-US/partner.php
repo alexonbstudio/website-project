@@ -2,7 +2,7 @@
 
 $partner = array(
 	'index' => array(
-		'title' => '',
+		'title' => 'Partner',
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
