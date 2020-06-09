@@ -33,9 +33,18 @@ $seo = array(
 			'key' => 'eebbc322e6a0ff75'
 		)
 		
+	),
+	/*			All Browser Pinned - just color on HEX			*/
+	'browsers' => array(
+		'color' => array(
+			'title' => '#2b5797',
+			'themes' => '#ffffff',
+			'safari' => '#5bbad5',
+			'background' => '#ffffff'
+		)
 	)
 );
 
 $JE_seo = json_encode($seo);
-
+# $seo['browsers']['color']['title']
 ?>
