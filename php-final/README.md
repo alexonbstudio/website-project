@@ -14,6 +14,7 @@
 + https://cssminifier.com/
 + https://javascript-minifier.com/
 + https://php.net/
++ https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/?referrer=ampproject.org
 
 
 You can support me to make a donation on https://alexonbstudio.fr/donation.html
