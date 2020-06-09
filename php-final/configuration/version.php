@@ -3,8 +3,8 @@ $local_vendor = 'assets/vendor/';
 $local_custom = 'assets/custom/';
 $local_production = 'assets/production/';
 $cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/';
-$cdn_custom = 'https://cdn.alexonbstudio.fr/assets/';
-$cdn_production = 'https://cdn.alexonbstudio.fr/assets/';
+$cdn_custom = 'https://www.alexonbstudio.fr/assets/';
+$cdn_production = 'https://www.alexonbstudio.fr/assets/';
 
 $version = array(
 	'internal' => array(
@@ -61,12 +61,12 @@ $version = array(
 		),
 		'production' => array(
 			'css' => array(
-				'default' => $local_production.'css/default.css',
-				'knight' => $local_production.'css/knight.css'
+				'default' => $local_production.'css/default.min.css',
+				'knight' => $local_production.'css/knight.min.css'
 			),
 			'js' => array(
 				/*'default' => $local_production.'js/default.js',*/
-				'knight' => $local_production.'js/knight.js'
+				'knight' => $local_production.'js/knight.min.js'
 			)
 		)
 	),
@@ -125,12 +125,12 @@ $version = array(
 		),
 		'production' => array(
 			'css' => array(
-				'default' => $cdn_production.'production/css/default.css',
-				'knight' => $cdn_production.'production/css/knight.css'
+				'default' => $cdn_production.'production/css/default.min.css',
+				'knight' => $cdn_production.'production/css/knight.min.css'
 			),
 			'js' => array(
-				/*'default' => $cdn_production.'production/js/default.js',*/
-				'knight' => $cdn_production.'production/js/knight.js'
+				/*'default' => $cdn_production.'production/js/default.min.js',*/
+				'knight' => $cdn_production.'production/js/knight.min.js'
 			)
 		)
 	)
