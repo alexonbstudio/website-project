@@ -1,5 +1,5 @@
 <?php
-# $private['mail']['public']
+# $private['mobile']['code']
 
 $private = array(
 	'name' => '',
