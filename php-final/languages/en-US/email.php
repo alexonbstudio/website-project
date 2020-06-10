@@ -18,10 +18,15 @@ $email = array(
 				'message' => 'Message:'
 			),
 			'placeholder' => array(
-				'email' => '',
-				'phone' => '',
-				'name' => '',
-				'message' => ''
+				'email' => 'Please enter a valid email',
+				'phone' => 'Please enter a valid number',
+				'name' => 'Please enter at least 4 chars',
+				'message' => 'Please write something for us'
+			),
+			'form' => array(
+				'load' => 'Loading',
+				'msg-thanks' => 'Your message has been sent. Thank you!',
+				'send' => 'Send Message'
 			)
 			/*custom your own*/
 		),
