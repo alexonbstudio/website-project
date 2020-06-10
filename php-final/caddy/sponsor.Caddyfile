@@ -1,4 +1,4 @@
 #Preparing Caddyfile * caddyserver v2
 #sponsor
-rewrite index.php?pages=sponsor /contact/sponsor.html
+rewrite index.php?pages=sponsor /sponsor.html
 

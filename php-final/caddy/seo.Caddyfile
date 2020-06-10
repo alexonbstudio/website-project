@@ -1,51 +1,46 @@
 #Preparing Caddyfile * caddyserver v2
 
-rewrite  /.html
-
-<IfModule mod_rewrite.c>
-RewriteEngine on
 #seo
 ###### XML ###### 
-RewriteRule ^rss\.xml$ seo.php?xml=rss [L]
-RewriteRule ^BingSiteAuth\.xml$ seo.php?xml=bingsiteauth [L]
-RewriteRule ^crossdomain\.xml$ seo.php?xml=crossdomain [L]
-RewriteRule ^sitemap\.xml$ seo.php?xml=sitemap [L]
+Rewrite seo.php?xml=rss rss.xml
+Rewrite seo.php?xml=bingsiteauth BingSiteAuth.xml
+Rewrite seo.php?xml=crossdomain crossdomain.xml
+Rewrite seo.php?xml=sitemap sitemap.xml
 ##SITEMAP - Translate##
-RewriteRule ^sitemap-index\.xml$ seo.php?xml=sitemap&translate=default [L]
-RewriteRule ^sitemap-en\.xml$ seo.php?xml=sitemap&translate=en [L]
-RewriteRule ^sitemap-fr\.xml$ seo.php?xml=sitemap&translate=fr [L]
+Rewrite seo.php?xml=sitemap&translate=default sitemap-index.xml
+Rewrite seo.php?xml=sitemap&translate=en sitemap-en.xml
+Rewrite seo.php?xml=sitemap&translate=fr sitemap-fr.xml
 
-RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
-RewriteRule ^browserconfig\.xml$ seo.php?xml=badge [L]
-RewriteRule ^dublincore\.xml$ seo.php?xml=dublincore [L]
-RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
+Rewrite seo.php?xml=badge badge.xml
+Rewrite seo.php?xml=badge browserconfig.xml
+Rewrite seo.php?xml=dublincore dublincore.xml
+Rewrite seo.php?xml=badge badge.xml
 
 ###### JSON ###### 
-RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
-RewriteRule ^site\.webmanifest$ seo.php?json=manifest [L]
-RewriteRule ^json-ld\.json$ seo.php?json=ld [L]
-RewriteRule ^\.well-known/microsoft-identity-association\.json$ seo.php?json=microsoft-identity-association [L]
+Rewrite seo.php?json=manifest manifest.json
+Rewrite seo.php?json=manifest site.webmanifest
+Rewrite seo.php?json=ld json-ld.json
+Rewrite seo.php?json=microsoft-identity-association .well-known/microsoft-identity-association.json
 
 ###### TXT ###### 
-RewriteRule ^robots\.txt$ seo.php?txt=robots [L]
-RewriteRule ^humans\.txt$ seo.php?txt=humans [L]
-RewriteRule ^\.well-known/brave-rewards-verification\.txt$ seo.php?txt=brave-rewards-verification [L]
-RewriteRule ^ads\.txt$ seo.php?txt=ads [L]
+Rewrite seo.php?txt=robots robots.txt
+Rewrite seo.php?txt=humans humans.txt
+Rewrite seo.php?txt=brave-rewards-verification .well-known/brave-rewards-verification.txt
+Rewrite seo.php?txt=ads ads.txt
 
 ###### HTML VERIFY ###### 
 ## take $var = $seo['html-verify']['dailymotion']['key']  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#RewriteRule ^$var\.html$ seo.php?html-verify=dailymotion [L]
+#Rewrite seo.php?html-verify=dailymotion $var.html
 
 ## take $var = $seo['html-verify']['google']['key']  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#RewriteRule ^$var\.html$ seo.php?html-verify=google [L]
+#Rewrite seo.php?html-verify=google $var.html
 
 ## take $var = $seo['html-verify']['pinterest']['key'] with only 5 caracter  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#RewriteRule ^pinterest-$var\.html$ seo.php?html-verify=pinterest [L]
-#RewriteRule ^pinterest-$var\.html$ seo.php?html-verify=pinterest [L]
+#Rewrite seo.php?html-verify=pinterest pinterest-$var.html
+#Rewrite seo.php?html-verify=pinterest pinterest-$var.html
 
 ## take $var = $seo['html-verify']['yandex']['key']  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#RewriteRule ^yandex_$var\.html$ seo.php?html-verify=yandex [L]
-RewriteRule ^yandex_eebbc322e6a0ff75\.html$ seo.php?html-verify=yandex [L]
+#Rewrite seo.php?html-verify=yandex yandex_$var.html
+Rewrite seo.php?html-verify=yandex yandex_eebbc322e6a0ff75.html
 
 
-</IfModule>

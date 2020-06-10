@@ -1,11 +1,7 @@
 #Preparing Caddyfile * caddyserver v2
 
-rewrite  /.html
-
-<IfModule mod_rewrite.c>
-RewriteEngine on
 #Translate French
-RewriteRule ^fr/accueil.html$ general.php?lang=fr&pages=index [L]
+Rewrite general.php?lang=fr&pages=index fr/accueil.html
 
 ####################################################################################################
 ####################################################################################################
@@ -13,37 +9,37 @@ RewriteRule ^fr/accueil.html$ general.php?lang=fr&pages=index [L]
 ####################################################################################################
 
 ########## LAW - French ########## 
-RewriteRule ^fr/règles\.html$ law.php?lang=fr&pages=law [L]
-RewriteRule ^fr/conditions-générales-utilisation\.html$ law.php?lang=fr&pages=law&full=cgu [L]
-RewriteRule ^fr/conditions-générales-de-vente\.html$ law.php?lang=fr&pages=law&full=cgv [L]
-RewriteRule ^fr/dmca\.html$ law.php?lang=fr&pages=law&full=dmca [L]
-RewriteRule ^fr/mentions-légales\.html$ law.php?lang=fr&pages=law&full=legal [L]
-RewriteRule ^fr/politique-de-confidentialité\.html$ law.php?lang=fr&pages=law&full=policy-privacy [L]
-RewriteRule ^fr/rgpd\.html$ law.php?lang=fr&pages=law&full=rgpd [L]
+Rewrite law.php?lang=fr&pages=law fr/règles.html
+Rewrite law.php?lang=fr&pages=law&full=cgu fr/conditions-générales-utilisation.html
+Rewrite law.php?lang=fr&pages=law&full=cgv fr/conditions-générales-de-vente.html
+Rewrite law.php?lang=fr&pages=law&full=dmca fr/dmca.html
+Rewrite law.php?lang=fr&pages=law&full=legal fr/mentions-légales.html
+Rewrite law.php?lang=fr&pages=law&full=policy-privacy fr/politique-de-confidentialité.html
+Rewrite law.php?lang=fr&pages=law&full=rgpd fr/rgpd.html
 
 
 ########## SPONSOR - French ##########
-RewriteRule ^fr/sponsorisé\.html$ sponsor.php?lang=fr&pages=index [L]
+Rewrite sponsor.php?lang=fr&pages=index fr/sponsorisé.html
 
 
 
 
 ########## PARTNER - French ##########
-RewriteRule ^fr/partenaire\.html$ partner.php?lang=fr&pages=index [L]
+Rewrite partner.php?lang=fr&pages=index fr/partenaire.html
 
 
 
 
 
 ########## CONTACT - French ##########
-RewriteRule ^fr/contactez\.html$ email.php?lang=fr&pages=index [L]
+Rewrite email.php?lang=fr&pages=index fr/contactez.html
 
 
 
 
 ########## BLOCK - French ##########
-RewriteRule ^fr/contact/success\.html$ block.php?lang=fr&pages=success [L]
-RewriteRule ^fr/erreur\.html$ block.php?lang=fr&pages=error [L]
+Rewrite block.php?lang=fr&pages=success fr/contact/success.html
+Rewrite block.php?lang=fr&pages=error fr/erreur.html
 
 
 ####################################################################################################
@@ -52,43 +48,41 @@ RewriteRule ^fr/erreur\.html$ block.php?lang=fr&pages=error [L]
 ####################################################################################################
 
 #Translate English
-RewriteRule ^en/home.html$ general.php?lang=en&pages=index [L]
+Rewrite general.php?lang=en&pages=index en/home.html
 
 
 ########## LAW - English ########## 
-RewriteRule ^en/rules\.html$ law.php?lang=en&pages=law [L]
-RewriteRule ^en/terms-and-conditions\.html$ law.php?lang=en&pages=law&full=cgu [L]
-RewriteRule ^en/terms-and-conditions-of-sale\.html$ law.php?lang=en&pages=law&full=cgv [L]
-RewriteRule ^en/dmca\.html$ law.php?lang=en&pages=law&full=dmca [L]
-RewriteRule ^en/legal\.html$ law.php?lang=en&pages=law&full=legal [L]
-RewriteRule ^en/privacy-policy\.html$ law.php?lang=en&pages=law&full=policy-privacy [L]
-RewriteRule ^en/grpd\.html$ law.php?lang=en&pages=law&full=rgpd [L]
+Rewrite law.php?lang=en&pages=law en/rules.html
+Rewrite law.php?lang=en&pages=law&full=cgu en/terms-and-conditions.html
+Rewrite law.php?lang=en&pages=law&full=cgv en/terms-and-conditions-of-sale.html
+Rewrite law.php?lang=en&pages=law&full=dmca en/dmca.html
+Rewrite law.php?lang=en&pages=law&full=legal en/legal.html
+Rewrite law.php?lang=en&pages=law&full=policy-privacy en/privacy-policy.html
+Rewrite law.php?lang=en&pages=law&full=rgpd en/grpd.html
 
 
 ########## SPONSOR - English ##########
-RewriteRule ^en/sponsor\.html$ sponsor.php?lang=en&pages=index [L]
+Rewrite sponsor.php?lang=en&pages=index en/sponsor.html
 
 
 
 
 
 ########## PARTNER - English ##########
-RewriteRule ^en/partner\.html$ partner.php?lang=en&pages=index [L]
+Rewrite partner.php?lang=en&pages=index en/partner.html
 
 
 
 
 
 ########## CONTACT - English ##########
-RewriteRule ^en/contact\.html$ email.php?lang=en&pages=index [L]
+Rewrite email.php?lang=en&pages=index en/contact.html
 
 
 
 
 ########## BLOCK - English ##########
-RewriteRule ^en/contact/success\.html$ block.php?lang=en&pages=success [L]
-RewriteRule ^en/error\.html$ block.php?lang=en&pages=error [L]
+Rewrite block.php?lang=en&pages=success en/contact/success.html
+Rewrite block.php?lang=en&pages=error en/error.html
 
 
-
-</IfModule>
