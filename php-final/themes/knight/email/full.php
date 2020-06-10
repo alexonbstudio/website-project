@@ -1,27 +1,94 @@
 
-  <!-- Page Content -->
-  <div class="container">
+  <main id="main">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3"><?php echo $title; ?>
-    </h1>
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs" data-aos="fade-up">
+      <div class="container">
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['name']; ?></a>
-      </li>
-      <li class="breadcrumb-item active"><?php echo $title; ?></li>
-    </ol>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><?php echo $title; ?></h2>
+          <ol>
+            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['name']; ?></a></li>
+            <li><?php echo $title; ?></li>
+          </ol>
+        </div>
 
-    <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
-
-    <div class="row">
-      <div class="col-lg-12">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
       </div>
-    </div>
-    <!-- /.row -->
+    </section><!-- End Breadcrumbs -->
 
-  </div>
-  <!-- /.container -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
+			<?php if(!empty($business['local']['name'])){ ?>
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4><?php echo $business['local']['name']; ?></h4>
+                <p><?php echo $business['local']['address']; ?>,<br>
+				<?php echo $business['local']['postal'].', '.$business['local']['city'].', '.$business['local']['contry']; ?>
+				</p>
+              </div>
+			<?php } ?>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
+                <p><?php echo $private['mail']['public']; ?></p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4><?php echo $email['index']['content']['default']['phone']; ?>:</h4>
+                <p><a href="tel:<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>">
+					<?php echo $private['mobile']['normal']; ?><?php echo $private['mobile']['number']; ?>
+				</a></p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form method="post" role="form" class="php-email-form" data-aos="fade-left">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="<?php echo $email['index']['content']['default']['name']; ?>" data-rule="minlen:4" data-msg="<?php echo $email['index']['content']['placeholder']['name']; ?>" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="<?php echo $email['index']['content']['default']['email']; ?>" data-rule="email" data-msg="<?php echo $email['index']['content']['placeholder']['email']; ?>" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+			  <!--
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+			  //-->
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="<?php echo $email['index']['content']['placeholder']['message']; ?>" placeholder="<?php echo $email['index']['content']['default']['message']; ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading"><?php echo $email['index']['content']['form']['load']; ?></div>
+                <div class="error-message"></div>
+                <div class="sent-message"><?php echo $email['index']['content']['form']['msg-thanks']; ?></div>
+              </div>
+              <div class="text-center"><button type="submit"><?php echo $email['index']['content']['form']['send']; ?></button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
