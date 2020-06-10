@@ -1,5 +1,5 @@
 <?php
-
+# $email['index']['content']['default']['phone']
 $email = array(
 	'index' => array(
 		'title' => 'Contactez',
@@ -12,16 +12,21 @@ $email = array(
 		),
 		'content' => array(
 			'default' => array(
-				'email' => 'E-mail:',
-				'phone' => 'Téléphone:',
-				'name' => 'Nom complet:',
-				'message' => 'Message:'
+				'email' => 'E-mail',
+				'phone' => 'Téléphone',
+				'name' => 'Nom',
+				'message' => 'Message'
 			),
 			'placeholder' => array(
-				'email' => '',
-				'phone' => '',
-				'name' => '',
-				'message' => ''
+				'email' => 'S\'il vous plaît entrer un e-mail valide',
+				'phone' => 'S\'il vous plaît entrer un numéro valide',
+				'name' => 'S\'il vous plaît entrer au moins 4 chars',
+				'message' => 'S\'il vous plaît écrire quelque chose pour nous'
+			),
+			'form' => array(
+				'load' => 'Chargement',
+				'msg-thanks' => 'Votre message a été envoyé. Merci!',
+				'send' => 'Message Envoyé'
 			)
 			/*custom your own*/
 		),
