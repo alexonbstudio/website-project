@@ -1,7 +1,7 @@
 #Preparing Caddyfile * caddyserver v2
 
 #Translate French
-Rewrite general.php?lang=fr&pages=index fr/accueil.html
+Rewrite general.php?lang=fr&pages=index /fr/accueil.html
 
 ####################################################################################################
 ####################################################################################################
@@ -9,37 +9,37 @@ Rewrite general.php?lang=fr&pages=index fr/accueil.html
 ####################################################################################################
 
 ########## LAW - French ########## 
-Rewrite law.php?lang=fr&pages=law fr/règles.html
-Rewrite law.php?lang=fr&pages=law&full=cgu fr/conditions-générales-utilisation.html
-Rewrite law.php?lang=fr&pages=law&full=cgv fr/conditions-générales-de-vente.html
-Rewrite law.php?lang=fr&pages=law&full=dmca fr/dmca.html
-Rewrite law.php?lang=fr&pages=law&full=legal fr/mentions-légales.html
-Rewrite law.php?lang=fr&pages=law&full=policy-privacy fr/politique-de-confidentialité.html
-Rewrite law.php?lang=fr&pages=law&full=rgpd fr/rgpd.html
+Rewrite law.php?lang=fr&pages=law /fr/règles.html
+Rewrite law.php?lang=fr&pages=law&full=cgu /fr/conditions-générales-utilisation.html
+Rewrite law.php?lang=fr&pages=law&full=cgv /fr/conditions-générales-de-vente.html
+Rewrite law.php?lang=fr&pages=law&full=dmca /fr/dmca.html
+Rewrite law.php?lang=fr&pages=law&full=legal /fr/mentions-légales.html
+Rewrite law.php?lang=fr&pages=law&full=policy-privacy /fr/politique-de-confidentialité.html
+Rewrite law.php?lang=fr&pages=law&full=rgpd /fr/rgpd.html
 
 
 ########## SPONSOR - French ##########
-Rewrite sponsor.php?lang=fr&pages=index fr/sponsorisé.html
+Rewrite sponsor.php?lang=fr&pages=index /fr/sponsorisé.html
 
 
 
 
 ########## PARTNER - French ##########
-Rewrite partner.php?lang=fr&pages=index fr/partenaire.html
+Rewrite partner.php?lang=fr&pages=index /fr/partenaire.html
 
 
 
 
 
 ########## CONTACT - French ##########
-Rewrite email.php?lang=fr&pages=index fr/contactez.html
+Rewrite email.php?lang=fr&pages=index /fr/contactez.html
 
 
 
 
 ########## BLOCK - French ##########
-Rewrite block.php?lang=fr&pages=success fr/contact/success.html
-Rewrite block.php?lang=fr&pages=error fr/erreur.html
+Rewrite block.php?lang=fr&pages=success /fr/contact/success.html
+Rewrite block.php?lang=fr&pages=error /fr/erreur.html
 
 
 ####################################################################################################
@@ -48,41 +48,41 @@ Rewrite block.php?lang=fr&pages=error fr/erreur.html
 ####################################################################################################
 
 #Translate English
-Rewrite general.php?lang=en&pages=index en/home.html
+Rewrite general.php?lang=en&pages=index /en/home.html
 
 
 ########## LAW - English ########## 
-Rewrite law.php?lang=en&pages=law en/rules.html
-Rewrite law.php?lang=en&pages=law&full=cgu en/terms-and-conditions.html
-Rewrite law.php?lang=en&pages=law&full=cgv en/terms-and-conditions-of-sale.html
-Rewrite law.php?lang=en&pages=law&full=dmca en/dmca.html
-Rewrite law.php?lang=en&pages=law&full=legal en/legal.html
-Rewrite law.php?lang=en&pages=law&full=policy-privacy en/privacy-policy.html
-Rewrite law.php?lang=en&pages=law&full=rgpd en/grpd.html
+Rewrite law.php?lang=en&pages=law /en/rules.html
+Rewrite law.php?lang=en&pages=law&full=cgu /en/terms-and-conditions.html
+Rewrite law.php?lang=en&pages=law&full=cgv /en/terms-and-conditions-of-sale.html
+Rewrite law.php?lang=en&pages=law&full=dmca /en/dmca.html
+Rewrite law.php?lang=en&pages=law&full=legal /en/legal.html
+Rewrite law.php?lang=en&pages=law&full=policy-privacy /en/privacy-policy.html
+Rewrite law.php?lang=en&pages=law&full=rgpd /en/grpd.html
 
 
 ########## SPONSOR - English ##########
-Rewrite sponsor.php?lang=en&pages=index en/sponsor.html
+Rewrite sponsor.php?lang=en&pages=index /en/sponsor.html
 
 
 
 
 
 ########## PARTNER - English ##########
-Rewrite partner.php?lang=en&pages=index en/partner.html
+Rewrite partner.php?lang=en&pages=index /en/partner.html
 
 
 
 
 
 ########## CONTACT - English ##########
-Rewrite email.php?lang=en&pages=index en/contact.html
+Rewrite email.php?lang=en&pages=index /en/contact.html
 
 
 
 
 ########## BLOCK - English ##########
-Rewrite block.php?lang=en&pages=success en/contact/success.html
-Rewrite block.php?lang=en&pages=error en/error.html
+Rewrite block.php?lang=en&pages=success /en/contact/success.html
+Rewrite block.php?lang=en&pages=error /en/error.html
 
 

@@ -2,45 +2,45 @@
 
 #seo
 ###### XML ###### 
-Rewrite seo.php?xml=rss rss.xml
-Rewrite seo.php?xml=bingsiteauth BingSiteAuth.xml
-Rewrite seo.php?xml=crossdomain crossdomain.xml
-Rewrite seo.php?xml=sitemap sitemap.xml
+Rewrite seo.php?xml=rss /rss.xml
+Rewrite seo.php?xml=bingsiteauth /BingSiteAuth.xml
+Rewrite seo.php?xml=crossdomain /crossdomain.xml
+Rewrite seo.php?xml=sitemap /sitemap.xml
 ##SITEMAP - Translate##
-Rewrite seo.php?xml=sitemap&translate=default sitemap-index.xml
-Rewrite seo.php?xml=sitemap&translate=en sitemap-en.xml
-Rewrite seo.php?xml=sitemap&translate=fr sitemap-fr.xml
+Rewrite seo.php?xml=sitemap&translate=default /sitemap-index.xml
+Rewrite seo.php?xml=sitemap&translate=en /sitemap-en.xml
+Rewrite seo.php?xml=sitemap&translate=fr /sitemap-fr.xml
 
-Rewrite seo.php?xml=badge badge.xml
-Rewrite seo.php?xml=badge browserconfig.xml
-Rewrite seo.php?xml=dublincore dublincore.xml
-Rewrite seo.php?xml=badge badge.xml
+Rewrite seo.php?xml=badge /badge.xml
+Rewrite seo.php?xml=badge /browserconfig.xml
+Rewrite seo.php?xml=dublincore /dublincore.xml
+Rewrite seo.php?xml=badge /badge.xml
 
 ###### JSON ###### 
-Rewrite seo.php?json=manifest manifest.json
-Rewrite seo.php?json=manifest site.webmanifest
-Rewrite seo.php?json=ld json-ld.json
-Rewrite seo.php?json=microsoft-identity-association .well-known/microsoft-identity-association.json
+Rewrite seo.php?json=manifest /manifest.json
+Rewrite seo.php?json=manifest /site.webmanifest
+Rewrite seo.php?json=ld /json-ld.json
+Rewrite seo.php?json=microsoft-identity-association /.well-known/microsoft-identity-association.json
 
 ###### TXT ###### 
-Rewrite seo.php?txt=robots robots.txt
-Rewrite seo.php?txt=humans humans.txt
-Rewrite seo.php?txt=brave-rewards-verification .well-known/brave-rewards-verification.txt
-Rewrite seo.php?txt=ads ads.txt
+Rewrite seo.php?txt=robots /robots.txt
+Rewrite seo.php?txt=humans /humans.txt
+Rewrite seo.php?txt=brave-rewards-verification /.well-known/brave-rewards-verification.txt
+Rewrite seo.php?txt=ads /ads.txt
 
 ###### HTML VERIFY ###### 
 ## take $var = $seo['html-verify']['dailymotion']['key']  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#Rewrite seo.php?html-verify=dailymotion $var.html
+#Rewrite seo.php?html-verify=dailymotion /$var.html
 
 ## take $var = $seo['html-verify']['google']['key']  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#Rewrite seo.php?html-verify=google $var.html
+#Rewrite seo.php?html-verify=google /$var.html
 
 ## take $var = $seo['html-verify']['pinterest']['key'] with only 5 caracter  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#Rewrite seo.php?html-verify=pinterest pinterest-$var.html
-#Rewrite seo.php?html-verify=pinterest pinterest-$var.html
+#Rewrite seo.php?html-verify=pinterest /pinterest-$var.html
+#Rewrite seo.php?html-verify=pinterest /pinterest-$var.html
 
 ## take $var = $seo['html-verify']['yandex']['key']  on files <site.tld>/configuration/seo.php between html-verify with your own ['key'] ##
-#Rewrite seo.php?html-verify=yandex yandex_$var.html
-Rewrite seo.php?html-verify=yandex yandex_eebbc322e6a0ff75.html
+#Rewrite seo.php?html-verify=yandex /yandex_$var.html
+Rewrite seo.php?html-verify=yandex /yandex_eebbc322e6a0ff75.html
 
 
