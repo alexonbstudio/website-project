@@ -15,7 +15,7 @@
 	<?php if(!empty($social['viadeo']['name'])){ ?>Viadeo: <?php echo $social['viadeo']['name']; } ?>
 	<?php if(!empty($social['mixcloud']['name'])){ ?>Mixcloud: <?php echo $social['mixcloud']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Dailymotion: <?php echo $social['dailymotion']['name']; } ?>
-	From: <?php echo $private['local']['name'].' '.$private['local']['address'].' '.$private['local']['postal'].' '.$business['local']['city'].' '.$private['local']['contry']; ?>
+	From: <?php echo $private['local']['name'].' '.$private['local']['address'].' '.$private['local']['postal'].' '.$private['local']['city'].' '.$private['local']['contry']; ?> 
 <?php } ?>
 <?php if(!empty($business['local']['name'])){ ?>
 /* TEAM */
@@ -47,11 +47,23 @@
 	WebDesigner: <?php echo $credits['webdesigner']['startbootstrap']['name'].', '.$credits['webdesigner']['bootstrapmade']['name']; ?>
 	Webmaster: <?php echo $credits['webmaster']['alexonbstudio']['name']; ?>
 	
-#	Designer: <?php echo $credits['designer']['alexonbstudio']['name']; ?>
+	Designer: <?php echo $credits['designer']['alexonbstudio']['name']; ?>
 #	Photographer:  <?php echo $credits['photographer']['alexonbstudio']['name']; ?>
-#	Images: <?php echo $credits['images']['alexonbstudio']['name']; ?>
-#	Marketing: <?php echo $credits['marketing']['alexonbstudio']['name']; ?>
-#	Video: <?php echo $credits['video']['alexonbstudio']['name']; ?>
+	Images: <?php 
+		echo $credits['images']['alexonbstudio']['name'].', '.
+		$credits['images']['pexels']['name'].', '.
+		$credits['images']['unsplash']['name'].', '.
+		$credits['images']['pixabay']['name'].', '.
+		$credits['images']['wikimedia']['name']; 
+		
+	?>
+	Marketing: <?php echo $credits['marketing']['alexonbstudio']['name']; ?>
+	Video: <?php 
+		echo $credits['video']['alexonbstudio']['name'].', '.
+		$credits['images']['pexels']['name'].', '.
+		$credits['images']['pixabay']['name']; 
+	
+	?>
 	
 
 
@@ -61,7 +73,7 @@
 	Multi-Language: <?php echo $translate['manual']['frontend']['english']; ?>
 	Doctype: HTML5
 	IDE Software: Notepad++
-	Technologie: Bootstrap, Fontawesome, PHP, jQuery, Txt, Xml, JSON, Apache, nginx
-	Copyright &copy; AlexonbStudio (Website Project) - Alexon Balangue
-	Licences: CC-BY-SA
-	Version: <?php echo $credits['version']['beta'].' '.$credits['version']['actual']; ?>
+	Technologie: Bootstrap, Fontawesome, PHP, jQuery, Txt, Xml, JSON, Apache, nginx, caddy
+	Copyright &copy; AlexonbStudio (Website Project = WP) - Alexon Balangue - CC-BY-SA
+	Licenses: GPL v3.0
+	Version: <?php echo $credits['version']['stable'].' '.$credits['version']['actual']; ?>
