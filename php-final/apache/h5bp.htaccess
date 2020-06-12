@@ -94,7 +94,7 @@
 #
 # https://httpd.apache.org/docs/current/mod/core.html#errordocument
 
-# ErrorDocument 404 /404.html
+ ErrorDocument 404 /error.html
 
 # ----------------------------------------------------------------------
 # | Error prevention                                                   |
@@ -333,15 +333,15 @@ AddDefaultCharset utf-8
 #     https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 #     https://tools.ietf.org/html/draft-ietf-acme-acme-12
 
-# <IfModule mod_rewrite.c>
-#    RewriteEngine On
-#    RewriteCond %{HTTPS} !=on
-#    # (1)
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-#    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </IfModule>
+ <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    # (1)
+     RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+     RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
+     RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Suppressing the `www.` at the beginning of URLs                    |
@@ -366,23 +366,23 @@ AddDefaultCharset utf-8
 #
 #     https://github.com/h5bp/server-configs-apache/issues/52
 
-<IfModule mod_rewrite.c>
+#<IfModule mod_rewrite.c>
 
-    RewriteEngine On
+#    RewriteEngine On
 
-    # (1)
-    RewriteCond %{HTTPS} =on
-    RewriteRule ^ - [E=PROTO:https]
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^ - [E=PROTO:http]
+#    # (1)
+#    RewriteCond %{HTTPS} =on
+#    RewriteRule ^ - [E=PROTO:https]
+#    RewriteCond %{HTTPS} !=on
+#    RewriteRule ^ - [E=PROTO:http]
 
-    # (2)
-    # RewriteCond %{HTTPS} !=on
+#    # (2)
+#    # RewriteCond %{HTTPS} !=on
 
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+#    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 
-</IfModule>
+#</IfModule>
 
 # ----------------------------------------------------------------------
 # | Forcing the `www.` at the beginning of URLs                        |
@@ -410,25 +410,25 @@ AddDefaultCharset utf-8
 # Be aware that the following might not be a good idea if you use "real"
 # subdomains for certain parts of your website.
 
-# <IfModule mod_rewrite.c>
+ <IfModule mod_rewrite.c>
 
-#     RewriteEngine On
+     RewriteEngine On
 
-#     # (1)
-#     RewriteCond %{HTTPS} =on
-#     RewriteRule ^ - [E=PROTO:https]
-#     RewriteCond %{HTTPS} !=on
-#     RewriteRule ^ - [E=PROTO:http]
+     # (1)
+     RewriteCond %{HTTPS} =on
+     RewriteRule ^ - [E=PROTO:https]
+     RewriteCond %{HTTPS} !=on
+     RewriteRule ^ - [E=PROTO:http]
 
-#     # (2)
-#     # RewriteCond %{HTTPS} !=on
+     # (2)
+     # RewriteCond %{HTTPS} !=on
 
-#     RewriteCond %{HTTP_HOST} !^www\. [NC]
-#     RewriteCond %{SERVER_ADDR} !=127.0.0.1
-#     RewriteCond %{SERVER_ADDR} !=::1
-#     RewriteRule ^ %{ENV:PROTO}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+     RewriteCond %{HTTP_HOST} !^www\. [NC]
+     RewriteCond %{SERVER_ADDR} !=127.0.0.1
+     RewriteCond %{SERVER_ADDR} !=::1
+     RewriteRule ^ %{ENV:PROTO}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# </IfModule>
+ </IfModule>
 
 # ######################################################################
 # # SECURITY                                                           #
@@ -468,9 +468,9 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
 # https://www.owasp.org/index.php/Clickjacking
 
-# <IfModule mod_headers.c>
-#     Header always set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header always set X-Frame-Options "SAMEORIGIN" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Content Security Policy (CSP)                                      |
@@ -647,11 +647,11 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2014/08/18/strict-transport-security/
 # https://hstspreload.org/
 
-# <IfModule mod_headers.c>
-#     Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains" "expr=%{HTTPS} == 'on'"
-#     # (1) Enable your site for HSTS preload inclusion.
-#     # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
-# </IfModule>
+ <IfModule mod_headers.c>
+     # Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains" "expr=%{HTTPS} == 'on'"
+     # (1) Enable your site for HSTS preload inclusion.
+      Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Content Type Options                                               |
@@ -709,10 +709,10 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/
 # https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
 
-# <IfModule mod_headers.c>
-#     #                           (1)    (2)
-#     Header always set X-XSS-Protection "1; mode=block" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
-# </IfModule>
+ <IfModule mod_headers.c>
+     #                           (1)    (2)
+     Header always set X-XSS-Protection "1; mode=block" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Referrer Policy                                                    |
@@ -736,10 +736,10 @@ AddDefaultCharset utf-8
 # https://scotthelme.co.uk/a-new-security-header-referrer-policy/
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 
-# <IfModule mod_headers.c>
-#     #                                                             (1)
-#     Header always set Referrer-Policy "strict-origin-when-cross-origin" "expr=%{CONTENT_TYPE} =~ m#text\/(css|html|javascript)|application\/pdf|xml#i"
-# </IfModule>
+ <IfModule mod_headers.c>
+     #                                                             (1)
+     Header always set Referrer-Policy "strict-origin-when-cross-origin" "expr=%{CONTENT_TYPE} =~ m#text\/(css|html|javascript)|application\/pdf|xml#i"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Disable TRACE HTTP Method                                          |
@@ -909,42 +909,42 @@ ServerSignature Off
 #
 # https://httpd.apache.org/docs/current/mod/mod_brotli.html#precompressed
 
-# <IfModule mod_headers.c>
+ <IfModule mod_headers.c>
 
-#     RewriteCond %{HTTP:Accept-Encoding} br
-#     RewriteCond %{REQUEST_FILENAME}\.br -f
-#     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.br [L]
+     RewriteCond %{HTTP:Accept-Encoding} br
+     RewriteCond %{REQUEST_FILENAME}\.br -f
+     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.br [L]
 
-#     # Prevent mod_deflate double gzip
-#     RewriteRule \.br$ - [E=no-gzip:1]
+     # Prevent mod_deflate double gzip
+     RewriteRule \.br$ - [E=no-gzip:1]
 
-#     <FilesMatch "\.br$">
+     <FilesMatch "\.br$">
 
-#         <IfModule mod_mime.c>
-#             # Serve correct content types
-#             AddType text/css              css.br
-#             AddType text/calendar         ics.br
-#             AddType text/javascript       js.br
-#             AddType application/json      json.br
-#             AddType text/html             html.br
-#             AddType image/svg+xml         svg.br
+         <IfModule mod_mime.c>
+             # Serve correct content types
+             AddType text/css              css.br
+             AddType text/calendar         ics.br
+             AddType text/javascript       js.br
+             AddType application/json      json.br
+             AddType text/html             html.br
+             AddType image/svg+xml         svg.br
 
-#             # Serve correct content charset
-#             AddCharset utf-8 .css.br \
-#                              .ics.br \
-#                              .js.br \
-#                              .json.br
-#         </IfModule>
+             # Serve correct content charset
+             AddCharset utf-8 .css.br \
+                              .ics.br \
+                              .js.br \
+                              .json.br
+         </IfModule>
 
-#         # Force proxies to cache brotlied and non-brotlied files separately
-#         Header append Vary Accept-Encoding
+         # Force proxies to cache brotlied and non-brotlied files separately
+         Header append Vary Accept-Encoding
 
-#     </FilesMatch>
+     </FilesMatch>
 
-#     # Serve correct encoding type
-#     AddEncoding br .br
+     # Serve correct encoding type
+     AddEncoding br .br
 
-# </IfModule>
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | GZip pre-compressed content                                        |
@@ -964,46 +964,46 @@ ServerSignature Off
 #     keep the default behavior regarding .gz files.
 #     https://httpd.apache.org/docs/current/mod/mod_mime.html#removetype
 
-# <IfModule mod_headers.c>
+ <IfModule mod_headers.c>
 
-#     RewriteCond %{HTTP:Accept-Encoding} gzip
-#     RewriteCond %{REQUEST_FILENAME}\.gz -f
-#     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.gz [L]
+     RewriteCond %{HTTP:Accept-Encoding} gzip
+     RewriteCond %{REQUEST_FILENAME}\.gz -f
+     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.gz [L]
 
-#     # Prevent mod_deflate double gzip
-#     RewriteRule \.gz$ - [E=no-gzip:1]
+     # Prevent mod_deflate double gzip
+     RewriteRule \.gz$ - [E=no-gzip:1]
 
-#     <FilesMatch "\.gz$">
+     <FilesMatch "\.gz$">
 
-#         # Serve correct content types
-#         <IfModule mod_mime.c>
-#             # (1)
-#             RemoveType gz
+         # Serve correct content types
+         <IfModule mod_mime.c>
+             # (1)
+             RemoveType gz
 
-#             # Serve correct content types
-#             AddType text/css              css.gz
-#             AddType text/calendar         ics.gz
-#             AddType text/javascript       js.gz
-#             AddType application/json      json.gz
-#             AddType text/html             html.gz
-#             AddType image/svg+xml         svg.gz
+             # Serve correct content types
+             AddType text/css              css.gz
+             AddType text/calendar         ics.gz
+             AddType text/javascript       js.gz
+             AddType application/json      json.gz
+             AddType text/html             html.gz
+             AddType image/svg+xml         svg.gz
 
-#             # Serve correct content charset
-#             AddCharset utf-8 .css.gz \
-#                              .ics.gz \
-#                              .js.gz \
-#                              .json.gz
-#         </IfModule>
+             # Serve correct content charset
+             AddCharset utf-8 .css.gz \
+                              .ics.gz \
+                              .js.gz \
+                              .json.gz
+         </IfModule>
 
-#         # Force proxies to cache gzipped and non-gzipped files separately
-#         Header append Vary Accept-Encoding
+         # Force proxies to cache gzipped and non-gzipped files separately
+         Header append Vary Accept-Encoding
 
-#     </FilesMatch>
+     </FilesMatch>
 
-#     # Serve correct encoding type
-#     AddEncoding gzip .gz
+     # Serve correct encoding type
+     AddEncoding gzip .gz
 
-# </IfModule>
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | Content transformation                                             |
@@ -1033,9 +1033,9 @@ ServerSignature Off
 #
 #     https://developers.google.com/speed/pagespeed/module/configuration#notransform
 
-# <IfModule mod_headers.c>
-#     Header merge Cache-Control "no-transform"
-# </IfModule>
+ <IfModule mod_headers.c>
+     Header merge Cache-Control "no-transform"
+ </IfModule>
 
 # ----------------------------------------------------------------------
 # | ETags                                                              |
@@ -1190,7 +1190,7 @@ FileETag None
 
 # <IfModule mod_include.c>
 
-#     <FilesMatch "\.combined\.js$">
+#     <FilesMatch "assets/combined/main\.js$">
 #         Options +Includes
 #         AddOutputFilterByType INCLUDES application/javascript \
 #                                        application/x-javascript \
@@ -1198,7 +1198,7 @@ FileETag None
 #         SetOutputFilter INCLUDES
 #     </FilesMatch>
 
-#     <FilesMatch "\.combined\.css$">
+#     <FilesMatch "assets/combined/main\.css$">
 #         Options +Includes
 #         AddOutputFilterByType INCLUDES text/css
 #         SetOutputFilter INCLUDES
@@ -1217,9 +1217,9 @@ FileETag None
 # something like `*.css?v231`, please see:
 # https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
-# <IfModule mod_rewrite.c>
-#     RewriteEngine On
-#     RewriteCond %{REQUEST_FILENAME} !-f
-#     RewriteRule ^(.+)\.(\w+)\.(bmp|css|cur|gif|ico|jpe?g|m?js|a?png|svgz?|webp|webmanifest)$ $1.$3 [L]
-# </IfModule>
+ <IfModule mod_rewrite.c>
+     RewriteEngine On
+     RewriteCond %{REQUEST_FILENAME} !-f
+     RewriteRule ^(.+)\.(\w+)\.(bmp|css|cur|gif|ico|jpe?g|m?js|a?png|svgz?|webp|webmanifest)$ $1.$3 [L]
+ </IfModule>
 
