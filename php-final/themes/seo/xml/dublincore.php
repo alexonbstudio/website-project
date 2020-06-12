@@ -13,6 +13,8 @@
 	<dc:subject>
 		<rdf:Bag>
 			<rdf:li>alexonbstudio</rdf:li>
+			<rdf:li>wp</rdf:li>
+			<rdf:li>website project</rdf:li>
 			<rdf:li>'.$sites['name'].'</rdf:li>
 		</rdf:Bag>
 	</dc:subject>
