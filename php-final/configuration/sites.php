@@ -6,8 +6,8 @@ exemple $sites['e-mail']['contact'];
 
 */
 $sites = array(
-	'name' => 'Name',
-	'domain' => 'website-project.test', /*domain: exemple.tld*/
+	'name' => 'Website Project (WP)',
+	'domain' => 'alexonbstudio.fr', /*domain: exemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'knight',
 	'create' => array(),
