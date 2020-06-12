@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#sponsor
+RewriteRule ^sitemap\.html$ index.php?pages=sitemap [L]
+
+</IfModule>
