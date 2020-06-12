@@ -1,5 +1,5 @@
 <?php
-# $law['full']['content']['footer']
+# $law['pages']['sitemap']['images']
 $law = array(
 	'full' => array(
 		'content' => array(
@@ -21,7 +21,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/law.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'cgu' => array(
@@ -38,7 +38,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/cgu.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'cgv' => array(
@@ -55,7 +55,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/cgv.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'dmca' => array(
@@ -72,7 +72,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/copyright.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'legal' => array(
@@ -132,7 +132,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/copyright.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'policy-privacy' => array(
@@ -149,7 +149,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/privacy-policy.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'rgpd' => array(
@@ -166,7 +166,7 @@ $law = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'img/imag.jpg' /*directory images from <exemple.tld>/assets */
+			'images' => 'background/law/rgpd.jpg' /*directory images from <exemple.tld>/assets */
 		)
 	)
 );
