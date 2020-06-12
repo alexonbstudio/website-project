@@ -16,6 +16,10 @@ $credits = array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
+		'flaticon' => array(
+			'name' => 'Freepik',
+			'url' => 'https://www.flaticon.com/packs/international-flags'
+		)
 	),
 	'webdesigner' => array(
 		'startbootstrap' => array(
