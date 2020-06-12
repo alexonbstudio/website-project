@@ -31,6 +31,14 @@ Rewrite partner.php?lang=fr&pages=index /fr/partenaire.html
 
 
 
+########## SITEMAP - French ##########
+Rewrite sitemap.php?lang=fr&pages=index /fr/plan-du-site.html
+
+
+
+
+
+
 ########## CONTACT - French ##########
 Rewrite email.php?lang=fr&pages=index /fr/contactez.html
 
@@ -70,6 +78,15 @@ Rewrite sponsor.php?lang=en&pages=index /en/sponsor.html
 
 ########## PARTNER - English ##########
 Rewrite partner.php?lang=en&pages=index /en/partner.html
+
+
+
+
+
+
+########## SITEMAP - English ##########
+Rewrite sitemap.php?lang=en&pages=index /en/sitemap.html
+
 
 
 
