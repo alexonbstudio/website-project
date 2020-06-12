@@ -16,6 +16,7 @@
 + https://php.net/
 + https://winginx.com/en/htaccess
 + https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/?referrer=ampproject.org
++ https://spritegen.website-performance.org/
 
 ## Manifest, all Browser (chrom, safari, wondows, favicon)
 + https://realfavicongenerator.net/
