@@ -7,6 +7,13 @@ $partner = array(
 		'images' => 'https://alexonbstudio.fr/assets/',
 		'code' => 'PHA-alexonbstudio',
 		'sites' => 'planethoster.com'
+	),
+	'safecreative' => array(
+		'name' => 'safecreative',
+		'url' => 'https://www.safecreative.org/',
+		'images' => 'https://alexonbstudio.fr/assets/',
+		'code' => '2AWLRJ',
+		'sites' => 'safecreative.org'
 	)
 );
 
