@@ -36,6 +36,12 @@ RewriteRule ^fr/contactez\.html$ email.php?lang=fr&pages=index [L]
 
 
 
+########## SITEMAP - French ##########
+RewriteRule ^fr/plan-du-site\.html$ sitemap.php?lang=fr&pages=index [L]
+
+
+
+
 
 ########## BLOCK - French ##########
 RewriteRule ^fr/contact/success\.html$ block.php?lang=fr&pages=success [L]
@@ -77,6 +83,14 @@ RewriteRule ^en/partner\.html$ partner.php?lang=en&pages=index [L]
 
 ########## CONTACT - English ##########
 RewriteRule ^en/contact\.html$ email.php?lang=en&pages=index [L]
+
+
+
+
+
+
+########## SITEMAP - English ##########
+RewriteRule ^en/sitemap\.html$ sitemap.php?lang=en&pages=index [L]
 
 
 
