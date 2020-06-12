@@ -52,7 +52,8 @@ $version = array(
 		'custom' => array(
 			'css' => array(
 				'default' => $local_custom.'css/default.css',
-				'knight' => $local_custom.'css/knight.css'
+				'knight' => $local_custom.'css/knight.css',
+				'langs' => $local_custom.'css/langs.css'
 			),
 			'js' => array(
 				/*'default' => $local_custom.'js/default.js',*/
@@ -62,7 +63,8 @@ $version = array(
 		'production' => array(
 			'css' => array(
 				'default' => $local_production.'css/default.min.css',
-				'knight' => $local_production.'css/knight.min.css'
+				'knight' => $local_production.'css/knight.min.css',
+				'langs' => $local_production.'css/langs.min.css'
 			),
 			'js' => array(
 				/*'default' => $local_production.'js/default.js',*/
@@ -115,6 +117,7 @@ $version = array(
 		),
 		'custom' => array(
 			'css' => array(
+				'langs' => $cdn_custom.'custom/css/langs.css',
 				'default' => $cdn_custom.'custom/css/default.css',
 				'knight' => $cdn_custom.'custom/css/knight.css'
 			),
@@ -125,6 +128,7 @@ $version = array(
 		),
 		'production' => array(
 			'css' => array(
+				'langs' => $cdn_production.'production/css/langs.min.css',
 				'default' => $cdn_production.'production/css/default.min.css',
 				'knight' => $cdn_production.'production/css/knight.min.css'
 			),
