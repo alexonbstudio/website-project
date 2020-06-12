@@ -17,8 +17,8 @@ $credits = array(
 			'url' => 'alexonbstudio.fr'
 		)
 		'flaticon' => array(
-			'name' => 'Freepik',
-			'url' => 'https://www.flaticon.com/packs/international-flags'
+			'name' => 'Flaticon',
+			'url' => 'https://www.flaticon.com/'
 		)
 	),
 	'webdesigner' => array(
@@ -41,6 +41,22 @@ $credits = array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
+		),
+		'pexels' => array(
+			'name' => 'Pexels',
+			'url' => 'pexels.com'
+		),
+		'unsplash' => array(
+			'name' => 'Unsplash',
+			'url' => 'unsplash.com'
+		),
+		'wikimedia' => array(
+			'name' => 'Wikimedia',
+			'url' => 'wikimedia.org'
+		),
+		'pixabay' => array(
+			'name' => 'Pixabay',
+			'url' => 'pixabay.com'
 		)
 	),
 	'marketing' => array(
@@ -65,8 +81,8 @@ $credits = array(
 		'stable' => '~*~',
 		'beta' => '1.3',
 		'alpha' => '0.2',
-		'actual' => 'beta'
-		'date' => '2020/06/10'
+		'actual' => 'RC',
+		'date' => '2020/06/12'
 	)
 );
 
