@@ -35,7 +35,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        <?php echo $sites['copyright']['frontend'].'<a href="'.$protocols.'://'.$sites['domain'].'">'.$sites['name'].'</a>'; ?>
+        <?php echo $sites['copyright']['frontend'].'<a href="'.$protocols.'://'.$sites['domain'].'">'.$sites['name'].'</a> .'.$law['full']['content']['footer']; ?>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -46,7 +46,8 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white"><?php echo $sites['copyright']['frontend'].' <a href="'.$protocols.'://'.$sites['domain'].'">'.$sites['name'].'</a> .'.$law['full']['content']['footer']; ?></p>
+      <p class="m-0 text-center text-white"><?php echo $sites['copyright']['frontend'].' <a href="'.$protocols.'://'.$sites['domain'].'">'.$sites['name'].'</a> .'.$law['full']['content']['footer']; ?>
+	  </p>
     </div>
     <!-- /.container -->
   </footer>

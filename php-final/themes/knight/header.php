@@ -172,6 +172,7 @@ if(!empty($marketing['google']['adsense'])){
   <link href="<?php echo $version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
   <script defer src="<?php echo $version['internal']['fontawesome']['js']; ?>"></script>
   <link href="<?php echo $version['internal']['production']['css']['knight']; ?>" rel="stylesheet">
+  <link href="<?php echo $version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -215,7 +216,7 @@ if(!empty($marketing['google']['adsense'])){
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
           <li class="active"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><?php echo $general['index']['title']; ?></a></li>
-          <li class="drop-down"><a href="">About</a>
+          <li class="drop-down"><a href="#">About</a>
             <ul>
               <li><a href="#about">About Us</a></li>
               <li><a href="#team">Team</a></li>
@@ -227,6 +228,14 @@ if(!empty($marketing['google']['adsense'])){
                   <li><a href="#">Deep Drop Down 3</a></li>
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Translate</a>
+                <ul>
+                  <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_FR_URL__; ?>">Français</a></li>
+                  <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_EN_URL__; ?>">English</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Deutsch</a></li>
                 </ul>
               </li>
             </ul>

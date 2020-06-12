@@ -169,7 +169,8 @@ if(!empty($marketing['google']['adsense'])){
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['fontawesome']['css']; ?>" rel="stylesheet">
   <script defer src="<?php echo $version['external']['fontawesome']['js']; ?>"></script>
-  <link href="<?php echo $version['internal']['custom']['css']['default']; ?>" rel="stylesheet">
+  <link href="<?php echo $version['internal']['production']['css']['default']; ?>" rel="stylesheet">
+  <link href="<?php echo $version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
 
 </head>
 <body>
@@ -206,6 +207,17 @@ if(!empty($marketing['google']['adsense'])){
               <a class="dropdown-item" href="#">3 Column Portfolio</a>
               <a class="dropdown-item" href="#">4 Column Portfolio</a>
               <a class="dropdown-item" href="#">Single Portfolio Item</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Translate
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_FR_URL__; ?>">Français</a>
+              <a class="dropdown-item" href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_EN_URL__; ?>">English</a>
+              <a class="dropdown-item" href="#">Español</a>
+              <a class="dropdown-item" href="#">Deutsch</a>
             </div>
           </li>
         </ul>
