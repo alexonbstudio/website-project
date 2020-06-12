@@ -72,7 +72,50 @@ $law = array(
 			'en' => 'legal.html'
 		),
 		'content' => array(
-			'' => ''
+			'owner' => array(
+				'title' => 'Owner',
+				'name' => 'Name of website:',
+				'address' => 'Address:',
+				'status' => 'Status:'
+			),
+			'business' => array(
+				'title' => 'Business Local',
+				'name' => 'Name of websitee:',
+				'address' => 'Address:',
+				'status' => 'Status:'
+			),
+			'hosting' => array(
+				'title' => 'Hosting',
+				'address' => 'Address:',
+				'name' => 'name:'
+			),
+			'server' => array(
+				'title' => 'Cloud computing',
+				'address' => 'Address:',
+				'name' => 'name:'
+			),
+			'credits' => array(
+				'title' => 'Credits',
+				'developper' => 'Developper:',
+				'designer' => 'Designer:',
+				'webmaster' => 'Webmaster:',
+				'marketing' => 'Marketing:',
+				'image' => 'Image:',
+				'photographer' => 'Photographer:',
+				'video' => 'Video:',
+				'webdesigner' => 'WebDesigner:'
+			),
+			'status' => array(
+				'particular' => 'Particuliar',
+				'association' => 'Association',
+				'small' => 'Small business',
+				'medium' => 'Business',
+				'big' => 'Big business'
+			),
+			'software' => array(
+				'name' => 'Website Project (WP)',
+				'title' => 'Software'
+			)
 			/*custom your own*/
 		)
 	),
