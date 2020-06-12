@@ -18,7 +18,7 @@
     </ol>
 
     <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
+    <img class="img-fluid rounded mb-4" src="<?php echo $images['dir'].'/'.$law['dmca']['sitemap']['images']; ?>" alt="<?php echo $title; ?>">
 
     <div class="row">
       <div class="col-lg-12">
