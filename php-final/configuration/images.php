@@ -11,12 +11,7 @@ $images = array(
 			'normal' => $root_imgs.'themes/logo-normal.png', /*size recommended ~60x60 */
 			'small' => $root_imgs.'pinned/favicon-32x32.png' /*size recommended ~32x32 = favicon on PNG */
 			'big' => $root_imgs.'themes/logo-big.png' /*size recommended ~200x200 */
-		),
-		/*Manager Images for Template (BACKGROUND) */
-		'background' => array(
-			'page1' => $root_imgs.'bg1.png',
-			'page2' => $root_imgs.'bg2.png'
-		),
+		)
 		/*Manager Images for SEO PINNED (Windows, Apple, Android/Safari, chrome) */
 		'pinned' => array(
 			'S:70x70' => $root_imgs.'pinned/mstile-70x70.png',
