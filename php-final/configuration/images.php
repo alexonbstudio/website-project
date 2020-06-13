@@ -1,7 +1,8 @@
 <?php
 # exemple $images['dir']
 # exemple $images['manager']['pinned']['s:']
-$root_imgs = 'assets/images'; 
+$root_imgs = 'assets/images/'; 
+$links_imgs = 'assets/images'; 
 #$cdn_imgs = 'HTTP'; # your own links 
 $images = array(
 	'manager' => array(
@@ -35,7 +36,7 @@ $images = array(
 		/*Manager Images */
 		'category' => array(
 			'hwc' => array(
-				'hwv' => $root_imgs.'/*name*.jpg'
+				'hwv' => $links_imgs.'*name*.jpg'
 			)
 			/*Custom your own*/
 		)
