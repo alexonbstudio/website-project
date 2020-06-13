@@ -15,7 +15,7 @@ $sponsor = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'imag.jpg'  /*directory images from <exemple.tld>/assets */
+			'images' => 'themes/bg-alexonbstudio.png'  /*directory images from <exemple.tld>/assets */
 		)
 	)
 );
