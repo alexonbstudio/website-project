@@ -3,8 +3,8 @@ $local_vendor = 'assets/vendor/';
 $local_custom = 'assets/custom/';
 $local_production = 'assets/production/';
 $cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/';
-$cdn_custom = 'https://www.alexonbstudio.fr/assets/';
-$cdn_production = 'https://www.alexonbstudio.fr/assets/';
+$cdn_custom = 'https://dev.alexonbstudio.fr/assets/';
+$cdn_production = 'https://dev.alexonbstudio.fr/assets/';
 
 $version = array(
 	'internal' => array(
