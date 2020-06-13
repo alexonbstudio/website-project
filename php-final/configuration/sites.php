@@ -7,7 +7,8 @@ exemple $sites['e-mail']['contact'];
 */
 $sites = array(
 	'name' => 'Website Project (WP)',
-	'domain' => 'website-project.test', /*domain: exemple.tld*/
+	/*'domain' => 'website-project.test',=Nginx test*/ /*domain: exemple.tld*/
+	'domain' => 'localhost', /*domain: exemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'knight',
 	'create' => array(),
