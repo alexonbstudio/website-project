@@ -17,7 +17,7 @@ $seo = array(
 	),
 	'microsoft' => array(
 		'key' => '2181a55f-b920-49f9-ad42-2c979d5c09de'
-	)
+	),
 	'html-verify' => array(
 		/** Verification HTLM Social & Video & Search Engine after that change your seo.htaccess **/	
 		'dailymotion' => array(
