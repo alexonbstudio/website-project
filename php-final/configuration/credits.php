@@ -78,11 +78,11 @@ $credits = array(
 		)
 	),
 	'version' => array(
-		'stable' => '~*~',
+		'stable' => '1.4',
 		'beta' => '1.3',
 		'alpha' => '0.2',
 		'actual' => 'RC',
-		'date' => '2020/06/12'
+		'date' => '2020/06/13'
 	)
 );
 
