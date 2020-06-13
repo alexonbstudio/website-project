@@ -18,7 +18,7 @@ $credits = array(
 		),
 		'flaticon' => array(
 			'name' => 'Flaticon',
-			'url' => 'https://www.flaticon.com/'
+			'url' => 'flaticon.com'
 		)
 	),
 	'webdesigner' => array(
