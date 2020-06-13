@@ -15,7 +15,7 @@ $credits = array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
-		)
+		),
 		'flaticon' => array(
 			'name' => 'Flaticon',
 			'url' => 'https://www.flaticon.com/'
