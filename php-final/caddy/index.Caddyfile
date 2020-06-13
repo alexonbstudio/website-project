@@ -1,4 +1,4 @@
 #Preparing Caddyfile * caddyserver v2
 
 rewrite index.php /index.html
-#rewrite index.php?pages=index /index.html
+rewrite index.php?pages=index /index.html
