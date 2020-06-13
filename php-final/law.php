@@ -40,17 +40,8 @@ $business = json_decode($JE_business, true);
 $markets = json_decode($JE_markets, true);
 $restaurant = json_decode($JE_restaurant, true);
 */
-#Translate
-$general = json_decode($JE_translate_general, true);
-$partner = json_decode($JE_translate_partner, true);
-$sponsor = json_decode($JE_translate_sponsor, true);
-$law = json_decode($JE_translate_law, true);
-$email = json_decode($JE_translate_email, true);
-$block = json_decode($JE_translate_block, true);
-$sitemap = json_decode($JE_translate_sitemap, true);
-
 #Configuration
-$lang_finales = 'languages/'.$translate['manual']['backend']['english'].'/general.php';
+$lang_finales = 'languages/'.$translate['manual']['frontend']['french'].'/general.php';
 if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
@@ -60,14 +51,23 @@ if (file_exists($lang_finales)) {
     include_once 'languages/'.$translate['auto']['files'].'/block.php'; 
     include_once 'languages/'.$translate['auto']['files'].'/sitemap.php'; 
 } else {
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/general.php'; 
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/partner.php'; 
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/sponsor.php'; 
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/law.php'; 
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/email.php'; 
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/block.php'; 
-    include_once 'languages/'.$translate['manual']['backend']['french'].'/sitemap.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/general.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/partner.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/law.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/email.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/block.php'; 
+    include_once 'languages/'.$translate['manual']['frontend']['french'].'/sitemap.php'; 
 }
+
+#Translate
+$general = json_decode($JE_translate_general, true);
+$partner = json_decode($JE_translate_partner, true);
+$sponsor = json_decode($JE_translate_sponsor, true);
+$law = json_decode($JE_translate_law, true);
+$email = json_decode($JE_translate_email, true);
+$block = json_decode($JE_translate_block, true);
+$sitemap = json_decode($JE_translate_sitemap, true);
 
 #Syslink
 $protocols = $sites['protocol'];
