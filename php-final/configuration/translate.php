@@ -4,15 +4,15 @@
 
 $translate = array(
 	'auto' => array(
-		'files' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5),
-		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)
+		'files' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2),
+		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 3, 5)
 	),
 	'manual' => array(
 		'backend' => array(
-			'french' => 'fr-FR',
-			'english' => 'en-US',
-			'spanish' => 'es-ES',
-			'german' => 'de-DE'
+			'french' => 'fr',
+			'english' => 'en',
+			'spanish' => 'es',
+			'german' => 'de'
 		),
 		'frontend' => array(
 			'french' => 'fr',
