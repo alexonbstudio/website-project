@@ -72,7 +72,7 @@
       }<?php } ?>
     }
     </script>
-<meta property="og:site_name" content="<?php echo $title; ?>">
+<meta property="og:site_name" content="<?php echo $sites['name']; ?>">
 <meta property="og:url" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>">
 <meta property="og:title" content="<?php echo $title; ?>">
 <meta property="og:type" content="website">
