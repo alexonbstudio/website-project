@@ -13,6 +13,9 @@ $sitemap = array(
 		'content' => array(
 			'' => ''
 			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'themes/bg-alexonbstudio.png'  /*directory images from <exemple.tld>/assets */
 		)
 	)
 );
