@@ -12,15 +12,17 @@ $email = array(
 		),
 		'content' => array(
 			'default' => array(
-				'email' => 'Email:',
-				'phone' => 'Phone:',
-				'name' => 'Full Name:',
-				'message' => 'Message:'
+				'email' => 'Email',
+				'phone' => 'Phone',
+				'subject' => 'sujet',
+				'name' => 'Full Name',
+				'message' => 'Message'
 			),
 			'placeholder' => array(
 				'email' => 'Please enter a valid email',
 				'phone' => 'Please enter a valid number',
-				'name' => 'Please enter at least 4 chars',
+				'subject' => 'Please enter at least 8 characters of subject',
+				'name' => 'Please enter at least 4 characters',
 				'message' => 'Please write something for us'
 			),
 			'form' => array(
