@@ -1,9 +1,11 @@
 <?php
-# $law['pages']['sitemap']['images']
+# $law['full']['content']['developper']
 $law = array(
 	'full' => array(
 		'content' => array(
-			'footer' => 'Tous Droits Réservés.'
+			'footer' => 'Tous Droits Réservés.',
+			'developper' => 'Développeur',
+			'designer' => 'Designer'
 		)
 	),
 	###################PAGE URL#####################
