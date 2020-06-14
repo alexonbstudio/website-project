@@ -38,9 +38,9 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 ------
 ## Need Help & info 
 
-+ -![list-directory](https://github.com/alexonbstudio/website-project/blob/master/list-directory.md)
-+ -![SEO](https://github.com/alexonbstudio/website-project/blob/master/need-help.md)
-+ -![Debug Json with PHP](https://github.com/alexonbstudio/website-project/blob/master/debug.php) - (frontend)
++ -List Directory ![list-directory](https://github.com/alexonbstudio/website-project/blob/master/list-directory.md)
++ -Seo ![SEO](https://github.com/alexonbstudio/website-project/blob/master/need-help.md)
++ -Debug Json/PHP ![Debug Json with PHP](https://github.com/alexonbstudio/website-project/blob/master/debug.php) - (frontend)
 
 ## Requirements:
 
