@@ -9,7 +9,7 @@
   <meta name="keywords" content="<?php echo $keyword; ?>">
   <meta name="author" content="<?php echo $sites['name']; ?>">
 	<meta name="format-detection" content="telephone=yes">
-	<meta name="robots" content="noopd, noydir">
+	<meta name="robots" content="<?php echo $sites['head']['robots']; ?>">
 	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
 		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['icon']; ?>">
 	<?php } else { ?>
@@ -195,7 +195,7 @@ if(!empty($marketing['google']['adsense'])){
             <a class="nav-link" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$email['index']['url']['default']; ?>"><?php echo $email['index']['title']; ?></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -257,11 +257,11 @@ if(!empty($marketing['google']['adsense'])){
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only"><?php echo general['pages']['full']['previous']; ?></span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only"><?php echo general['pages']['full']['next']; ?></span>
       </a>
     </div>
   </header>
