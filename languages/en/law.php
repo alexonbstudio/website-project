@@ -3,7 +3,9 @@
 $law = array(
 	'full' => array(
 		'content' => array(
-			'footer' => 'All Right Reserved.'
+			'footer' => 'All Right Reserved.',
+			'developper' => 'Developper',
+			'designer' => 'Designer'
 		)
 	),
 	'pages' => array(
