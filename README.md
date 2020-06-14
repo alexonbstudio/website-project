@@ -47,6 +47,7 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 + -PHP
 + -Json
 + -Apache or Nginx or Caddy
++ -Server turn on linux recommend (alternative on windows WMNP/Wamp not works) | Macs OS not know
 
 ======
 
