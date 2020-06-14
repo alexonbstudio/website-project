@@ -36,6 +36,11 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 
 ------
+## Need Help & info 
+
++ -![list-directory](https://github.com/alexonbstudio/website-project/blob/master/list-directory.md)
++ -![SEO](https://github.com/alexonbstudio/website-project/blob/master/need-help.md)
++ -![Debug Json with PHP](https://github.com/alexonbstudio/website-project/blob/master/debug.php) - (frontend)
 
 ## Requirements:
 
@@ -49,4 +54,4 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 Copyright &copy; AlexonbStudio CC-BY-SA
 ------
-LICENSE: GPL v3.0
+LICENSE: ![GPL v3.0](https://github.com/alexonbstudio/website-project/blob/master/LICENSE)
