@@ -15,15 +15,15 @@
 	<?php if(!empty($social['viadeo']['name'])){ ?>Viadeo: <?php echo $social['viadeo']['name']; } ?>
 	<?php if(!empty($social['mixcloud']['name'])){ ?>Mixcloud: <?php echo $social['mixcloud']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Dailymotion: <?php echo $social['dailymotion']['name']; } ?>
-	From: <?php echo $private['local']['name'].' '.$private['local']['address'].' '.$private['local']['postal'].' '.$private['local']['city'].' '.$private['local']['contry']; ?> 
+
 <?php } ?>
 <?php if(!empty($business['local']['name'])){ ?>
 /* TEAM */
 	compagny: <?php echo $business['local']['name']; ?>
-	TVA: <?php echo $business['local']['tva']; ?>
-	VAT: <?php echo $business['local']['vat']; ?>
-	SIRET: <?php echo $business['local']['siret']; ?>
-	Contact: <?php echo $business['local']['mail']['contact']; ?>
+	<?php if(!empty($business['local']['tva'])){ ?>TVA: <?php echo $business['local']['tva']; } ?>
+	<?php if(!empty($business['local']['vat'])){ ?>VAT: <?php echo $business['local']['vat']; } ?>
+	<?php if(!empty($business['local']['siret'])){ ?>SIRET: <?php echo $business['local']['siret']; } ?>
+	Contact: <?php echo $business['local']['mail']['business']; ?>
 	Site: <?php echo $sites['domain']; ?> 
 	<?php if(!empty($social['twitter']['name'])){ ?>Twitter: @<?php echo $social['twitter']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Facebook: <?php echo $social['facebook']['name']; } ?>
@@ -37,6 +37,7 @@
 	<?php if(!empty($social['mixcloud']['name'])){ ?>Mixcloud: <?php echo $social['mixcloud']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Dailymotion: <?php echo $social['dailymotion']['name']; } ?>
 	From: <?php echo $business['local']['name'].' '.$business['local']['address'].' '.$business['local']['postal'].' '.$business['local']['city'].' '.$business['local']['contry']; ?>
+
 <?php } ?>
 
 	
