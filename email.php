@@ -95,15 +95,22 @@ if(isset($_GET['lang'])){
 
 						$mail = new PHPMailer(true);
 						$mail->setFrom($_POST['email'], $_POST['name']);
-						$mail->addAddress($private['mail']['public'], $sites['domain']);
+				
+						if(!empty($business['local']['name'])){
+							$mail->addAddress($business['local']['mail']['contact'], $sites['domain']);
+						} else {
+							$mail->addAddress($private['mail']['public'], $sites['domain']);
+						}
+				
 						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-							$mail->Subject = $email['index']['title'].' '.$sites['domain'].'.';
+							$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
 							$mail->isHTML(true);
 							$mail->Body = '
-							<h2>'.$email['index']['title'].'</h2>
-							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'
-							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'
-							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'
+							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
+							<h4>'.$email['index']['content']['subject'].' - '.$_POST['subject'].'</h4> 
+							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
+							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
+							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
 							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
 							if (!$mail->send()) {
 							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
