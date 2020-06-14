@@ -1,0 +1,595 @@
+root@alexonbstudio:/SubLinux/c/Users/Alexonbstudio/Desktop/CDN-host# tree
+.
+├── apache
+│   ├── block.htaccess
+│   ├── email.htaccess
+│   ├── general.htaccess
+│   ├── h5bp.htaccess
+│   ├── index.html
+│   ├── law.htaccess
+│   ├── partner.htaccess
+│   ├── seo.htaccess
+│   ├── sitemap.htaccess
+│   └── sponsor.htaccess
+├── assets
+│   ├── combined
+│   │   ├── index.html
+│   │   ├── main.css
+│   │   └── main.js
+│   ├── custom
+│   │   ├── css
+│   │   │   ├── default.css
+│   │   │   ├── index.html
+│   │   │   ├── knight.css
+│   │   │   └── langs.css
+│   │   ├── index.html
+│   │   └── js
+│   │       ├── index.html
+│   │       └── knight.js
+│   ├── images
+│   │   ├── background
+│   │   │   ├── index.html
+│   │   │   └── law
+│   │   │       ├── cgu.jpg
+│   │   │       ├── cgv.jpg
+│   │   │       ├── copyright.jpg
+│   │   │       ├── index.html
+│   │   │       ├── law.jpg
+│   │   │       ├── privacy-policy.jpg
+│   │   │       └── rgpd.jpg
+│   │   ├── default
+│   │   │   └── index.html
+│   │   ├── index.html
+│   │   ├── knight
+│   │   │   ├── about.jpg
+│   │   │   ├── apple-touch-icon.png
+│   │   │   ├── clients
+│   │   │   │   ├── client-1.png
+│   │   │   │   ├── client-2.png
+│   │   │   │   ├── client-3.png
+│   │   │   │   ├── client-4.png
+│   │   │   │   ├── client-5.png
+│   │   │   │   └── client-6.png
+│   │   │   ├── favicon.png
+│   │   │   ├── featured-1.png
+│   │   │   ├── featured-2.png
+│   │   │   ├── featured-3.png
+│   │   │   ├── featured-4.png
+│   │   │   ├── footer-bg.jpg
+│   │   │   ├── hero-bg.png
+│   │   │   ├── hero-logo.png
+│   │   │   ├── index.html
+│   │   │   ├── logo.png
+│   │   │   ├── portfolio
+│   │   │   │   ├── portfolio-1.jpg
+│   │   │   │   ├── portfolio-2.jpg
+│   │   │   │   ├── portfolio-3.jpg
+│   │   │   │   ├── portfolio-4.jpg
+│   │   │   │   ├── portfolio-5.jpg
+│   │   │   │   ├── portfolio-6.jpg
+│   │   │   │   ├── portfolio-7.jpg
+│   │   │   │   ├── portfolio-8.jpg
+│   │   │   │   └── portfolio-9.jpg
+│   │   │   ├── portfolio-details-1.jpg
+│   │   │   ├── portfolio-details-2.jpg
+│   │   │   ├── portfolio-details-3.jpg
+│   │   │   ├── services.jpg
+│   │   │   ├── team
+│   │   │   │   ├── team-1.jpg
+│   │   │   │   ├── team-2.jpg
+│   │   │   │   ├── team-3.jpg
+│   │   │   │   ├── team-4.jpg
+│   │   │   │   ├── team-5.jpg
+│   │   │   │   └── team-6.jpg
+│   │   │   ├── testimonials
+│   │   │   │   ├── testimonials-1.jpg
+│   │   │   │   ├── testimonials-2.jpg
+│   │   │   │   ├── testimonials-3.jpg
+│   │   │   │   ├── testimonials-4.jpg
+│   │   │   │   └── testimonials-5.jpg
+│   │   │   ├── testimonials-bg.jpg
+│   │   │   └── why-us.jpg
+│   │   ├── langs
+│   │   │   └── index.html
+│   │   ├── pinned
+│   │   │   ├── android-chrome-192x192.png
+│   │   │   ├── apple-touch-icon-114x114-precomposed.png
+│   │   │   ├── apple-touch-icon-114x114.png
+│   │   │   ├── apple-touch-icon-120x120-precomposed.png
+│   │   │   ├── apple-touch-icon-120x120.png
+│   │   │   ├── apple-touch-icon-144x144-precomposed.png
+│   │   │   ├── apple-touch-icon-144x144.png
+│   │   │   ├── apple-touch-icon-152x152-precomposed.png
+│   │   │   ├── apple-touch-icon-152x152.png
+│   │   │   ├── apple-touch-icon-180x180-precomposed.png
+│   │   │   ├── apple-touch-icon-180x180.png
+│   │   │   ├── apple-touch-icon-57x57-precomposed.png
+│   │   │   ├── apple-touch-icon-57x57.png
+│   │   │   ├── apple-touch-icon-60x60-precomposed.png
+│   │   │   ├── apple-touch-icon-60x60.png
+│   │   │   ├── apple-touch-icon-72x72-precomposed.png
+│   │   │   ├── apple-touch-icon-72x72.png
+│   │   │   ├── apple-touch-icon-76x76-precomposed.png
+│   │   │   ├── apple-touch-icon-76x76.png
+│   │   │   ├── apple-touch-icon-precomposed.png
+│   │   │   ├── apple-touch-icon.png
+│   │   │   ├── favicon-16x16.png
+│   │   │   ├── favicon-32x32.png
+│   │   │   ├── favicon.ico
+│   │   │   ├── index.html
+│   │   │   ├── mstile-144x144.png
+│   │   │   ├── mstile-150x150.png
+│   │   │   ├── mstile-310x150.png
+│   │   │   ├── mstile-310x310.png
+│   │   │   ├── mstile-70x70.png
+│   │   │   └── safari-pinned-tab.svg
+│   │   └── themes
+│   │       ├── bg-alexonbstudio.png
+│   │       ├── index.html
+│   │       ├── langs.png
+│   │       ├── logo-big.png
+│   │       └── logo-normal.png
+│   ├── index.conf
+│   ├── index.html
+│   ├── production
+│   │   ├── css
+│   │   │   ├── default.min.css
+│   │   │   ├── index.html
+│   │   │   ├── knight.min.css
+│   │   │   └── langs.min.css
+│   │   ├── index.html
+│   │   └── js
+│   │       ├── index.html
+│   │       └── knight.min.js
+│   └── vendor
+│       ├── aos
+│       │   ├── aos.css
+│       │   ├── aos.js
+│       │   └── index.html
+│       ├── bootstrap
+│       │   ├── css
+│       │   │   ├── bootstrap-grid.css
+│       │   │   ├── bootstrap-grid.min.css
+│       │   │   ├── bootstrap-reboot.css
+│       │   │   ├── bootstrap-reboot.min.css
+│       │   │   ├── bootstrap.css
+│       │   │   ├── bootstrap.min.css
+│       │   │   └── index.html
+│       │   ├── index.html
+│       │   └── js
+│       │       ├── bootstrap.bundle.js
+│       │       ├── bootstrap.bundle.min.js
+│       │       ├── bootstrap.js
+│       │       ├── bootstrap.min.js
+│       │       └── index.html
+│       ├── boxicons
+│       │   ├── css
+│       │   │   ├── animations.css
+│       │   │   ├── boxicons.css
+│       │   │   ├── boxicons.min.css
+│       │   │   ├── index.html
+│       │   │   └── transformations.css
+│       │   ├── fonts
+│       │   │   ├── boxicons.eot
+│       │   │   ├── boxicons.svg
+│       │   │   ├── boxicons.ttf
+│       │   │   ├── boxicons.woff
+│       │   │   ├── boxicons.woff2
+│       │   │   └── index.html
+│       │   └── index.html
+│       ├── fontawesome
+│       │   ├── LICENSE.txt
+│       │   ├── css
+│       │   │   ├── all.css
+│       │   │   ├── all.min.css
+│       │   │   ├── brands.css
+│       │   │   ├── brands.min.css
+│       │   │   ├── duotone.css
+│       │   │   ├── duotone.min.css
+│       │   │   ├── fontawesome.css
+│       │   │   ├── fontawesome.min.css
+│       │   │   ├── index.html
+│       │   │   ├── light.css
+│       │   │   ├── light.min.css
+│       │   │   ├── regular.css
+│       │   │   ├── regular.min.css
+│       │   │   ├── solid.css
+│       │   │   ├── solid.min.css
+│       │   │   ├── svg-with-js.css
+│       │   │   ├── svg-with-js.min.css
+│       │   │   ├── v4-shims.css
+│       │   │   └── v4-shims.min.css
+│       │   ├── index.html
+│       │   ├── js
+│       │   │   ├── all.js
+│       │   │   ├── all.min.js
+│       │   │   ├── brands.js
+│       │   │   ├── brands.min.js
+│       │   │   ├── conflict-detection.js
+│       │   │   ├── conflict-detection.min.js
+│       │   │   ├── duotone.js
+│       │   │   ├── duotone.min.js
+│       │   │   ├── fontawesome.js
+│       │   │   ├── fontawesome.min.js
+│       │   │   ├── index.html
+│       │   │   ├── light.js
+│       │   │   ├── light.min.js
+│       │   │   ├── regular.js
+│       │   │   ├── regular.min.js
+│       │   │   ├── solid.js
+│       │   │   ├── solid.min.js
+│       │   │   ├── v4-shims.js
+│       │   │   └── v4-shims.min.js
+│       │   └── webfonts
+│       │       ├── fa-brands-400.eot
+│       │       ├── fa-brands-400.svg
+│       │       ├── fa-brands-400.ttf
+│       │       ├── fa-brands-400.woff
+│       │       ├── fa-brands-400.woff2
+│       │       ├── fa-duotone-900.eot
+│       │       ├── fa-duotone-900.svg
+│       │       ├── fa-duotone-900.ttf
+│       │       ├── fa-duotone-900.woff
+│       │       ├── fa-duotone-900.woff2
+│       │       ├── fa-light-300.eot
+│       │       ├── fa-light-300.svg
+│       │       ├── fa-light-300.ttf
+│       │       ├── fa-light-300.woff
+│       │       ├── fa-light-300.woff2
+│       │       ├── fa-regular-400.eot
+│       │       ├── fa-regular-400.svg
+│       │       ├── fa-regular-400.ttf
+│       │       ├── fa-regular-400.woff
+│       │       ├── fa-regular-400.woff2
+│       │       ├── fa-solid-900.eot
+│       │       ├── fa-solid-900.svg
+│       │       ├── fa-solid-900.ttf
+│       │       ├── fa-solid-900.woff
+│       │       ├── fa-solid-900.woff2
+│       │       └── index.html
+│       ├── icofont
+│       │   ├── fonts
+│       │   │   ├── icofont.woff
+│       │   │   ├── icofont.woff2
+│       │   │   └── index.html
+│       │   ├── icofont.min.css
+│       │   └── index.html
+│       ├── index.html
+│       ├── isotope-layout
+│       │   ├── index.html
+│       │   ├── isotope.pkgd.js
+│       │   └── isotope.pkgd.min.js
+│       ├── jquery
+│       │   ├── index.html
+│       │   ├── jquery.min.js
+│       │   └── jquery.min.map
+│       ├── jquery-sticky
+│       │   ├── index.html
+│       │   └── jquery.sticky.js
+│       ├── jquery.easing
+│       │   ├── index.html
+│       │   └── jquery.easing.min.js
+│       ├── owl.carousel
+│       │   ├── LICENSE
+│       │   ├── README.md
+│       │   ├── assets
+│       │   │   ├── ajax-loader.gif
+│       │   │   ├── index.html
+│       │   │   ├── owl.carousel.css
+│       │   │   ├── owl.carousel.min.css
+│       │   │   ├── owl.theme.default.css
+│       │   │   ├── owl.theme.default.min.css
+│       │   │   ├── owl.theme.green.css
+│       │   │   ├── owl.theme.green.min.css
+│       │   │   └── owl.video.play.png
+│       │   ├── index.html
+│       │   ├── owl.carousel.js
+│       │   └── owl.carousel.min.js
+│       ├── php-email-form
+│       │   ├── index.html
+│       │   └── validate.js
+│       └── venobox
+│           ├── index.html
+│           ├── venobox.css
+│           ├── venobox.js
+│           ├── venobox.min.css
+│           └── venobox.min.js
+├── block.php
+├── cache
+├── caddy
+│   ├── block.Caddyfile
+│   ├── email.Caddyfile
+│   ├── general.Caddyfile
+│   ├── h5bp.Caddyfile
+│   ├── index.Caddyfile
+│   ├── index.html
+│   ├── law.Caddyfile
+│   ├── partner.Caddyfile
+│   ├── seo.Caddyfile
+│   ├── sitemap.Caddyfile
+│   └── sponsor.Caddyfile
+├── configuration
+│   ├── business.php
+│   ├── credits.php
+│   ├── hosting.php
+│   ├── images.php
+│   ├── market.php
+│   ├── marketing.php
+│   ├── partner.php
+│   ├── private.php
+│   ├── restaurant.php
+│   ├── seo.php
+│   ├── sites.php
+│   ├── social.php
+│   ├── sponsor.php
+│   ├── translate.php
+│   └── version.php
+├── debug.php
+├── email.php
+├── general.php
+├── index.php
+├── languages
+│   ├── en
+│   │   ├── block.php
+│   │   ├── email.php
+│   │   ├── general.php
+│   │   ├── law.php
+│   │   ├── partner.php
+│   │   ├── sitemap.php
+│   │   └── sponsor.php
+│   └── fr
+│       ├── block.php
+│       ├── email.php
+│       ├── general.php
+│       ├── law.php
+│       ├── partner.php
+│       ├── sitemap.php
+│       └── sponsor.php
+├── law.php
+├── libs
+│   ├── custom
+│   │   ├── compress.php
+│   │   └── translate-old.php
+│   ├── minify
+│   │   ├── CONTRIBUTING.md
+│   │   ├── CSS.php
+│   │   ├── Exception.php
+│   │   ├── Exceptions
+│   │   │   ├── BasicException.php
+│   │   │   ├── FileImportException.php
+│   │   │   └── IOException.php
+│   │   ├── JS.php
+│   │   ├── LICENSE
+│   │   ├── Minify.php
+│   │   ├── bin
+│   │   │   ├── minifycss
+│   │   │   └── minifyjs
+│   │   └── data
+│   │       └── js
+│   │           ├── keywords_after.txt
+│   │           ├── keywords_before.txt
+│   │           ├── keywords_reserved.txt
+│   │           ├── operators.txt
+│   │           ├── operators_after.txt
+│   │           └── operators_before.txt
+│   ├── phpmailer
+│   │   ├── COMMITMENT
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   ├── SECURITY.md
+│   │   ├── VERSION
+│   │   ├── composer.json
+│   │   ├── get_oauth_token.php
+│   │   ├── language
+│   │   │   ├── phpmailer.lang-af.php
+│   │   │   ├── phpmailer.lang-am.php
+│   │   │   ├── phpmailer.lang-ar.php
+│   │   │   ├── phpmailer.lang-az.php
+│   │   │   ├── phpmailer.lang-ba.php
+│   │   │   ├── phpmailer.lang-be.php
+│   │   │   ├── phpmailer.lang-bg.php
+│   │   │   ├── phpmailer.lang-ca.php
+│   │   │   ├── phpmailer.lang-ch.php
+│   │   │   ├── phpmailer.lang-cs.php
+│   │   │   ├── phpmailer.lang-da.php
+│   │   │   ├── phpmailer.lang-de.php
+│   │   │   ├── phpmailer.lang-el.php
+│   │   │   ├── phpmailer.lang-eo.php
+│   │   │   ├── phpmailer.lang-es.php
+│   │   │   ├── phpmailer.lang-et.php
+│   │   │   ├── phpmailer.lang-fa.php
+│   │   │   ├── phpmailer.lang-fi.php
+│   │   │   ├── phpmailer.lang-fo.php
+│   │   │   ├── phpmailer.lang-fr.php
+│   │   │   ├── phpmailer.lang-gl.php
+│   │   │   ├── phpmailer.lang-he.php
+│   │   │   ├── phpmailer.lang-hi.php
+│   │   │   ├── phpmailer.lang-hr.php
+│   │   │   ├── phpmailer.lang-hu.php
+│   │   │   ├── phpmailer.lang-hy.php
+│   │   │   ├── phpmailer.lang-id.php
+│   │   │   ├── phpmailer.lang-it.php
+│   │   │   ├── phpmailer.lang-ja.php
+│   │   │   ├── phpmailer.lang-ka.php
+│   │   │   ├── phpmailer.lang-ko.php
+│   │   │   ├── phpmailer.lang-lt.php
+│   │   │   ├── phpmailer.lang-lv.php
+│   │   │   ├── phpmailer.lang-mg.php
+│   │   │   ├── phpmailer.lang-ms.php
+│   │   │   ├── phpmailer.lang-nb.php
+│   │   │   ├── phpmailer.lang-nl.php
+│   │   │   ├── phpmailer.lang-pl.php
+│   │   │   ├── phpmailer.lang-pt.php
+│   │   │   ├── phpmailer.lang-pt_br.php
+│   │   │   ├── phpmailer.lang-ro.php
+│   │   │   ├── phpmailer.lang-rs.php
+│   │   │   ├── phpmailer.lang-ru.php
+│   │   │   ├── phpmailer.lang-sk.php
+│   │   │   ├── phpmailer.lang-sl.php
+│   │   │   ├── phpmailer.lang-sr.php
+│   │   │   ├── phpmailer.lang-sv.php
+│   │   │   ├── phpmailer.lang-tl.php
+│   │   │   ├── phpmailer.lang-tr.php
+│   │   │   ├── phpmailer.lang-uk.php
+│   │   │   ├── phpmailer.lang-vi.php
+│   │   │   ├── phpmailer.lang-zh.php
+│   │   │   └── phpmailer.lang-zh_cn.php
+│   │   └── src
+│   │       ├── Exception.php
+│   │       ├── OAuth.php
+│   │       ├── PHPMailer.php
+│   │       ├── POP3.php
+│   │       └── SMTP.php
+│   └── tinify
+│       ├── CHANGES.md
+│       ├── LICENSE
+│       ├── README.md
+│       ├── Tinify
+│       │   ├── Client.php
+│       │   ├── Exception.php
+│       │   ├── Result.php
+│       │   ├── ResultMeta.php
+│       │   └── Source.php
+│       ├── Tinify.php
+│       ├── composer.json
+│       ├── composer.lock
+│       ├── data
+│       │   └── cacert.pem
+│       ├── phpunit.xml
+│       ├── test
+│       │   ├── TinifyClientTest.php
+│       │   ├── TinifyResultMetaTest.php
+│       │   ├── TinifyResultTest.php
+│       │   ├── TinifySourceTest.php
+│       │   ├── TinifyTest.php
+│       │   ├── curl_mock.php
+│       │   ├── examples
+│       │   │   ├── dummy.png
+│       │   │   └── voormedia.png
+│       │   ├── helper.php
+│       │   └── integration.php
+│       └── update-cacert.sh
+├── nginx
+│   ├── block.conf
+│   ├── email.conf
+│   ├── general.conf
+│   ├── h5bp.conf
+│   ├── index.conf
+│   ├── index.html
+│   ├── law.conf
+│   ├── nginx.conf
+│   ├── partner.conf
+│   ├── seo.conf
+│   ├── sitemap.conf
+│   └── sponsor.conf
+├── old.htaccess
+├── partner.php
+├── seo.php
+├── sitemap.php
+├── sponsor.php
+└── themes
+    ├── default
+    │   ├── block
+    │   │   ├── error.php
+    │   │   └── success.php
+    │   ├── email
+    │   │   └── full.php
+    │   ├── footer.php
+    │   ├── general
+    │   │   └── home.php
+    │   ├── header.php
+    │   ├── law
+    │   │   ├── cgu.php
+    │   │   ├── cgv.php
+    │   │   ├── dmca.php
+    │   │   ├── full.php
+    │   │   ├── legal.php
+    │   │   ├── policy-privacy.php
+    │   │   └── rgpd.php
+    │   ├── partner
+    │   │   └── full.php
+    │   ├── sitemap
+    │   │   ├── default.php
+    │   │   ├── en.php
+    │   │   └── fr.php
+    │   └── sponsor
+    │       └── full.php
+    ├── dev-default
+    │   ├── 404.html
+    │   ├── about.html
+    │   ├── blog-home-1.html
+    │   ├── blog-home-2.html
+    │   ├── blog-post.html
+    │   ├── contact.html
+    │   ├── faq.html
+    │   ├── full-width.html
+    │   ├── index.html
+    │   ├── portfolio-1-col.html
+    │   ├── portfolio-2-col.html
+    │   ├── portfolio-3-col.html
+    │   ├── portfolio-4-col.html
+    │   ├── portfolio-item.html
+    │   ├── pricing.html
+    │   ├── services.html
+    │   └── sidebar.html
+    ├── dev-knight
+    │   ├── Readme.txt
+    │   ├── changelog.txt
+    │   ├── index.html
+    │   └── portfolio-details.html
+    ├── knight
+    │   ├── block
+    │   │   ├── error.php
+    │   │   └── success.php
+    │   ├── email
+    │   │   └── full.php
+    │   ├── footer.php
+    │   ├── general
+    │   │   └── home.php
+    │   ├── header.php
+    │   ├── law
+    │   │   ├── cgu.php
+    │   │   ├── cgv.php
+    │   │   ├── dmca.php
+    │   │   ├── full.php
+    │   │   ├── legal.php
+    │   │   ├── policy-privacy.php
+    │   │   └── rgpd.php
+    │   ├── partner
+    │   │   └── full.php
+    │   ├── sitemap
+    │   │   ├── default.php
+    │   │   ├── en.php
+    │   │   └── fr.php
+    │   └── sponsor
+    │       └── full.php
+    └── seo
+        ├── html-verify
+        │   ├── dailymotion.php
+        │   ├── google.php
+        │   ├── pinterest.php
+        │   └── yandex.php
+        ├── json
+        │   ├── json-ld.php
+        │   ├── manifest.php
+        │   └── microsoft-identity-association.php
+        ├── txt
+        │   ├── ads.php
+        │   ├── brave-rewards-verification.php
+        │   ├── humans.php
+        │   └── robots.php
+        └── xml
+            ├── BingSiteAuth.php
+            ├── badge.php
+            ├── crossdomain.php
+            ├── dublincore.php
+            ├── rss.php
+            ├── sitemap.php
+            └── translate
+                ├── default.php
+                ├── en.php
+                └── fr.php
+
+====
+
+90 directories, 499 files
