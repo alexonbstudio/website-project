@@ -33,13 +33,37 @@
 				<?php echo $business['local']['postal'].', '.$business['local']['city'].', '.$business['local']['contry']; ?>
 				</p>
               </div>
+			<?php } else { ?>
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4><?php echo $private['name']; ?></h4>
+                <p> </p>
+              </div>
 			<?php } ?>
-
+			<?php if(!empty($business['local']['name'])){ ?>
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
+                <p><?php echo $business['local']['mail']['business']; ?></p>
+              </div>
+			<?php } else { ?>
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
                 <p><?php echo $private['mail']['public']; ?></p>
               </div>
+			<?php } ?>
+			
+			<?php if(!empty($business['local']['name'])){ ?>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4><?php echo $email['index']['content']['default']['phone']; ?>:</h4>
+                <p><a href="tel:<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>">
+					<?php echo $business['local']['phone']['normal']; ?><?php echo $business['local']['phone']['number']; ?>
+				</a></p>
+              </div>
+			<?php } else { ?>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
@@ -48,6 +72,8 @@
 					<?php echo $private['mobile']['normal']; ?><?php echo $private['mobile']['number']; ?>
 				</a></p>
               </div>
+			
+			<?php } ?>
 
             </div>
 
@@ -66,12 +92,10 @@
                   <div class="validate"></div>
                 </div>
               </div>
-			  <!--
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="<?php echo $email['index']['content']['default']['subject']; ?>" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
-			  //-->
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="<?php echo $email['index']['content']['placeholder']['message']; ?>" placeholder="<?php echo $email['index']['content']['default']['message']; ?>"></textarea>
                 <div class="validate"></div>
