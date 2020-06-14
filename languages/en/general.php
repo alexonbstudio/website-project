@@ -1,6 +1,13 @@
 <?php
 
 $general = array(
+	'pages' => array(
+		'full' => array(
+			'starter' => 'Get Started',
+			'previous' => 'Previous',
+			'next' => 'Next'
+		)
+	),
 	'index' => array(
 		'title' => 'Home',
 		'description' => '',
