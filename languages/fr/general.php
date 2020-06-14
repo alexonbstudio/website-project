@@ -1,6 +1,13 @@
 <?php
-
+#general['pages']['full']['starter']
 $general = array(
+	'pages' => array(
+		'full' => array(
+			'starter' => 'Démarrer',
+			'previous' => 'Précédent',
+			'next' => 'Suivant'
+		)
+	),
 	'index' => array(
 		'title' => 'Accueil',
 		'description' => '',
