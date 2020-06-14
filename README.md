@@ -2,41 +2,42 @@
 ![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Falexonbstudio.fr)
 # website-project
 
-Create your own website project 
-
+Create your own website project (WP)
+======
+Server Backend 
 #### Folder Apache (adapt)
 #### Folder Nginx (adapt)
-#### Folder Php - site vitrine php -- artisanat plumber (french: artisan plombier, chauffagiste, etc....) -- not be continued 
-#### Folder php-final - Lastest Release
-------
-site vitrine (simple)
+#### Folder Caddy v2 (adapt)
 ======
-How want a simple website not very complicated without using DB server only a simple hosting shared needed or host your own home networks 
-------
-* Requirements:
-+ -Multi-language
-+ -Json 
-+ -XML 
-+ -Text 
-+ -CSS
-+ -JS
-+ -HTML
-+ -Nginx
-+ -Caddy (v2)
-+ -Apache (htaccess)
+Server Frontend
+#### PHP >=7.2
+
+
+
+======
+How want a simple website not very complicated without using DB server only a simple hosting shared needed or host your own home networks on linux/unix only (windows not works)
 ------
 * integrated: 
 + -SEO 
 + -Referencial links 
 + -Contact form 
 + -translate 
++ -template exemple
 
 
 You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 
+------
+* Requirements:
++ -PHP
++ -Json
++ -Apache or Nginx or Caddy
+
+======
+
+#### Folder Php - Move on ![Website-Project-old](https://github.com/alexonbstudio/website-project)
+
 Copyright &copy; AlexonbStudio CC-BY-SA
 ------
-LICENSE:
-======
-GPL v3.0
+LICENSE: GPL v3.0
