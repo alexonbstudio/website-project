@@ -1,5 +1,6 @@
 <?php
-
+# $credits['webdesigner']['bootstrapmade']['name']['']['']
+# $credits['developper']['alexonbstudio']['name']['']['']
 $credits = array(
 	'developper' => array(
 		'alexonbstudio' => array(
@@ -10,16 +11,15 @@ $credits = array(
 			'name' => 'PHPMailer',
 			'url' => 'github.com/PHPMailer/PHPMailer'
 		),
+		/* This part on libs not yet use */
 		'Minify' => array(
 			'name' => 'Minify',
-			'url' => 'github.com/matthiasmullie/minify'
+			'url' => 'minifier.org'
+		),
+		'tinypng' => array(
+			'name' => 'Tinyfy',
+			'url' => 'tinypng.com'
 		)
-		/*,
-		'' => array(
-			'name' => 'PHPMailer',
-			'url' => 'github.com/PHPMailer/PHPMailer'
-		)
-		*/
 	),
 	'designer' => array(
 		'alexonbstudio' => array(
