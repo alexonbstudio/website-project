@@ -8,6 +8,7 @@ Server Backend
 #### Folder Apache (adapt)
 #### Folder Nginx (adapt)
 #### Folder Caddy v2 (adapt)
+
 ======
 Server Frontend
 #### PHP >=7.2
@@ -16,8 +17,10 @@ Server Frontend
 
 ======
 How want a simple website not very complicated without using DB server only a simple hosting shared needed or host your own home networks on linux/unix only (windows not works)
+
 ------
-* integrated: 
+integrated: 
+
 + -SEO 
 + -Referencial links 
 + -Contact form 
@@ -29,14 +32,15 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 
 ------
-* Requirements:
+Requirements:
+
 + -PHP
 + -Json
 + -Apache or Nginx or Caddy
 
 ======
 
-#### Folder Php - Move on ![Website-Project-old](https://github.com/alexonbstudio/website-project)
+#### Folder Php - Move on ![Website-Project-old](https://github.com/alexonbstudio/website-project-old)
 
 Copyright &copy; AlexonbStudio CC-BY-SA
 ------
