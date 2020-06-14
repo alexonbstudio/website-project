@@ -9,7 +9,7 @@
   <meta name="keywords" content="<?php echo $keyword; ?>">
   <meta name="author" content="<?php echo $sites['name']; ?>">
 	<meta name="format-detection" content="telephone=yes">
-	<meta name="robots" content="noopd, noydir">
+	<meta name="robots" content="<?php echo $sites['head']['robots']; ?>">
 	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
 		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['icon']; ?>">
 	<?php } else { ?>
@@ -200,7 +200,7 @@ if(!empty($marketing['google']['adsense'])){
       <a href="<?php echo $protocols.'://'.$sites['domain']; ?>" class="hero-logo" data-aos="zoom-in"><img src="<?php echo $images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
       <h1 data-aos="zoom-in"><?php echo $sites['name']; ?></h1>
       <h2 data-aos="fade-up"><?php echo $description; ?></h2>
-      <a data-aos="fade-up" href="#about" class="btn-get-started scrollto">Get Started</a>
+      <a data-aos="fade-up" href="#main" class="btn-get-started scrollto"><?php echo $general['pages']['full']['starter']; ?></a>
     </div>
   </section><!-- End Hero -->
 
@@ -215,7 +215,7 @@ if(!empty($marketing['google']['adsense'])){
 
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
-          <li class="active"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><?php echo $general['index']['title']; ?></a></li>
+          <li class="active"><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a></li>
           <li class="drop-down"><a href="#">About</a>
             <ul>
               <li><a href="#about">About Us</a></li>
@@ -242,11 +242,11 @@ if(!empty($marketing['google']['adsense'])){
           </li>
           <li><a href="#services">Services</a></li>
 
-          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $images['manager']['logo']['normal'];; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
+          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $images['manager']['logo']['normal']; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
 
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$email['index']['url']['default']; ?>"><?php echo $email['index']['title']; ?></a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
