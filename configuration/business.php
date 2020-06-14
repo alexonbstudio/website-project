@@ -1,8 +1,8 @@
 <?php
-
+#business['local']['local']['name']
 $business = array(
 	'local' => array(
-		'name' => '',
+		'name' => '',/*IF empty variable output not show public/not use*/
 		'siret' => '',
 		'tva' => '',
 		'vat' => '',
@@ -37,6 +37,9 @@ $business = array(
 			'sponsor' => 'spon@email.tld',
 			'partner' => 'part@email.tld',
 			'business' => 'buz@email.tld'
+		),
+		'team' => array(
+			/* Custom your own here */
 		)
 	),
 	'external' => array(
