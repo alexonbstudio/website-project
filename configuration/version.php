@@ -1,10 +1,15 @@
 <?php
+#TESTING
+$protocols_v = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
+
 $local_vendor = 'assets/vendor/';
 $local_custom = 'assets/custom/';
 $local_production = 'assets/production/';
-$cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/';
-$cdn_custom = 'https://website-project.test/assets/';
-$cdn_production = 'https://website-project.test/assets/';
+$cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/'; #cdnjs by Cloudflare (vendor directories)
+#host external
+$cdn_custom = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/custom/'; #HTTPS/HTTPS TESTING 
+$cdn_exvendor = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/vendor/'; #HTTPS/HTTPS TESTING
+$cdn_production = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/production/'; #HTTPS/HTTPS TESTING
 
 $version = array(
 	'internal' => array(
@@ -36,14 +41,14 @@ $version = array(
 			'js' => $local_vendor.'jquery.easing/jquery.easing.min.js'
 		),
 		'jquery-sticky' => array(
-			'js' => $local_vendor.'jquery-sticky/jquery-sticky.js'
+			'js' => $local_vendor.'jquery-sticky/jquery-sticky.min.js'
 		),
 		'owl.carousel' => array(
 			'css' => $local_vendor.'owl.carousel/assets/owl.carousel.min.css',
 			'js' => $local_vendor.'owl.carousel/owl.carousel.min.js'
 		),
 		'php-email-form' => array(
-			'js' => $local_vendor.'php-email-form/validate.js'
+			'js' => $local_vendor.'php-email-form/validate.min.js'
 		),
 		'venobox' => array(
 			'css' => $local_vendor.'venobox/venobox.min.css',
@@ -90,13 +95,13 @@ $version = array(
 			'js' => $cdn_vendor.'aos/2.3.4/aos.js'
 		),
 		'boxicons' => array(
-			'css' => $cdn_production.'vendor/boxicons/css/boxicons.min.css'
+			'css' => $cdn_exvendor.'boxicons/css/boxicons.min.css'
 		),
 		'icofont' => array(
-			'css' => $cdn_production.'vendor/icofont/icofont.min.css'
+			'css' => $cdn_exvendor.'icofont/icofont.min.css'
 		),
 		'isotope-layout' => array(
-			'js' => $cdn_production.'vendor/isotope-layout/isotope.pkgd.min.js'
+			'js' => $cdn_exvendor.'isotope-layout/isotope.pkgd.min.js'
 		),
 		'jquery.easing' => array(
 			'js' => $cdn_vendor.'jquery-easing/1.4.1/jquery.easing.min.js'
@@ -109,7 +114,7 @@ $version = array(
 			'js' => $cdn_vendor.'OwlCarousel2/2.3.4/owl.carousel.min.js'
 		),
 		'php-email-form' => array(
-			'js' => $cdn_production.'vendor/php-email-form/validate.js'
+			'js' => $cdn_exvendor.'php-email-form/validate.js'
 		),
 		'venobox' => array(
 			'css' => $cdn_vendor.'venobox/1.9.0/venobox.min.css',
@@ -117,24 +122,24 @@ $version = array(
 		),
 		'custom' => array(
 			'css' => array(
-				'langs' => $cdn_custom.'custom/css/langs.css',
-				'default' => $cdn_custom.'custom/css/default.css',
-				'knight' => $cdn_custom.'custom/css/knight.css'
+				'langs' => $cdn_custom.'css/langs.css',
+				'default' => $cdn_custom.'css/default.css',
+				'knight' => $cdn_custom.'css/knight.css'
 			),
 			'js' => array(
-				/*'default' => $cdn_custom.'custom/js/default.js',*/
-				'knight' => $cdn_custom.'custom/js/knight.js'
+				/*'default' => $cdn_custom.'js/default.js',*/
+				'knight' => $cdn_custom.'js/knight.js'
 			)
 		),
 		'production' => array(
 			'css' => array(
-				'langs' => $cdn_production.'production/css/langs.min.css',
-				'default' => $cdn_production.'production/css/default.min.css',
-				'knight' => $cdn_production.'production/css/knight.min.css'
+				'langs' => $cdn_production.'css/langs.min.css',
+				'default' => $cdn_production.'css/default.min.css',
+				'knight' => $cdn_production.'css/knight.min.css'
 			),
 			'js' => array(
-				/*'default' => $cdn_production.'production/js/default.min.js',*/
-				'knight' => $cdn_production.'production/js/knight.min.js'
+				/*'default' => $cdn_production.'js/default.min.js',*/
+				'knight' => $cdn_production.'js/knight.min.js'
 			)
 		)
 	)
