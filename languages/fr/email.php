@@ -14,13 +14,15 @@ $email = array(
 			'default' => array(
 				'email' => 'E-mail',
 				'phone' => 'Téléphone',
+				'subject' => 'sujet',
 				'name' => 'Nom',
 				'message' => 'Message'
 			),
 			'placeholder' => array(
 				'email' => 'S\'il vous plaît entrer un e-mail valide',
 				'phone' => 'S\'il vous plaît entrer un numéro valide',
-				'name' => 'S\'il vous plaît entrer au moins 4 chars',
+				'subject' => 'S\'il vous plaît entrer au moins 8 caractères de sujet',
+				'name' => 'S\'il vous plaît entrer au moins 4 caractères',
 				'message' => 'S\'il vous plaît écrire quelque chose pour nous'
 			),
 			'form' => array(
