@@ -9,7 +9,17 @@ $credits = array(
 		'PHPMailer' => array(
 			'name' => 'PHPMailer',
 			'url' => 'github.com/PHPMailer/PHPMailer'
+		),
+		'Minify' => array(
+			'name' => 'Minify',
+			'url' => 'github.com/matthiasmullie/minify'
 		)
+		/*,
+		'' => array(
+			'name' => 'PHPMailer',
+			'url' => 'github.com/PHPMailer/PHPMailer'
+		)
+		*/
 	),
 	'designer' => array(
 		'alexonbstudio' => array(
@@ -78,11 +88,11 @@ $credits = array(
 		)
 	),
 	'version' => array(
-		'stable' => '1.4',
+		'stable' => '1.5',
 		'beta' => '1.3',
 		'alpha' => '0.2',
-		'actual' => 'RC',
-		'date' => '2020/06/13'
+		'actual' => 'Stable',
+		'date' => '2020/06/14'
 	)
 );
 
