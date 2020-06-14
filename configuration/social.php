@@ -1,5 +1,5 @@
 <?php
-# exemple $social[''][''];
+# exemple $social['facebook']['url'];
 $social = array(
 	'facebook' => array(
 		'sites' => 'facebook',
