@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2><?php echo $title; ?></h2>
           <ol>
-            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['name']; ?></a></li>
+            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a></li>
             <li><?php echo $title; ?></li>
           </ol>
         </div>
@@ -30,7 +30,7 @@
                 <i class="icofont-google-map"></i>
                 <h4><?php echo $business['local']['name']; ?></h4>
                 <p><?php echo $business['local']['address']; ?>,<br>
-				<?php echo $business['local']['postal'].', '.$business['local']['city'].', '.$business['local']['contry']; ?>
+				<?php echo $business['local']['address'].'<br> '.$business['local']['postal'].', '.$business['local']['city'].', '.$business['local']['contry']; ?>
 				</p>
               </div>
 			<?php } else { ?>
