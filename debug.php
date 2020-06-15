@@ -16,8 +16,8 @@ include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
 include_once 'configuration/images.php';
-/*
 include_once 'configuration/business.php';
+/*
 include_once 'configuration/market.php';
 include_once 'configuration/restaurant.php';
 */
@@ -34,9 +34,9 @@ $social = json_decode($JE_social);
 $hosting = json_decode($JE_hosting);
 $marketing = json_decode($JE_marketing);
 $images = json_decode($JE_images);
+$business = json_decode($JE_business);
 /*
 #Supplémentaire
-$business = json_decode($JE_business);
 $markets = json_decode($JE_markets);
 $restaurant = json_decode($JE_restaurant);
 */
