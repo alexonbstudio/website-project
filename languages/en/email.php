@@ -11,6 +11,14 @@ $email = array(
 			'en' => 'contact.html'
 		),
 		'content' => array(
+			'mail' => array(
+				'contact' => 'Contact',
+				'support' => 'Support',
+				'commercial' => 'Commercial',
+				'sponsor' => 'Sponsor',
+				'partner' => 'Partner',
+				'business' => 'Business'
+			),
 			'default' => array(
 				'email' => 'Email',
 				'phone' => 'Phone',
