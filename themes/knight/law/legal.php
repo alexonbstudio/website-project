@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2><?php echo $title; ?></h2>
           <ol>
-            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['name']; ?></a></li>
+            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a></li>
             <li><?php echo $title; ?></li>
           </ol>
         </div>
@@ -28,26 +28,29 @@
 
         <div class="row">
       <div class="col-lg-12">
-	  .	<?php if(!empty($private['name'])){ ?>
+	  .	<?php if(!empty($business['local']['name'])){ ?>
+           <h3><?php echo $law['legal']['content']['business']['title']; ?></h3>
+		   <p>
+				<strong><?php echo $law['legal']['content']['business']['name']; ?></strong> <?php echo $business['local']['name']; ?><br />
+					<?php if(!empty($business['local']['tva'])){ ?><strong>TVA</strong>: <?php echo $business['local']['tva'].'<br />'; } ?>
+					<?php if(!empty($business['local']['vat'])){ ?><strong>VAT</strong>: <?php echo $business['local']['vat'].'<br />'; } ?>
+					<?php if(!empty($business['local']['siret'])){ ?><strong>SIRET</strong>: <?php echo $business['local']['siret'].'<br />'; } ?>
+				<strong><?php echo $law['legal']['content']['business']['address']; ?></strong> <?php echo $business['local']['address'].' '.$business['local']['postal'].' '.$business['local']['city'].' '.$business['local']['contry']; ?> <br />
+				<strong><?php echo $law['legal']['content']['business']['status']; ?></strong> <?php echo $law['legal']['content']['status']['medium']; ?><?php if(!empty($business['local']['status'])){ echo ' - '.$business['local']['status']; } ?>
+				
+			</p>
+		
+	    <?php } else { ?>
            <h3><?php echo $law['legal']['content']['owner']['title']; ?></h3>
 		   <p>
 				<strong><?php echo $law['legal']['content']['owner']['name']; ?></strong> <?php echo $private['name']; ?><br />
-				<strong><?php echo $law['legal']['content']['owner']['address']; ?></strong> <?php echo $private['local']['name'].' '.$private['local']['address'].' '.$private['local']['postal'].' '.$private['local']['city'].' '.$private['local']['contry']; ?> <br />
+				
 				<strong><?php echo $law['legal']['content']['owner']['status']; ?></strong> <?php echo $law['legal']['content']['status']['particular']; ?>
 				
 			</p>
-	    <?php } ?>
-		
-	  .	<?php if(!empty($business['name'])){ ?>
-           <h3><?php echo $law['legal']['content']['business']['title']; ?></h3>
-		   <p>
-				<strong><?php echo $law['legal']['content']['business']['name']; ?></strong> <?php echo $business['name']; ?><br />
-				<strong><?php echo $law['legal']['content']['business']['address']; ?></strong> <?php echo $business['local']['name'].' '.$business['local']['address'].' '.$business['local']['postal'].' '.$business['local']['city'].' '.$business['local']['contry']; ?> <br />
-				<strong><?php echo $law['legal']['content']['business']['status']; ?></strong> <?php echo $law['legal']['content']['status']['business']; ?> 
-				
-			</p>
-		
-	    <?php } ?>   
+	    <?php } ?> 
+
+		  
            <h3><?php echo $law['legal']['content']['hosting']['title']; ?></h3>
 		   <p>
 				<strong><?php echo $law['legal']['content']['hosting']['name']; ?></strong> <a href="<?php echo $protocols.'://'.$hosting['server']['internal']['site']; ?>"><?php echo $hosting['server']['internal']['name']; ?></a><br />
@@ -76,7 +79,7 @@
 			</p>
            <h3><?php echo $law['legal']['content']['software']['title']; ?></h3>
 		   <p>
-			<strong><?php echo $law['legal']['content']['software']['name']; ?></strong> <?php echo $law['legal']['content']['software']['wp']; ?> - CC-BY-SA <br />
+			<strong><?php echo $law['legal']['content']['software']['title']; ?></strong> <?php echo $law['legal']['content']['software']['wp']; ?> - CC-BY-SA <br />
 			License: GNU GPL V3.0
 		   </p>
 		   
