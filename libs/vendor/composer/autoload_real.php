@@ -32,22 +32,13 @@ class ComposerAutoloaderInit0865c538745cf2229fdb078ccb18765a
 
             call_user_func(\Composer\Autoload\ComposerStaticInit0865c538745cf2229fdb078ccb18765a::getInitializer($loader));
         } else {
-            $map = require __DIR__ . '/autoload_namespaces.php';
-            foreach ($map as $namespace => $path) {
-                $loader->set($namespace, $path);
-            }
-
-            $map = require __DIR__ . '/autoload_psr4.php';
-            foreach ($map as $namespace => $path) {
-                $loader->setPsr4($namespace, $path);
-            }
-
             $classMap = require __DIR__ . '/autoload_classmap.php';
             if ($classMap) {
                 $loader->addClassMap($classMap);
             }
         }
 
+        $loader->setClassMapAuthoritative(true);
         $loader->register(true);
 
         if ($useStaticLoader) {
