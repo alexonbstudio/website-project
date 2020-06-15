@@ -6,3 +6,14 @@ Disallow: /configuration/
 Disallow: /cache/
 
 Sitemap: <?php echo $protocols.'://'.$sites['domain']; ?>/sitemap.xml
+
+<?php
+/*
+
+If you are using on production absolute deleted folder:
+-apache
+-nginx
+-caddy
+
+*/
+?>
