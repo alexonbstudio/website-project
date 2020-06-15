@@ -9,5 +9,7 @@
         "symfony/http-foundation": "^5.1",
         "symfony/error-handler": "^5.1",
         "symfony/console": "^5.1"
-    }
+    },
+	"optimize-autoloader": "true",
+	"classmap-authoritative": "true"
 }
