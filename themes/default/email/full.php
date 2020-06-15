@@ -8,7 +8,7 @@
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['name']; ?></a>
+        <a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a>
       </li>
       <li class="breadcrumb-item active"><?php echo $title; ?></li>
     </ol>
@@ -68,7 +68,7 @@
 	  <?php if(!empty($business['local']['name'])){ ?>
         <h3><?php echo $business['local']['name']; ?></h3>
         <p><?php echo $business['local']['address']; ?>,<br>
-				<?php echo $business['local']['postal'].', '.$business['local']['city'].', '.$business['local']['contry']; ?>
+				<?php echo $business['local']['address'].'<br> '.$business['local']['postal'].', '.$business['local']['city'].', '.$business['local']['contry']; ?>
 					
         </p>
 		<?php } else { ?>
