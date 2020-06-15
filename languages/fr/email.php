@@ -1,5 +1,5 @@
 <?php
-# $email['index']['content']['default']['phone']
+# $email['index']['content']['mail']['contact']
 $email = array(
 	'index' => array(
 		'title' => 'Contactez',
@@ -11,6 +11,14 @@ $email = array(
 			'en' => 'contact.html'
 		),
 		'content' => array(
+			'mail' => array(
+				'contact' => 'Contact',
+				'support' => 'Support',
+				'commercial' => 'Commercial',
+				'sponsor' => 'Sponsor',
+				'partner' => 'Partner',
+				'business' => 'Business'
+			),
 			'default' => array(
 				'email' => 'E-mail',
 				'phone' => 'Téléphone',
