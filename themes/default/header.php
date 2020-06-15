@@ -61,10 +61,10 @@
       "author": {
         "@type": "Person",
         "name": "<?php echo $private['name']; ?>"
-      }<?php } ?><?php if(!empty($business['name'])){ ?>,
+      }<?php } ?><?php if(!empty($business['local']['name'])){ ?>,
        "publisher": {
         "@type": "Organization",
-        "name": "<?php echo $business['name']; ?>",
+        "name": "<?php echo $business['local']['name']; ?>",
         "logo": {
           "@type": "ImageObject",
           "url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>"
