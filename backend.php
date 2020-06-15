@@ -6,37 +6,27 @@ ini_set("display_errors", 1);
 
 require 'libs/custom/compress.php'; 
 
-#Autoload 
-require 'libs/vendor/autoload.php'; 
-
-
 #minifier CSS/JS - minifier.org
-/*
 require 'libs/minify/src/Exception.php'; 
 require 'libs/minify/src/Exceptions/BasicException.php'; 
 require 'libs/minify/src/Exceptions/FileImportException.php'; 
 require 'libs/minify/src/Exceptions/IOException.php'; 
 require 'libs/minify/src/Minify.php'; 
-*/
 use MatthiasMullie\Minify;
 
 #Compressor JPG/PNG - TinyPNG.com
-/*
 require 'libs/minify/tinify/Tinify/Exception.php';
 require 'libs/minify/tinify/Tinify/ResultMeta.php';
 require 'libs/minify/tinify/Tinify/Result.php';
 require 'libs/minify/tinify/Tinify/Source.php';
 require 'libs/minify/tinify/Tinify/Client.php';
 require 'libs/minify/tinify/Tinify.php'; 
-*/
 use Tinify;
 
 # PHPMailer 
-/*
 require 'path/to/PHPMailer/src/Exception.php';
 require 'path/to/PHPMailer/src/PHPMailer.php';
 require 'path/to/PHPMailer/src/SMTP.php';
-*/
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -54,8 +44,8 @@ include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
 include_once 'configuration/images.php';
-/*
 include_once 'configuration/business.php';
+/*
 include_once 'configuration/market.php';
 include_once 'configuration/restaurant.php';
 */
@@ -72,9 +62,9 @@ $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
+$business = json_decode($JE_business, true);
 /*
 #Supplémentaire
-$business = json_decode($JE_business, true);
 $markets = json_decode($JE_markets, true);
 $restaurant = json_decode($JE_restaurant, true);
 */
