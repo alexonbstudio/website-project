@@ -19,7 +19,7 @@
 <?php } ?>
 <?php if(!empty($business['local']['name'])){ ?>
 /* TEAM */
-	compagny: <?php echo $business['local']['name']; ?>
+	compagny: <?php echo $business['local']['name']; ?><?php if(!empty($business['local']['status'])){ echo ' - '.$business['local']['status']; } ?>
 	<?php if(!empty($business['local']['tva'])){ ?>TVA: <?php echo $business['local']['tva']; } ?>
 	<?php if(!empty($business['local']['vat'])){ ?>VAT: <?php echo $business['local']['vat']; } ?>
 	<?php if(!empty($business['local']['siret'])){ ?>SIRET: <?php echo $business['local']['siret']; } ?>
@@ -71,10 +71,10 @@
 /* SITE */
 	Last update: <?php echo $credits['version']['date']; ?>
 	Language: <?php echo $translate['manual']['frontend']['french']; ?>
-	Multi-Language: <?php echo $translate['manual']['frontend']['english']; ?>
+	Multi-Language: <?php echo $translate['manual']['backend']['english'].', '.$translate['manual']['backend']['french']; ?>
 	Doctype: HTML5
 	IDE Software: Notepad++
-	Technologie: Bootstrap, Fontawesome, PHP, jQuery, Txt, Xml, JSON, Apache, nginx, caddy
+	Technologie: Bootstrap, Fontawesome, PHP, jQuery, Txt, Xml, JSON, Apache, nginx, caddy, amp, html, css
 	Copyright &copy; AlexonbStudio (Website Project = WP) - Alexon Balangue - CC-BY-SA
 	Licenses: GPL v3.0
 	Version: <?php echo $credits['version']['stable'].' '.$credits['version']['actual']; ?>
