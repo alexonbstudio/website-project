@@ -92,7 +92,7 @@ $credits = array(
 		'beta' => '1.3',
 		'alpha' => '0.2',
 		'actual' => 'Stable',
-		'date' => '2020/06/14'
+		'date' => '2020/06/15'
 	)
 );
 
