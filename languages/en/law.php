@@ -88,13 +88,13 @@ $law = array(
 		'content' => array(
 			'owner' => array(
 				'title' => 'Owner',
-				'name' => 'Name of website:',
+				'name' => 'Name:',
 				'address' => 'Address:',
 				'status' => 'Status:'
 			),
 			'business' => array(
 				'title' => 'Business Local',
-				'name' => 'Name of websitee:',
+				'name' => 'Name:',
 				'address' => 'Address:',
 				'status' => 'Status:'
 			),
@@ -127,7 +127,7 @@ $law = array(
 				'big' => 'Big business'
 			),
 			'software' => array(
-				'name' => 'Website Project (WP)',
+				'wp' => 'Website Project (WP)',
 				'title' => 'Software'
 			)
 			/*custom your own*/
