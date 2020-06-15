@@ -6,27 +6,37 @@ ini_set("display_errors", 1);
 
 require 'libs/custom/compress.php'; 
 
+#Autoload 
+require 'libs/vendor/autoload.php'; 
+
+
 #minifier CSS/JS - minifier.org
+/*
 require 'libs/minify/src/Exception.php'; 
 require 'libs/minify/src/Exceptions/BasicException.php'; 
 require 'libs/minify/src/Exceptions/FileImportException.php'; 
 require 'libs/minify/src/Exceptions/IOException.php'; 
 require 'libs/minify/src/Minify.php'; 
+*/
 use MatthiasMullie\Minify;
 
 #Compressor JPG/PNG - TinyPNG.com
+/*
 require 'libs/minify/tinify/Tinify/Exception.php';
 require 'libs/minify/tinify/Tinify/ResultMeta.php';
 require 'libs/minify/tinify/Tinify/Result.php';
 require 'libs/minify/tinify/Tinify/Source.php';
 require 'libs/minify/tinify/Tinify/Client.php';
 require 'libs/minify/tinify/Tinify.php'; 
+*/
 use Tinify;
 
 # PHPMailer 
+/*
 require 'path/to/PHPMailer/src/Exception.php';
 require 'path/to/PHPMailer/src/PHPMailer.php';
 require 'path/to/PHPMailer/src/SMTP.php';
+*/
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
