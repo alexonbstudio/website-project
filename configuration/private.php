@@ -2,7 +2,7 @@
 # $private['mail']['public']
 
 $private = array(
-	'name' => '',
+	'name' => 'Private name',/*IF empty variable output not show public/not use*/
 	'address' => '',
 	'postal' => '75000',
 	'city' => 'Paris',
