@@ -1,8 +1,8 @@
 <?php
-#business['local']['local']['name']
+#business['local']['status']['name']
 $business = array(
 	'local' => array(
-		'name' => '',/*IF empty variable output not show public/not use*/
+		'name' => 'business compagny',/*IF empty variable output not show public/not use*/
 		'siret' => '',
 		'tva' => '',
 		'vat' => '',
@@ -11,7 +11,9 @@ $business = array(
 		'city' => 'Paris',
 		'region' => 'Paris',
 		'contry' => 'France',
+		'status' => 'SASU', /*Special status on france SASU, SARL, SAS, etc...*/
 		'geo' => array(
+		/*Pratical for use Google map JS/Mapbox or other*/
 			'latitude' => '',
 			'longitude' => ''
 		),
@@ -38,7 +40,7 @@ $business = array(
 			'partner' => 'part@email.tld',
 			'business' => 'buz@email.tld',
 			'text' => array(
-				'contact' => 'con',
+				'contact' => 'con', 
 				'support' => 'supp',
 				'commercial' => 'comm',
 				'sponsor' => 'spon',
@@ -47,11 +49,24 @@ $business = array(
 			)
 		),
 		'team' => array(
+		/*exemple*/
+			'john' => array(
+				'name' => 'John',
+				'url' => 'john.tld'
+			),
+			'bob' => array(
+				'name' => 'bob',
+				'url' => 'bob.tld'
+			)
 			/* Custom your own here */
 		)
 	),
 	'external' => array(
-		/*Add here*/
+		/*exemple*/
+		'london' => array(
+			'' => ''
+		)
+		/*Custom your own here*/
 	)
 );
 
