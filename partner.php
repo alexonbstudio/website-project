@@ -1,6 +1,8 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+
 
 require 'libs/custom/compress.php'; 
 #configuration
@@ -16,8 +18,8 @@ include_once 'configuration/hosting.php';
 include_once 'configuration/credits.php';
 include_once 'configuration/marketing.php';
 include_once 'configuration/images.php';
-/*
 include_once 'configuration/business.php';
+/*
 include_once 'configuration/market.php';
 include_once 'configuration/restaurant.php';
 */
@@ -34,9 +36,9 @@ $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
+$business = json_decode($JE_business, true);
 /*
 #Supplémentaire
-$business = json_decode($JE_business, true);
 $markets = json_decode($JE_markets, true);
 $restaurant = json_decode($JE_restaurant, true);
 */
