@@ -48,6 +48,16 @@
               <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="<?php echo $email['index']['content']['placeholder']['message']; ?>" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
+				<?php if(!empty($business['local']['name'])){ ?>	  
+				<select name="teams" id="select">
+					<option value="<?php echo $business['local']['mail']['text']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
+					<option value="<?php echo $business['local']['mail']['text']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
+					<option value="<?php echo $business['local']['mail']['text']['commercial']; ?>"><?php echo $email['index']['content']['mail']['commercial']; ?></option>
+					<option value="<?php echo $business['local']['mail']['text']['sponsor']; ?>"><?php echo $email['index']['content']['mail']['sponsor']; ?></option>
+					<option value="<?php echo $business['local']['mail']['text']['partner']; ?>"><?php echo $email['index']['content']['mail']['partner']; ?></option>
+					<option value="<?php echo $business['local']['mail']['text']['business']; ?>"><?php echo $email['index']['content']['mail']['business']; ?></option>
+				</select>
+				<?php } ?>	
           <div id="success"></div>
           <!-- For success/fail messages -->
           <button type="submit" class="btn btn-primary"><?php echo $email['index']['content']['form']['send']; ?></button>
