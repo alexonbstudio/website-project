@@ -36,7 +36,15 @@ $business = array(
 			'commercial' => 'comm@@email.tld',
 			'sponsor' => 'spon@email.tld',
 			'partner' => 'part@email.tld',
-			'business' => 'buz@email.tld'
+			'business' => 'buz@email.tld',
+			'text' => array(
+				'contact' => 'con',
+				'support' => 'supp',
+				'commercial' => 'comm',
+				'sponsor' => 'spon',
+				'partner' => 'part',
+				'business' => 'buz'
+			)
 		),
 		'team' => array(
 			/* Custom your own here */
