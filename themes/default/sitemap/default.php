@@ -9,7 +9,7 @@
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['name']; ?></a>
+        <a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a>
       </li>
       <li class="breadcrumb-item">
         <a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['pages']['url']; ?>"><?php echo $law['pages']['name']; ?></a>
