@@ -38,9 +38,9 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 ------
 ## Need Help & info 
 
-+ -List Directory ![list-directory](https://github.com/alexonbstudio/website-project/blob/master/list-directory.txt)
-+ -Seo ![SEO](https://github.com/alexonbstudio/website-project/blob/master/need-help.md)
-+ -Debug Json/PHP ![Debug Json with PHP](https://github.com/alexonbstudio/website-project/blob/master/debug.php) - (frontend)
++ - [list-directory](https://github.com/alexonbstudio/website-project/blob/master/list-directory.txt)
++ - [SEO](https://github.com/alexonbstudio/website-project/blob/master/need-help.md)
++ - [Debug Json with PHP](https://github.com/alexonbstudio/website-project/blob/master/debug.php) - (frontend)
 
 ## Requirements:
 
@@ -53,6 +53,6 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 #### Folder Php - Move on ![Website-Project-old](https://github.com/alexonbstudio/website-project-old)
 
-Copyright &copy; AlexonbStudio ![CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+Copyright &copy; AlexonbStudio [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
 ------
-LICENSE: ![GPL v3.0](https://github.com/alexonbstudio/website-project/blob/master/LICENSE)
+LICENSE: [GPL v3.0](https://github.com/alexonbstudio/website-project/blob/master/LICENSE)
