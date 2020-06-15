@@ -87,20 +87,22 @@ if(isset($_GET['lang'])){
 				$urls = $email['index']['url']['default'];
 				$imgs = $email['index']['sitemap']['images'];
 				
-					$msg = '';
-					if (array_key_exists('email', $_POST)) {
+				if(!empty($business['local']['name'])){
+		
+					if (array_key_exists('teams', $_POST) && in_array($_POST['teams'], [$business['local']['mail']['text']['contact'], $business['local']['mail']['text']['support'], $business['local']['mail']['text']['commercial'], $business['local']['mail']['text']['sponsor'], $business['local']['mail']['text']['partner'], $business['local']['mail']['text']['business']], true)) {
+						$teams = $_POST['team'].'@'.$sites['domain'];
+					} else {
+						$teams = $business['local']['mail']['text']['contact'].'@'.$sites['domain'];
+					}	
+					# $msg = '';
+					if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
 						date_default_timezone_set($sites['default-timezone']);
 
 						require 'libs/phpmailer/src/PHPMailer.php';
 
 						$mail = new PHPMailer(true);
 						$mail->setFrom($_POST['email'], $_POST['name']);
-				
-						if(!empty($business['local']['name'])){
-							$mail->addAddress($business['local']['mail']['contact'], $sites['domain']);
-						} else {
-							$mail->addAddress($private['mail']['public'], $sites['domain']);
-						}
+						$mail->addAddress($teams, $sites['domain']);
 				
 						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 							$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
@@ -125,7 +127,41 @@ if(isset($_GET['lang'])){
 
 						}
 					}
+				} else {
+					# $msg = '';
+					if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
+						date_default_timezone_set($sites['default-timezone']);
+
+						require 'libs/phpmailer/src/PHPMailer.php';
+
+						$mail = new PHPMailer(true);
+						$mail->setFrom($_POST['email'], $_POST['name']);
+						$mail->addAddress($private['mail']['public'], $sites['domain']);
 				
+						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+							$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
+							$mail->isHTML(true);
+							$mail->Body = '
+							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
+							<h4>'.$email['index']['content']['subject'].' - '.$_POST['subject'].'</h4> 
+							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
+							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
+							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
+							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+							if (!$mail->send()) {
+							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+							   exit();
+							} else {
+							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['success']['url']['default']);
+							   exit();
+							}
+						} else {
+							header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+							exit();
+
+						}
+					}
+				}
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
