@@ -51,6 +51,21 @@ You can support me to make a donation on https://alexonbstudio.fr/donation.html
 
 ======
 
+## Official WP public/private
+* [Free - Version (TODO)](https://github.com/website-project-WP/free-wp)
+* [Commercial - Version (TODO)](https://github.com/website-project-WP/commercial-wp)
+* [Linux Installer WP need (TODO)](https://github.com/website-project-WP/linux-wp)
+* [Composer/PHP automate (install/update)](https://github.com/website-project-WP/composer-wp)
+* [Docker (TODO)](https://github.com/website-project-WP/docker-wp)
+
+## TODO
+* logo design
+* branding under alexonbstudio
+* commercial purposed
+* Largest for Dev's backend and robust
+
+======
+
 #### Folder Php - Move on ![Website-Project-old](https://github.com/alexonbstudio/website-project-old)
 
 Copyright &copy; AlexonbStudio [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
