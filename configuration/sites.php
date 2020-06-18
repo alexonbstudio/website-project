@@ -13,7 +13,7 @@ $sites = array(
 	'template' => 'default',
 	'create' => array(),
 	'update' => array(
-		'rdf' => '2020-06-07'
+		'rdf' => date('Y-m-d')
 	),
 	'copyright' => array(
 		'frontend' => 'Copyright &copy; 2019-'.date('Y'), /*show on template */
@@ -26,5 +26,13 @@ $sites = array(
 );
 
 $JE_sites = json_encode($sites);
+
+
+
+#####################################
+#									#
+#			DATABASE				#
+#									#
+#####################################
 
 ?>
