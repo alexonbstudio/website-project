@@ -44,21 +44,22 @@
 			</p>
 	    <?php } ?> 
 
-		
+		   <?php if(!empty($hosting['server']['internal']['name'])){ ?>
            <h3><?php echo $law['legal']['content']['hosting']['title']; ?></h3>
 		   <p>
 				<strong><?php echo $law['legal']['content']['hosting']['name']; ?></strong> <a href="<?php echo $protocols.'://'.$hosting['server']['internal']['site']; ?>"><?php echo $hosting['server']['internal']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['hosting']['address']; ?></strong> <?php echo $hosting['server']['internal']['address'].' '.$hosting['server']['internal']['postal'].' '.$hosting['server']['internal']['city'].' '.$hosting['server']['internal']['contry']; ?>
 				
 			</p>
-		   
+		   <?php } ?> 
+		   <?php if(!empty($hosting['server']['external']['cloud']['google']['name'])){ ?>
            <h3><?php echo $law['legal']['content']['server']['title']; ?></h3>
 		   <p>
 				<strong><?php echo $law['legal']['content']['server']['name']; ?></strong> <a href="<?php echo $protocols.'://'.$hosting['server']['external']['cloud']['google']['site']; ?>"><?php echo $hosting['server']['external']['cloud']['google']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['server']['address']; ?></strong> <?php echo $hosting['server']['external']['cloud']['google']['address'].' '.$hosting['server']['external']['cloud']['google']['postal'].' '.$hosting['server']['external']['cloud']['google']['city'].' '.$hosting['server']['external']['cloud']['google']['contry']; ?>
 				
 			</p>
-		   
+		   <?php } ?> 
            <h3><?php echo $law['legal']['content']['credits']['title']; ?></h3>
 		   <p>
 				<strong><?php echo $law['legal']['content']['credits']['developper']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['developper']['alexonbstudio']['url']; ?>"><?php echo $credits['developper']['alexonbstudio']['name'].'</a>, <a href="'.$protocols.'://'.$credits['developper']['PHPMailer']['url'].'">'.$credits['developper']['PHPMailer']['name']; ?></a><br />
