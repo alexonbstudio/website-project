@@ -5,7 +5,7 @@
 $translate = array(
 	'auto' => array(
 		'files' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2),
-		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 3, 5)
+		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)
 	),
 	'manual' => array(
 		'backend' => array(
