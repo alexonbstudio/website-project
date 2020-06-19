@@ -4,7 +4,7 @@
   "@context": "http://schema.org/",
   "@type": "Person",
   "name": "<?php echo $private['name']; ?>",
-  "telephone": "<?php echo $business['local']['mobile']['code']; ?><?php echo $business['local']['mobile']['number']; ?>",
+  "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
   "url": "<?php echo $protocols.'://'.$sites['domain']; ?>"
 }<?php } ?>
 <?php ##########	BUSINESS PAGE | You need Absolute CHANGE for Adapt your Business Local categories	########## ?>
@@ -13,74 +13,26 @@
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
-	"logo": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>logo.png"
-},
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "image": [
-        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>1x1/photo.jpg",
-        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>4x3/photo.jpg",
-        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'; ?>16x9/photo.jpg"
-       ],
-      "@id": "<?php echo $protocols.'://'.$sites['domain']; ?>",
-      "name": "<?php echo $business['local']['name']; ?>",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "<?php echo $business['local']['address']; ?>t",
-        "addressLocality": "<?php echo $business['local']['city']; ?>",
-        "addressRegion": "<?php echo $business['local']['region']; ?>",
-        "postalCode": "<?php echo $business['local']['postal']; ?>",
-        "addressCountry": "<?php echo $business['local']['contry']; ?>"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": <?php echo $business['local']['geo']['latitude']; ?>,
-        "longitude": <?php echo $business['local']['geo']['longitude']; ?>
-      },
-      "url": "<?php echo $protocols.'://'.$sites['domain']; ?>/restaurant-locations/manhattan",
-      "telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
-      "servesCuisine": "American",
-      "priceRange": "$$$",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday"
-          ],
-          "opens": "11:30",
-          "closes": "22:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "11:30",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "16:00",
-          "closes": "23:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "16:00",
-          "closes": "22:00"
-        }
-      ],
-      "menu": "<?php echo $protocols.'://'.$sites['domain']; ?>/menu",
-      "acceptsReservations": "True"
-    }
+	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
+	"logo": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
+	"name": "<?php echo $business['local']['name']; ?>",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "<?php echo $business['local']['address']; ?>",
+		"addressLocality": "<?php echo $business['local']['city']; ?>",
+		"addressRegion": "<?php echo $business['local']['region']; ?>",
+		"postalCode": "<?php echo $business['local']['postal']; ?>",
+		"addressCountry": "<?php echo $business['local']['contry']; ?>"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": <?php echo $business['local']['geo']['latitude']; ?>,
+		"longitude": <?php echo $business['local']['geo']['longitude']; ?>
+	}
+}
 <?php } ?>
 <?php ##########	FAQs PAGE	########## ?>
-<?php /*if(!empty()){*/ ?>,
+<?php /*if(!empty()){,*/ ?>
 <?php /*    {
       "@context": "https://schema.org",
       "@type": "FAQPage",
