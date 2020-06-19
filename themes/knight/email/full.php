@@ -92,7 +92,8 @@
                   <div class="validate"></div>
                 </div>
               </div>
-				<?php if(!empty($business['local']['name'])){ ?>	  
+				<?php if(!empty($business['local']['name'])){ ?>	
+              <div class="form-group">  
 				<select name="teams" id="select">
 					<option value="<?php echo $business['local']['mail']['text']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
 					<option value="<?php echo $business['local']['mail']['text']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
@@ -101,6 +102,8 @@
 					<option value="<?php echo $business['local']['mail']['text']['partner']; ?>"><?php echo $email['index']['content']['mail']['partner']; ?></option>
 					<option value="<?php echo $business['local']['mail']['text']['business']; ?>"><?php echo $email['index']['content']['mail']['business']; ?></option>
 				</select>
+                <div class="validate"></div>
+              </div>
 				<?php } ?>	
               <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="<?php echo $email['index']['content']['default']['subject']; ?>" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
