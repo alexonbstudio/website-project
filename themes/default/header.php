@@ -11,24 +11,24 @@
 	<meta name="format-detection" content="telephone=yes">
 	<meta name="robots" content="<?php echo $sites['head']['robots']; ?>">
 	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
-		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['icon']; ?>">
+		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['icon']; ?>">
 	<?php } else { ?>
 		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
 	<?php }?>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['small']; ?>">
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['small']; ?>">
 	<link rel="manifest" href="<?php echo $protocols.'://'.$sites['domain']; ?>/manifest.json">	
 
-<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:180x180']; ?>">
-<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:32x32']; ?>">
-<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:192x192']; ?>">
-<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:16x16']; ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:180x180']; ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:32x32']; ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:192x192']; ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:16x16']; ?>">
 
-<link rel="mask-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['safari']; ?>" color="<?php echo $seo['browsers']['color']['safari']; ?>">
+<link rel="mask-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['safari']; ?>" color="<?php echo $seo['browsers']['color']['safari']; ?>">
 <meta name="apple-mobile-web-app-title" content="<?php echo $sites['name'].' - '.$title;?>">
 <meta name="application-name" content="<?php echo $sites['name'];?>">
 <meta name="msapplication-TileColor" content="<?php echo $seo['browsers']['color']['title']; ?>">
-<meta name="msapplication-TileImage" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['pinned']['s:144x144']; ?>">
-<meta name="theme-color" content="<?php echo $seo['browsers']['color']['theme']; ?>">
+<meta name="msapplication-TileImage" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:144x144']; ?>">
+<meta name="theme-color" content="<?php echo $seo['browsers']['color']['themes']; ?>">
 
 
 
@@ -67,7 +67,7 @@
         "name": "<?php echo $business['local']['name']; ?>",
         "logo": {
           "@type": "ImageObject",
-          "url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['normal']; ?>"
+          "url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>"
         }
       }<?php } ?>
     }
@@ -77,7 +77,7 @@
 <meta property="og:title" content="<?php echo $title; ?>">
 <meta property="og:type" content="website">
 <meta property="og:description" content="<?php echo $description; ?>">
-<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['small']; ?>">
+<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['small']; ?>">
 
  <meta content="<?php echo $translate['auto']['seo']; ?>" property="og:locale"/>
 <?php 
@@ -186,7 +186,7 @@ if(!empty($marketing['google']['adsense'])){
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a>
+            <a class="nav-link" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']['default']; ?>"><?php echo $general['index']['title']; ?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
@@ -257,11 +257,11 @@ if(!empty($marketing['google']['adsense'])){
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only"><?php echo general['pages']['full']['previous']; ?></span>
+        <span class="sr-only"><?php echo $general['pages']['full']['previous']; ?></span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only"><?php echo general['pages']['full']['next']; ?></span>
+        <span class="sr-only"><?php echo $general['pages']['full']['next']; ?></span>
       </a>
     </div>
   </header>
