@@ -49,7 +49,7 @@
               <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
             </div>
           </div>
-          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/services.jpg");' data-aos="fade-left" data-aos-delay="100"></div>
+          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("<?php echo $images['dir'].'/'; ?>knight/services.jpg");' data-aos="fade-left" data-aos-delay="100"></div>
         </div>
 
       </div>
