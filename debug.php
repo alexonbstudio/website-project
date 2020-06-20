@@ -22,48 +22,21 @@ include_once 'configuration/market.php';
 include_once 'configuration/restaurant.php';
 */
 
+    include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/email.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/block.php'; 
+    include_once 'languages/'.$translate['auto']['files'].'/sitemap.php'; 
 
-#Decode
-$sites = json_decode($JE_sites);
-$translate = json_decode($JE_translate);
-$credits = json_decode($JE_credits);
-$private = json_decode($JE_private);
-$seo = json_decode($JE_seo);
-$partner = json_decode($JE_partner);
-$social = json_decode($JE_social);
-$hosting = json_decode($JE_hosting);
-$marketing = json_decode($JE_marketing);
-$images = json_decode($JE_images);
-$business = json_decode($JE_business);
-/*
-#Supplémentaire
-$markets = json_decode($JE_markets);
-$restaurant = json_decode($JE_restaurant);
-*/
-    include_once 'languages/fr/general.php'; 
-    include_once 'languages/fr/partner.php'; 
-    include_once 'languages/fr/sponsor.php'; 
-    include_once 'languages/fr/law.php'; 
-    include_once 'languages/fr/email.php'; 
-    include_once 'languages/fr/block.php'; 
-    include_once 'languages/fr/sitemap.php'; 
-
-
-#Translate
-$general = json_decode($JE_translate_general);
-$partner = json_decode($JE_translate_partner);
-$sponsor = json_decode($JE_translate_sponsor);
-$law = json_decode($JE_translate_law);
-$email = json_decode($JE_translate_email);
-$block = json_decode($JE_translate_block);
-$sitemap = json_decode($JE_translate_sitemap);
 
 
 ?>
 <html>
 	<head>
 		<title>
-			Website Project (WP) - Debug json V1.4 RC
+			Website Project (WP) - Debug json V1.5
 		</title>
 	</head>
 	<body>

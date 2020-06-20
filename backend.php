@@ -29,7 +29,7 @@ require 'path/to/PHPMailer/src/PHPMailer.php';
 require 'path/to/PHPMailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
+# https://stackoverflow.com/questions/38158181/send-html-emails-using-phpmailer-and-html-templates/38158566
 
 #configuration
 include_once 'configuration/sites.php';

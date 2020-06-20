@@ -72,4 +72,16 @@ $business = array(
 
 $JE_business = json_encode($business);
 
+#####################################
+#									#
+#			Email|SMTP 				#
+#									#
+#####################################
+/*
+$hostMAIL = 'mail.exemple.tld';
+$userMAIL = 'user@exemple.tld';
+$passwdMAIL = '****';
+$portMAIL = 587;
+*/
+
 ?>

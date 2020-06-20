@@ -104,17 +104,44 @@ if(isset($_GET['lang'])){
 						$mail = new PHPMailer(true);
 						$mail->setFrom($_POST['email'], $_POST['name']);
 						$mail->addAddress($teams, $sites['domain']);
+						# $mail->msgHTML(); #preparing email template
 				
 						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 							$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
 							$mail->isHTML(true);
+							/*
+							#Solution 1
+							ob_start("ob_html_compress");
+							include 'themes/email/backend.php';
+							$body = ob_get_clean();
+							$mail->msgHTML($body, dirname(__FILE__));
+							*/
+							#Solution 2
+							/*$vars = array(
+								'subject' => $_POST['subject'],
+								'email' => $_POST['email'],
+								'name' => $_POST['name'],
+								'phone' => $_POST['phone'],
+								'message' => $_POST['message'],
+							);
+							$body = file_get_contents('themes/email/public.php');
+
+							if(isset($vars)){
+								foreach($email_vars as $k=>$v){
+									$body = str_replace('{'.strtoupper($k).'}', $v, $body);
+								}
+							}
+							$mail->msgHTML($body, dirname(__FILE__));
+							#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
+							# Solution 3
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
-							<h4>'.$email['index']['content']['subject'].' - '.$_POST['subject'].'</h4> 
+							<h4>'.$email['index']['content']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
 							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
 							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
 							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
 							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+					
 							if (!$mail->send()) {
 							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
 							   exit();
@@ -138,17 +165,43 @@ if(isset($_GET['lang'])){
 						$mail = new PHPMailer(true);
 						$mail->setFrom($_POST['email'], $_POST['name']);
 						$mail->addAddress($private['mail']['public'], $sites['domain']);
-				
+						# $mail->msgHTML(); #preparing email template
 						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 							$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
 							$mail->isHTML(true);
+							/*
+							#Solution 1
+							ob_start("ob_html_compress");
+							include 'themes/email/backend.php';
+							$body = ob_get_clean();
+							$mail->msgHTML($body, dirname(__FILE__));
+							*/
+							#Solution 2
+							/*$vars = array(
+								'subject' => $_POST['subject'],
+								'email' => $_POST['email'],
+								'name' => $_POST['name'],
+								'phone' => $_POST['phone'],
+								'message' => $_POST['message'],
+							);
+							$body = file_get_contents('themes/email/public.php');
+
+							if(isset($vars)){
+								foreach($email_vars as $k=>$v){
+									$body = str_replace('{'.strtoupper($k).'}', $v, $body);
+								}
+							}
+							$mail->msgHTML($body, dirname(__FILE__));
+							#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
+							#solution 3
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
-							<h4>'.$email['index']['content']['subject'].' - '.$_POST['subject'].'</h4> 
+							<h4>'.$email['index']['content']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
 							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
 							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
 							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
 							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+					
 							if (!$mail->send()) {
 							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
 							   exit();

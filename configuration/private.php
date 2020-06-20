@@ -31,4 +31,16 @@ $private = array(
 
 $JE_private = json_encode($private);
 
+#####################################
+#									#
+#			Email|SMTP 				#
+#									#
+#####################################
+/*
+$hostMAIL = 'mail.exemple.tld';
+$userMAIL = 'user@exemple.tld';
+$passwdMAIL = '****';
+$portMAIL = 587;
+*/
+
 ?>

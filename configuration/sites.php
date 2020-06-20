@@ -1,13 +1,12 @@
 <?php
 /*
-exemple $sites['debug'];
+exemple $sites['show'];
 exemple $sites['update']['rdf'];
 exemple $sites['e-mail']['contact'];
 
 */
 $sites = array(
 	'name' => 'Website Project (WP)',
-	/*'domain' => 'website-project.test',=Nginx test*/ /*domain: exemple.tld*/
 	'domain' => 'dev.alexonbstudio.fr', /*domain: exemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'default',
@@ -27,12 +26,32 @@ $sites = array(
 
 $JE_sites = json_encode($sites);
 
-
+#Secret hidden debug json
 
 #####################################
 #									#
-#			DATABASE				#
+#			DATABASE|ADODB			#
 #									#
 #####################################
+/*
+$hostDB = 'localhost';
+$nameDB = '';
+$userDB = '';
+$passwdDB = '';
+$portDB = 3306;
+*/
+
+#####################################
+#									#
+#			Email|SMTP 				#
+#									#
+#####################################
+/*
+$hostMAIL = 'mail.exemple.tld';
+$userMAIL = 'user@exemple.tld';
+$passwdMAIL = '****';
+$portMAIL = 587;
+*/
+
 
 ?>
