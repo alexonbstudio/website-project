@@ -1,0 +1,7 @@
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#INDEX frontend default
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^index.html$ index.php?pages=index [L]
+</IfModule>
