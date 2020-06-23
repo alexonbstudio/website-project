@@ -1,9 +1,9 @@
 <?php
-
+# $block['success']['content']['msg']
 $block = array(
 	'success' => array(
 		'title' => 'Succès',
-		'description' => '',
+		'description' => 'Désolé votre message n\'a pas été envoyé',
 		'keyword' => '',
 		'url' => array(
 			'default' => 'contact/success.html',
@@ -11,18 +11,16 @@ $block = array(
 			'en' => 'contact/success.html'
 		),
 		'content' => array(
-			'top' => array(),
-			'middle' => array(),
-			'footer' => array()
+			'msg' => 'Votre message à été bien envoyé avec success'
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'themes/bg-alexonbstudio.png'  /*directory images from <exemple.tld>/assets */
+			'images' => 'block/success.jpg'  /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'error' => array(
 		'title' => 'Erreur',
-		'description' => '',
+		'description' => 'Désolé votre message n\'a pas été envoyé',
 		'keyword' => '',
 		'url' => array(
 			'default' => 'error.html',
@@ -30,13 +28,17 @@ $block = array(
 			'en' => 'error.html'
 		),
 		'content' => array(
-			'top' => array(),
-			'middle' => array(),
-			'footer' => array()
+			'line1' => 'Une erreur est survenue pendant l\'exécution de la requête.',
+			'line2' => 'Vous ne pouvez pas visiter cette page car :',
+			'line3' => 'bookmark/favori périmé',
+			'line4' => 'une adresse erronée',
+			'line5' => 'Un moteur de recherche possède un listing périmé pour ce site',
+			'line6' => 'vous n\'avez pas accès à cette page',
+			'line7' => 'Votre message n\'a pas été correctement envoyé avec succès'
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'themes/bg-alexonbstudio.png'  /*directory images from <exemple.tld>/assets */
+			'images' => 'block/error.jpg'  /*directory images from <exemple.tld>/assets */
 		)
 	)
 );

@@ -14,11 +14,20 @@
     </ol>
 
     <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
+    <img class="img-fluid rounded mb-4" src="<?php echo $images['dir'].'/'.$block['error']['sitemap']['images']; ?>" alt="<?php echo $title; ?>">
 
     <div class="row">
-      <div class="col-lg-12">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+      <div class="col-lg-6">
+           <p><?php echo $block['error']['content']['line1']; ?></p>
+           <p><?php echo $block['error']['content']['line2']; ?></p>
+            <p><?php echo $block['error']['content']['line3']; ?></p>
+            <p><?php echo $block['error']['content']['line4']; ?></p>
+		</div>	
+      <div class="col-lg-6">
+			
+            <p><?php echo $block['error']['content']['line5']; ?></p>
+            <p><?php echo $block['error']['content']['line6']; ?></p>
+            <p><?php echo $block['error']['content']['line7']; ?></p>
       </div>
     </div>
     <!-- /.row -->

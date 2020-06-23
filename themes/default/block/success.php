@@ -14,11 +14,11 @@
     </ol>
 
     <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
+    <img class="img-fluid rounded mb-4" src="<?php echo $images['dir'].'/'.$block['success']['sitemap']['images']; ?>" alt="<?php echo $title; ?>">
 
     <div class="row">
       <div class="col-lg-12">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p><?php echo $block['success']['content']['msg']; ?></p>
       </div>
     </div>
     <!-- /.row -->
