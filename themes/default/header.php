@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title><?php echo $sites['name'].' - '.$title; ?></title>
-  <meta name="description" content="<?php echo $description; ?>">
-  <meta name="keywords" content="<?php echo $keyword; ?>">
+  <?php if(!empty($title)){ ?>
+	<title><?php echo $sites['name'].' - '.$title; ?></title>
+  <?php } else { ?>
+	<title><?php echo $sites['name']; ?></title>
+  <?php } ?>
+  <?php if(!empty($description)){ ?><meta name="description" content="<?php echo $description; ?>"><?php } ?>
+  <?php if(!empty($keyword)){ ?><meta name="keywords" content="<?php echo $keyword; ?>"><?php } ?>
   <meta name="author" content="<?php echo $sites['name']; ?>">
 	<meta name="format-detection" content="telephone=yes">
 	<meta name="robots" content="<?php echo $sites['head']['robots']; ?>">
