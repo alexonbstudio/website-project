@@ -99,6 +99,11 @@ if(isset($_GET['pages'])){
 		$urls = $email['index']['url']['default'];
 		$imgs = $email['index']['sitemap']['images'];
 		$imgs = $email['index']['sitemap']['images'];
+
+				require 'libs/phpmailer/src/PHPMailer.php';
+
+				$mail = new PHPMailer(true);
+				
 		if(!empty($business['local']['name'])){		
 		
 			if (array_key_exists('teams', $_POST) && in_array($_POST['teams'], [$business['local']['mail']['text']['contact'], $business['local']['mail']['text']['support'], $business['local']['mail']['text']['commercial'], $business['local']['mail']['text']['sponsor'], $business['local']['mail']['text']['partner'], $business['local']['mail']['text']['business']], true)) {
@@ -110,12 +115,8 @@ if(isset($_GET['pages'])){
 		
 		
 			# $msg = '';
-			if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
+			if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
 				date_default_timezone_set($sites['default-timezone']);
-
-				require 'libs/phpmailer/src/PHPMailer.php';
-
-				$mail = new PHPMailer(true);
 				$mail->setFrom($_POST['email'], $_POST['name']);
 				$mail->addAddress($teams, $sites['domain']);
 				
@@ -150,11 +151,11 @@ if(isset($_GET['pages'])){
 							#Solution 3
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
-							<h4>'.$email['index']['content']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
-							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
-							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
-							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
-							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+							<h4>'.$email['index']['content']['default']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
 					
 					if (!$mail->send()) {
 					   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
@@ -171,12 +172,9 @@ if(isset($_GET['pages'])){
 			}
 		} else {		
 			# $msg = '';
-			if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
+			if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
 				date_default_timezone_set($sites['default-timezone']);
-
-				require 'libs/phpmailer/src/PHPMailer.php';
-
-				$mail = new PHPMailer(true);
+				
 				$mail->setFrom($_POST['email'], $_POST['name']);
 				$mail->addAddress($private['mail']['public'], $sites['domain']);
 				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
@@ -209,11 +207,11 @@ if(isset($_GET['pages'])){
 							#Solution 3
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
-							<h4>'.$email['index']['content']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
-							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
-							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
-							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
-							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+							<h4>'.$email['index']['content']['default']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
 					
 					if (!$mail->send()) {
 					   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);

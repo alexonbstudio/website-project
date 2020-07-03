@@ -86,6 +86,10 @@ if(isset($_GET['lang'])){
 				$keyword = $email['index']['keyword'];
 				$urls = $email['index']['url']['default'];
 				$imgs = $email['index']['sitemap']['images'];
+
+				require 'libs/phpmailer/src/PHPMailer.php';
+
+				$mail = new PHPMailer(true);
 				
 				if(!empty($business['local']['name'])){
 		
@@ -96,12 +100,9 @@ if(isset($_GET['lang'])){
 						$teams = $business['local']['mail']['text']['contact'].'@'.$sites['domain'];
 					}	
 					# $msg = '';
-					if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
+					if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
 						date_default_timezone_set($sites['default-timezone']);
 
-						require 'libs/phpmailer/src/PHPMailer.php';
-
-						$mail = new PHPMailer(true);
 						$mail->setFrom($_POST['email'], $_POST['name']);
 						$mail->addAddress($teams, $sites['domain']);
 						# $mail->msgHTML(); #preparing email template
@@ -136,11 +137,11 @@ if(isset($_GET['lang'])){
 							# Solution 3
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
-							<h4>'.$email['index']['content']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
-							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
-							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
-							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
-							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+							<h4>'.$email['index']['content']['default']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
 					
 							if (!$mail->send()) {
 							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
@@ -157,12 +158,9 @@ if(isset($_GET['lang'])){
 					}
 				} else {
 					# $msg = '';
-					if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
+					if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
 						date_default_timezone_set($sites['default-timezone']);
-
-						require 'libs/phpmailer/src/PHPMailer.php';
-
-						$mail = new PHPMailer(true);
+						
 						$mail->setFrom($_POST['email'], $_POST['name']);
 						$mail->addAddress($private['mail']['public'], $sites['domain']);
 						# $mail->msgHTML(); #preparing email template
@@ -196,11 +194,11 @@ if(isset($_GET['lang'])){
 							#solution 3
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
-							<h4>'.$email['index']['content']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
-							<strong>'.$email['index']['content']['email'].':</strong> '.$_POST['email'].'<br /><br />
-							<strong>'.$email['index']['content']['name'].':</strong> '.$_POST['name'].'<br /><br />
-							<strong>'.$email['index']['content']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
-							<strong>'.$email['index']['content']['message'].':</strong> '.$_POST['message'];
+							<h4>'.$email['index']['content']['default']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
+							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
 					
 							if (!$mail->send()) {
 							   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
