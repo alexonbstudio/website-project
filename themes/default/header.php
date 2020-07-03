@@ -1,6 +1,6 @@
 <?php ob_start("ob_html_compress"); ?>
 <!doctype html>
-<html lang="<?php echo $translate['auto']['seo']; ?>">
+<html lang="<?php echo $Languages_translate; ?>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -83,7 +83,7 @@
 <meta property="og:description" content="<?php echo $description; ?>">
 <meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['small']; ?>">
 
- <meta content="<?php echo $translate['auto']['seo']; ?>" property="og:locale"/>
+ <meta content="<?php echo $Languages_translate; ?>" property="og:locale"/>
 <?php 
 if(!empty($social['facebook']['admins'])){
 	 echo '<meta content="'.$social['facebook']['admins'].'" property="og:admins"/>

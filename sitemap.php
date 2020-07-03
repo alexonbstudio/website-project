@@ -71,6 +71,7 @@ $sitemap = json_decode($JE_translate_sitemap, true);
 
 #Syslink
 $protocols = $sites['protocol'];
+$Languages_translate = isset($translate['auto']['seo']) ? $translate['manual']['frontend']['french'] : $translate['manual']['frontend']['english'];
 
 #frontend
 if(isset($_GET['lang'])){
@@ -85,7 +86,7 @@ if(isset($_GET['lang'])){
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sitemap['index']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sitemap['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
-				include_once('themes/'.$sites['template'].'/sitemap/'.$translate['auto']['seo'].'.php');
+				include_once('themes/'.$sites['template'].'/sitemap/'.$Languages_translate.'.php');
 				include('themes/'.$sites['template'].'/footer.php');	
 			} else {
 				header('Location: '.$protocols.'://'.$sites['domain']);

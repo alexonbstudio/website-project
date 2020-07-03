@@ -71,6 +71,7 @@ $sitemap = json_decode($JE_translate_sitemap, true);
 
 #Syslink
 $protocols = $sites['protocol'];
+$Languages_translate = isset($translate['auto']['seo']) ? $translate['manual']['frontend']['french'] : $translate['manual']['frontend']['english'];
 
 #frontend
 if(isset($_GET['xml'])){
@@ -78,8 +79,8 @@ if(isset($_GET['xml'])){
 		if(isset($_GET['translate'])){
 			if($_GET['translate'] == 'default'){
 				include_once('themes/seo/xml/translate/default.php');	
-			} else if($_GET['translate'] == $translate['auto']['seo']){
-				include_once('themes/seo/xml/translate/'.$translate['auto']['seo'].'.php');	
+			} else if($_GET['translate'] == $Languages_translate){
+				include_once('themes/seo/xml/translate/'.$Languages_translate.'.php');	
 			} else {
 				header('Location: '.$protocols.'://'.$sites['domain']);
 				exit();

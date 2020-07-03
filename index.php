@@ -71,6 +71,7 @@ $sitemap = json_decode($JE_translate_sitemap, true);
 
 #Syslink
 $protocols = $sites['protocol'];
+$Languages_translate = isset($translate['auto']['seo']) ? $translate['manual']['frontend']['french'] : $translate['manual']['frontend']['english'];
 
 #Email contact form PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
