@@ -92,8 +92,9 @@
                   <div class="validate"></div>
                 </div>
               </div>
-				<?php if(!empty($business['local']['name'])){ ?>	
-              <div class="form-group">  
+				<?php if(!empty($business['local']['name'])){ ?>
+              <div class="form-row">	
+              <div class="col-md-6 form-group">  
 				<select name="teams" id="select">
 					<option value="<?php echo $business['local']['mail']['text']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
 					<option value="<?php echo $business['local']['mail']['text']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
@@ -104,6 +105,17 @@
 				</select>
                 <div class="validate"></div>
               </div>
+                <div class="col-md-6 form-group">
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="<?php echo $email['index']['content']['default']['phone']; ?>" data-rule="minlen:3" data-msg="<?php echo $email['index']['content']['placeholder']['phone']; ?>" />
+                  <div class="validate"></div>
+                </div>
+				
+              </div>
+				<?php } else { ?>	
+                <div class="form-group">
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="<?php echo $email['index']['content']['default']['phone']; ?>" data-rule="minlen:3" data-msg="<?php echo $email['index']['content']['placeholder']['phone']; ?>" />
+                  <div class="validate"></div>
+                </div>
 				<?php } ?>	
               <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="<?php echo $email['index']['content']['default']['subject']; ?>" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
