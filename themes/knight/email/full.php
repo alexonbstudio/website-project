@@ -80,7 +80,7 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
+<?php if (empty($msg_email)) { ?>
             <form method="post" role="form" class="php-email-form" data-aos="fade-left">
               <div class="form-row">
                 <div class="col-md-6 form-group">
@@ -96,12 +96,12 @@
               <div class="form-row">	
               <div class="col-md-6 form-group">  
 				<select name="teams" id="select">
-					<option value="<?php echo $business['local']['mail']['text']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['commercial']; ?>"><?php echo $email['index']['content']['mail']['commercial']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['sponsor']; ?>"><?php echo $email['index']['content']['mail']['sponsor']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['partner']; ?>"><?php echo $email['index']['content']['mail']['partner']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['business']; ?>"><?php echo $email['index']['content']['mail']['business']; ?></option>
+					<option value="<?php echo $business['local']['mail']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
+					<option value="<?php echo $business['local']['mail']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
+					<option value="<?php echo $business['local']['mail']['commercial']; ?>"><?php echo $email['index']['content']['mail']['commercial']; ?></option>
+					<option value="<?php echo $business['local']['mail']['sponsor']; ?>"><?php echo $email['index']['content']['mail']['sponsor']; ?></option>
+					<option value="<?php echo $business['local']['mail']['partner']; ?>"><?php echo $email['index']['content']['mail']['partner']; ?></option>
+					<option value="<?php echo $business['local']['mail']['business']; ?>"><?php echo $email['index']['content']['mail']['business']; ?></option>
 				</select>
                 <div class="validate"></div>
               </div>
@@ -132,7 +132,11 @@
               </div>
               <div class="text-center"><button type="submit"><?php echo $email['index']['content']['form']['send']; ?></button></div>
             </form>
-
+<?php 
+} else {
+    echo $msg_email;
+} 
+?>
           </div>
 
         </div>
