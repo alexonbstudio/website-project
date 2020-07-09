@@ -1,9 +1,10 @@
-<?php header('Content-Type: text/html; charset=utf-8'); ?>
+<?php header('Content-Type: text/plain; charset=utf-8'); ?>
 User-agent: *
 Disallow: /themes/
 Disallow: /libs/
 Disallow: /configuration/
 Disallow: /cache/
+Allow: /
 
 Sitemap: <?php echo $protocols.'://'.$sites['domain']; ?>/sitemap.xml
 
