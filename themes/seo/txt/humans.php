@@ -1,4 +1,4 @@
-<?php header('Content-Type: text/html; charset=utf-8'); ?>
+<?php header('Content-Type: text/plain; charset=utf-8'); ?>
 <?php if(!empty($private['name'])){ ?>
 /* OWNER */
 	name: <?php echo $private['name']; } ?>
