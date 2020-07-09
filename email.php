@@ -40,16 +40,20 @@ $business = json_decode($JE_business, true);
 $markets = json_decode($JE_markets, true);
 $restaurant = json_decode($JE_restaurant, true);
 */
+#Syslink
+$protocols = $sites['protocol'];
+$Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $translate['auto']['seo'] : $translate['manual']['frontend']['french'];
+
 #Configuration
-$lang_finales = 'languages/'.$translate['manual']['frontend']['french'].'/general.php';
+$lang_finales = 'languages/'.$Languages_translate.'/general.php';
 if (file_exists($lang_finales)) {
-    include_once 'languages/'.$translate['auto']['files'].'/general.php'; 
-    include_once 'languages/'.$translate['auto']['files'].'/partner.php'; 
-    include_once 'languages/'.$translate['auto']['files'].'/sponsor.php'; 
-    include_once 'languages/'.$translate['auto']['files'].'/law.php'; 
-    include_once 'languages/'.$translate['auto']['files'].'/email.php'; 
-    include_once 'languages/'.$translate['auto']['files'].'/block.php'; 
-    include_once 'languages/'.$translate['auto']['files'].'/sitemap.php'; 
+    include_once 'languages/'.$Languages_translate.'/general.php'; 
+    include_once 'languages/'.$Languages_translate.'/partner.php'; 
+    include_once 'languages/'.$Languages_translate.'/sponsor.php'; 
+    include_once 'languages/'.$Languages_translate.'/law.php'; 
+    include_once 'languages/'.$Languages_translate.'/email.php'; 
+    include_once 'languages/'.$Languages_translate.'/block.php'; 
+    include_once 'languages/'.$Languages_translate.'/sitemap.php'; 
 } else {
     include_once 'languages/'.$translate['manual']['frontend']['french'].'/general.php'; 
     include_once 'languages/'.$translate['manual']['frontend']['french'].'/partner.php'; 
@@ -69,17 +73,13 @@ $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
 
-#Syslink
-$protocols = $sites['protocol'];
-$Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $translate['auto']['seo'] : $translate['manual']['frontend']['french'];
-
 #Email contact form PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 #use PHPMailer\PHPMailer\Exception; test
 
 require 'libs/phpmailer/src/PHPMailer.php';
 $mail = new PHPMailer(true);
-				
+
 #frontend
 if(isset($_GET['lang'])){
 	if($_GET['lang'] == $Languages_translate){
@@ -192,7 +192,7 @@ if(isset($_GET['lang'])){
 						date_default_timezone_set($sites['default-timezone']);
 						
 						$mail->setFrom($_POST['email'], $_POST['name']);
-						$mail->addAddress($private['mail']['public'], $sites['domain']);
+						$mail->addAddress($private['mail']['public'].'@'.$sites['domain'], $sites['domain']);
 						# $mail->msgHTML(); #preparing email template
 						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 							$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
