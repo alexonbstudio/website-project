@@ -1,4 +1,4 @@
-<?php header('Content-Type: text/html; charset=utf-8'); ?>
+<?php header('Content-Type: text/plain; charset=utf-8'); ?>
 #Info <?php echo $sites['domain']; ?> Update <?php echo date('d/m/Y'); ?>
 <?php 
 if(!empty($marketing['google']['adsense'])){ echo 'google.com, '.$marketing['google']['adsense'].', RESELLER'; }
