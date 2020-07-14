@@ -19,7 +19,7 @@ $sites = array(
 		'rdf' => 'Copyright &copy;' /*show only template seo/txt/rdf*/
 	),
 	'head' => array(
-		'robots' => 'noopd, noydir' /*Only show on template header.php | robots meta*/
+		'robots' => 'index, follow' /*Only show on template header.php | robots meta*/
 	),
 	'default-timezone' => 'Etc/UTC' /*Docs PHP variable date_default_timezone_set() */
 );
