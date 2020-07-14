@@ -51,7 +51,6 @@
 
 <!--SEO-->
 <link rel="canonical" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
-<link rel="alternate" type="application/ld+json" href="<?php echo $protocols.'://'.$sites['domain']; ?>/json-ld.json" />
 
     <script type="application/ld+json">
 
@@ -139,18 +138,18 @@
   "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
   "url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
   "sameAs":[
-		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['name'].'",'; } ?>
-		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['name'].'",'; } ?>
-		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['name'].'",'; } ?> 
-		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['name'].'",'; } ?>
-		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['name'].'",'; } ?>
-		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['name'].'",'; } ?>
-		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['name'].'",'; } ?>
-		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['name'].'",'; } ?>
-		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['name'].'",'; } ?>
-		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['name'].'",'; } ?>
-		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['name'].'",'; } ?>
-		<?php if(!empty($private['name'])){ echo '"'.$private['name'].'",'; } ?>
+		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['url'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['url'].'",'; } ?>
+		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['url'].'",'; } ?> 
+		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['url'].'",'; } ?>
+		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['url'].'",'; } ?>
+		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['url'].'",'; } ?>
+		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['url'].'",'; } ?>
+		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['url'].'",'; } ?>
+		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['url'].'",'; } ?>
+		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['url'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['url'].'",'; } ?>
+		"<?php echo $private['name'];  ?>",
 		"<?php echo $sites['name']; ?>"
 	]
 }<?php } ?>
@@ -175,10 +174,26 @@
 		"@type": "GeoCoordinates",
 		"latitude": <?php echo $business['local']['geo']['latitude']; ?>,
 		"longitude": <?php echo $business['local']['geo']['longitude']; ?>
-	}
+	},
+	"sameAs":[
+		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['url'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['url'].'",'; } ?>
+		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['url'].'",'; } ?> 
+		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['url'].'",'; } ?>
+		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['url'].'",'; } ?>
+		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['url'].'",'; } ?>
+		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['url'].'",'; } ?>
+		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['url'].'",'; } ?>
+		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['url'].'",'; } ?>
+		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['url'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['url'].'",'; } ?>
+		<?php if(!empty($private['name'])){ ?>"<?php echo $private['name'];  ?>",<?php } ?>
+		"<?php echo $sites['name']; ?>"
+	]
 }<?php } ?>]
 
     </script>
+	
 <meta property="og:site_name" content="<?php echo $sites['name']; ?>">
 <meta property="og:url" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>">
 <meta property="og:title" content="<?php echo $title; ?>">
