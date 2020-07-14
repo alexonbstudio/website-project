@@ -14,6 +14,8 @@
   <meta name="author" content="<?php echo $sites['name']; ?>">
 	<meta name="format-detection" content="telephone=yes">
 	<meta name="robots" content="<?php echo $sites['head']['robots']; ?>">
+	<meta name="googlebot" content="<?php echo $sites['head']['robots']; ?>, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="bingbot" content="<?php echo $sites['head']['robots']; ?>, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
 		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['icon']; ?>">
 	<?php } else { ?>
@@ -48,35 +50,133 @@
 
 <!--SEO-->
 <link rel="canonical" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
-<link rel="alternate" type="application/ld+json" href="<?php echo $protocols.'://'.$sites['domain']; ?>/json-ld.json" />
+
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>"
-      },
-      "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
-      "image": [
-        "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$imgs; ?>"
-       ]<?php } ?><?php if(!empty($private['name'])){ ?>,
-      "author": {
-        "@type": "Person",
-        "name": "<?php echo $private['name']; ?>"
-      }<?php } ?><?php if(!empty($business['local']['name'])){ ?>,
-       "publisher": {
-        "@type": "Organization",
-        "name": "<?php echo $business['local']['name']; ?>",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>"
-        }
-      }<?php } ?>
-    }
+
+<?php ##########	OWNER	########## ?>
+[{
+    "@context": "https://schema.org",
+	"@type": "WebPage",
+	"@id": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#webpage",
+	"url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>",
+	"name":"<?php echo $sites['name']; ?>",
+	"description":"<?php echo $description; ?>",
+    "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
+	"inLanguage":"<?php echo $Languages_translate; ?>",
+    "image": [
+      "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$imgs; ?>"
+     ],<?php } ?>
+	 "isPartOf":{
+		"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'; ?>#website"
+	 },
+	 "primaryImageOfPage":{
+		"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#primaryimage"
+	 },
+	 "breadcrumb":{
+		"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#breadcrumb"
+	 },
+	 ,
+	"potentialAction":[
+		{
+			"@type":"ReadAction",
+			"target":[
+				"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>"
+			]
+		}
+	]
+	
+},
+{
+	"@type":"WebSite",
+	"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'; ?>#website",
+	"url":"<?php echo $protocols.'://'.$sites['domain'].'/'; ?>",
+	"name":"<?php echo $sites['name']; ?>",
+	"description":"<?php echo $general['index']['description']; ?>",
+	"inLanguage":"<?php echo $Languages_translate; ?>"
+},
+<?php ##########	Breadcrumb	########## ?>
+{
+	"@type":"BreadcrumbList",
+	"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#breadcrumb",
+	"itemListElement":[
+		{
+			"@type":"ListItem",
+			"position":1,
+			"item":{
+				"@type":"WebPage",
+				"@id":"<?php echo $protocols.'://'.$sites['domain']; ?>",
+				"url":"<?php echo $protocols.'://'.$sites['domain']; ?>",
+				"name":"<?php echo $general['index']['title']; ?>"
+			}
+		},
+		{
+			"@type":"ListItem",
+			"position":2,
+			"item":{
+				"@type":"WebPage",
+				"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>",
+				"url":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>",
+				"name":"<?php echo $title; ?>"
+			}
+		}
+	]
+},
+{
+	"@type":"ImageObject",
+	"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#primaryimage",
+	"inLanguage":"<?php echo $Languages_translate; ?>",
+	"url":"<?php echo $protocols.'://'.$sites['domain'].'/'.$imgs; ?>",
+	"width":718,
+	"height":403,
+	"caption":"<?php echo $title; ?>"
+}<?php if(!empty($private['name'])){ ?>,
+  {
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "<?php echo $private['name']; ?>",
+  "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
+  "url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
+  "sameAs":[
+		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['name'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['name'].'",'; } ?>
+		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['name'].'",'; } ?> 
+		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['name'].'",'; } ?>
+		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['name'].'",'; } ?>
+		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['name'].'",'; } ?>
+		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['name'].'",'; } ?>
+		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['name'].'",'; } ?>
+		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['name'].'",'; } ?>
+		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['name'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['name'].'",'; } ?>
+		<?php if(!empty($private['name'])){ echo '"'.$private['name'].'",'; } ?>
+		"<?php echo $sites['name']; ?>"
+	]
+}<?php } ?>
+<?php ##########	BUSINESS PAGE | You need Absolute CHANGE for Adapt your Business Local categories	########## ?>
+<?php if(!empty($business['local']['name'])){ ?>,
+{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
+	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
+	"logo": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
+	"name": "<?php echo $business['local']['name']; ?>",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "<?php echo $business['local']['address']; ?>",
+		"addressLocality": "<?php echo $business['local']['city']; ?>",
+		<?php if(!empty($business['local']['region'])){ ?>"addressRegion": "<?php echo $business['local']['region'].','; ?>"<?php } ?>
+		"postalCode": "<?php echo $business['local']['postal']; ?>",
+		"addressCountry": "<?php echo $business['local']['contry']; ?>"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": <?php echo $business['local']['geo']['latitude']; ?>,
+		"longitude": <?php echo $business['local']['geo']['longitude']; ?>
+	}
+}<?php } ?>]
+
     </script>
-
-
 <meta property="og:site_name" content="<?php echo $sites['name']; ?>">
 <meta property="og:url" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>">
 <meta property="og:title" content="<?php echo $title; ?>">
