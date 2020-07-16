@@ -95,6 +95,41 @@ if(isset($_GET['pages'])){
 		include('themes/'.$sites['template'].'/footer.php');
 		
 		
+	} else if($_GET['pages'] == 'debug'){
+		/**########## debug DIR ##########**/
+		if(isset($_GET['json'])){
+			if($_GET['json'] == 'sites'){
+				include_once('themes/debug/sites.php');
+			} else if($_GET['json'] == 'social'){
+				include_once('themes/debug/social.php');
+			} else if($_GET['json'] == 'private'){
+				include_once('themes/debug/private.php');
+			} else if($_GET['json'] == 'business'){
+				include_once('themes/debug/business.php');
+			} else if($_GET['json'] == 'images'){
+				include_once('themes/debug/images.php');
+			} else if($_GET['json'] == 'partner'){
+				include_once('themes/debug/partner.php');
+			} else if($_GET['json'] == 'sponsor'){
+				include_once('themes/debug/sponsor.php');
+			} else if($_GET['json'] == 'credits'){
+				include_once('themes/debug/credits.php');
+			} else {
+				header('Location: '.$protocols.'://'.$sites['domain']);
+				exit();
+			}
+		} else {
+			$title = $debug['index']['title'];
+			$description = $debug['index']['description'];
+			$keyword = $debug['index']['keyword'];
+			$urls = $debug['index']['url']['default'];
+			$imgs = $debug['index']['sitemap']['images'];
+			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$debug['index']['url']['fr']);
+			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$debug['index']['url']['en']);
+			include('themes/'.$sites['template'].'/header.php');
+			include_once('themes/'.$sites['template'].'/debug/full.php');
+			include('themes/'.$sites['template'].'/footer.php');	
+		}
 	} else if($_GET['pages'] == 'email'){
 		/**########## EMAIL DIR ##########**/	
 		$title = $email['index']['title'];

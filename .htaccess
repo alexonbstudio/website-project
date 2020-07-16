@@ -1243,6 +1243,16 @@ RewriteRule ^fr/accueil.html$ general.php?lang=fr&pages=index [L]
 ####################################################################################################
 ####################################################################################################
 
+	########## debug - English ##########
+	RewriteRule ^fr/déboguer\.html$ debug.php?lang=fr&pages=debug [L]
+	RewriteRule ^fr/debug/sites\.json$ debug.php?lang=fr&pages=debug&json=sites [L]
+	RewriteRule ^fr/debug/social\.json$ debug.php?lang=fr&pages=debug&json=social [L]
+	RewriteRule ^fr/debug/private\.json$ debug.php?lang=fr&pages=debug&json=private [L]
+	RewriteRule ^fr/debug/business\.json$ debug.php?lang=fr&pages=debug&json=business [L]
+	RewriteRule ^fr/debug/images\.json$ debug.php?lang=fr&pages=debug&json=images [L]
+	RewriteRule ^fr/debug/partner\.json$ debug.php?lang=fr&pages=debug&json=partner [L]
+	RewriteRule ^fr/debug/sponsor\.json$ debug.php?lang=fr&pages=debug&json=sponsor [L]
+	RewriteRule ^fr/debug/credits\.json$ debug.php?lang=fr&pages=debug&json=credits [L]
 ########## LAW - French ########## 
 RewriteRule ^fr/règles\.html$ law.php?lang=fr&pages=law [L]
 RewriteRule ^fr/conditions-générales-utilisation\.html$ law.php?lang=fr&pages=law&full=cgu [L]
@@ -1291,6 +1301,16 @@ RewriteRule ^fr/erreur\.html$ block.php?lang=fr&pages=error [L]
 #Translate English
 RewriteRule ^en/home.html$ general.php?lang=en&pages=index [L]
 
+	########## debug - English ##########
+	RewriteRule ^en/debug\.html$ debug.php?lang=en&pages=debug [L]
+	RewriteRule ^en/debug/sites\.json$ debug.php?lang=en&pages=debug&json=sites [L]
+	RewriteRule ^en/debug/social\.json$ debug.php?lang=en&pages=debug&json=social [L]
+	RewriteRule ^en/debug/private\.json$ debug.php?lang=en&pages=debug&json=private [L]
+	RewriteRule ^en/debug/business\.json$ debug.php?lang=en&pages=debug&json=business [L]
+	RewriteRule ^en/debug/images\.json$ debug.php?lang=en&pages=debug&json=images [L]
+	RewriteRule ^en/debug/partner\.json$ debug.php?lang=en&pages=debug&json=partner [L]
+	RewriteRule ^en/debug/sponsor\.json$ debug.php?lang=en&pages=debug&json=sponsor [L]
+	RewriteRule ^en/debug/credits\.json$ debug.php?lang=en&pages=debug&json=credits [L]
 
 ########## LAW - English ########## 
 RewriteRule ^en/rules\.html$ law.php?lang=en&pages=law [L]
@@ -1455,4 +1475,20 @@ RewriteRule ^legal\.html$ index.php?pages=law&full=legal [L]
 RewriteRule ^policy-privacy\.html$ index.php?pages=law&full=policy-privacy [L]
 RewriteRule ^grpd\.html$ index.php?pages=law&full=rgpd [L]
 
+</IfModule>
+
+
+# DEBUG 
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	RewriteRule ^debug\.html$ index.php?pages=debug [L]
+	RewriteRule ^debug/sites\.json$ index.php?pages=debug&json=sites [L]
+	RewriteRule ^debug/social\.json$ index.php?pages=debug&json=social [L]
+	RewriteRule ^debug/private\.json$ index.php?pages=debug&json=private [L]
+	RewriteRule ^debug/business\.json$ index.php?pages=debug&json=business [L]
+	RewriteRule ^debug/images\.json$ index.php?pages=debug&json=images [L]
+	RewriteRule ^debug/partner\.json$ index.php?pages=debug&json=partner [L]
+	RewriteRule ^debug/sponsor\.json$ index.php?pages=debug&json=sponsor [L]
+	RewriteRule ^debug/credits\.json$ index.php?pages=debug&json=credits [L]
 </IfModule>
