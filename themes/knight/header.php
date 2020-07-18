@@ -287,10 +287,10 @@ if(!empty($marketing['google']['adsense'])){
 
 ?>
 
-
+<?php if(!empty($seo['hcaptcha']['key'])){ ?><script src="https://hcaptcha.com/1/api.js?hl=<?php echo $Languages_translate; ?>" async defer></script><?php } ?>
 <!--Template-->
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
-  <link href="<?php echo $version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
   <script defer src="<?php echo $version['internal']['fontawesome']['js']; ?>"></script>
   <link href="<?php echo $version['internal']['production']['css']['knight']; ?>" rel="stylesheet">
   <link href="<?php echo $version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
@@ -298,8 +298,8 @@ if(!empty($marketing['google']['adsense'])){
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?php echo $version['internal']['icofont']['css']; ?>" rel="stylesheet">
-  <link href="<?php echo $version['internal']['boxicons']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['icofont']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['boxicons']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['venobox']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['owl.carousel']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['aos']['css']; ?>" rel="stylesheet">
@@ -331,7 +331,7 @@ if(!empty($marketing['google']['adsense'])){
 
       <!-- The main logo is shown in mobile version only. The centered nav-logo in nav menu is displayed in desktop view  -->
       <div class="logo d-block d-lg-none">
-        <a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $images['dir'].'/'.$images['manager']['logo']['small'];?>" alt="<?php echo $sites['name'];?>" class="img-fluid"></a>
+        <a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['small'];?>" alt="<?php echo $sites['name'];?>" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -363,7 +363,7 @@ if(!empty($marketing['google']['adsense'])){
           </li>
           <li><a href="#services">Services</a></li>
 
-          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $images['dir'].'/'.$images['manager']['logo']['normal']; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
+          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
 
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#pricing">Pricing</a></li>

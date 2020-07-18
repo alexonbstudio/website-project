@@ -117,6 +117,11 @@
                   <div class="validate"></div>
                 </div>
 				<?php } ?>	
+              <?php if(!empty($seo['hcaptcha']['key'])){ ?>
+			  <div class="form-group">
+                <div class="h-captcha" data-sitekey="<?php echo $seo['hcaptcha']['key']; ?>" data-theme="dark"></div>
+              </div>
+				<?php } ?>
               <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="<?php echo $email['index']['content']['default']['subject']; ?>" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>

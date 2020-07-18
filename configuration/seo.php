@@ -6,17 +6,20 @@ $seo = array(
 	),
 	'google' => array(
 		'tag' => '',
-		'analystics' => 'UA-153512940-1',
+		'analystics' => 'UA-XXXXXXX-X',
 		'' => ''
 	),
 	'yandex' => array(
-		'analystics' => '64702624'
+		'analystics' => ''
 	),
 	'bing' => array(
-		'key' => '45EBC3A755193831C491868CCC1925BB'
+		'key' => ''
+	),
+	'hcaptcha' => array(
+		'key' => ''
 	),
 	'microsoft' => array(
-		'key' => '2181a55f-b920-49f9-ad42-2c979d5c09de'
+		'key' => ''
 	),
 	'html-verify' => array(
 		/** Verification HTLM Social & Video & Search Engine after that change your seo.htaccess **/	
@@ -30,7 +33,7 @@ $seo = array(
 			'key' => ''
 		),
 		'yandex' => array(
-			'key' => 'eebbc322e6a0ff75'
+			'key' => ''
 		)
 		
 	),

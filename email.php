@@ -90,6 +90,7 @@ if(isset($_GET['lang'])){
 				$keyword = $email['index']['keyword'];
 				$urls = $email['index']['url']['default'];
 				$imgs = $email['index']['sitemap']['images'];
+				$pattern_out = '/^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/';
 
 				if(!empty($business['local']['name'])){
 		
@@ -128,7 +129,7 @@ if(isset($_GET['lang'])){
 							$teams = $business['local']['mail']['contact'].'@'.$sites['domain'];
 						}
 						//Make sure the address they provided is valid before trying teams use it
-						if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
+						if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email']) && preg_match($pattern_out, $_POST['phone']) {
 							date_default_timezone_set($sites['default-timezone']);
 							$email_email = $_POST['email'];
 						} else {
@@ -188,7 +189,7 @@ if(isset($_GET['lang'])){
 					} 
 				} else {
 					# $msg = '';
-					if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
+					if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email']) && preg_match($pattern_out, $_POST['phone']) {
 						date_default_timezone_set($sites['default-timezone']);
 						
 						$mail->setFrom($_POST['email'], $_POST['name']);

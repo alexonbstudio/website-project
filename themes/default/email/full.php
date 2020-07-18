@@ -56,6 +56,11 @@
 				<?php } ?>
             </div>
           </div>
+              <?php if(!empty($seo['hcaptcha']['key'])){ ?>
+			  <div class="control-group form-group">
+                <div class="h-captcha" data-sitekey="<?php echo $seo['hcaptcha']['key']; ?>" data-theme="dark"></div>
+              </div>
+				<?php } ?>
           <div class="control-group form-group">
             <div class="controls">
               <label><?php echo $email['index']['content']['default']['message']; ?>:</label>
