@@ -303,6 +303,7 @@ if(!empty($marketing['google']['adsense'])){
   <link href="<?php echo $version['external']['venobox']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['owl.carousel']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['aos']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $version['external']['intl-tel-input']['css']; ?>" rel="stylesheet">
 
 
   <!-- =======================================================

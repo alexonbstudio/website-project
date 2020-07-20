@@ -71,7 +71,25 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo $version['internal']['production']['js']['knight']; ?>"></script>
+  <script src="<?php echo $version['external']['intl-tel-input']['js']; ?>"></script>
   
+	<script>
+
+		var input = document.querySelector("#phone");
+		window.intlTelInput(input, {
+			initialCountry: "auto",
+			geoIpLookup: function(success, failure) {
+				$.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+					var countryCode = (resp && resp.country) ? resp.country : "";
+					success(countryCode);
+				});
+			}
+		});
+
+		var iti = window.intlTelInputGlobals.getInstance(input);
+		iti.isValidNumber(); 
+
+  </script>
   
 </body>
 </html>

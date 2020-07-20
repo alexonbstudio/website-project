@@ -290,6 +290,7 @@ if(!empty($marketing['google']['adsense'])){
 <!--Template-->
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['fontawesome']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $version['external']['intl-tel-input']['css']; ?>" rel="stylesheet">
   <script defer src="<?php echo $version['external']['fontawesome']['js']; ?>"></script>
   <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['production']['css']['default']; ?>" rel="stylesheet">
   <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
