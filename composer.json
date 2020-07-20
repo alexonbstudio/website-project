@@ -18,7 +18,7 @@
 		"bootstrap"
 	],
     "homepage": "https://github.com/alexonbstudio/website-project",
-    "license": "CC-BY-SA",
+    "license": "GPL-3.0",
 	"support": {
 		"source": "https://github.com/alexonbstudio/website-project",
 		"issues": "https://github.com/alexonbstudio/website-project/issues"
@@ -46,16 +46,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "PHPMailer\\PHPMailer\\": "libs/vendor/",
-            "libphonenumber\\": "libs/vendor/",
-			"MatthiasMullie\\Minify\\": "libs/vendor/"
+            "PHPMailer\\PHPMailer\\": "libs/phpmailer/src/",
+            "libphonenumber\\": "libs/libphonenumber/src/",
+			"MatthiasMullie\\Minify\\": "libs/minify/src/"
         }
     },
 	"archive": {
 		"exclude": [
-			"apache/",
-			"caddy/",
-			"nginx/",
 			".github/",
 			"FUNDING.yml",
 			"list-directory.txt",
@@ -67,11 +64,12 @@
         "symfony/polyfill-mbstring": "For optional Work with Libphonenumber library",
         "giggsey/locale": "For optional Work with Libphonenumber library",
         "ext-mbstring": "Needed to send email in multibyte encoding charset",
-        "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+        "psr/cache-implementation": "Cache implementation to use with Minify::cache"
     },
     "require": {
         "php": ">=7.2.0",
         "phpmailer/phpmailer": "^6.1.7",
+        "matthiasmullie/minify": "^1.3.63",
         "giggsey/libphonenumber-for-php": "^8.12.7"
     }
 }
