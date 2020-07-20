@@ -12,7 +12,7 @@ For more information on my website to [https://alexonbstudio.fr](www.alexonbstud
 
 * notice: Hosting shared take Manual install
 
-# comoser using
+# composer using
 
 	composer require alexonbstudio/website-project --no-dev
 	
