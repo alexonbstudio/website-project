@@ -3,4 +3,15 @@ RewriteEngine on
 #sponsor
 RewriteRule ^sponsor\.html$ index.php?pages=sponsor [L]
 
+
+########## SPONSOR - French ##########
+RewriteRule ^fr/sponsorisé\.html$ sponsor.php?lang=fr&pages=index [L]
+
+
+
+########## SPONSOR - English ##########
+RewriteRule ^en/sponsor\.html$ sponsor.php?lang=en&pages=index [L]
+
+
+
 </IfModule>
