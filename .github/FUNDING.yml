@@ -11,7 +11,6 @@
 #otechie: # Replace with a single Otechie username
 #custom: ['https://alexonbstudio.fr/donation.html', 'https://alexonbstudio.fr/sponsoris%C3%A9.html']# Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
 
-
-github: [alexonbstudio]
+github: alexonbstudio
+custom: ["https://alexonbstudio.fr/donation.html", "https://paypal.me/alexonbalangue", "https://utip.io/alexonbstudio", "https://fr.tipeee.com/alexonbstudio", "https://commerce.coinbase.com/checkout/129a7ffa-2284-4b98-b869-5e1b667840f5"]
 patreon: alexonbstudio
-custom: ['https://alexonbstudio.fr/donation.html'] #info https://help.github.com/en/github/administering-a-repository/displaying-a-sponsor-button-in-your-repository
