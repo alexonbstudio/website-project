@@ -3,4 +3,19 @@ RewriteEngine on
 #Partner
 RewriteRule ^partner\.html$ index.php?pages=partner [L]
 
+
+
+
+########## PARTNER - French ##########
+RewriteRule ^fr/partenaire\.html$ partner.php?lang=fr&pages=index [L]
+
+
+
+
+
+########## PARTNER - English ##########
+RewriteRule ^en/partner\.html$ partner.php?lang=en&pages=index [L]
+
+
+
 </IfModule>
