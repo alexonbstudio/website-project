@@ -11,6 +11,10 @@ For more information on my website to [https://alexonbstudio.fr](www.alexonbstud
 + -Manual install[free version](https://github.com/website-project-WP/free-wp) && [Commercial version](https://github.com/website-project-WP/commercial-wp)
 
 * notice: Hosting shared take Manual install
+
+# comoser using
+
+	composer require alexonbstudio/website-project --no-dev
 	
 	
 # back full developement
