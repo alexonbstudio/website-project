@@ -3,4 +3,16 @@ RewriteEngine on
 #sponsor
 RewriteRule ^sitemap\.html$ index.php?pages=sitemap [L]
 
+
+
+########## SITEMAP - English ##########
+RewriteRule ^en/sitemap\.html$ sitemap.php?lang=en&pages=index [L]
+
+
+
+
+########## SITEMAP - French ##########
+RewriteRule ^fr/plan-du-site\.html$ sitemap.php?lang=fr&pages=index [L]
+
+
 </IfModule>
