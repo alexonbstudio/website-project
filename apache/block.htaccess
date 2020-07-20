@@ -5,4 +5,18 @@ RewriteRule ^contact/success\.html$ index.php?pages=success [L]
 RewriteRule ^error\.html$ index.php?pages=error [L]
 
 
+########## BLOCK - English ##########
+RewriteRule ^en/contact/success\.html$ block.php?lang=en&pages=success [L]
+RewriteRule ^en/error\.html$ block.php?lang=en&pages=error [L]
+
+
+
+
+########## BLOCK - French ##########
+RewriteRule ^fr/contact/success\.html$ block.php?lang=fr&pages=success [L]
+RewriteRule ^fr/erreur\.html$ block.php?lang=fr&pages=error [L]
+
+
+
+
 </IfModule>
