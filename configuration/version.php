@@ -5,7 +5,7 @@ $protocols_v = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
 $local_vendor = 'assets/vendor/';
 $local_custom = 'assets/custom/';
 $local_production = 'assets/production/';
-$cdn_vendor = 'https://cdnjs.cloudflare.com/ajax/libs/'; #cdnjs by Cloudflare (vendor directories)
+$cdn_vendor = $protocols_v.'://cdnjs.cloudflare.com/ajax/libs/'; #cdnjs by Cloudflare (vendor directories)
 #host external
 $cdn_custom = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/custom/'; #HTTPS/HTTPS TESTING 
 $cdn_exvendor = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/vendor/'; #HTTPS/HTTPS TESTING
@@ -47,6 +47,10 @@ $version = array(
 			'css' => $local_vendor.'owl.carousel/assets/owl.carousel.min.css',
 			'js' => $local_vendor.'owl.carousel/owl.carousel.min.js'
 		),
+		'intl-tel-input' => array(
+			'css' => $local_vendor.'intl-tel-input/17.0.3/css/intlTelInput.css',
+			'js' => $local_vendor.'intl-tel-input/17.0.3/js/intlTelInput.js'
+		),
 		'php-email-form' => array(
 			'js' => $local_vendor.'php-email-form/validate.min.js'
 		),
@@ -56,9 +60,9 @@ $version = array(
 		),
 		'custom' => array(
 			'css' => array(
-				'default' => $local_custom.'css/default.css',
 				'knight' => $local_custom.'css/knight.css',
-				'langs' => $local_custom.'css/langs.css'
+				'langs' => $local_custom.'css/langs.css',
+				'tpl' => $local_custom.'css/tpl.css',
 			),
 			'js' => array(
 				/*'default' => $local_custom.'js/default.js',*/
@@ -67,12 +71,11 @@ $version = array(
 		),
 		'production' => array(
 			'css' => array(
-				'default' => $local_production.'css/default.min.css',
 				'knight' => $local_production.'css/knight.min.css',
-				'langs' => $local_production.'css/langs.min.css'
+				'langs' => $local_production.'css/langs.min.css',
+				'tpl' => $local_production.'css/tpl.min.css'
 			),
 			'js' => array(
-				/*'default' => $local_production.'js/default.js',*/
 				'knight' => $local_production.'js/knight.min.js'
 			)
 		)
@@ -89,6 +92,10 @@ $version = array(
 		),
 		'jquery' => array(
 			'js' => $cdn_vendor.'jquery/3.5.1/jquery.min.js'
+		),
+		'intl-tel-input' => array(
+			'css' => $local_vendor.'intl-tel-input/17.0.3/css/intlTelInput.min.css',
+			'js' => $local_vendor.'intl-tel-input/17.0.3/js/intlTelInput.min.js'
 		),
 		'aos' => array(
 			'css' => $cdn_vendor.'aos/2.3.4/aos.css',
@@ -124,21 +131,19 @@ $version = array(
 			'css' => array(
 				'langs' => $cdn_custom.'css/langs.css',
 				'default' => $cdn_custom.'css/default.css',
-				'knight' => $cdn_custom.'css/knight.css'
+				'knight' => $cdn_custom.'css/knight.css',
+				'tpl' => $cdn_custom.'css/tpl.css'
 			),
 			'js' => array(
-				/*'default' => $cdn_custom.'js/default.js',*/
 				'knight' => $cdn_custom.'js/knight.js'
 			)
 		),
 		'production' => array(
 			'css' => array(
-				'langs' => $cdn_production.'css/langs.min.css',
-				'default' => $cdn_production.'css/default.min.css',
-				'knight' => $cdn_production.'css/knight.min.css'
+				'knight' => $cdn_production.'css/knight.min.css',
+				'tpl' => $cdn_production.'css/tpl.min.css'
 			),
 			'js' => array(
-				/*'default' => $cdn_production.'js/default.min.js',*/
 				'knight' => $cdn_production.'js/knight.min.js'
 			)
 		)
