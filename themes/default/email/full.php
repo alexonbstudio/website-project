@@ -56,9 +56,9 @@
 				<?php } ?>
             </div>
           </div>
-              <?php if(!empty($seo['hcaptcha']['key'])){ ?>
+              <?php if(!empty($seo['hcaptcha']['public-key'])){ ?>
 			  <div class="control-group form-group">
-                <div class="h-captcha" data-sitekey="<?php echo $seo['hcaptcha']['key']; ?>" data-theme="dark"></div>
+                <div class="h-captcha" data-sitekey="<?php echo $seo['hcaptcha']['public-key']; ?>" data-theme="dark"></div>
               </div>
 				<?php } ?>
           <div class="control-group form-group">

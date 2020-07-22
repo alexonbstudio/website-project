@@ -80,6 +80,15 @@ use PHPMailer\PHPMailer\PHPMailer;
 require 'libs/phpmailer/src/PHPMailer.php';
 $mail = new PHPMailer(true);
 
+#Joomla utilities
+require 'libs/joomla/utilities/src/IpHelper.php';
+use Joomla\Utilities\IpHelper;
+
+# anti spam with HCAPTCHA
+/*
+$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
+$hcaptcha_RData = json_decode($hcaptcha_VResponse);
+*/
 #frontend
 if(isset($_GET['pages'])){
 	if($_GET['pages'] == 'index'){
@@ -165,7 +174,9 @@ if(isset($_GET['pages'])){
 					//Limit length and strip HTML tags
 					$name_email = substr(strip_tags($_POST['name']), 0, 255);
 				} else {
-					$name_email = $email['index']['content']['placeholder']['name'];
+					$name_email = '';
+					$msg_email .= $email['index']['content']['placeholder']['name'];
+					$err_email = true;
 				}
 				//Validate teams address
 				//Never allow arbitrary input for the 'teams' address as it will turn your form inteams a spam gateway!
@@ -236,7 +247,7 @@ if(isset($_GET['pages'])){
 			} 
 		} else {		
 			# $msg = '';
-			if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])/* && preg_match($pattern_out, $_POST['phone'] */) {
+			if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
 				date_default_timezone_set($sites['default-timezone']);
 				
 				$mail->setFrom($_POST['email'], $_POST['name']);

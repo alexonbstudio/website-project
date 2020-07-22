@@ -287,7 +287,7 @@ if(!empty($marketing['google']['adsense'])){
 
 ?>
 
-<?php if(!empty($seo['hcaptcha']['key'])){ ?><script src="https://hcaptcha.com/1/api.js?hl=<?php echo $Languages_translate; ?>" async defer></script><?php } ?>
+<?php if(!empty($seo['hcaptcha']['public-key'])){ ?><script src="https://hcaptcha.com/1/api.js?hl=<?php echo $Languages_translate; ?>" async defer></script><?php } ?>
 <!--Template-->
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['fontawesome']['css']; ?>" rel="stylesheet">

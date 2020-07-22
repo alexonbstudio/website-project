@@ -16,7 +16,8 @@ $seo = array(
 		'key' => ''
 	),
 	'hcaptcha' => array(
-		'key' => ''
+		'public-key' => '', /*Public key here hcaptcha*/
+		'private-key' => '' /*Private key here hcaptcha*/
 	),
 	'microsoft' => array(
 		'key' => ''
