@@ -12,6 +12,21 @@ For more information on my website to [https://alexonbstudio.fr](www.alexonbstud
 
 * notice: Hosting shared take Manual install
 
+## One Libs add from Joomla CMS 4.0
+
+### How to use add the files index.php exemple
+
+	#Joomla utilities
+	require 'libs/joomla/utilities/src/IpHelper.php';
+	use Joomla\Utilities\IpHelper;
+
+	#anti spam with CAPTCHA
+	$Response = file_get_contents('https://captcha/verify?secret='.secret.'&response='.$_POST['response'].'&remoteip='.IpHelper::getIp());
+	$Data = json_decode($Response);
+	#etc...
+
+
+
 # composer using
 
 	composer require alexonbstudio/website-project --no-dev
