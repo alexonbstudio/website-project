@@ -1,79 +1,53 @@
 <?php
-
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-
 require 'libs/custom/compress.php'; 
 #configuration
-include_once 'configuration/sites.php';
-include_once 'configuration/social.php';
-include_once 'configuration/sponsor.php';
-include_once 'configuration/translate.php';
-include_once 'configuration/version.php';
-include_once 'configuration/seo.php';
-include_once 'configuration/private.php';
-include_once 'configuration/partner.php';
-include_once 'configuration/hosting.php';
-include_once 'configuration/credits.php';
-include_once 'configuration/marketing.php';
-include_once 'configuration/images.php';
-include_once 'configuration/business.php';
-/*
-include_once 'configuration/market.php';
-include_once 'configuration/restaurant.php';
-*/
-
+foreach (glob('configuration/*.php') as $GlobConfig) { include_once $GlobConfig; }
 
 #Decode
 $sites = json_decode($JE_sites, true);
-$sponsor_config = json_decode($JE_sponsor_config, true);
-$partner_config = json_decode($JE_partner_config, true);
 $translate = json_decode($JE_translate, true);
 $credits = json_decode($JE_credits, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
+$partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
 $business = json_decode($JE_business, true);
+/*
+#Supplémentaire
+$markets = json_decode($JE_markets, true);
+$restaurant = json_decode($JE_restaurant, true);
+*/
 
 
 #Syslink
 $protocols = $sites['protocol'];
-$Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $translate['auto']['seo'] : $translate['manual']['frontend']['french'];
+$CDNdomainTLD = (!empty($sites['sub-domain']) ? $sites['sub-domain'] : $sites['domain']);
+$domainTLD = (!empty($sites['domain']) ? $sites['domain'] : $sites['auto']['domain']);
+
+#auto translate
+$browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : $translate['meta']['lang']['FR'];
+$Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 0,2) : $translate['manual']['frontend']['french'];
+$phone_langs = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 3,4) : $translate['manual']['backend']['french'];
+$meta_langs = $browser_lang;
+
+
 
 #Configuration
 $lang_finales = 'languages/'.$Languages_translate.'/general.php';
 if (file_exists($lang_finales)) {
-    include_once 'languages/'.$Languages_translate.'/general.php'; 
-    include_once 'languages/'.$Languages_translate.'/partner.php'; 
-    include_once 'languages/'.$Languages_translate.'/sponsor.php'; 
-    include_once 'languages/'.$Languages_translate.'/law.php'; 
-    include_once 'languages/'.$Languages_translate.'/email.php'; 
-    include_once 'languages/'.$Languages_translate.'/block.php'; 
-    include_once 'languages/'.$Languages_translate.'/sitemap.php'; 
-    include_once 'languages/'.$Languages_translate.'/about.php'; 
-    include_once 'languages/'.$Languages_translate.'/pool-services.php'; 
-    include_once 'languages/'.$Languages_translate.'/pricing.php'; 
-    include_once 'languages/'.$Languages_translate.'/faqs.php'; 
-    include_once 'languages/'.$Languages_translate.'/others.php'; 
-    include_once 'languages/'.$Languages_translate.'/debug.php'; 
+	foreach (glob('languages/'.$Languages_translate.'/*.php') as $GlobLangAuto) { include_once $GlobLangAuto; }
+	$DefineMajLang = strtoupper($Languages_translate);
+	$DefineTranslateLang = $Languages_translate;
 } else {
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/general.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/partner.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/sponsor.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/law.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/email.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/block.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/sitemap.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/about.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/pool-services.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/pricing.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/faqs.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/others.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/debug.php'; 
+	foreach (glob('languages/'.$translate['manual']['frontend']['french'].'/*.php') as $GlobLangManual) { include_once $GlobLangManual; }
+	$DefineMajLang = strtoupper($translate['manual']['frontend']['french']);
+	$DefineTranslateLang = $translate['manual']['frontend']['french'];
 }
 
 #Translate
@@ -84,19 +58,7 @@ $law = json_decode($JE_translate_law, true);
 $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
-$about = json_decode($JE_translate_about, true);
-$pool = json_decode($JE_translate_pool, true);
-$pricing = json_decode($JE_translate_pricing, true);
-$faqs = json_decode($JE_translate_faqs, true);
-$others = json_decode($JE_translate_others, true);
-$debug = json_decode($JE_translate_debug, true);
 
-#Email contact form PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-#use PHPMailer\PHPMailer\Exception; test
-require 'libs/phpmailer/src/PHPMailer.php';
-$mail = new PHPMailer(true);
-			
 #frontend
 if(isset($_GET['lang'])){
 	if($_GET['lang'] == $Languages_translate){
@@ -129,8 +91,7 @@ if(isset($_GET['lang'])){
 					$keyword = $debug['index']['keyword'];
 					$urls = $debug['index']['url']['default'];
 					$imgs = $debug['index']['sitemap']['images'];
-					define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$debug['index']['url']['fr']);
-					define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$debug['index']['url']['en']);
+					define('__WP_'.$DefineMajLang.'_URL__', $DefineTranslateLang.'/'.$debug['index']['url'][$DefineTranslateLang]);
 					include('themes/'.$sites['template'].'/header.php');
 					include_once('themes/'.$sites['template'].'/debug/full.php');
 					include('themes/'.$sites['template'].'/footer.php');
