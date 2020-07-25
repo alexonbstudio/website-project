@@ -1,18 +1,15 @@
 <?php
 # exemple $translate['manual']['backend']['french']
 # exemple $translate['manual']['frontend']['french']
+# exemple $translate['meta']['lang']['FR']
 
 $translate = array(
-	'auto' => array(
-		'files' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2),
-		'seo' => substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)
-	),
 	'manual' => array(
 		'backend' => array(
-			'french' => 'fr',
-			'english' => 'en',
-			'spanish' => 'es',
-			'german' => 'de'
+			'french' => 'FR',
+			'english' => 'EN',
+			'spanish' => 'ES',
+			'german' => 'DE'
 		),
 		'frontend' => array(
 			'french' => 'fr',
@@ -21,6 +18,15 @@ $translate = array(
 			'german' => 'de'	
 		)
 
+	),
+	'meta' => array(
+		'lang' => array(
+			'US' => 'en-US',
+			'GB' => 'en-GB',
+			'FR' => 'fr-FR',
+			'DE' => 'de-DE',
+			'ES' => 'es-ES',
+		)
 	)
 );
 
