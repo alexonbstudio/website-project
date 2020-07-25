@@ -242,7 +242,8 @@ if(isset($_GET['lang'])){
 						}
 					}
 				}
-				define('__WP_'.$DefineMajLang.'_URL__', $DefineTranslateLang.'/'.$email['index']['url'][$DefineTranslateLang]);
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/email/full.php');
 				include('themes/'.$sites['template'].'/footer.php');	

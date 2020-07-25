@@ -69,7 +69,8 @@ if(isset($_GET['lang'])){
 				$keyword = $sitemap['index']['keyword'];
 				$urls = $sitemap['index']['url']['default'];
 				$imgs = $sitemap['index']['sitemap']['images'];
-				define('__WP_'.$DefineMajLang.'_URL__', $DefineTranslateLang.'/'.$sitemap['index']['url'][$DefineTranslateLang]);
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sitemap['index']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sitemap['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/sitemap/'.$Languages_translate.'.php');
 				include('themes/'.$sites['template'].'/footer.php');	
