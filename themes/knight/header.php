@@ -62,9 +62,9 @@
 	"name":"<?php echo $sites['name']; ?>",
 	"description":"<?php echo $description; ?>",
     "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
-	"inLanguage":"<?php echo $Languages_translate; ?>",
+	"inLanguage":"<?php echo $meta_langs; ?>",
     "image": [
-      "<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$imgs; ?>"
+      "<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$imgs; ?>"
      ],<?php } ?>
 	 "isPartOf":{
 		"@id":"<?php echo $protocols.'://'.$domainTLD.'/'; ?>#website"
@@ -92,7 +92,7 @@
 	"url":"<?php echo $protocols.'://'.$domainTLD.'/'; ?>",
 	"name":"<?php echo $sites['name']; ?>",
 	"description":"<?php echo $general['index']['description']; ?>",
-	"inLanguage":"<?php echo $Languages_translate; ?>"
+	"inLanguage":"<?php echo $meta_langs; ?>"
 },
 <?php ##########	Breadcrumb	########## ?>
 {
@@ -124,7 +124,7 @@
 {
 	"@type":"ImageObject",
 	"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>#primaryimage",
-	"inLanguage":"<?php echo $Languages_translate; ?>",
+	"inLanguage":"<?php echo $meta_langs; ?>",
 	"url":"<?php echo $protocols.'://'.$domainTLD.'/'.$imgs; ?>",
 	"width":718,
 	"height":403,
@@ -133,33 +133,25 @@
   {
   "@context": "http://schema.org/",
   "@type": "Person",
-  "name": "<?php echo $private['name']; ?>",
-  "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
-  "url": "<?php echo $protocols.'://'.$domainTLD; ?>",
+  "name": "<?php echo $private['name']; ?>"<?php if(!empty($private['mobile']['number'])){ ?>,
+  "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>"<?php } ?>,
+  "url": "<?php echo $protocols.'://'.$domainTLD; ?>"<?php if(!empty($private['name'])){ ?>,
   "sameAs":[
-		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['url'].'",'; } ?>
-		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['url'].'",'; } ?>
-		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['url'].'",'; } ?> 
 		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['url'].'",'; } ?>
-		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['url'].'",'; } ?>
-		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['url'].'",'; } ?>
 		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['url'].'",'; } ?>
-		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['url'].'",'; } ?>
 		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['url'].'",'; } ?>
-		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['url'].'",'; } ?>
-		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['url'].'",'; } ?>
 		"<?php echo $private['name'];  ?>",
 		"<?php echo $sites['name']; ?>"
-	]
+	]<?php } ?>
 }<?php } ?>
 <?php ##########	BUSINESS PAGE | You need Absolute CHANGE for Adapt your Business Local categories	########## ?>
 <?php if(!empty($business['local']['name'])){ ?>,
 {
 	"@context": "https://schema.org",
 	"@type": "Organization",
-	"url": "<?php echo $protocols.'://'.$domainTLD; ?>",
-	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
-	"logo": "<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
+	"url": "<?php echo $protocols.'://'.$domainTLD; ?>"<?php if(!empty($business['local']['phone']['number'])){ ?>,
+	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>"<?php } ?>,
+	"logo": "<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
 	"name": "<?php echo $business['local']['name']; ?>",
 	"address": {
 		"@type": "PostalAddress",
@@ -173,26 +165,25 @@
 		"@type": "GeoCoordinates",
 		"latitude": <?php echo $business['local']['geo']['latitude']; ?>,
 		"longitude": <?php echo $business['local']['geo']['longitude']; ?>
-	},
+	}<?php if(!empty($private['name'])){ ?>,
 	"sameAs":[
 		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['url'].'",'; } ?>
 		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['url'].'",'; } ?>
 		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['url'].'",'; } ?> 
-		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['url'].'",'; } ?>
+		<?php if(!empty($social['linkedin']['team']['name'])){ echo '"'.$social['linkedin']['team']['url'].'",'; } ?>
 		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['url'].'",'; } ?>
 		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['url'].'",'; } ?>
 		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['url'].'",'; } ?>
 		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['url'].'",'; } ?>
-		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['url'].'",'; } ?>
+		<?php if(!empty($social['viadeo']['team']['name'])){ echo '"'.$social['viadeo']['team']['url'].'",'; } ?>
 		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['url'].'",'; } ?>
 		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['url'].'",'; } ?>
-		<?php if(!empty($private['name'])){ ?>"<?php echo $private['name'];  ?>",<?php } ?>
+		<?php if(!empty($private['name'])){ echo '"'.$private['name'].'",'; } ?>
 		"<?php echo $sites['name']; ?>"
-	]
+	]<?php } ?>
 }<?php } ?>]
 
     </script>
-	
 	
 <meta property="og:site_name" content="<?php echo $sites['name']; ?>">
 <meta property="og:url" content="<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>">
