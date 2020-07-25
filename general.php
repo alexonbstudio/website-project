@@ -4,24 +4,7 @@ ini_set("display_errors", 1);
 
 require 'libs/custom/compress.php'; 
 #configuration
-include_once 'configuration/sites.php';
-include_once 'configuration/social.php';
-include_once 'configuration/sponsor.php';
-include_once 'configuration/translate.php';
-include_once 'configuration/version.php';
-include_once 'configuration/seo.php';
-include_once 'configuration/private.php';
-include_once 'configuration/partner.php';
-include_once 'configuration/hosting.php';
-include_once 'configuration/credits.php';
-include_once 'configuration/marketing.php';
-include_once 'configuration/images.php';
-include_once 'configuration/business.php';
-/*
-include_once 'configuration/market.php';
-include_once 'configuration/restaurant.php';
-*/
-
+foreach (glob('configuration/*.php') as $GlobConfig) { include_once $GlobConfig; }
 
 #Decode
 $sites = json_decode($JE_sites, true);
@@ -40,28 +23,30 @@ $business = json_decode($JE_business, true);
 $markets = json_decode($JE_markets, true);
 $restaurant = json_decode($JE_restaurant, true);
 */
+
+
 #Syslink
 $protocols = $sites['protocol'];
-$Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $translate['auto']['seo'] : $translate['manual']['frontend']['french'];
+$CDNdomainTLD = (!empty($sites['sub-domain']) ? $sites['sub-domain'] : $sites['domain']);
+$domainTLD = (!empty($sites['domain']) ? $sites['domain'] : $sites['auto']['domain']);
+
+#auto translate
+$browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : $translate['meta']['lang']['FR'];
+$Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 0,2) : $translate['manual']['frontend']['french'];
+$phone_langs = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 3,4) : $translate['manual']['backend']['french'];
+$meta_langs = $browser_lang;
+
 
 #Configuration
 $lang_finales = 'languages/'.$Languages_translate.'/general.php';
 if (file_exists($lang_finales)) {
-    include_once 'languages/'.$Languages_translate.'/general.php'; 
-    include_once 'languages/'.$Languages_translate.'/partner.php'; 
-    include_once 'languages/'.$Languages_translate.'/sponsor.php'; 
-    include_once 'languages/'.$Languages_translate.'/law.php'; 
-    include_once 'languages/'.$Languages_translate.'/email.php'; 
-    include_once 'languages/'.$Languages_translate.'/block.php'; 
-    include_once 'languages/'.$Languages_translate.'/sitemap.php'; 
+	foreach (glob('languages/'.$Languages_translate.'/*.php') as $GlobLangAuto) { include_once $GlobLangAuto; }
+	$DefineMajLang = strtoupper($Languages_translate);
+	$DefineTranslateLang = $Languages_translate;
 } else {
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/general.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/partner.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/sponsor.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/law.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/email.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/block.php'; 
-    include_once 'languages/'.$translate['manual']['frontend']['french'].'/sitemap.php'; 
+	foreach (glob('languages/'.$translate['manual']['frontend']['french'].'/*.php') as $GlobLangManual) { include_once $GlobLangManual; }
+	$DefineMajLang = strtoupper($translate['manual']['frontend']['french']);
+	$DefineTranslateLang = $translate['manual']['frontend']['french'];
 }
 
 #Translate
@@ -73,7 +58,6 @@ $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
 
-
 #frontend
 if(isset($_GET['lang'])){
 	if($_GET['lang'] == $Languages_translate){
@@ -84,8 +68,7 @@ if(isset($_GET['lang'])){
 				$keyword = $general['index']['keyword'];
 				$urls = $general['index']['url']['default'];
 				$imgs = $general['index']['sitemap']['images'];
-				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
-				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
+				define('__WP_'.$DefineMajLang.'_URL__', $DefineTranslateLang.'/'.$general['index']['url'][$DefineTranslateLang]);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/general/home.php');
 				include('themes/'.$sites['template'].'/footer.php');	
