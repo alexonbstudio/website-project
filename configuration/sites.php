@@ -7,7 +7,11 @@ exemple $sites['e-mail']['contact'];
 */
 $sites = array(
 	'name' => 'Website Project (WP)',
-	'domain' => 'dev.alexonbstudio.fr', /*domain: exemple.tld*/
+	'domain' => '', /*domain: exemple.tld*/
+	'auto' => array(
+		'domain' => preg_replace('/www/i', '', $_SERVER['SERVER_NAME']) /*Automate domain.tld no put*/
+	),
+	'sub-domain' => '',  /*domain: cdexemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'default',
 	'create' => array(),
