@@ -82,7 +82,7 @@ if(isset($_GET['lang'])){
 					} else if($_GET['json'] == 'credits'){
 						include_once('themes/debug/credits.php');
 					} else {
-						header('Location: '.$protocols.'://'.$sites['domain']);
+						header('Location: '.$protocols.'://'.$domainTLD);
 						exit();
 					}
 				} else {
@@ -98,15 +98,15 @@ if(isset($_GET['lang'])){
 					include('themes/'.$sites['template'].'/footer.php');
 				}
 			} else {
-				header('Location: '.$protocols.'://'.$sites['domain']);
+				header('Location: '.$protocols.'://'.$domainTLD);
 				exit();
 			}
 		} else {
-			header('Location: '.$protocols.'://'.$sites['domain']);
+			header('Location: '.$protocols.'://'.$domainTLD);
 			exit();
 		}
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else {

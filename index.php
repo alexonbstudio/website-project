@@ -109,7 +109,7 @@ if(isset($_GET['pages'])){
 			} else if($_GET['json'] == 'credits'){
 				include_once('themes/debug/credits.php');
 			} else {
-				header('Location: '.$protocols.'://'.$sites['domain']);
+				header('Location: '.$protocols.'://'.$domainTLD);
 				exit();
 			}
 		} else {
@@ -428,7 +428,7 @@ if(isset($_GET['pages'])){
 				include_once('themes/'.$sites['template'].'/law/rgpd.php');
 				include('themes/'.$sites['template'].'/footer.php');	
 			} else {
-				header('Location: '.$protocols.'://'.$sites['domain']);
+				header('Location: '.$protocols.'://'.$domainTLD);
 				exit();
 			}
 		} else {
@@ -444,7 +444,7 @@ if(isset($_GET['pages'])){
 			include('themes/'.$sites['template'].'/footer.php');
 		}
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else {

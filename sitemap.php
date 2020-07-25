@@ -75,19 +75,19 @@ if(isset($_GET['lang'])){
 				include_once('themes/'.$sites['template'].'/sitemap/'.$Languages_translate.'.php');
 				include('themes/'.$sites['template'].'/footer.php');	
 			} else {
-				header('Location: '.$protocols.'://'.$sites['domain']);
+				header('Location: '.$protocols.'://'.$domainTLD);
 				exit();
 			}
 		} else {
-			header('Location: '.$protocols.'://'.$sites['domain']);
+			header('Location: '.$protocols.'://'.$domainTLD);
 			exit();
 		}
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else {
-	header('Location: '.$protocols.'://'.$sites['domain']);
+	header('Location: '.$protocols.'://'.$domainTLD);
 	exit();
 }
 

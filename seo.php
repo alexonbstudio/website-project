@@ -67,7 +67,7 @@ if(isset($_GET['xml'])){
 			} else if($_GET['translate'] == $Languages_translate){
 				include_once('themes/seo/xml/translate/'.$Languages_translate.'.php');	
 			} else {
-				header('Location: '.$protocols.'://'.$sites['domain']);
+				header('Location: '.$protocols.'://'.$domainTLD);
 				exit();
 			}
 		} else {
@@ -84,7 +84,7 @@ if(isset($_GET['xml'])){
 	} else if($_GET['xml'] == 'bingsiteauth'){
 		include_once('themes/seo/xml/BingSiteAuth.php');
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else if(isset($_GET['txt'])){
@@ -97,7 +97,7 @@ if(isset($_GET['xml'])){
 	} else if($_GET['txt'] == 'brave-rewards-verification'){
 		include_once('themes/seo/txt/brave-rewards-verification.php');		
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else if(isset($_GET['json'])){
@@ -108,7 +108,7 @@ if(isset($_GET['xml'])){
 	} else if($_GET['json'] == 'microsoft-identity-association'){
 		include_once('themes/seo/json/microsoft-identity-association.php');		
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else if(isset($_GET['html-verify'])){
@@ -121,11 +121,11 @@ if(isset($_GET['xml'])){
 	} else if($_GET['html-verify'] == 'yandex'){
 		include_once('themes/seo/html-verify/yandex.php');		
 	} else {
-		header('Location: '.$protocols.'://'.$sites['domain']);
+		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
 } else {
-	header('Location: '.$protocols.'://'.$sites['domain']);
+	header('Location: '.$protocols.'://'.$domainTLD);
 	exit();
 }
 ?>
