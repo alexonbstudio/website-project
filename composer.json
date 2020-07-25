@@ -47,7 +47,7 @@
     "autoload": {
         "psr-4": {
             "PHPMailer\\PHPMailer\\": "libs/phpmailer/src/",
-            "libphonenumber\\": "libs/libphonenumber/src/",
+            "libphonenumber\\": "libs/libphonenumber-for-php/src/",
             "Joomla\\Utilities\\": "libs/joomla/utilities/src/",
 			"MatthiasMullie\\Minify\\": "libs/minify/src/"
         }
@@ -56,6 +56,7 @@
 		"exclude": [
 			".github/",
 			"FUNDING.yml",
+			"backend.php",
 			"list-directory.txt",
 			"phone-verify.php",
 			"need-help.md"
