@@ -60,7 +60,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['sites']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/sites.json'; ?>">/<em>debug/sites.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/sites.json'; ?>">/<em>api/sites.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -96,7 +96,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['social']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/social.json'; ?>">/<em>debug/social.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/social.json'; ?>">/<em>api/social.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -133,7 +133,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['private']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/private.json'; ?>">/<em>debug/private.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/private.json'; ?>">/<em>api/private.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -169,7 +169,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['business']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/business.json'; ?>">/<em>debug/business.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/business.json'; ?>">/<em>api/business.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -205,7 +205,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['images']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/images.json'; ?>">/<em>debug/images.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/images.json'; ?>">/<em>api/images.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -241,7 +241,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['partner']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/partner.json'; ?>">/<em>debug/partner.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/partner.json'; ?>">/<em>api/partner.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -277,7 +277,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['sponsor']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/sponsor.json'; ?>">/<em>debug/sponsor.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/sponsor.json'; ?>">/<em>api/sponsor.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -313,7 +313,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['credits']['3']; ?> 
-								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/credits.json'; ?>">/<em>debug/credits.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/api/credits.json'; ?>">/<em>api/credits.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
