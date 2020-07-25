@@ -6,7 +6,7 @@ Disallow: /configuration/
 Disallow: /cache/
 Allow: /
 
-Sitemap: <?php echo $protocols.'://'.$sites['domain']; ?>/sitemap.xml
+Sitemap: <?php echo $protocols.'://'.$domainTLD; ?>/sitemap.xml
 
 <?php
 /*

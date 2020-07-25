@@ -3,7 +3,7 @@
 /* OWNER */
 	name: <?php echo $private['name']; } ?>
 	Contact: <?php echo $private['mail']['public']; } ?> 
-	Site: <?php echo $sites['domain']; } ?>
+	Site: <?php echo $domainTLD; } ?>
 	<?php if(!empty($social['twitter']['name'])){ ?>Twitter: @<?php echo $social['twitter']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Facebook: <?php echo $social['facebook']['name']; } ?>
 	<?php if(!empty($social['facebook']['name'])){ ?>Instagram: <?php echo $social['instagram']['name']; } ?> 
@@ -24,7 +24,7 @@
 	<?php if(!empty($business['local']['vat'])){ ?>VAT: <?php echo $business['local']['vat']; } ?>
 	<?php if(!empty($business['local']['siret'])){ ?>SIRET: <?php echo $business['local']['siret']; } ?>
 	Contact: <?php echo $business['local']['mail']['business']; ?>
-	Site: <?php echo $sites['domain']; ?> 
+	Site: <?php echo $domainTLD; ?> 
 	<?php if(!empty($social['twitter']['name'])){ ?>Twitter: @<?php echo $social['twitter']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Facebook: <?php echo $social['facebook']['name']; } ?>
 	<?php if(!empty($social['facebook']['name'])){ ?>Instagram: <?php echo $social['instagram']['name']; } ?> 

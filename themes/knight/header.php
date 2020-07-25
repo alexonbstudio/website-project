@@ -17,39 +17,39 @@
 	<meta name="googlebot" content="<?php echo $sites['head']['robots']; ?>, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 	<meta name="bingbot" content="<?php echo $sites['head']['robots']; ?>, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 	<?php if(!empty($images['manager']['logo']['icon'])){ ?>
-		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['icon']; ?>">
+		<link rel="icon" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['icon']; ?>">
 	<?php } else { ?>
-		<link rel="icon" href="<?php echo $protocols.'://'.$sites['domain']; ?>/favicon.ico">
+		<link rel="icon" href="<?php echo $protocols.'://'.$domainTLD; ?>/favicon.ico">
 	<?php }?>
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['small']; ?>">
-	<link rel="manifest" href="<?php echo $protocols.'://'.$sites['domain']; ?>/manifest.json">	
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['small']; ?>">
+	<link rel="manifest" href="<?php echo $protocols.'://'.$domainTLD; ?>/manifest.json">	
 
-<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:180x180']; ?>">
-<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:32x32']; ?>">
-<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:192x192']; ?>">
-<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:16x16']; ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['pinned']['s:180x180']; ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['pinned']['s:32x32']; ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['pinned']['s:192x192']; ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['pinned']['s:16x16']; ?>">
 
-<link rel="mask-icon" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['safari']; ?>" color="<?php echo $seo['browsers']['color']['safari']; ?>">
+<link rel="mask-icon" href="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['pinned']['safari']; ?>" color="<?php echo $seo['browsers']['color']['safari']; ?>">
 <meta name="apple-mobile-web-app-title" content="<?php echo $sites['name'].' - '.$title;?>">
 <meta name="application-name" content="<?php echo $sites['name'];?>">
 <meta name="msapplication-TileColor" content="<?php echo $seo['browsers']['color']['title']; ?>">
-<meta name="msapplication-TileImage" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['pinned']['s:144x144']; ?>">
+<meta name="msapplication-TileImage" content="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['pinned']['s:144x144']; ?>">
 <meta name="theme-color" content="<?php echo $seo['browsers']['color']['themes']; ?>">
 
 
 
 <!--HUMANS NOT ROBOTS-->
-<link type="text/plain" rel="author" href="<?php echo $protocols.'://'.$sites['domain']; ?>/humans.txt" />
+<link type="text/plain" rel="author" href="<?php echo $protocols.'://'.$domainTLD; ?>/humans.txt" />
 
 
 <!--Multi Language-->
-<link rel="alternate" hreflang="x-default" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
-<link rel="alternate" hreflang="<?php echo $translate['manual']['frontend']['french']; ?>" href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_FR_URL__; ?>" />
-<link rel="alternate" hreflang="<?php echo $translate['manual']['frontend']['english']; ?>" href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_EN_URL__; ?>" />
+<link rel="alternate" hreflang="x-default" href="<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>" />
+<link rel="alternate" hreflang="<?php echo $translate['manual']['frontend']['french']; ?>" href="<?php echo $protocols.'://'.$domainTLD.'/'.__WP_FR_URL__; ?>" />
+<link rel="alternate" hreflang="<?php echo $translate['manual']['frontend']['english']; ?>" href="<?php echo $protocols.'://'.$domainTLD.'/'.__WP_EN_URL__; ?>" />
 
 
 <!--SEO-->
-<link rel="canonical" href="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>" />
+<link rel="canonical" href="<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>" />
 
     <script type="application/ld+json">
 
@@ -57,30 +57,30 @@
 [{
     "@context": "https://schema.org",
 	"@type": "WebPage",
-	"@id": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#webpage",
-	"url": "<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>",
+	"@id": "<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>#webpage",
+	"url": "<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>",
 	"name":"<?php echo $sites['name']; ?>",
 	"description":"<?php echo $description; ?>",
     "headline": "<?php echo $title; ?>"<?php if(!empty($imgs)){ ?>,
 	"inLanguage":"<?php echo $Languages_translate; ?>",
     "image": [
-      "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$imgs; ?>"
+      "<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$imgs; ?>"
      ],<?php } ?>
 	 "isPartOf":{
-		"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'; ?>#website"
+		"@id":"<?php echo $protocols.'://'.$domainTLD.'/'; ?>#website"
 	 },
 	 "primaryImageOfPage":{
-		"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#primaryimage"
+		"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>#primaryimage"
 	 },
 	 "breadcrumb":{
-		"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#breadcrumb"
+		"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>#breadcrumb"
 	 },
 	 ,
 	"potentialAction":[
 		{
 			"@type":"ReadAction",
 			"target":[
-				"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>"
+				"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>"
 			]
 		}
 	]
@@ -88,8 +88,8 @@
 },
 {
 	"@type":"WebSite",
-	"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'; ?>#website",
-	"url":"<?php echo $protocols.'://'.$sites['domain'].'/'; ?>",
+	"@id":"<?php echo $protocols.'://'.$domainTLD.'/'; ?>#website",
+	"url":"<?php echo $protocols.'://'.$domainTLD.'/'; ?>",
 	"name":"<?php echo $sites['name']; ?>",
 	"description":"<?php echo $general['index']['description']; ?>",
 	"inLanguage":"<?php echo $Languages_translate; ?>"
@@ -97,15 +97,15 @@
 <?php ##########	Breadcrumb	########## ?>
 {
 	"@type":"BreadcrumbList",
-	"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#breadcrumb",
+	"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>#breadcrumb",
 	"itemListElement":[
 		{
 			"@type":"ListItem",
 			"position":1,
 			"item":{
 				"@type":"WebPage",
-				"@id":"<?php echo $protocols.'://'.$sites['domain']; ?>",
-				"url":"<?php echo $protocols.'://'.$sites['domain']; ?>",
+				"@id":"<?php echo $protocols.'://'.$domainTLD; ?>",
+				"url":"<?php echo $protocols.'://'.$domainTLD; ?>",
 				"name":"<?php echo $general['index']['title']; ?>"
 			}
 		},
@@ -114,8 +114,8 @@
 			"position":2,
 			"item":{
 				"@type":"WebPage",
-				"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>",
-				"url":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>",
+				"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>",
+				"url":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>",
 				"name":"<?php echo $title; ?>"
 			}
 		}
@@ -123,9 +123,9 @@
 },
 {
 	"@type":"ImageObject",
-	"@id":"<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>#primaryimage",
+	"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>#primaryimage",
 	"inLanguage":"<?php echo $Languages_translate; ?>",
-	"url":"<?php echo $protocols.'://'.$sites['domain'].'/'.$imgs; ?>",
+	"url":"<?php echo $protocols.'://'.$domainTLD.'/'.$imgs; ?>",
 	"width":718,
 	"height":403,
 	"caption":"<?php echo $title; ?>"
@@ -135,7 +135,7 @@
   "@type": "Person",
   "name": "<?php echo $private['name']; ?>",
   "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
-  "url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
+  "url": "<?php echo $protocols.'://'.$domainTLD; ?>",
   "sameAs":[
 		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['url'].'",'; } ?>
 		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['url'].'",'; } ?>
@@ -157,9 +157,9 @@
 {
 	"@context": "https://schema.org",
 	"@type": "Organization",
-	"url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
+	"url": "<?php echo $protocols.'://'.$domainTLD; ?>",
 	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
-	"logo": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
+	"logo": "<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
 	"name": "<?php echo $business['local']['name']; ?>",
 	"address": {
 		"@type": "PostalAddress",
@@ -195,11 +195,11 @@
 	
 	
 <meta property="og:site_name" content="<?php echo $sites['name']; ?>">
-<meta property="og:url" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$urls; ?>">
+<meta property="og:url" content="<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>">
 <meta property="og:title" content="<?php echo $title; ?>">
 <meta property="og:type" content="website">
 <meta property="og:description" content="<?php echo $description; ?>">
-<meta property="og:image" content="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['manager']['logo']['small']; ?>">
+<meta property="og:image" content="<?php echo $protocols.'://'.$domainTLD.'/'.$images['manager']['logo']['small']; ?>">
 
  <meta content="<?php echo $Languages_translate; ?>" property="og:locale"/>
 <?php 
@@ -276,7 +276,7 @@ if(!empty($marketing['uiz']['key'])){
 		var app_url = \'https://uiz.io/\';
 		var app_api_token = \''.$marketing['uiz']['key'].'\';
 		var app_advert = 1;
-		var app_exclude_domains = ["*.'.$sites['domain'].'"];
+		var app_exclude_domains = ["*.'.$domainTLD.'"];
 	</script>
 	<script src=\'//uiz.io/js/full-page-script.js\'></script>';
 }
@@ -290,16 +290,16 @@ if(!empty($marketing['google']['adsense'])){
 <?php if(!empty($seo['hcaptcha']['public-key'])){ ?><script src="https://hcaptcha.com/1/api.js?hl=<?php echo $Languages_translate; ?>" async defer></script><?php } ?>
 <!--Template-->
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
-  <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
-  <script defer src="<?php echo $version['internal']['fontawesome']['js']; ?>"></script>
-  <link href="<?php echo $version['internal']['production']['css']['knight']; ?>" rel="stylesheet">
-  <link href="<?php echo $version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
+  <script defer src="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['fontawesome']['js']; ?>"></script>
+  <link href="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['production']['css']['knight']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['icofont']['css']; ?>" rel="stylesheet">
-  <link href="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['boxicons']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['icofont']['css']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['boxicons']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['venobox']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['owl.carousel']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $version['external']['aos']['css']; ?>" rel="stylesheet">
@@ -319,7 +319,7 @@ if(!empty($marketing['google']['adsense'])){
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <a href="<?php echo $protocols.'://'.$sites['domain']; ?>" class="hero-logo" data-aos="zoom-in"><img src="<?php echo $images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
+      <a href="<?php echo $protocols.'://'.$domainTLD; ?>" class="hero-logo" data-aos="zoom-in"><img src="<?php echo $images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
       <h1 data-aos="zoom-in"><?php echo $sites['name']; ?></h1>
       <h2 data-aos="fade-up"><?php echo $description; ?></h2>
       <a data-aos="fade-up" href="#main" class="btn-get-started scrollto"><?php echo $general['pages']['full']['starter']; ?></a>
@@ -332,12 +332,12 @@ if(!empty($marketing['google']['adsense'])){
 
       <!-- The main logo is shown in mobile version only. The centered nav-logo in nav menu is displayed in desktop view  -->
       <div class="logo d-block d-lg-none">
-        <a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['small'];?>" alt="<?php echo $sites['name'];?>" class="img-fluid"></a>
+        <a href="<?php echo $protocols.'://'.$domainTLD; ?>"><img src="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['small'];?>" alt="<?php echo $sites['name'];?>" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul class="nav-inner">
-          <li class="active"><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']['default']; ?>"><?php echo $general['index']['title']; ?></a></li>
+          <li class="active"><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$general['index']['url']['default']; ?>"><?php echo $general['index']['title']; ?></a></li>
           <li class="drop-down"><a href="#">About</a>
             <ul>
               <li><a href="#about">About Us</a></li>
@@ -354,8 +354,8 @@ if(!empty($marketing['google']['adsense'])){
               </li>
               <li class="drop-down"><a href="#">Translate</a>
                 <ul>
-                  <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_FR_URL__; ?>">Français</a></li>
-                  <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_EN_URL__; ?>">English</a></li>
+                  <li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.__WP_FR_URL__; ?>">Français</a></li>
+                  <li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.__WP_EN_URL__; ?>">English</a></li>
                   <li><a href="#">Español</a></li>
                   <li><a href="#">Deutsch</a></li>
                 </ul>
@@ -364,11 +364,11 @@ if(!empty($marketing['google']['adsense'])){
           </li>
           <li><a href="#services">Services</a></li>
 
-          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$sites['domain']; ?>"><img src="<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
+          <li class="nav-logo"><a href="<?php echo $protocols.'://'.$domainTLD; ?>"><img src="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>" alt="<?php echo $sites['name']; ?>" class="img-fluid"></a></li>
 
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$email['index']['url']['default']; ?>"><?php echo $email['index']['title']; ?></a></li>
+          <li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$email['index']['url']['default']; ?>"><?php echo $email['index']['title']; ?></a></li>
 
         </ul>
       </nav><!-- .nav-menu -->

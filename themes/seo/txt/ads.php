@@ -1,5 +1,5 @@
 <?php header('Content-Type: text/plain; charset=utf-8'); ?>
-#Info <?php echo $sites['domain']; ?> Update <?php echo date('d/m/Y'); ?>
+#Info <?php echo $domainTLD; ?> Update <?php echo date('d/m/Y'); ?>
 <?php 
 if(!empty($marketing['google']['adsense'])){ echo 'google.com, '.$marketing['google']['adsense'].', RESELLER'; }
 if(!empty($marketing['33Across']['key'])){ echo 'tynt.com, '.$marketing['33Across']['key'].', RESELLER'; }

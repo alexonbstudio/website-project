@@ -5,16 +5,16 @@
   "@type": "Person",
   "name": "<?php echo $private['name']; ?>",
   "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
-  "url": "<?php echo $protocols.'://'.$sites['domain']; ?>"
+  "url": "<?php echo $protocols.'://'.$domainTLD; ?>"
 }<?php } ?>
 <?php ##########	BUSINESS PAGE | You need Absolute CHANGE for Adapt your Business Local categories	########## ?>
 <?php if(!empty($business['local']['name'])){ ?>,
 {
 	"@context": "https://schema.org",
 	"@type": "Organization",
-	"url": "<?php echo $protocols.'://'.$sites['domain']; ?>",
+	"url": "<?php echo $protocols.'://'.$domainTLD; ?>",
 	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
-	"logo": "<?php echo $protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
+	"logo": "<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
 	"name": "<?php echo $business['local']['name']; ?>",
 	"address": {
 		"@type": "PostalAddress",

@@ -8,7 +8,7 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <a href="#header" class="scrollto footer-logo"><img src="<?php echo $images['dir'].'/'.$images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
+            <a href="#header" class="scrollto footer-logo"><img src="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
             <h3>Knight</h3>
             <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
           </div>
@@ -35,8 +35,8 @@
     <div class="container footer-bottom clearfix">
       <div class="copyright">
         <?php echo $law['full']['content']['developper'].': <href="'.$protocols.'://'.$credits['developper']['alexonbstudio']['url'].'" rel="dofollow">'.$credits['developper']['alexonbstudio']['name'].'</a>'.' | '.$law['full']['content']['designer'].': <href="'.$protocols.'://'.$credits['webdesigner']['bootstrapmade']['url'].'" rel="dofollow">'.$credits['webdesigner']['bootstrapmade']['name'].'</a>'; ?><br />
-		<a href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_FR_URL__; ?>"><i class="langs langs-fr"></i></a> 
-		<a href="<?php echo $protocols.'://'.$sites['domain'].'/'.__WP_EN_URL__; ?>"><i class="langs langs-us"></i></a>
+		<a href="<?php echo $protocols.'://'.$domainTLD.'/'.__WP_FR_URL__; ?>"><i class="langs langs-fr"></i></a> 
+		<a href="<?php echo $protocols.'://'.$domainTLD.'/'.__WP_EN_URL__; ?>"><i class="langs langs-us"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -47,7 +47,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white"><?php echo $sites['copyright']['frontend'].' <a href="'.$protocols.'://'.$sites['domain'].'">'.$sites['name'].'</a> .'.$law['full']['content']['footer']; ?>
+      <p class="m-0 text-center text-white"><?php echo $sites['copyright']['frontend'].' <a href="'.$protocols.'://'.$domainTLD.'">'.$sites['name'].'</a> .'.$law['full']['content']['footer']; ?>
 	  </p>
     </div>
     <!-- /.container -->
@@ -62,7 +62,7 @@
   <script src="<?php echo $version['external']['jquery']['js']; ?>"></script>
   <script src="<?php echo $version['external']['bootstrap']['js']; ?>"></script>
   <script src="<?php echo $version['external']['jquery.easing']['js']; ?>"></script>
-  <script src="<?php echo $protocols.'://'.$sites['domain'].'/'.$version['internal']['php-email-form']['js']; ?>"></script>
+  <script src="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['php-email-form']['js']; ?>"></script>
   <script src="<?php echo $version['external']['jquery-sticky']['js']; ?>"></script>
   <script src="<?php echo $version['external']['venobox']['js']; ?>"></script>
   <script src="<?php echo $version['external']['isotope-layout']['js']; ?>"></script>
@@ -70,7 +70,7 @@
   <script src="<?php echo $version['external']['aos']['js']; ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?php echo $version['internal']['production']['js']['knight']; ?>"></script>
+  <script src="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['production']['js']['knight']; ?>"></script>
   <script src="<?php echo $version['external']['intl-tel-input']['js']; ?>"></script>
   
 	<script>

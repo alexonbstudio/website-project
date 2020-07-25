@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2><?php echo $title; ?></h2>
           <ol>
-            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a></li>
+            <li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$general['index']['url']; ?>"><?php echo $general['index']['title']; ?></a></li>
             <li><?php echo $title; ?></li>
           </ol>
         </div>
@@ -33,13 +33,13 @@
               <p>
 			  
 				<ul>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['pages']['url']['default'];?>"><?php echo $law['pages']['title'];?></a> </li>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['rgpd']['url']['default'];?>"><?php echo $law['rgpd']['title'];?></a> </li>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['policy-privacy']['url']['default'];?>"><?php echo $law['policy-privacy']['title'];?></a> </li>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['legal']['url']['default'];?>"><?php echo $law['legal']['title'];?></a> </li>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['dmca']['url']['default'];?>"><?php echo $law['dmca']['title'];?></a> </li>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['cgv']['url']['default'];?>"><?php echo $law['cgv']['title'];?></a> </li>
-					<li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$law['cgu']['url']['default'];?>"><?php echo $law['cgu']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['pages']['url']['default'];?>"><?php echo $law['pages']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['rgpd']['url']['default'];?>"><?php echo $law['rgpd']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['policy-privacy']['url']['default'];?>"><?php echo $law['policy-privacy']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['legal']['url']['default'];?>"><?php echo $law['legal']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['dmca']['url']['default'];?>"><?php echo $law['dmca']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['cgv']['url']['default'];?>"><?php echo $law['cgv']['title'];?></a> </li>
+					<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$law['cgu']['url']['default'];?>"><?php echo $law['cgu']['title'];?></a> </li>
 					
 				</ul>
 			  </p>

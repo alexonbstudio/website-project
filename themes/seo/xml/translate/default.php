@@ -3,13 +3,13 @@
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
 <urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$general['index']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 		<?php 
 		if(!empty($general['index']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$general['index']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$general['index']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$general['index']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -17,13 +17,13 @@
 	</url>
 	<? #################################	SPONSOR		################################# ?>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$sponsor['index']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$sponsor['index']['url']['default']; ?></loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($sponsor['index']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$sponsor['index']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$sponsor['index']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$sponsor['index']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -31,13 +31,13 @@
 	</url>
 	<? #################################	PARTNER		################################# ?>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$partner['index']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$partner['index']['url']['default']; ?></loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($partner['index']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$partner['index']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$partner['index']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$partner['index']['title'].']]></image:title>
 		</image:image>';
 		}
@@ -45,91 +45,91 @@
 	</url>
 	<? #################################	LAW		################################# ?>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['pages']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['pages']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['pages']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['pages']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['pages']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['pages']['title'].']]></image:title>
 		</image:image>';
 		}
 		?>
 	</url>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['cgu']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['cgu']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['cgu']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['cgu']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['cgu']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['cgu']['title'].']]></image:title>
 		</image:image>';
 		}
 		?>
 	</url>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['cgv']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['cgv']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['cgv']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['cgv']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['cgv']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['cgv']['title'].']]></image:title>
 		</image:image>';
 		}
 		?>
 	</url>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['dmca']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['dmca']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['dmca']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['dmca']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['dmca']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['dmca']['title'].']]></image:title>
 		</image:image>';
 		}
 		?>
 	</url>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['legal']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['legal']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['legal']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['legal']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['legal']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['legal']['title'].']]></image:title>
 		</image:image>';
 		}
 		?>
 	</url>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['policy-privacy']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['policy-privacy']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['policy-privacy']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['policy-privacy']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['policy-privacy']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['policy-privacy']['title'].']]></image:title>
 		</image:image>';
 		}
 		?>
 	</url>
 	<url>
-		<loc><?php echo $protocols.'://'.$sites['domain'].'/'.$law['rgpd']['url']['default']; ?></loc>
+		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$law['rgpd']['url']['default']; ?></loc>
 		<changefreq>monthly</changefreq>
 		<priority>1</priority>
 		<?php 
 		if(!empty($law['rgpd']['sitemap']['images'])){
 			echo '<image:image>
-			<image:loc>'.$protocols.'://'.$sites['domain'].'/'.$images['dir'].'/'.$law['rgpd']['sitemap']['images'].'</image:loc>
+			<image:loc>'.$protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$law['rgpd']['sitemap']['images'].'</image:loc>
 			<image:title><![CDATA['.$law['rgpd']['title'].']]></image:title>
 		</image:image>';
 		}

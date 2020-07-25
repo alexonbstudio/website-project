@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2><?php echo $title; ?></h2> 
           <ol>
-            <li><a href="<?php echo $protocols.'://'.$sites['domain'].'/'.$general['index']['url']['default']; ?>"><?php echo $general['index']['title']; ?></a></li>
+            <li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$general['index']['url']['default']; ?>"><?php echo $general['index']['title']; ?></a></li>
             <li><?php echo $title; ?></li>
           </ol>
         </div>
@@ -60,7 +60,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['sites']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/sites.json'; ?>">/<em>debug/sites.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/sites.json'; ?>">/<em>debug/sites.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -96,7 +96,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['social']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/social.json'; ?>">/<em>debug/social.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/social.json'; ?>">/<em>debug/social.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -133,7 +133,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['private']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/private.json'; ?>">/<em>debug/private.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/private.json'; ?>">/<em>debug/private.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -169,7 +169,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['business']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/business.json'; ?>">/<em>debug/business.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/business.json'; ?>">/<em>debug/business.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -205,7 +205,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['images']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/images.json'; ?>">/<em>debug/images.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/images.json'; ?>">/<em>debug/images.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -241,7 +241,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['partner']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/partner.json'; ?>">/<em>debug/partner.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/partner.json'; ?>">/<em>debug/partner.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -277,7 +277,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['sponsor']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/sponsor.json'; ?>">/<em>debug/sponsor.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/sponsor.json'; ?>">/<em>debug/sponsor.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
@@ -313,7 +313,7 @@
 							</td>
 							<td class="text-center">
 								<?php echo $debug['index']['content']['table']['tr']['credits']['3']; ?> 
-								 - <small><b>[<?php echo $sites['domain']; ?>]</b><a href="<?php echo $protocols.'://'.$sites['domain'].'/debug/credits.json'; ?>">/<em>debug/credits.json</em></a></small>
+								 - <small><b>[<?php echo $domainTLD; ?>]</b><a href="<?php echo $protocols.'://'.$domainTLD.'/debug/credits.json'; ?>">/<em>debug/credits.json</em></a></small>
 							</td>
 						</tr>
 					  </tbody>
