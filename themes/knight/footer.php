@@ -8,7 +8,7 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <a href="#header" class="scrollto footer-logo"><img src="<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
+            <a href="#header" class="scrollto footer-logo"><img src="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['big']; ?>" alt="<?php echo $sites['name']; ?>"></a>
             <h3>Knight</h3>
             <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
           </div>
@@ -62,7 +62,7 @@
   <script src="<?php echo $version['external']['jquery']['js']; ?>"></script>
   <script src="<?php echo $version['external']['bootstrap']['js']; ?>"></script>
   <script src="<?php echo $version['external']['jquery.easing']['js']; ?>"></script>
-  <script src="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['php-email-form']['js']; ?>"></script>
+  <script src="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['php-email-form']['js']; ?>"></script>
   <script src="<?php echo $version['external']['jquery-sticky']['js']; ?>"></script>
   <script src="<?php echo $version['external']['venobox']['js']; ?>"></script>
   <script src="<?php echo $version['external']['isotope-layout']['js']; ?>"></script>
@@ -70,7 +70,7 @@
   <script src="<?php echo $version['external']['aos']['js']; ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?php echo $protocols.'://'.$domainTLD.'/'.$version['internal']['production']['js']['knight']; ?>"></script>
+  <script src="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['production']['js']['knight']; ?>"></script>
   <script src="<?php echo $version['external']['intl-tel-input']['js']; ?>"></script>
   
 	<script>
