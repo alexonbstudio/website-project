@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - .:/var/www:/var/www/
+            - ./wp:/etc/nginx/conf.d
+            - ./nginx.conf:/etc/nginx/wp.conf
+        depends_on:
+            - php
+        links:
+            - php
+    php:
+        image: php:7.2-fpm
+        volumes:
+            - .:/var/www:/var/www/
+        working_dir: /var/www:/var/www/
