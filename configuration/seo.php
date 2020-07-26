@@ -12,6 +12,9 @@ $seo = array(
 	'yandex' => array(
 		'analystics' => ''
 	),
+	'shareaholic' => array(
+		'key' => ''
+	),
 	'bing' => array(
 		'key' => ''
 	),
