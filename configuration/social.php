@@ -1,5 +1,5 @@
 <?php
-# exemple $social['facebook']['url'];
+# exemple $social['twitter']['name'];
 $social = array(
 	'facebook' => array(
 		'sites' => 'facebook',
