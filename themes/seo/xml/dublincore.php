@@ -1,4 +1,4 @@
-<?php header('Content-type: application/xml; charset=utf-8'); ?>
+
 <?php echo '
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -7,7 +7,7 @@
 	xmlns:dcmitype="http://purl.org/dc/dcmitype/"
 	xmlns:admin="http://webns.net/mvcb/">
 
-<rdf:Description rdf:about="'.$protocols.'://'.$domainTLD.'">
+<rdf:Description rdf:about="'.$protocols.'://'.$sites['domain'].'">
 	<dc:title>'.$sites['name'].' '.$general['index']['title'].'</dc:title>
 	<dc:description>'.$general['index']['description'].'</dc:description>
 	<dc:subject>
@@ -20,8 +20,8 @@
 	</dc:subject>
 	<dc:language>fr</dc:language>
 	<dc:creator dc:source="'.$protocols.'://alexonbstudio.fr" rdfs:Literal="alexonbstudio" />
-	<dc:publisher dc:source="'.$protocols.'://'.$domainTLD.'" rdfs:Literal="'.$sites['name'].'" />
-	<dc:license dc:source="'.$protocols.'://'.$domainTLD.'" rdfs:Literal="CC-BY-SA" />
+	<dc:publisher dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="'.$sites['name'].'" />
+	<dc:license dc:source="'.$protocols.'://'.$sites['domain'].'" rdfs:Literal="CC-BY-SA" />
 	<dcterms:Created><dcterms:W3CDTF><rdf:value>'.$sites['update']['rdf'].' '.$sites['name'].'</rdf:value></dcterms:W3CDTF></dcterms:Created>
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Collection" />
 	<dc:type rdfs:value="http://purl.org/dc/dcmitype/Dataset" />

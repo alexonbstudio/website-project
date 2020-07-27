@@ -1,4 +1,4 @@
-<?php header('Content-type: application/xml; charset=utf-8'); ?>
+
 <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 <cross-domain-policy>
     <!-- Read this: www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html -->
