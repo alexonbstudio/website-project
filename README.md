@@ -2,7 +2,7 @@
 
 Vous avez la flem [generator sitemap](https://xmlsitemapgenerator.org/) 
 
-For more information on my website to [https://alexonbstudio.fr](www.alexonbstudio.fr) 
+For more information on my website to [alexonbstudio.fr](https://www.alexonbstudio.fr) 
 
 
 ## install on linux exemple on ubuntu
@@ -25,7 +25,11 @@ For more information on my website to [https://alexonbstudio.fr](www.alexonbstud
 	$Data = json_decode($Response);
 	#etc...
 
+# Duration 
 
+	59 Days Totaly
+	Dev/Manage Structure/Imagine/Thinking to build simple
+	#No Frameworks & No CMS
 
 # composer using
 
@@ -35,3 +39,9 @@ For more information on my website to [https://alexonbstudio.fr](www.alexonbstud
 # back full developement
 
 + https://github.com/alexonbstudio/website-project
+	
+# Copyright
+
+#### @alexonbstudio 2020
+
+(c) CC-BY-SA - Website Project (WP)
