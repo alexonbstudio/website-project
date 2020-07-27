@@ -208,14 +208,14 @@
 
     </script>
 
-<meta property="og:site_name" content="<?php echo htmlentities($sites['name']); ?>">
-<meta property="og:url" content="<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>">
-<meta property="og:title" content="<?php echo htmlentities($title); ?>">
-<meta property="og:type" content="website">
-<meta property="og:description" content="<?php echo htmlentities($description); ?>">
-<meta property="og:image" content="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$imgs; ?>">
+<meta property="og:site_name" content="<?php echo htmlentities($sites['name']); ?>" />
+<meta property="og:url" content="<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>" />
+<meta property="og:title" content="<?php echo htmlentities($title); ?>" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="<?php echo htmlentities($description); ?>" />
+<meta property="og:image" content="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$imgs; ?>" />
 
- <meta content="<?php echo $Languages_translate.'_'.$phone_langs; ?>" property="og:locale"/>
+ <meta content="<?php echo $Languages_translate.'_'.$phone_langs; ?>" property="og:locale" />
 <?php 
 if(!empty($social['facebook']['admins'])){
 	 echo '<meta content="'.$social['facebook']['admins'].'" property="og:admins"/>
