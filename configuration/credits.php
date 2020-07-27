@@ -1,6 +1,6 @@
 <?php
-# $credits['webdesigner']['bootstrapmade']['name']['']['']
-# $credits['developper']['alexonbstudio']['name']['']['']
+# $credits['webdesigner']['bootstrapmade']['name'].' '.$credits['webdesigner']['startbootstrap']['name'].' '.$credits['developper']['PHPMailer']['name'].' '.$credits['developper']['joomla']['name']
+
 $credits = array(
 	'developper' => array(
 		'alexonbstudio' => array(
@@ -19,6 +19,18 @@ $credits = array(
 		'tinypng' => array(
 			'name' => 'Tinyfy',
 			'url' => 'tinypng.com'
+		),
+		'symfony' => array(
+			'name' => 'Symfony',
+			'url' => 'symfony.com'
+		),
+		'adodb' => array(
+			'name' => 'AdoDB',
+			'url' => 'adodb.org'
+		),
+		'joomla' => array(
+			'name' => 'Joomla',
+			'url' => 'joomla.org'
 		)
 	),
 	'designer' => array(
@@ -85,14 +97,31 @@ $credits = array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
+		),
+		'pexels' => array(
+			'name' => 'Pexels',
+			'url' => 'pexels.com'
+		),
+		'unsplash' => array(
+			'name' => 'Unsplash',
+			'url' => 'unsplash.com'
+		),
+		'wikimedia' => array(
+			'name' => 'Wikimedia',
+			'url' => 'wikimedia.org'
+		),
+		'pixabay' => array(
+			'name' => 'Pixabay',
+			'url' => 'pixabay.com'
 		)
 	),
 	'version' => array(
-		'stable' => '1.6',
+		'stable' => '2.0',
+		'rc' => '1.8',
 		'beta' => '1.3',
 		'alpha' => '0.2',
 		'actual' => 'Stable',
-		'date' => '2020/06/20'
+		'date' => '2020/07/27'
 	)
 );
 

@@ -9,7 +9,7 @@ $sites = array(
 	'name' => 'Website Project (WP)',
 	'domain' => '', /*domain: exemple.tld*/
 	'auto' => array(
-		'domain' => preg_replace('/www/i', '', $_SERVER['SERVER_NAME']) /*Automate domain.tld no put*/
+		'domain' => preg_replace('/www./i', '', $_SERVER['SERVER_NAME']) /*Automate domain.tld no put*/
 	),
 	'sub-domain' => '',  /*domain: cdexemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
