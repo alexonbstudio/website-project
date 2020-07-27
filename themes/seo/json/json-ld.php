@@ -1,74 +1,146 @@
-<?php header('Content-Type: application/ld+json; charset=utf-8'); ?>
 <?php ##########	OWNER	########## ?>
-[<?php if(!empty($private['name'])){ ?>{
+[{
+    "@context": "https://schema.org",
+	"@type": "WebPage",
+	"@id": "#webpage",
+	"url": "<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>",
+	"name":"<?php echo htmlentities($sites['name']); ?>",
+	"description":"<?php echo htmlentities($description); ?>",
+    "headline": "<?php echo htmlentities($title); ?>"<?php if(!empty($imgs)){ ?>,
+	"inLanguage":"<?php echo $meta_langs; ?>",
+    "image": [
+      "<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$imgs; ?>"
+     ],<?php } ?>
+     "speakable":
+     {
+      "@type": "SpeakableSpecification",
+      "xpath": [
+        "/html/head/title",
+        "/html/head/meta[@name='description']/@content"
+        ]
+      },
+	"potentialAction":[
+		{
+			"@type":"ReadAction",
+			"target":[
+				"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>"
+			]
+		}
+	]
+	
+},<?php /*
+{
+      "@type": "VideoObject",
+      "name": "Cat video",
+      "duration": "P10M",
+      "uploadDate": "2019-07-19",
+      "thumbnailUrl": "<?php echo $protocols.'://'.$domainTLD.'/'; ?>"",
+      "description": "Watch this cat jump over a fence!",
+      "contentUrl": "<?php echo $protocols.'://'.$domainTLD.'/'; ?>"",
+      "hasPart": [{
+        "@type": "Clip",
+        "name": "Cat jumps",
+        "url": "<?php echo $protocols.'://'.$domainTLD.'/'; ?>"
+      },
+      {
+        "@type": "Clip",
+        "name": "Cat misses the fence",
+        "url": "<?php echo $protocols.'://'.$domainTLD.'/'; ?>"
+      }]
+}, */?>
+{
+	"@type":"WebSite",
+	"@id":"#website",
+	"url":"<?php echo $protocols.'://'.$domainTLD.'/'; ?>",
+	"name":"<?php echo htmlentities($sites['name']); ?>",
+	"description":"<?php echo htmlentities($general['index']['description']); ?>",
+	"inLanguage":"<?php echo $meta_langs; ?>"
+},
+<?php ##########	Breadcrumb	########## ?>
+{
+	"@type":"BreadcrumbList",
+	"@id":"#breadcrumb",
+	"itemListElement":[
+		{
+			"@type":"ListItem",
+			"position":1,
+			"item":{
+				"@type":"WebPage",
+				"@id":"<?php echo $protocols.'://'.$domainTLD; ?>",
+				"url":"<?php echo $protocols.'://'.$domainTLD; ?>",
+				"name":"<?php echo htmlentities($general['index']['title']); ?>"
+			}
+		},
+		{
+			"@type":"ListItem",
+			"position":2,
+			"item":{
+				"@type":"WebPage",
+				"@id":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>",
+				"url":"<?php echo $protocols.'://'.$domainTLD.'/'.$urls; ?>",
+				"name":"<?php echo htmlentities($title); ?>"
+			}
+		}
+	]
+},
+{
+	"@type":"ImageObject",
+	"@id":"#primaryimage",
+	"inLanguage":"<?php echo $meta_langs; ?>",
+	"url":"<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$imgs; ?>",
+	"width":718,
+	"height":403,
+	"caption":"<?php echo $title; ?>"
+}<?php if(!empty($private['name'])){ ?>,
+  {
   "@context": "http://schema.org/",
   "@type": "Person",
-  "name": "<?php echo $private['name']; ?>",
-  "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>",
-  "url": "<?php echo $protocols.'://'.$domainTLD; ?>"
+  "name": "<?php echo htmlentities($private['name']); ?>"<?php if(!empty($private['mobile']['number'])){ ?>,
+  "telephone": "<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>"<?php } ?>,
+  "url": "<?php echo $protocols.'://'.$domainTLD; ?>"<?php if(!empty($private['name'])){ ?>,
+  "sameAs":[
+		<?php if(!empty($social['linkedin']['name'])){ echo '"'.$social['linkedin']['url'].'",'; } ?>
+		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['url'].'",'; } ?>
+		<?php if(!empty($social['viadeo']['name'])){ echo '"'.$social['viadeo']['url'].'",'; } ?>
+		"<?php echo htmlentities($private['name']);  ?>",
+		"<?php echo htmlentities($sites['name']); ?>"
+	]<?php } ?>
 }<?php } ?>
 <?php ##########	BUSINESS PAGE | You need Absolute CHANGE for Adapt your Business Local categories	########## ?>
 <?php if(!empty($business['local']['name'])){ ?>,
 {
 	"@context": "https://schema.org",
 	"@type": "Organization",
-	"url": "<?php echo $protocols.'://'.$domainTLD; ?>",
-	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>",
-	"logo": "<?php echo $protocols.'://'.$domainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
-	"name": "<?php echo $business['local']['name']; ?>",
+	"url": "<?php echo $protocols.'://'.$domainTLD; ?>"<?php if(!empty($business['local']['phone']['number'])){ ?>,
+	"telephone": "<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>"<?php } ?>,
+	"logo": "<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$images['manager']['logo']['normal']; ?>",
+	"name": "<?php echo htmlentities($business['local']['name']); ?>",
 	"address": {
 		"@type": "PostalAddress",
-		"streetAddress": "<?php echo $business['local']['address']; ?>",
-		"addressLocality": "<?php echo $business['local']['city']; ?>",
-		"addressRegion": "<?php echo $business['local']['region']; ?>",
+		"streetAddress": "<?php echo htmlentities($business['local']['address']); ?>",
+		"addressLocality": "<?php echo htmlentities($business['local']['city']); ?>",
+		<?php if(!empty($business['local']['region'])){ ?>"addressRegion": "<?php echo htmlentities($business['local']['region']).','; ?>"<?php } ?>
 		"postalCode": "<?php echo $business['local']['postal']; ?>",
-		"addressCountry": "<?php echo $business['local']['contry']; ?>"
+		"addressCountry": "<?php echo htmlentities($business['local']['contry']); ?>"
 	},
 	"geo": {
 		"@type": "GeoCoordinates",
 		"latitude": <?php echo $business['local']['geo']['latitude']; ?>,
 		"longitude": <?php echo $business['local']['geo']['longitude']; ?>
-	}
-}
-<?php } ?>
-<?php ##########	FAQs PAGE	########## ?>
-<?php /*if(!empty()){,*/ ?>
-<?php /*    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is the return policy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most unopened items in new condition and returned within <strong>90 days</strong> will receive a refund or exchange. Some items have a modified return policy noted on the receipt or packing slip. Items that are opened or damaged or do not have a receipt may be denied a refund or exchange. Items purchased online or in-store may be returned to any store.<br /><p>Online purchases may be returned via a major parcel carrier. <a href=http://example.com/returns> Click here </a> to initiate a return.</p>"
-        }
-      }, {
-        "@type": "Question",
-        "name": "How long does it take to process a refund?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We will reimburse you for returned items in the same way you paid for them. For example, any amounts deducted from a gift card will be credited back to a gift card. For returns by mail, once we receive your return, we will process it within 4–5 business days. It may take up to 7 days after we process the return to reflect in your account, depending on your financial institution's processing time."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What is the policy for late/non-delivery of items ordered online?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our local teams work diligently to make sure that your order arrives on time, within our normaldelivery hours of 9AM to 8PM in the recipient's time zone. During  busy holiday periods like Christmas, Valentine's and Mother's Day, we may extend our delivery hours before 9AM and after 8PM to ensure that all gifts are delivered on time. If for any reason your gift does not arrive on time, our dedicated Customer Service agents will do everything they can to help successfully resolve your issue. <br/> <p><a href=https://example.com/orders/>Click here</a> to complete the form with your order-related question(s).</p>"
-        }
-      }, {
-        "@type": "Question",
-        "name": "When will my credit card be charged?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We'll attempt to securely charge your credit card at the point of purchase online. If there's a problem, you'll be notified on the spot and prompted to use another card. Once we receive verification of sufficient funds, your payment will be completed and transferred securely to us. Your account will be charged in 24 to 48 hours."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Will I be charged sales tax for online orders?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text":"Local and State sales tax will be collected if your recipient's mailing address is in: <ul><li>Arizona</li><li>California</li><li>Colorado</li></ul>"}
-        }]
-    }*/ ?><?php /*}*/ ?>]
+	}<?php if(!empty($private['name'])){ ?>,
+	"sameAs":[
+		<?php if(!empty($social['twitter']['name'])){ echo '"'.$social['twitter']['url'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['facebook']['url'].'",'; } ?>
+		<?php if(!empty($social['facebook']['name'])){ echo '"'.$social['instagram']['url'].'",'; } ?> 
+		<?php if(!empty($social['linkedin']['team']['name'])){ echo '"'.$social['linkedin']['team']['url'].'",'; } ?>
+		<?php if(!empty($social['youtube']['name'])){ echo '"'.$social['youtube']['url'].'",'; } ?>
+		<?php if(!empty($social['twitch']['name'])){ echo '"'.$social['twitch']['url'].'",'; } ?>
+		<?php if(!empty($social['github']['name'])){ echo '"'.$social['github']['url'].'",'; } ?>
+		<?php if(!empty($social['discord']['name'])){ echo '"'.$social['discord']['url'].'",'; } ?>
+		<?php if(!empty($social['viadeo']['team']['name'])){ echo '"'.$social['viadeo']['team']['url'].'",'; } ?>
+		<?php if(!empty($social['mixcloud']['name'])){ echo '"'.$social['mixcloud']['url'].'",'; } ?>
+		<?php if(!empty($social['dailymotion']['name'])){ echo '"'.$social['dailymotion']['url'].'",'; } ?>
+		<?php if(!empty($private['name'])){ echo '"'.htmlentities($private['name']).'",'; } ?>
+		"<?php echo htmlentities($sites['name']); ?>"
+	]<?php } ?>
+}<?php } ?>]
