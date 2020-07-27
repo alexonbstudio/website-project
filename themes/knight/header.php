@@ -1,6 +1,6 @@
 <?php ob_start("ob_html_compress"); ?>
 <!doctype html>
-<html lang="<?php echo $Languages_translate; ?>">
+<html lang="<?php echo $DefineTranslateLang; ?>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
