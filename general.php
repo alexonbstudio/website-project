@@ -16,6 +16,7 @@ $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
+$videos = json_decode($JE_videos, true);
 $images = json_decode($JE_images, true);
 $business = json_decode($JE_business, true);
 /*

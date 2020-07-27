@@ -13,6 +13,7 @@ $credits = json_decode($JE_credits, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
 $partner = json_decode($JE_partner, true);
+$videos = json_decode($JE_videos, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);

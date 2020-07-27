@@ -12,6 +12,7 @@ $translate = json_decode($JE_translate, true);
 $credits = json_decode($JE_credits, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
+$videos = json_decode($JE_videos, true);
 $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);

@@ -10,6 +10,7 @@ foreach (glob('configuration/*.php') as $GlobConfig) { include_once $GlobConfig;
 $sites = json_decode($JE_sites, true);
 $translate = json_decode($JE_translate, true);
 $credits = json_decode($JE_credits, true);
+$videos = json_decode($JE_videos, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
 $partner = json_decode($JE_partner, true);
