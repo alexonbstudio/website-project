@@ -61,7 +61,7 @@ $sitemap = json_decode($JE_translate_sitemap, true);
 
 #frontend
 if(isset($_GET['lang'])){
-	if($_GET['lang'] == $Languages_translate){
+	if($_GET['lang'] == $DefineTranslateLang){
 		if(isset($_GET['pages'])){
 			if($_GET['pages'] == 'index'){
 				$title = $general['index']['title'];

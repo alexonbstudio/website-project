@@ -78,7 +78,7 @@ $hcaptcha_RData = json_decode($hcaptcha_VResponse);
 */
 #frontend
 if(isset($_GET['lang'])){
-	if($_GET['lang'] == $Languages_translate){
+	if($_GET['lang'] == $DefineTranslateLang){
 		if(isset($_GET['pages'])){
 			if($_GET['pages'] == 'index'){
 				$title = $email['index']['title'];
