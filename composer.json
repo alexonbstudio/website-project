@@ -20,7 +20,7 @@
 	"config": {
         "optimize-autoloader": true,
         "platform": {
-            "php": "7.2.00"
+            "php": "7.2.0"
         },
         "vendor-dir": "libs"
     },
@@ -72,7 +72,6 @@
 		]
 	},
     "suggest": {
-        "symfony/polyfill-mbstring": "For optional Work with Libphonenumber library",
         "giggsey/locale": "For optional Work with Libphonenumber library",
         "ext-mbstring": "Needed to send email in multibyte encoding charset",
         "psr/cache-implementation": "Cache implementation to use with Minify::cache"
