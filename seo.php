@@ -75,7 +75,7 @@ if(isset($_GET['html-verify'])){
 	} else if($_GET['html-verify'] == 'yandex'){
 		include_once('themes/seo/html-verify/yandex.php');	
 	} else {
-		echo '';
+		header('Location: '.$protocols.'://'.$domainTLD);
 		
 	}
 } else if(isset($_GET['json'])){
@@ -89,7 +89,7 @@ if(isset($_GET['html-verify'])){
 		header('Content-type: application/json; charset=utf-8');
 		include_once('themes/seo/json/microsoft-identity-association.php');	
 	} else {
-		echo '';
+		header('Location: '.$protocols.'://'.$domainTLD);
 		
 	}
 } else if(isset($_GET['txt'])){
@@ -106,34 +106,11 @@ if(isset($_GET['html-verify'])){
 		header('Content-type: text/plain; charset=utf-8');
 		include_once('themes/seo/txt/brave-rewards-verification.php');	
 	} else {
-		echo '';
+		header('Location: '.$protocols.'://'.$domainTLD);
 		
 	}
-}/* else if(isset($_GET['xml'])){
-	if($_GET['xml'] == 'badge'){
-		header('Content-type: application/xml; charset=utf-8');
-		include_once('themes/seo/xml/badge.php');	
-	} else if($_GET['xml'] == 'dublincore'){
-		header('Content-type: application/xml; charset=utf-8');
-		include_once('themes/seo/xml/dublincore.php';	
-	} else if($_GET['xml'] == 'rss'){
-		header('Content-type: application/xml; charset=utf-8');
-		include_once('themes/seo/xml/rss.php');
-	} else if($_GET['xml'] == 'crossdomain'){
-		header('Content-type: application/xml; charset=utf-8');
-		include_once('themes/seo/xml/crossdomain.php');
-	} else if($_GET['xml'] == 'BingSiteAuth'){
-		header('Content-type: application/xml; charset=utf-8');
-		include_once('themes/seo/xml/BingSiteAuth.php');
-	} else if($_GET['xml'] == 'sitemap'){
-		header('Content-type: application/xml; charset=utf-8');
-		include_once('themes/seo/xml/sitemap.php');	
-
-	} else {
-		echo '';
-	}
-}*/ else {
-	echo '';
+} else {
+	header('Location: '.$protocols.'://'.$domainTLD);
 	
 }
 ?>
