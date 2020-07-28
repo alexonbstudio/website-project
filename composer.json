@@ -16,7 +16,14 @@
 		"nginx",
 		"caddy",
 		"bootstrap"
-	],
+	],    
+	"config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.2.00"
+        },
+        "vendor-dir": "libs"
+    },
     "homepage": "https://github.com/alexonbstudio/website-project",
     "license": "GPL-3.0",
 	"support": {
