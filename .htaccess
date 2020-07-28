@@ -1365,19 +1365,16 @@ RewriteRule ^en/error\.html$ block.php?lang=en&pages=error [L]
 	RewriteEngine on
 
 	###### XML ###### 
-	#RewriteRule ^rss\.xml$ seo.php?xml=rss [L]
-	#RewriteRule ^BingSiteAuth\.xml$ seo.php?xml=bingsiteauth [L]
-	#RewriteRule ^crossdomain\.xml$ seo.php?xml=crossdomain [L]
-	#RewriteRule ^sitemap\.xml$ seo.php?xml=sitemap [L]
-	##SITEMAP - Translate##
-	#RewriteRule ^sitemap-index\.xml$ seo.php?xml=sitemap&translate=default [L]
-	#RewriteRule ^sitemap-en\.xml$ seo.php?xml=sitemap&translate=en [L]
-	#RewriteRule ^sitemap-fr\.xml$ seo.php?xml=sitemap&translate=fr [L]
-
-	#RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
-	#RewriteRule ^browserconfig\.xml$ seo.php?xml=badge [L]
-	#RewriteRule ^dublincore\.xml$ seo.php?xml=dublincore [L]
-	#RewriteRule ^badge\.xml$ seo.php?xml=badge [L]
+	RewriteRule ^rss\.xml$ seo-others.php?index=rss [L]
+	RewriteRule ^badge\.xml$ seo-others.php?index=badge [L]
+	RewriteRule ^browserconfig\.xml$ seo-others.php?index=badge [L]
+	RewriteRule ^BingSiteAuth\.xml$ seo-others.php?index=BingSiteAuth [L]
+	RewriteRule ^sitemap\.xml$ seo-others.php?index=sitemap [L]
+	##SITEMAP##
+	RewriteRule ^sitemap\.xml$ seo-others.php?sitemap=index [L]
+	RewriteRule ^sitemap-index\.xml$ seo-others.php?sitemap=default [L]
+	RewriteRule ^sitemap-en\.xml$ seo-others.php?sitemap=en [L]
+	RewriteRule ^sitemap-fr\.xml$ seo-others.php?sitemap=fr [L]
 
 	###### JSON ###### 
 	RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
@@ -1396,6 +1393,8 @@ RewriteRule ^en/error\.html$ block.php?lang=en&pages=error [L]
 	#RewriteRule ^dmyc73gogfqvf3a9p\.html$ seo.php?html-verify=dailymotion [L]
 	#RewriteRule ^$var\.html$ seo.php?html-verify=google [L]
 	#RewriteRule ^pinterest-$var\.html$ seo.php?html-verify=pinterest [L]
+	#exemple: with pinterest
+	#RewriteRule ^pinterest-ccf5f\.html$ seo.php?html-verify=pinterest [L]
 	#RewriteRule ^yandex_$var.html$ seo.php?html-verify=yandex [L]
 </IfModule>
 
