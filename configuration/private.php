@@ -24,8 +24,8 @@ $private = array(
 		'number' => '1234567891',
 	),
 	'mail' => array(
-		'public' => 'contact@exemple.tld',
-		'private' => 'exemple@gmal.tld'
+		'public' => 'contact',
+		'private' => 'exemple'
 	)
 );
 
