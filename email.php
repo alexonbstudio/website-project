@@ -260,6 +260,48 @@ if(isset($_GET['lang'])){
 		header('Location: '.$protocols.'://'.$domainTLD);
 		exit();
 	}
+} else if(isset($_GET['security'])){
+	if($_GET['security'] == 'csp'){
+		if(!empty($business['local']['name'])){
+			$SecurityCSP_emailTo=$business['local']['mail']['contact'].'@'.$domainTLD;
+		} else {
+			$SecurityCSP_emailTo=$private['mail']['public'].'@'.$domainTLD;
+		}
+
+		http_response_code(204);
+
+		// Only run if proper input data received
+		if ($SecurityCSP_data=json_decode(file_get_contents('php://input'), true)){
+			if (!isset($SecurityCSP_data['csp-report'])){ return; }
+				
+			$SecurityCSP_data=$SecurityCSP_data['csp-report'];
+			ksort($SecurityCSP_data);
+			
+			if ($SecurityCSP_data['blocked-uri']==''){ return; }
+			
+			// Filter out junk reports
+			$blockedUris=array('127.0.0.1', 'blur://', 'mbinit://', 'ms-appx-web:', 'mx:', 'opera://', 'safari-extension:', 'self');
+			
+			foreach($blockedUris as $uri){
+				if (strpos($SecurityCSP_data['blocked-uri'], $uri)!==FALSE){
+					return;
+				}
+			}
+			
+			// Prettify the JSON-formatted data
+			$SecurityCSP_email=json_encode($SecurityCSP_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\r\n\r\n";
+
+			$SecurityCSP_email.=sprintf("%s (%s)\r\n", $_SERVER['REMOTE_ADDR'], gethostbyaddr($_SERVER['REMOTE_ADDR']));
+			$SecurityCSP_email.=sprintf("%s\r\n\r\n", $_SERVER['HTTP_USER_AGENT']);
+			
+			// Mail the CSP violation report
+			mail($ecurityCSP_emailTo, 'CSP Violation', $SecurityCSP_email, 'Content-Type: text/plain;charset=utf-8');
+		}	
+
+	} else {
+		header('Location: '.$protocols.'://'.$domainTLD);
+		exit();
+	}
 } else {
 	header('Location: '.$protocols.'://'.$domainTLD);
 	exit();

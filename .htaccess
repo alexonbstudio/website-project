@@ -1452,6 +1452,14 @@ RewriteRule ^sitemap\.html$ index.php?pages=sitemap [L]
 
 
 
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#security CSP 
+RewriteRule ^security/csp-violate\.html$ email.php?security=csp [L]
+
+</IfModule>
+
+
 
 
 <IfModule mod_rewrite.c>
