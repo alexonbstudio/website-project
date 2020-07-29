@@ -1,29 +1,40 @@
 <?php
-
+# $seo['hcaptcha']['private-key']
 $seo = array(
+	'crisp' => array(
+		'key' => '' 
+	),
+	'tidio' => array(
+		'key' => '' 
+	),
+	'quantcast' => array(
+		'key' => '' /*gH0YrwXWXWWS3*/
+	),
+	'hcaptcha' => array(
+		'public-key' => '', /* Key public*/
+		'private-key' => '' /* Key private*/
+	),
 	'brave' => array(
-		'token' => '4451d832bcfc59988ca2e9ad4c4cfd80512460d65764632b7fef46bb7fd7891e'
+		'token' => ''
 	),
 	'google' => array(
-		'tag' => '',
-		'analystics' => 'UA-XXXXXXX-X',
-		'' => ''
-	),
-	'yandex' => array(
-		'analystics' => ''
+		'analystics' => 'UA-xxxxxxxxx-x',
+		'tag-manager' => 'GTM-xxxxxxx'
 	),
 	'shareaholic' => array(
 		'key' => ''
 	),
+	'yandex' => array(
+		'analystics' => '' /**/
+	),
 	'bing' => array(
 		'key' => ''
 	),
-	'hcaptcha' => array(
-		'public-key' => '', /*Public key here hcaptcha*/
-		'private-key' => '' /*Private key here hcaptcha*/
-	),
 	'microsoft' => array(
 		'key' => ''
+	),
+	'addthis' => array(
+		'key' => '' /*ra-5efbed45630393b0*/
 	),
 	'html-verify' => array(
 		/** Verification HTLM Social & Video & Search Engine after that change your seo.htaccess **/	
