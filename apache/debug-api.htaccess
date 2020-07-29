@@ -1,0 +1,36 @@
+
+# DEBUG 
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	RewriteRule ^debug\.html$ index.php?pages=debug [L]
+	RewriteRule ^api/sites\.json$ index.php?pages=debug&json=sites [L]
+	RewriteRule ^api/social\.json$ index.php?pages=debug&json=social [L]
+	RewriteRule ^api/private\.json$ index.php?pages=debug&json=private [L]
+	RewriteRule ^api/business\.json$ index.php?pages=debug&json=business [L]
+	RewriteRule ^api/images\.json$ index.php?pages=debug&json=images [L]
+	RewriteRule ^api/partner\.json$ index.php?pages=debug&json=partner [L]
+	RewriteRule ^api/sponsor\.json$ index.php?pages=debug&json=sponsor [L]
+	RewriteRule ^api/credits\.json$ index.php?pages=debug&json=credits [L]
+	
+	########## debug - English ##########
+	RewriteRule ^en/debug\.html$ debug.php?lang=en&pages=debug [L]
+	RewriteRule ^en/api/sites\.json$ debug.php?lang=en&pages=debug&json=sites [L]
+	RewriteRule ^en/api/social\.json$ debug.php?lang=en&pages=debug&json=social [L]
+	RewriteRule ^en/api/private\.json$ debug.php?lang=en&pages=debug&json=private [L]
+	RewriteRule ^en/api/business\.json$ debug.php?lang=en&pages=debug&json=business [L]
+	RewriteRule ^en/api/images\.json$ debug.php?lang=en&pages=debug&json=images [L]
+	RewriteRule ^en/api/partner\.json$ debug.php?lang=en&pages=debug&json=partner [L]
+	RewriteRule ^en/api/sponsor\.json$ debug.php?lang=en&pages=debug&json=sponsor [L]
+	
+	########## debug - French ##########
+	RewriteRule ^fr/déboguer\.html$ debug.php?lang=fr&pages=debug [L]
+	RewriteRule ^fr/api/sites\.json$ debug.php?lang=fr&pages=debug&json=sites [L]
+	RewriteRule ^fr/api/social\.json$ debug.php?lang=fr&pages=debug&json=social [L]
+	RewriteRule ^fr/api/private\.json$ debug.php?lang=fr&pages=debug&json=private [L]
+	RewriteRule ^fr/api/business\.json$ debug.php?lang=fr&pages=debug&json=business [L]
+	RewriteRule ^fr/api/images\.json$ debug.php?lang=fr&pages=debug&json=images [L]
+	RewriteRule ^fr/api/partner\.json$ debug.php?lang=fr&pages=debug&json=partner [L]
+	RewriteRule ^fr/api/sponsor\.json$ debug.php?lang=fr&pages=debug&json=sponsor [L]
+	RewriteRule ^fr/api/credits\.json$ debug.php?lang=fr&pages=debug&json=credits [L]
+</IfModule>
