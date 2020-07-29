@@ -1,0 +1,36 @@
+#Preparing Caddyfile * caddyserver v2
+
+rewrite index.php?pages=email /contact.html
+	
+	rewrite index.php?pages=debug debug.html 
+	rewrite index.php?pages=debug&json=sites api/sites.json 
+	rewrite index.php?pages=debug&json=social api/social.json 
+	rewrite index.php?pages=debug&json=private api/private.json 
+	rewrite index.php?pages=debug&json=business api/business.json 
+	rewrite index.php?pages=debug&json=images api/images.json 
+	rewrite index.php?pages=debug&json=partner api/partner.json 
+	rewrite index.php?pages=debug&json=sponsor api/sponsor.json 
+	rewrite index.php?pages=debug&json=credits api/credits.json 
+	
+	########## debug - English ##########
+	rewrite debug.php?lang=en&pages=debug en/debug.html 
+	rewrite debug.php?lang=en&pages=debug&json=sites en/api/sites.json 
+	rewrite debug.php?lang=en&pages=debug&json=social en/api/social.json 
+	rewrite debug.php?lang=en&pages=debug&json=private en/api/private.json 
+	rewrite debug.php?lang=en&pages=debug&json=business en/api/business.json 
+	rewrite debug.php?lang=en&pages=debug&json=images en/api/images.json 
+	rewrite debug.php?lang=en&pages=debug&json=partner en/api/partner.json 
+	rewrite debug.php?lang=en&pages=debug&json=sponsor en/api/sponsor.json 
+	rewrite debug.php?lang=en&pages=debug&json=credits en/api/credits.json 
+	
+	########## debug - French ##########
+	rewrite debug.php?lang=fr&pages=debug fr/debug.html 
+	rewrite debug.php?lang=fr&pages=debug&json=sites fr/api/sites.json 
+	rewrite debug.php?lang=fr&pages=debug&json=social fr/api/social.json 
+	rewrite debug.php?lang=fr&pages=debug&json=private fr/api/private.json 
+	rewrite debug.php?lang=fr&pages=debug&json=business fr/api/business.json 
+	rewrite debug.php?lang=fr&pages=debug&json=images fr/api/images.json 
+	rewrite debug.php?lang=fr&pages=debug&json=partner fr/api/partner.json 
+	rewrite debug.php?lang=fr&pages=debug&json=sponsor fr/api/sponsor.json 
+	rewrite debug.php?lang=fr&pages=debug&json=credits fr/api/credits.json 
+
