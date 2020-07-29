@@ -71,7 +71,7 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['production']['js']['knight']; ?>"></script>
-  <script src="<?php echo $version['external']['intl-tel-input']['js']; ?>"></script>
+  <!--<script src="<?php echo $version['external']['intl-tel-input']['js']; ?>"></script>
   
 	<script>
 
@@ -89,8 +89,27 @@
 		var iti = window.intlTelInputGlobals.getInstance(input);
 		iti.isValidNumber(); 
 
-  </script>
-  
+  </script>-->
+    
+  <? if(!empty($seo['addthis']['key'])){ ?>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $seo['addthis']['key']; ?>"></script>
+  <?php } ?>
+  <?php if(!empty($seo['google']['tag-manager'])){ ?>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $seo['google']['tag-manager']; ?>"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<?php } ?>
+  <?php 
+  if(!empty($seo['crisp']['key'])){ 
+	echo '<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="'.$seo['crisp']['key'].'";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>';
+  }
+  ?>
+  <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+    <?php  if(!empty($seo['tidio']['key'])){  ?>
+  <script src="//code.tidio.co/<?php echo $seo['tidio']['key']; ?>.js" async></script>
+	<?php } ?>
 </body>
 </html>
 <?php ob_end_flush(); ?>
