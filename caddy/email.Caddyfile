@@ -1,6 +1,7 @@
 #Preparing Caddyfile * caddyserver v2
 
 rewrite index.php?pages=email /contact.html
+rewrite email.php?security=csp /security/csp-violate.html
 
 
 
