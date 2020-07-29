@@ -2,6 +2,8 @@
 RewriteEngine on
 #E-Mail
 RewriteRule ^contact\.html$ index.php?pages=email [L]
+#security CSP 
+RewriteRule ^security/csp-violate\.html$ email.php?security=csp [L]
 
 
 ########## CONTACT - French ##########
