@@ -1,5 +1,5 @@
 <?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 	<url>
 		<loc><?php echo $protocols.'://'.$domainTLD.'/'.$translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']; ?></loc>
 		<changefreq>monthly</changefreq>
@@ -11,6 +11,14 @@
 			<image:title><![CDATA['.$general['index']['title'].']]></image:title>
 		</image:image>';
 		}
+		
+		if(!empty($general['index']['sitemap']['video'])){
+		echo '<video:video>
+			<video:thumbnail_loc>'.$protocols.'://'.$CDNdomainTLD.'/'.$images['dir'].'/'.$general['index']['sitemap']['images'].'</video:thumbnail_loc> 
+			<video:title>'.$general['index']['title'].'</video:title>
+			<video:description>'.$general['index']['description'].'</video:description>
+			<video:player_loc allow_embed="yes" autoplay="ap=1">'.$protocols.'://'.$general['index']['sitemap']['video'].'</video:player_loc>
+		</video:video>';
 		?>
 	</url>
 	<? #################################	ABOUT		################################# ?>
