@@ -64,11 +64,7 @@
 			".github/",
 			"FUNDING.yml",
 			"docker-compose.yml",
-			"backend.php",
-			"list-directory.txt",
-			"test-lang.php",
-			"phone-verify.php",
-			"need-help.md"
+			"testiing"
 		]
 	},
     "suggest": {
