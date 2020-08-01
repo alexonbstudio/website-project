@@ -49,7 +49,6 @@
 	Webmaster: <?php echo $credits['webmaster']['alexonbstudio']['name']; ?>
 	
 	Designer: <?php echo $credits['designer']['alexonbstudio']['name']; ?>
-#	Photographer:  <?php/* echo $credits['photographer']['alexonbstudio']['name'];*/ ?>
 	Images: <?php 
 		echo $credits['images']['alexonbstudio']['name'].', '.
 		$credits['images']['pexels']['name'].', '.
