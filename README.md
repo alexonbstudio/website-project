@@ -27,7 +27,7 @@ For more information on my website to [alexonbstudio.fr](https://www.alexonbstud
 
 # Duration 
 
-	59 Days Totaly
+	60 Days Totaly every 4 hours 
 	Dev/Manage Structure/Imagine/Thinking to build simple
 	#No Frameworks & No CMS
 
