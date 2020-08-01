@@ -14,7 +14,7 @@ PHP
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 7.2   | :white_check_mark: |
+| 7.2     | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
