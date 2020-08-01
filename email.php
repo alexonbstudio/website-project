@@ -86,6 +86,7 @@ if(isset($_GET['lang'])){
 				$keyword = $email['index']['keyword'];
 				$urls = $email['index']['url']['default'];
 				$imgs = $email['index']['sitemap']['images'];
+				$vdos = $email['index']['sitemap']['video'];
 				//$pattern_out = '/^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/';
 
 				if(!empty($business['local']['name'])){

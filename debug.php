@@ -92,6 +92,7 @@ if(isset($_GET['lang'])){
 					$keyword = $debug['index']['keyword'];
 					$urls = $debug['index']['url']['default'];
 					$imgs = $debug['index']['sitemap']['images'];
+					$vdos = $debug['index']['sitemap']['video'];
 					define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$debug['index']['url']['fr']);
 					define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$debug['index']['url']['en']);
 					include('themes/'.$sites['template'].'/header.php');

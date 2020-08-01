@@ -69,6 +69,7 @@ if(isset($_GET['lang'])){
 				$keyword = $sponsor['index']['keyword'];
 				$urls = $sponsor['index']['url']['default'];
 				$imgs = $sponsor['index']['sitemap']['images'];
+				$vdos = $sponsor['index']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sponsor['index']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sponsor['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');

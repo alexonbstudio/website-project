@@ -83,6 +83,7 @@ if(isset($_GET['pages'])){
 		$keyword = $general['index']['keyword'];
 		$urls = $general['index']['url']['default'];
 		$imgs = $general['index']['sitemap']['images'];
+		$vdos = $general['index']['sitemap']['video'];
 		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
 		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
 		include('themes/'.$sites['template'].'/header.php');
@@ -119,6 +120,7 @@ if(isset($_GET['pages'])){
 			$keyword = $debug['index']['keyword'];
 			$urls = $debug['index']['url']['default'];
 			$imgs = $debug['index']['sitemap']['images'];
+			$vdos = $debug['index']['sitemap']['video'];
 			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$debug['index']['url']['fr']);
 			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$debug['index']['url']['en']);
 			include('themes/'.$sites['template'].'/header.php');
@@ -132,7 +134,7 @@ if(isset($_GET['pages'])){
 		$keyword = $email['index']['keyword'];
 		$urls = $email['index']['url']['default'];
 		$imgs = $email['index']['sitemap']['images'];
-		$imgs = $email['index']['sitemap']['images'];
+		$vdos = $email['index']['sitemap']['video'];
 		//$pattern_out = '/^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/';
 		if(!empty($business['local']['name'])){		
 		
@@ -300,6 +302,7 @@ if(isset($_GET['pages'])){
 		$keyword = $sponsor['index']['keyword'];
 		$urls = $sponsor['index']['url']['default'];
 		$imgs = $sponsor['index']['sitemap']['images'];
+		$vdos = $sponsor['index']['sitemap']['video'];
 		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sponsor['index']['url']['fr']);
 		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sponsor['index']['url']['en']);
 		include('themes/'.$sites['template'].'/header.php');
@@ -314,6 +317,7 @@ if(isset($_GET['pages'])){
 		$keyword = $sitemap['index']['keyword'];
 		$urls = $sitemap['index']['url']['default'];
 		$imgs = $sitemap['index']['sitemap']['images'];
+		$vdos = $sitemap['index']['sitemap']['video'];
 		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$sitemap['index']['url']['fr']);
 		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$sitemap['index']['url']['en']);
 		include('themes/'.$sites['template'].'/header.php');
@@ -328,6 +332,7 @@ if(isset($_GET['pages'])){
 		$keyword = $partner['index']['keyword'];
 		$urls = $partner['index']['url']['default'];
 		$imgs = $partner['index']['sitemap']['images'];
+		$vdos = $partner['index']['sitemap']['video'];
 		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$partner['index']['url']['fr']);
 		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$partner['index']['url']['en']);
 		include('themes/'.$sites['template'].'/header.php');
@@ -342,6 +347,7 @@ if(isset($_GET['pages'])){
 			$keyword = $block['success']['keyword'];
 			$urls = $block['success']['url']['default'];
 			$imgs = $block['success']['sitemap']['images'];
+			$vdos = $block['success']['sitemap']['video'];
 			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['success']['url']['fr']);
 			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['success']['url']['en']);
 			include('themes/'.$sites['template'].'/header.php');
@@ -354,6 +360,7 @@ if(isset($_GET['pages'])){
 			$keyword = $block['error']['keyword'];
 			$urls = $block['error']['url']['default'];
 			$imgs = $block['error']['sitemap']['images'];
+			$vdos = $block['error']['sitemap']['video'];
 			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$block['error']['url']['fr']);
 			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$block['error']['url']['en']);
 			include('themes/'.$sites['template'].'/header.php');
@@ -368,6 +375,7 @@ if(isset($_GET['pages'])){
 				$keyword = $law['cgu']['keyword'];
 				$urls = $law['cgu']['url']['default'];
 				$imgs = $law['cgu']['sitemap']['images'];
+				$vdos = $law['cgu']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['cgu']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['cgu']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -379,6 +387,7 @@ if(isset($_GET['pages'])){
 				$keyword = $law['cgv']['keyword'];
 				$urls = $law['cgv']['url']['default'];
 				$imgs = $law['cgv']['sitemap']['images'];
+				$vdos = $law['cgv']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['cgv']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['cgv']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -390,6 +399,7 @@ if(isset($_GET['pages'])){
 				$keyword = $law['dmca']['keyword'];
 				$urls = $law['dmca']['url']['default'];
 				$imgs = $law['dmca']['sitemap']['images'];
+				$vdos = $law['dmca']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['dmca']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['dmca']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -401,6 +411,7 @@ if(isset($_GET['pages'])){
 				$keyword = $law['legal']['keyword'];
 				$urls = $law['legal']['url']['default'];
 				$imgs = $law['legal']['sitemap']['images'];
+				$vdos = $law['legal']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['legal']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['legal']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -412,6 +423,7 @@ if(isset($_GET['pages'])){
 				$keyword = $law['policy-privacy']['keyword'];
 				$urls = $law['policy-privacy']['url']['default'];
 				$imgs = $law['policy-privacy']['sitemap']['images'];
+				$vdos = $law['policy-privacy']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['policy-privacy']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['policy-privacy']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -423,6 +435,7 @@ if(isset($_GET['pages'])){
 				$keyword = $law['rgpd']['keyword'];
 				$urls = $law['rgpd']['url']['default'];
 				$imgs = $law['rgpd']['sitemap']['images'];
+				$vdos = $law['rgpd']['sitemap']['video'];
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['rgpd']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['rgpd']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
@@ -438,6 +451,7 @@ if(isset($_GET['pages'])){
 			$keyword = $law['pages']['keyword'];
 			$urls = $law['pages']['url']['default'];
 			$imgs = $law['pages']['sitemap']['images'];
+			$vdos = $law['pages']['sitemap']['video'];
 			define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['pages']['url']['fr']);
 			define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['pages']['url']['en']);
 			include('themes/'.$sites['template'].'/header.php');
@@ -454,6 +468,7 @@ if(isset($_GET['pages'])){
 	$keyword = $general['index']['keyword'];
 	$urls = $general['index']['url']['default'];
 	$imgs = $general['index']['sitemap']['images'];
+	$vdos = $general['index']['sitemap']['video'];
 	define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$general['index']['url']['fr']);
 	define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$general['index']['url']['en']);
 	include('themes/'.$sites['template'].'/header.php');

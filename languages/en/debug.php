@@ -63,7 +63,8 @@ $debug = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'background/debug.jpg'  /*directory images from <exemple.tld>/assets */
+			'images' => 'background/debug.jpg',
+			'video' => 'www.youtube.com/watch?v=pzXxTTyxFNA'  /*directory images from <exemple.tld>/assets */
 		)
 	)
 );
