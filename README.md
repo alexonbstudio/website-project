@@ -27,7 +27,7 @@ For more information on my website to [alexonbstudio.fr](https://www.alexonbstud
 
 # Duration 
 
-	60 Days Totaly every 4 hours 
+	2 month Totaly = every 4 hours on 12 days 
 	Dev/Manage Structure/Imagine/Thinking to build simple
 	#No Frameworks & No CMS
 
@@ -35,6 +35,10 @@ For more information on my website to [alexonbstudio.fr](https://www.alexonbstud
 
 	composer require alexonbstudio/website-project --no-dev
 	
+# Docker using
+
+	docker-compose.yml
+		
 	
 # back full developement
 
