@@ -4,6 +4,11 @@ Vous avez la flem [generator sitemap](https://xmlsitemapgenerator.org/)
 
 For more information on my website to [alexonbstudio.fr](https://www.alexonbstudio.fr) 
 
+## News Possible 
+
+GET data from website project wp with [Plugin System Shortcode](https://github.com/alexonbstudio/plg-shortcode-joomla/releases/) integrated, beginning with Joomla 3.9, Joomla 4.0 not supported you can download that now for free and then...
+
+
 
 ## install on linux exemple on ubuntu
 
