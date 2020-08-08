@@ -2,6 +2,7 @@
 #business['local']['status']['name']
 $business = array(
 	'local' => array(
+		'born' => '', /*exemple Day/Month/Year number only indicate age */
 		'name' => 'business compagny',/*IF empty variable output not show public/not use*/
 		'siret' => '',
 		'tva' => '',

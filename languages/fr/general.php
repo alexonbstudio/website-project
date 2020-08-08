@@ -1,6 +1,14 @@
 <?php
 #general['pages']['full']['starter']
 $general = array(
+	'full' => array(
+		'there-is-him' => 'Il a',
+		'there-is-her' => 'Elle a',
+		'there-iam' => 'J\'ai',
+		'year' => 'Ans',
+		'website-exist' => 'le site existe depuis plus de',
+		'entreprise-exist' => 'la société existe depuis plus de'
+	),
 	'pages' => array(
 		'full' => array(
 			'starter' => 'Démarrer',

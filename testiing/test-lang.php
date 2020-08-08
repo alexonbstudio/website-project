@@ -68,5 +68,14 @@ echo '<br>';
 echo 'PHONE: '.$phone_langs.'OUTPUT auto: MAJUSCULE (FR) for libs libphonenumbers-php'; //US
 echo '<br>';
 echo 'META: '.$meta_langs.'OUTPUT auto: (fr-FR) Meta-Tags Json-LS'; // fr-FR
+echo '<br><br>';
+echo 'Indicate your age';
+echo '<br><br>';
+echo age($private['born']).' - PRIVATE AGE BORN INFO THE OWNER'; // 24/04/1991 - 09/08/2020 = 29 yrs
+echo '<br>';
+echo age($business['local']['born']).' - BUSINESS COMPAGNY AGE BORN INFO';
+
+
+
 
 ?>

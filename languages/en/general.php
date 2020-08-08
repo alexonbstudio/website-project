@@ -1,6 +1,14 @@
 <?php
 
 $general = array(
+	'full' => array(
+		'there-is-him' => 'He has',
+		'there-is-her' => 'She has',
+		'there-iam' => 'I have',
+		'year' => 'Years old',
+		'website-exist' => 'the site has existed for more than',
+		'entreprise-exist' => 'the company has existed for more than'
+	),
 	'pages' => array(
 		'full' => array(
 			'starter' => 'Get Started',

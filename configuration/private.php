@@ -2,6 +2,7 @@
 # $private['mail']['public']
 
 $private = array(
+	'born' => '24/04/1991', /*exemple Day/Month/Year number only indicate age */
 	'name' => 'Private name',/*IF empty variable output not show public/not use*/
 	'address' => '',
 	'postal' => '75000',
