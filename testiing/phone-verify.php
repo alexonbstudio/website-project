@@ -8,5 +8,6 @@ $pattern_out = '/^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/';
 # PHPMAILER PHONE NUMBER
 if (array_key_exists('email', $_POST) && preg_match($pattern_out, $_POST['phone'])) 
 	
+#without validation number
 
-*****************************
+?>
