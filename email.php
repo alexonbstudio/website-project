@@ -194,7 +194,12 @@ if(isset($_GET['lang'])){
 						date_default_timezone_set($sites['default-timezone']);
 						
 						$mail->setFrom($_POST['email'], $_POST['name']);
-						$mail->addAddress($private['mail']['public'].'@'.$domainTLD, $domainTLD);
+						if(!empty($private['mail']['public'])){
+							$mail->addAddress($private['mail']['public'].'@'.$domainTLD, $domainTLD);
+						} else {
+							$mail->addAddress($private['mail']['private'].'@'.$private['mail']['@']['external'], $domainTLD);
+						}
+						
 						# $mail->msgHTML(); #preparing email template
 						if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 							$mail->Subject = $email['index']['title'].' - '.$domainTLD.'.';

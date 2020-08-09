@@ -241,7 +241,12 @@ if(isset($_GET['pages'])){
 				date_default_timezone_set($sites['default-timezone']);
 				
 				$mail->setFrom($_POST['email'], $_POST['name']);
-				$mail->addAddress($private['mail']['public'].'@'.$domainTLD, $domainTLD);
+				if(!empty($private['mail']['public'])){
+					$mail->addAddress($private['mail']['public'].'@'.$domainTLD, $domainTLD);
+				} else {
+					$mail->addAddress($private['mail']['private'].'@'.$private['mail']['@']['external'], $domainTLD);
+				}
+						
 				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
 					$mail->Subject = $email['index']['title'].' - '.$domainTLD.'.';
 					$mail->isHTML(true);
