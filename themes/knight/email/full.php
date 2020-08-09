@@ -60,7 +60,7 @@
                 <i class="icofont-phone"></i>
                 <h4><?php echo $email['index']['content']['default']['phone']; ?>:</h4>
                 <p><a href="tel:<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>">
-					<?php echo $business['local']['phone']['normal']; ?><?php echo $business['local']['phone']['number']; ?>
+					(<?php echo $business['local']['phone']['normal']; ?>) <?php echo $business['local']['phone']['number']; ?>
 				</a></p>
               </div>
 			<?php } else { ?>
@@ -69,7 +69,7 @@
                 <i class="icofont-phone"></i>
                 <h4><?php echo $email['index']['content']['default']['phone']; ?>:</h4>
                 <p><a href="tel:<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>">
-					<?php echo $private['mobile']['normal']; ?><?php echo $private['mobile']['number']; ?>
+					(<?php echo $private['mobile']['normal']; ?>) <?php echo $private['mobile']['number']; ?>
 				</a></p>
               </div>
 			

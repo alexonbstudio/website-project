@@ -20,17 +20,17 @@ $business = array(
 		),
 		'mobile' => array(
 			'code' => '+33',
-			'normal' => '(0)',
+			'normal' => '0',
 			'number' => '1234567891',
 		),
 		'phone' => array(
 			'code' => '+33',
-			'normal' => '(0)',
+			'normal' => '0',
 			'number' => '1234567891',
 		),
 		'fax' => array(
 			'code' => '+33',
-			'normal' => '(0)',
+			'normal' => '0',
 			'number' => '1234567891',
 		),
 		'mail' => array(
@@ -39,15 +39,7 @@ $business = array(
 			'commercial' => 'comm',
 			'sponsor' => 'spon',
 			'partner' => 'part',
-			'business' => 'buz',
-			'text' => array(
-				'contact' => 'con', 
-				'support' => 'supp',
-				'commercial' => 'comm',
-				'sponsor' => 'spon',
-				'partner' => 'part',
-				'business' => 'buz'
-			)
+			'business' => 'buz'
 		),
 		'team' => array(
 		/*exemple*/
