@@ -32,7 +32,7 @@ GET data from website project wp with [Plugin System Shortcode](https://github.c
 
 # Duration 
 
-	2 month Totaly = every 4 hours on 12 days 
+	2 month + 1day Totaly = every 4 hours on 12 days + 10min 1day 
 	Dev/Manage Structure/Imagine/Thinking to build simple
 	#No Frameworks & No CMS
 
