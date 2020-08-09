@@ -58,13 +58,6 @@ $portMAIL = 587;
 */
 
 
-if (!defined('DS')){
-	define('DS', DIRECTORY_SEPARATOR);
-}
-
-
-
-
 
 
 ?>
