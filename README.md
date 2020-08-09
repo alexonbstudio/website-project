@@ -1,5 +1,12 @@
 # Website Project WP
 
+Video want help for [french](https://dai.ly/x7vaz18) or [https://dai.ly/x7vaz14](https://dai.ly/x7vaz18)
+
+## Documentation 
+
+Files [PDF need teorique French](docs/website-project-wp-documents-french.pdf)
+
+
 Vous avez la flem [generator sitemap](https://xmlsitemapgenerator.org/) 
 
 For more information on my website to [alexonbstudio.fr](https://www.alexonbstudio.fr) 
