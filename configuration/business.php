@@ -21,17 +21,17 @@ $business = array(
 		'mobile' => array(
 			'code' => '+33',
 			'normal' => '0',
-			'number' => '1234567891',
+			'number' => '',
 		),
 		'phone' => array(
 			'code' => '+33',
 			'normal' => '0',
-			'number' => '1234567891',
+			'number' => '',
 		),
 		'fax' => array(
 			'code' => '+33',
 			'normal' => '0',
-			'number' => '1234567891',
+			'number' => '',
 		),
 		'mail' => array(
 			'contact' => 'con',
