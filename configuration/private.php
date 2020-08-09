@@ -12,21 +12,24 @@ $private = array(
 	'phone' => array(
 		'code' => '+33',
 		'normal' => '0',
-		'number' => '1234567891',
+		'number' => '',
 	),
 	'mobile' => array(
 		'code' => '+33',
 		'normal' => '0',
-		'number' => '1234567891',
+		'number' => '',
 	),
 	'fax' => array(
 		'code' => '+33',
 		'normal' => '0',
-		'number' => '1234567891',
+		'number' => '',
 	),
 	'mail' => array(
-		'public' => 'contact',
-		'private' => 'exemple'
+		'public' => 'contact', /*IF yes domain name or not indicate use mail private -> @ -> external = gamil.com*/
+		'private' => 'exemple', /* *@gmail.com down is gmail.com*/
+		'@' => array(
+			'external' => 'gmail.com'
+		)
 	)
 );
 
