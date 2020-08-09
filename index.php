@@ -172,9 +172,9 @@ if(isset($_GET['pages'])){
 				//Never allow arbitrary input for the 'teams' address as it will turn your form inteams a spam gateway!
 				//Substitute appropriate addresses from your own domain, or simply use a single, fixed address
 				if (array_key_exists('teams', $_POST) && in_array($_POST['teams'], [$business['local']['mail']['contact'], $business['local']['mail']['support'], $business['local']['mail']['commercial'], $business['local']['mail']['sponsor'], $business['local']['mail']['partner'], $business['local']['mail']['business']], true)) {
-					$teams = $_POST['teams'].'@'.$sites['domain'];
+					$teams = $_POST['teams'].'@'.$domainTLD;
 				} else {
-					$teams = $business['local']['mail']['contact'].'@'.$sites['domain'];
+					$teams = $business['local']['mail']['contact'].'@'.$domainTLD;
 				}
 				//Make sure the address they provided is valid before trying teams use it
 				if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])/* && preg_match($pattern_out, $_POST['phone'] */) {
@@ -185,13 +185,13 @@ if(isset($_GET['pages'])){
 					$err_email = true;
 				}
 				if (!$err_email) {
-					$mail->setFrom($business['local']['mail']['contact'].'@'.$sites['domain'], (empty($name_email) ? '<Anonymous>' : $name_email));
-					$mail->addAddress($teams, $sites['domain']);
+					$mail->setFrom($business['local']['mail']['contact'].'@'.$domainTLD, (empty($name_email) ? '<Anonymous>' : $name_email));
+					$mail->addAddress($teams, $domainTLD);
 					$mail->addReplyteams($email_email, $name_email);
 					
 					if ($mail->addReplyTo($email_email, $name_email)) {
 						$mail->isHTML(true);
-						$mail->Subject = $subject_email.' ('.$email['index']['title'].') - '.$sites['domain'].'.';
+						$mail->Subject = $subject_email.' ('.$email['index']['title'].') - '.$domainTLD.'.';
 						/*
 						#Solution 1
 						ob_start("ob_html_compress");
@@ -217,7 +217,7 @@ if(isset($_GET['pages'])){
 						$mail->msgHTML($body, dirname(__FILE__));
 						#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
 						# Solution 3
-						$mail->Body = '<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
+						$mail->Body = '<h2>'.$email['index']['title'].': '.$domainTLD.'</h2>
 							<h4>'.$email['index']['default']['content']['default']['subject'].':</h4> '.$subject_email.'<br /><br />
 							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$email_email.'<br /><br />
 							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$name_email.'<br /><br />
@@ -226,12 +226,12 @@ if(isset($_GET['pages'])){
 							
 							
 						if (!$mail->send()) {
-							header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+							header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
 						} else {
-							header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['success']['url']['default']);
+							header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['success']['url']['default']);
 						}
 					} else {
-						header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+						header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
 					}
 				}
 			} 
@@ -241,9 +241,9 @@ if(isset($_GET['pages'])){
 				date_default_timezone_set($sites['default-timezone']);
 				
 				$mail->setFrom($_POST['email'], $_POST['name']);
-				$mail->addAddress($private['mail']['public'].'@'.$sites['domain'], $sites['domain']);
+				$mail->addAddress($private['mail']['public'].'@'.$domainTLD, $domainTLD);
 				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-					$mail->Subject = $email['index']['title'].' - '.$sites['domain'].'.';
+					$mail->Subject = $email['index']['title'].' - '.$domainTLD.'.';
 					$mail->isHTML(true);
 							/*
 							#Solution 1
@@ -271,7 +271,7 @@ if(isset($_GET['pages'])){
 							#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
 							#Solution 3
 							$mail->Body = '
-							<h2>'.$email['index']['title'].': '.$sites['domain'].'</h2>
+							<h2>'.$email['index']['title'].': '.$domainTLD.'</h2>
 							<h4>'.$email['index']['content']['default']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
 							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br /><br />
 							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br /><br />
@@ -279,14 +279,14 @@ if(isset($_GET['pages'])){
 							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
 					
 					if (!$mail->send()) {
-					   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+					   header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
 					   exit();
 					} else {
-					   header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['success']['url']['default']);
+					   header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['success']['url']['default']);
 					   exit();
 					}
 				} else {
-					header('Location: '.$protocols.'://'.$sites['domain'].'/'.$block['error']['url']['default']);
+					header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
 					exit();
 
 				}

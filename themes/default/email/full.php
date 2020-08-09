@@ -46,12 +46,12 @@
             <div class="controls">
 				<?php if(!empty($business['local']['name'])){ ?>	  
 				<select name="teams" id="select">
-					<option value="<?php echo $business['local']['mail']['text']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['commercial']; ?>"><?php echo $email['index']['content']['mail']['commercial']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['sponsor']; ?>"><?php echo $email['index']['content']['mail']['sponsor']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['partner']; ?>"><?php echo $email['index']['content']['mail']['partner']; ?></option>
-					<option value="<?php echo $business['local']['mail']['text']['business']; ?>"><?php echo $email['index']['content']['mail']['business']; ?></option>
+					<option value="<?php echo $business['local']['mail']['contact']; ?>" selected="selected"><?php echo $email['index']['content']['mail']['contact']; ?></option>
+					<option value="<?php echo $business['local']['mail']['support']; ?>"><?php echo $email['index']['content']['mail']['support']; ?></option>
+					<option value="<?php echo $business['local']['mail']['commercial']; ?>"><?php echo $email['index']['content']['mail']['commercial']; ?></option>
+					<option value="<?php echo $business['local']['mail']['sponsor']; ?>"><?php echo $email['index']['content']['mail']['sponsor']; ?></option>
+					<option value="<?php echo $business['local']['mail']['partner']; ?>"><?php echo $email['index']['content']['mail']['partner']; ?></option>
+					<option value="<?php echo $business['local']['mail']['business']; ?>"><?php echo $email['index']['content']['mail']['business']; ?></option>
 				</select>
 				<?php } ?>
             </div>
@@ -86,23 +86,29 @@
 		<!--separator-->
 		<?php if(!empty($business['local']['name'])){ ?>
         <p>
-          <abbr title="<?php echo $email['index']['content']['default']['phone']; ?>"><i class="fas fa-phone"></i></abbr>: <?php echo $business['local']['phone']['normal']; ?><?php echo $business['local']['phone']['number']; ?>
+          <abbr title="<?php echo $email['index']['content']['default']['phone']; ?>"><i class="fas fa-phone"></i></abbr>: (<?php echo $business['local']['phone']['normal']; ?>) <?php echo $business['local']['phone']['number']; ?>
         </p>
 		<?php } else { ?>
         <p>
-          <abbr title="<?php echo $email['index']['content']['default']['phone']; ?>"><i class="fas fa-phone"></i></abbr>: <?php echo $private['mobile']['normal']; ?><?php echo $private['mobile']['number']; ?>
+          <abbr title="<?php echo $email['index']['content']['default']['phone']; ?>"><i class="fas fa-phone"></i></abbr>: (<?php echo $private['mobile']['normal']; ?>) <?php echo $private['mobile']['number']; ?>
         </p>
 		<?php } ?>
 		<!--separator-->
 		<?php if(!empty($business['local']['name'])){ ?>
         <p>
           <abbr title="<?php echo $email['index']['content']['default']['email']; ?>"><i class="far fa-envelope"></i></abbr>:
-		  <?php echo $business['local']['mail']['business']; ?>
+		  <?php echo $business['local']['mail']['business'].' [AT] '.$sites['domain']; ?>
         </p>
 		<?php } else { ?>
         <p>
           <abbr title="<?php echo $email['index']['content']['default']['email']; ?>"><i class="far fa-envelope"></i></abbr>:
-		  <?php echo $private['mail']['public']; ?>
+		  <?php 
+		  if(!empty($private['mail']['public'])){
+			echo $private['mail']['public'].' [AT] '.$sites['domain']; 
+		  } else {			  
+			echo $private['mail']['private'].' [AT] '.$private['mail']['private']['@']['external']; 
+		  }
+		  ?>
         </p>
 		<?php } ?>
 		<!--separator-->

@@ -44,13 +44,19 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
-                <p><?php echo $business['local']['mail']['business']; ?></p>
+                <p><?php echo $business['local']['mail']['business'].' [AT] '.$sites['domain']; ?></p>
               </div>
 			<?php } else { ?>
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
-                <p><?php echo $private['mail']['public']; ?></p>
+                <p> <?php 
+		  if(!empty($private['mail']['public'])){
+			echo $private['mail']['public'].' [AT] '.$sites['domain']; 
+		  } else {			  
+			echo $private['mail']['private'].' [AT] '.$private['mail']['private']['@']['external']; 
+		  }
+		  ?></p>
               </div>
 			<?php } ?>
 			
@@ -60,7 +66,7 @@
                 <i class="icofont-phone"></i>
                 <h4><?php echo $email['index']['content']['default']['phone']; ?>:</h4>
                 <p><a href="tel:<?php echo $business['local']['phone']['code']; ?><?php echo $business['local']['phone']['number']; ?>">
-					(<?php echo $business['local']['phone']['normal']; ?>) <?php echo $business['local']['phone']['number']; ?>
+					<?php echo $business['local']['phone']['code']; ?> (<?php echo $business['local']['phone']['normal']; ?>) <?php echo $business['local']['phone']['number']; ?>
 				</a></p>
               </div>
 			<?php } else { ?>
@@ -69,7 +75,7 @@
                 <i class="icofont-phone"></i>
                 <h4><?php echo $email['index']['content']['default']['phone']; ?>:</h4>
                 <p><a href="tel:<?php echo $private['mobile']['code']; ?><?php echo $private['mobile']['number']; ?>">
-					(<?php echo $private['mobile']['normal']; ?>) <?php echo $private['mobile']['number']; ?>
+					<?php echo $private['mobile']['code']; ?> (<?php echo $private['mobile']['normal']; ?>) <?php echo $private['mobile']['number']; ?>
 				</a></p>
               </div>
 			
