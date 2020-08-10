@@ -1,21 +1,26 @@
 {
     "name": "alexonbstudio/website-project",
+	"version": "1.7.0",
     "type": "project",
     "description": "Website Project WP | No DB requirement",
     "keywords": [
 		"website project", 
+		"showcase site", 
+		"seo", 
 		"less php",
 		"alexonbstudio",
 		"WP",
 		"PHP",
 		"json",
 		"minify HTML",
+		"generator sitemap",
 		"json-ld",
 		"seo",
 		"apache",
 		"nginx",
 		"caddy",
-		"bootstrap"
+		"bootstrap",
+		"no databasse"
 	],    
 	"config": {
         "optimize-autoloader": true,
@@ -35,6 +40,26 @@
             "name": "Alexon Balangue",
             "homepage": "https://alexonbstudio.fr",
             "role": "Developer"
+        },
+		{
+            "name": "Joshua Gigg",
+            "homepage": "https://giggsey.com/",
+            "role": "contributor"
+        },
+		{
+            "name": "Prisacari Dmitrii",
+            "homepage": "https://github.com/icamys",
+            "role": "contributor"
+        },
+		{
+            "name": "PHPmailer",
+            "homepage": "https://github.com/synchro",
+            "role": "contributor"
+        },
+		{
+            "name": "Joomla",
+            "homepage": "https://github.com/joomla-cms",
+            "role": "contributor"
         }
     ],
     "funding": [
@@ -51,33 +76,72 @@
             "type": "custom"
         }
     ],
+    "require": {
+        "php": ">=7.2.0",
+		"ext-SPL": "*",
+		"ext-dom": "*",
+		"ext-simplexml": "*",
+		"ext-mbstring": "*",
+		"ext-zlib": "*",
+		"ext-curl": "*",
+        "phpmailer/phpmailer": "^6.1.7",
+        "joomla/utilities": "^1.6",
+		"giggsey/locale": "^1.7",
+        "giggsey/libphonenumber-for-php": "^8.12.7",
+        "icamys/php-sitemap-generator": "^2.0.1"
+    },
     "autoload": {
+		"classmap": [
+			"libs/custom/", 
+			"libs/libphonenumber-for-php/", 
+			"libs/phpmailer/", 
+			"libs/sitemap-generator/"
+		],
+		"files": [
+			"libs/joomla/utilities/IpHelper.php",
+			"libs/Locale/src/Locale.php",
+			"libs/sitemap-generator/src/SitemapGenerator.php"
+		],
         "psr-4": {
             "PHPMailer\\PHPMailer\\": "libs/phpmailer/src/",
+			"Giggsey\\Locale\\": "libs/Locale/src/",
             "libphonenumber\\": "libs/libphonenumber-for-php/src/",
             "Joomla\\Utilities\\": "libs/joomla/utilities/src/",
-			"MatthiasMullie\\Minify\\": "libs/minify/src/",
-			"Giggsey\\Locale\\": "libs/Locale/src/"
-        }
+			"Icamys\\SitemapGenerator\\": "libs/sitemap-generator/src/"
+        },
+		"exclude-from-classmap": [
+			"/.github/",
+			"/libs/libphonenumber-for-php/src/data/",
+			"/libs/libphonenumber-for-php/src/carrier/data/",
+			"/libs/libphonenumber-for-php/src/geocoding/data/",
+			"/libs/libphonenumber-for-php/src/timezone/data/"
+			"/testiing/",
+			"/apache/",
+			"/caddy/",
+			"/docs/",
+			"/nginx/"
+		]
     },
 	"archive": {
 		"exclude": [
 			".github/",
 			"FUNDING.yml",
 			"docker-compose.yml",
-			"testiing"
+			"testiing/",
+			"apache/",
+			"caddy/",
+			"docs/",
+			"nginx/",
+			"SECURITY.md"
 		]
 	},
+	"require-dev": {
+		"phpunit/phpunit": "^8.5",
+		"php-mock/php-mock-phpunit": "^2.5"
+	},
     "suggest": {
-        "ext-mbstring": "Needed to send email in multibyte encoding charset",
-        "psr/cache-implementation": "Cache implementation to use with Minify::cache"
-    },
-    "require": {
-        "php": ">=7.2.0",
-        "phpmailer/phpmailer": "^6.1.7",
-        "matthiasmullie/minify": "^1.3.63",
-        "joomla/utilities": "^1.6",
-		"giggsey/locale": "^1.7",
-        "giggsey/libphonenumber-for-php": "^8.12.7"
+		"psr/log": "For optional PSR-3 debug logging",
+        "psr/cache-implementation": "Cache implementation to use with Minify::cache",
+        "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
     }
 }
