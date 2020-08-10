@@ -78,6 +78,41 @@ use Joomla\Utilities\IpHelper;
 $hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
 $hcaptcha_RData = json_decode($hcaptcha_VResponse);
 */
+
+#LibPhoneNumber-for-php - check only
+require 'libs/Locale/src/Locale.php';
+require 'libs/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php';
+require 'libs/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php';
+require 'libs/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumberFormat.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumberToCarrierMapper.php';
+require 'libs/libphonenumber-for-php/src/geocoding/PhoneNumberOfflineGeocoder.php';
+require 'libs/libphonenumber-for-php/src/ValidationResult.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumberType.php';
+require 'libs/libphonenumber-for-php/src/NumberFormat.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumberDesc.php';
+require 'libs/libphonenumber-for-php/src/PhoneMetadata.php';
+require 'libs/libphonenumber-for-php/src/Matcher.php';
+require 'libs/libphonenumber-for-php/src/CountryCodeSource.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumber.php';
+require 'libs/libphonenumber-for-php/src/MatcherAPIInterface.php';
+require 'libs/libphonenumber-for-php/src/RegexBasedMatcher.php';
+require 'libs/libphonenumber-for-php/src/MetadataSourceInterface.php';
+require 'libs/libphonenumber-for-php/src/MultiFileMetadataSourceImpl.php';
+require 'libs/libphonenumber-for-php/src/MetadataLoaderInterface.php';
+require 'libs/libphonenumber-for-php/src/DefaultMetadataLoader.php';
+require 'libs/libphonenumber-for-php/src/CountryCodeToRegionCodeMap.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumberUtil.php';
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\PhoneNumberToCarrierMapper;
+use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
+use libphonenumber\PhoneNumberFormat;
+
+
+$PhoneNumberUtil = PhoneNumberUtil::getInstance();
+$PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
+$PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
+
 #frontend
 if(isset($_GET['lang'])){
 	if($_GET['lang'] == $DefineTranslateLang){
