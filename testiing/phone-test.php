@@ -108,14 +108,13 @@ if($phoneNumberUtil->isValidNumber($phoneNumberObjectdefault)){
 	echo 'false number not valid';
 }
 echo '<br><br>';
-echo '<br><br>GET Region code: '.$phoneNumberUtil->getCountryCodeForRegion('FR'); # 33
-echo '<br><br>carrer show<br><br>';
-#carrer show
-echo $carrierMapper->getNameForNumber($phoneNumberObjectdefault, $DefineTranslateLang);
-echo '<br><br>Geocoder number: '.$geocoder->getDescriptionForNumber($phoneNumberObjectdefault, "fr_FR");
-echo '<br><br>format E164: '.$phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::E164);
-echo '<br><br>format NATIONAL: '.$phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::NATIONAL);
-echo '<br><br>format INTERNATIONAL: '.$phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
+
+$WPRegionCodeNumbers = $phoneNumberUtil->getCountryCodeForRegion('FR'); # 33
+$WPcarrerNumbers = $carrierMapper->getNameForNumber($phoneNumberObjectdefault, $DefineTranslateLang);
+$WPGeocoderNumbers = $geocoder->getDescriptionForNumber($phoneNumberObjectdefault, "fr_FR");
+$WPformatE164Numbers = $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::E164);
+$WPformatNATIONALNumbers = $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::NATIONAL);
+$WPformatINTERNATIONALNumbers = $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
 
 
 /************************************************************************************************************/		
