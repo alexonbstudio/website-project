@@ -63,8 +63,8 @@ $pricing = json_decode($JE_translate_pricing, true);
 $faqs = json_decode($JE_translate_faqs, true);
 $others = json_decode($JE_translate_others, true);
 $debug = json_decode($JE_translate_debug, true);
-		
-#frontend
+/************************************************************************************************************/		
+#frontend - LibPhoneNumber-for-php - check only
 require 'libs/Locale/src/Locale.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php';
@@ -90,52 +90,92 @@ require 'libs/libphonenumber-for-php/src/MetadataLoaderInterface.php';
 require 'libs/libphonenumber-for-php/src/DefaultMetadataLoader.php';
 require 'libs/libphonenumber-for-php/src/CountryCodeToRegionCodeMap.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberUtil.php';
-
-
 # Not works
 //$testPhone = glob('libs/libphonenumber-for-php/src/*.php');
-
 #Testing if have issue with number exemple to check how works it
 #https://libphonenumber.appspot.com/phonenumberparser?number=798765432&country=CH&geocodingLocale=fr-FR
-
-
 $phoneNumberUtil = \libphonenumber\PhoneNumberUtil::getInstance();
 $carrierMapper = \libphonenumber\PhoneNumberToCarrierMapper::getInstance();
 $geocoder = \libphonenumber\geocoding\PhoneNumberOfflineGeocoder::getInstance();
 
-
 echo '<br><br>DEFAULT CH<br><br>';
-$phoneNumberObjectdefault = $phoneNumberUtil->parse('798765432', 'CH');
-echo $phoneNumberObjectdefault.'<br><br>';
-var_dump($phoneNumberUtil->isValidNumber($phoneNumberObjectdefault)).'<br><br>';
-
-
-
-echo '<br><br>GET Region code<br><br>';
-var_dump($phoneNumberUtil->getCountryCodeForRegion('FR')); # 33
-
-
+$phoneNumberObjectdefault = $phoneNumberUtil->parse('7987654', 'FR');
+#$phoneNumberObjectdefault = $phoneNumberUtil->parse('798765432', 'CH');//CH
+echo '<br><br>';
+if($phoneNumberUtil->isValidNumber($phoneNumberObjectdefault)){
+	echo 'true number valid';
+} else {
+	echo 'false number not valid';
+}
+echo '<br><br>';
+echo '<br><br>GET Region code: '.$phoneNumberUtil->getCountryCodeForRegion('FR'); # 33
 echo '<br><br>carrer show<br><br>';
 #carrer show
-var_dump($carrierMapper->getNameForNumber($phoneNumberObjectdefault, $DefineTranslateLang));
+echo $carrierMapper->getNameForNumber($phoneNumberObjectdefault, $DefineTranslateLang);
+echo '<br><br>Geocoder number: '.$geocoder->getDescriptionForNumber($phoneNumberObjectdefault, "fr_FR");
+echo '<br><br>format E164: '.$phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::E164);
+echo '<br><br>format NATIONAL: '.$phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::NATIONAL);
+echo '<br><br>format INTERNATIONAL: '.$phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
 
 
-echo '<br><br>Geocoder number<br><br>';
-# Geocoder number
-var_dump($geocoder->getDescriptionForNumber($phoneNumberObjectdefault, "fr_FR"));
+/************************************************************************************************************/		
+#frontend - https://numverify.com/documentation Verify number phone
+/*
+// set API Access Key
+$access_key = 'YOUR_ACCESS_KEY';
 
-echo '<br><br>format E164<br><br>';
-# format
-// Produces "+41446681800"
-echo $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::E164);
+// set phone number
+$phone_number = '14158586273';
 
-echo '<br><br>format NATIONAL)<br><br>';
-// Produces "044 668 18 00"
-echo $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::NATIONAL);
+// Initialize CURL:
+$ch = curl_init('http://apilayer.net/api/validate?access_key='.$access_key.'&number='.$phone_number.'');  
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-echo '<br><br>format INTERNATIONAL<br><br>';
-// Produces "+41 44 668 18 00"
-echo $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
+// Store the data:
+$json = curl_exec($ch);
+curl_close($ch);
+
+// Decode JSON response:
+$validationResult = json_decode($json, true);
+
+// Access and use your preferred validation result objects
+$validationResult['valid'];
+$validationResult['country_code'];
+$validationResult['carrier'];
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
