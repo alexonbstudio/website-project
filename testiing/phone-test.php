@@ -65,27 +65,14 @@ $others = json_decode($JE_translate_others, true);
 $debug = json_decode($JE_translate_debug, true);
 		
 #frontend
-
-# This is Manual without autoloader composer
-/*
-//require 'libs/Locale/src/Locale.php';
+require 'libs/Locale/src/Locale.php';
+require 'libs/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php';
-require 'libs/libphonenumber-for-php/src/geocoding/PhoneNumberOfflineGeocoder.php';
-# Geocoder number
-$geocoder = \libphonenumber\geocoding\PhoneNumberOfflineGeocoder::getInstance();
-echo $geocoder->getDescriptionForNumber($phoneNumberObject, "fr_FR")
-*/
-/*
-#carrier
-require 'libs/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php';
-require 'libs/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php';
+require 'libs/libphonenumber-for-php/src/PhoneNumberFormat.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberToCarrierMapper.php';
-#carrierMapper
-$carrierMapper = \libphonenumber\PhoneNumberToCarrierMapper::getInstance();
-// Outputs "Swisscom"
-echo $carrierMapper->getNameForNumber($phoneNumberObject, "$Languages_translate");
-*/
+# This is Manual without autoloader composer
+require 'libs/libphonenumber-for-php/src/geocoding/PhoneNumberOfflineGeocoder.php';
 #base
 require 'libs/libphonenumber-for-php/src/ValidationResult.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberType.php';
@@ -104,24 +91,18 @@ require 'libs/libphonenumber-for-php/src/DefaultMetadataLoader.php';
 require 'libs/libphonenumber-for-php/src/CountryCodeToRegionCodeMap.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberUtil.php';
 
-/*
+
 # Not works
-$testPhone = glob('libs/libphonenumber-for-php/src/*.php');
-foreach (glob('libs/libphonenumber-for-php/src/*.php') as $GlobPhoneRequire) { include $GlobPhoneRequire; }
-*/
+//$testPhone = glob('libs/libphonenumber-for-php/src/*.php');
 
 #Testing if have issue with number exemple to check how works it
 #https://libphonenumber.appspot.com/phonenumberparser?number=798765432&country=CH&geocodingLocale=fr-FR
 
 
 $phoneNumberUtil = \libphonenumber\PhoneNumberUtil::getInstance();
+$carrierMapper = \libphonenumber\PhoneNumberToCarrierMapper::getInstance();
+$geocoder = \libphonenumber\geocoding\PhoneNumberOfflineGeocoder::getInstance();
 
-echo '<br><br>IF AUTO false<br><br>';
-$phoneNumberObject = $phoneNumberUtil->parse('798765432', $phone_langs);
-
-var_dump($phoneNumberUtil->isValidNumber($phoneNumberObject)).'<br><br>';
-
-echo $phoneNumberObject.'<br><br>';
 
 echo '<br><br>DEFAULT CH<br><br>';
 $phoneNumberObjectdefault = $phoneNumberUtil->parse('798765432', 'CH');
@@ -134,12 +115,27 @@ echo '<br><br>GET Region code<br><br>';
 var_dump($phoneNumberUtil->getCountryCodeForRegion('FR')); # 33
 
 
+echo '<br><br>carrer show<br><br>';
+#carrer show
+var_dump($carrierMapper->getNameForNumber($phoneNumberObjectdefault, $DefineTranslateLang));
 
 
+echo '<br><br>Geocoder number<br><br>';
+# Geocoder number
+var_dump($geocoder->getDescriptionForNumber($phoneNumberObjectdefault, "fr_FR"));
 
+echo '<br><br>format E164<br><br>';
+# format
+// Produces "+41446681800"
+echo $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::E164);
 
+echo '<br><br>format NATIONAL)<br><br>';
+// Produces "044 668 18 00"
+echo $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::NATIONAL);
 
-
+echo '<br><br>format INTERNATIONAL<br><br>';
+// Produces "+41 44 668 18 00"
+echo $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
 
 
 
