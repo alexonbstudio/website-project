@@ -64,16 +64,14 @@ $faqs = json_decode($JE_translate_faqs, true);
 $others = json_decode($JE_translate_others, true);
 $debug = json_decode($JE_translate_debug, true);
 /************************************************************************************************************/		
-#frontend - LibPhoneNumber-for-php - check only
+#LibPhoneNumber-for-php - check only
 require 'libs/Locale/src/Locale.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberFormat.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberToCarrierMapper.php';
-# This is Manual without autoloader composer
 require 'libs/libphonenumber-for-php/src/geocoding/PhoneNumberOfflineGeocoder.php';
-#base
 require 'libs/libphonenumber-for-php/src/ValidationResult.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberType.php';
 require 'libs/libphonenumber-for-php/src/NumberFormat.php';
@@ -90,31 +88,58 @@ require 'libs/libphonenumber-for-php/src/MetadataLoaderInterface.php';
 require 'libs/libphonenumber-for-php/src/DefaultMetadataLoader.php';
 require 'libs/libphonenumber-for-php/src/CountryCodeToRegionCodeMap.php';
 require 'libs/libphonenumber-for-php/src/PhoneNumberUtil.php';
-# Not works
-//$testPhone = glob('libs/libphonenumber-for-php/src/*.php');
-#Testing if have issue with number exemple to check how works it
-#https://libphonenumber.appspot.com/phonenumberparser?number=798765432&country=CH&geocodingLocale=fr-FR
-$phoneNumberUtil = \libphonenumber\PhoneNumberUtil::getInstance();
-$carrierMapper = \libphonenumber\PhoneNumberToCarrierMapper::getInstance();
-$geocoder = \libphonenumber\geocoding\PhoneNumberOfflineGeocoder::getInstance();
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\PhoneNumberToCarrierMapper;
+use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
+use libphonenumber\PhoneNumberFormat;
+
+
+
+$PhoneNumberUtil = PhoneNumberUtil::getInstance();
+$PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
+$PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
+
+$SelectPhoneNumberRegionCode = 'CH';
+$DataPhoneNumberCheck = '798765432';
 
 echo '<br><br>DEFAULT CH<br><br>';
-$phoneNumberObjectdefault = $phoneNumberUtil->parse('7987654', 'FR');
-#$phoneNumberObjectdefault = $phoneNumberUtil->parse('798765432', 'CH');//CH
+#$PhoneNumberData = $PhoneNumberUtil->parse('7987654', 'FR');
+$PhoneNumberData = $PhoneNumberUtil->parse($DataPhoneNumberCheck, $SelectPhoneNumberRegionCode);//CH
 echo '<br><br>';
-if($phoneNumberUtil->isValidNumber($phoneNumberObjectdefault)){
+if($PhoneNumberUtil->isValidNumber($PhoneNumberData)){
 	echo 'true number valid';
 } else {
 	echo 'false number not valid';
 }
 echo '<br><br>';
 
-$WPRegionCodeNumbers = $phoneNumberUtil->getCountryCodeForRegion('FR'); # 33
-$WPcarrerNumbers = $carrierMapper->getNameForNumber($phoneNumberObjectdefault, $DefineTranslateLang);
-$WPGeocoderNumbers = $geocoder->getDescriptionForNumber($phoneNumberObjectdefault, "fr_FR");
-$WPformatE164Numbers = $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::E164);
-$WPformatNATIONALNumbers = $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::NATIONAL);
-$WPformatINTERNATIONALNumbers = $phoneNumberUtil->format($phoneNumberObjectdefault, \libphonenumber\PhoneNumberFormat::INTERNATIONAL);
+$WPRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion('FR'); # 33
+echo $PhoneNumberUtil->getCountryCodeForRegion($SelectPhoneNumberRegionCode); # 33
+
+echo '<br><br>';
+
+$WPcarrerNumbers = $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTranslateLang);
+echo $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTranslateLang);
+
+echo '<br><br>';
+
+$WPGeocoderNumbers = $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, "fr_FR");
+echo $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, "fr_FR");
+
+echo '<br><br>';
+
+$WPformatE164Numbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::E164);
+echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::E164);
+
+echo '<br><br>';
+
+$WPformatNATIONALNumbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::NATIONAL);
+echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::NATIONAL);
+
+echo '<br><br>';
+
+$WPformatINTERNATIONALNumbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::INTERNATIONAL);
+echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::INTERNATIONAL);
 
 
 /************************************************************************************************************/		
