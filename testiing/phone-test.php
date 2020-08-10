@@ -100,6 +100,7 @@ $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
 
 $SelectPhoneNumberRegionCode = 'CH';
+$SelectPhoneNumberRegionCode = $phone_langs;
 $DataPhoneNumberCheck = '798765432';
 
 echo '<br><br>DEFAULT CH<br><br>';
@@ -107,9 +108,9 @@ echo '<br><br>DEFAULT CH<br><br>';
 $PhoneNumberData = $PhoneNumberUtil->parse($DataPhoneNumberCheck, $SelectPhoneNumberRegionCode);//CH
 echo '<br><br>';
 if($PhoneNumberUtil->isValidNumber($PhoneNumberData)){
-	echo 'true number valid';
+	echo 'true number valid for '.$SelectPhoneNumberRegionCode.' phone';
 } else {
-	echo 'false number not valid';
+	echo 'false number not valid for '.$SelectPhoneNumberRegionCode.' phone';
 }
 echo '<br><br>';
 

@@ -77,7 +77,7 @@ use Joomla\Utilities\IpHelper;
 $hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
 $hcaptcha_RData = json_decode($hcaptcha_VResponse);
 */
-
+/* Take other method
 #LibPhoneNumber-for-php - check only
 require 'libs/Locale/src/Locale.php';
 require 'libs/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php';
@@ -110,7 +110,7 @@ use libphonenumber\PhoneNumberFormat;
 $PhoneNumberUtil = PhoneNumberUtil::getInstance();
 $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
-
+*/
 #frontend
 if(isset($_GET['pages'])){
 	if($_GET['pages'] == 'index'){
