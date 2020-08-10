@@ -6,9 +6,9 @@ $debug = array(
 		'description' => 'Here is all the information from the JSON debug that you can take from the necessary data on any type of technology',
 		'keyword' => 'debug, php, json, information, website, data, technology, developer, programmer',
 		'url' => array(
-			'default' => 'debug.html',
-			'fr' => 'debug.html',
-			'en' => 'debug.html'
+			'default' => 'debug',
+			'fr' => 'debug',
+			'en' => 'debug'
 		),
 		'content' => array(
 			'table' => array(

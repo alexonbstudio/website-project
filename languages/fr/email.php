@@ -6,9 +6,9 @@ $email = array(
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'contact.html',
-			'fr' => 'contactez.html',
-			'en' => 'contact.html'
+			'default' => 'contact',
+			'fr' => 'contactez',
+			'en' => 'contact'
 		),
 		'content' => array(
 			'mail' => array(

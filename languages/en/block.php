@@ -6,9 +6,9 @@ $block = array(
 		'description' => 'Your message has been sent successfully',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'contact/success.html',
-			'fr' => 'contact/succès.html',
-			'en' => 'contact/success.html'
+			'default' => 'contact/success',
+			'fr' => 'contact/succès',
+			'en' => 'contact/success'
 		),
 		'content' => array(
 			'msg' => 'Your message has been sent successfully'
@@ -24,9 +24,9 @@ $block = array(
 		'description' => 'Sorry your message was not sent',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'error.html',
-			'fr' => 'erreur.html',
-			'en' => 'error.html'
+			'default' => 'error',
+			'fr' => 'erreur',
+			'en' => 'error'
 		),
 		'content' => array(
 			'line1' => 'An error occurred while running the query.',

@@ -6,9 +6,9 @@ $sponsor = array(
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'sponsor.html',
-			'fr' => 'sponsorisé.html',
-			'en' => 'sponsor.html'
+			'default' => 'sponsor',
+			'fr' => 'sponsorisé',
+			'en' => 'sponsor'
 		),
 		'content' => array(
 			'' => ''

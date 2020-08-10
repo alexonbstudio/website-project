@@ -6,9 +6,9 @@ $partner = array(
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'partner.html',
-			'fr' => 'partenaire.html',
-			'en' => 'partner.html'
+			'default' => 'partner',
+			'fr' => 'partenaire',
+			'en' => 'partner'
 		),
 		'content' => array(
 			'' => ''

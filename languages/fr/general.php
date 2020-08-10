@@ -21,9 +21,9 @@ $general = array(
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'index.html',
-			'fr' => 'accueil.html',
-			'en' => 'home.html'
+			'default' => 'index',
+			'fr' => 'accueil',
+			'en' => 'home'
 		),
 		'content' => array(
 			'' => ''

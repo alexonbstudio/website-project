@@ -6,9 +6,9 @@ $sitemap = array(
 		'description' => '',
 		'keyword' => '',
 		'url' => array(
-			'default' => 'sitemap.html',
-			'fr' => 'Plan-du-site.html',
-			'en' => 'sitemap.html'
+			'default' => 'sitemap',
+			'fr' => 'Plan-du-site',
+			'en' => 'sitemap'
 		),
 		'content' => array(
 			'' => ''
