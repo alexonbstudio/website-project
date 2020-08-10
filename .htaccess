@@ -1371,7 +1371,7 @@ RewriteRule ^en/error$ block.php?lang=en&pages=error [L]
 	RewriteRule ^BingSiteAuth\.xml$ seo-others.php?index=BingSiteAuth [L]
 	RewriteRule ^sitemap\.xml$ seo-others.php?index=sitemap [L]
 	##SITEMAP##
-	RewriteRule ^sitemap\.xml$ seo-others.php?sitemap=index [L]
+	RewriteRule ^sitemap-full\.xml$ seo-others.php?sitemap=index [L]
 	RewriteRule ^sitemap-index\.xml$ seo-others.php?sitemap=default [L]
 	RewriteRule ^sitemap-en\.xml$ seo-others.php?sitemap=en [L]
 	RewriteRule ^sitemap-fr\.xml$ seo-others.php?sitemap=fr [L]
