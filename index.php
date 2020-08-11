@@ -470,6 +470,18 @@ if(isset($_GET['pages'])){
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/law/policy-privacy.php');
 				include('themes/'.$sites['template'].'/footer.php');	
+			} else if($_GET['full'] == 'cookies'){
+				$title = $law['cookies']['title'];
+				$description = $law['cookies']['description'];
+				$keyword = $law['cookies']['keyword'];
+				$urls = $law['cookies']['url']['default'];
+				$imgs = $law['cookies']['sitemap']['images'];
+				$vdos = $law['cookies']['sitemap']['video'];
+				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$law['cookies']['url']['fr']);
+				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$law['cookies']['url']['en']);
+				include('themes/'.$sites['template'].'/header.php');
+				include_once('themes/'.$sites['template'].'/law/cookies.php');
+				include('themes/'.$sites['template'].'/footer.php');	
 			} else if($_GET['full'] == 'rgpd'){
 				$title = $law['rgpd']['title'];
 				$description = $law['rgpd']['description'];

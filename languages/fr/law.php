@@ -27,6 +27,24 @@ $law = array(
 			'video' => 'www.youtube.com/watch?v=pzXxTTyxFNA' /*directory images from <exemple.tld>/assets */
 		)
 	),
+	'cookies' => array(
+		'title' => 'Cookies',
+		'description' => '',
+		'keyword' => '',
+		'url' => array(
+			'default' => 'cookies',
+			'fr' => 'cookies',
+			'en' => 'cookies-policy'
+		),
+		'content' => array(
+			'' => ''
+			/*custom your own*/
+		),
+		'sitemap' => array(
+			'images' => 'background/law/cookie.jpg',
+			'video' => 'www.youtube.com/watch?v=pzXxTTyxFNA' /*directory images from <exemple.tld>/assets */
+		)
+	),
 	'cgu' => array(
 		'title' => 'Conditions générales d\'utilisation',
 		'description' => '',

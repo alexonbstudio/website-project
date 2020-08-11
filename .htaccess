@@ -1253,14 +1253,15 @@ RewriteRule ^fr/accueil.html$ general.php?lang=fr&pages=index [L]
 	RewriteRule ^fr/api/partner\.json$ debug.php?lang=fr&pages=debug&json=partner [L]
 	RewriteRule ^fr/api/sponsor\.json$ debug.php?lang=fr&pages=debug&json=sponsor [L]
 	RewriteRule ^fr/api/credits\.json$ debug.php?lang=fr&pages=debug&json=credits [L]
-########## LAW - French ########## 
-RewriteRule ^fr/règles$ law.php?lang=fr&pages=law [L]
-RewriteRule ^fr/conditions-générales-utilisation$ law.php?lang=fr&pages=law&full=cgu [L]
-RewriteRule ^fr/conditions-générales-de-vente$ law.php?lang=fr&pages=law&full=cgv [L]
-RewriteRule ^fr/dmca$ law.php?lang=fr&pages=law&full=dmca [L]
-RewriteRule ^fr/mentions-légales$ law.php?lang=fr&pages=law&full=legal [L]
-RewriteRule ^fr/politique-de-confidentialité$ law.php?lang=fr&pages=law&full=policy-privacy [L]
-RewriteRule ^fr/rgpd$ law.php?lang=fr&pages=law&full=rgpd [L]
+	########## LAW - French ########## 
+	RewriteRule ^fr/règles$ law.php?lang=fr&pages=law [L]
+	RewriteRule ^fr/conditions-générales-utilisation$ law.php?lang=fr&pages=law&full=cgu [L]
+	RewriteRule ^fr/conditions-générales-de-vente$ law.php?lang=fr&pages=law&full=cgv [L]
+	RewriteRule ^fr/dmca$ law.php?lang=fr&pages=law&full=dmca [L]
+	RewriteRule ^fr/mentions-légales$ law.php?lang=fr&pages=law&full=legal [L]
+	RewriteRule ^fr/politique-de-confidentialité$ law.php?lang=fr&pages=law&full=policy-privacy [L]
+	RewriteRule ^fr/rgpd$ law.php?lang=fr&pages=law&full=rgpd [L]
+	RewriteRule ^fr/cookies$ law.php?lang=fr&pages=law&full=cookies [L]
 
 
 ########## SPONSOR - French ##########
@@ -1312,14 +1313,15 @@ RewriteRule ^en/home.html$ general.php?lang=en&pages=index [L]
 	RewriteRule ^en/api/sponsor\.json$ debug.php?lang=en&pages=debug&json=sponsor [L]
 	RewriteRule ^en/api/credits\.json$ debug.php?lang=en&pages=debug&json=credits [L]
 
-########## LAW - English ########## 
-RewriteRule ^en/rules$ law.php?lang=en&pages=law [L]
-RewriteRule ^en/terms-and-conditions$ law.php?lang=en&pages=law&full=cgu [L]
-RewriteRule ^en/terms-and-conditions-of-sale$ law.php?lang=en&pages=law&full=cgv [L]
-RewriteRule ^en/dmca$ law.php?lang=en&pages=law&full=dmca [L]
-RewriteRule ^en/legal$ law.php?lang=en&pages=law&full=legal [L]
-RewriteRule ^en/privacy-policy$ law.php?lang=en&pages=law&full=policy-privacy [L]
-RewriteRule ^en/grpd$ law.php?lang=en&pages=law&full=rgpd [L]
+	########## LAW - English ########## 
+	RewriteRule ^en/rules$ law.php?lang=en&pages=law [L]
+	RewriteRule ^en/terms-and-conditions$ law.php?lang=en&pages=law&full=cgu [L]
+	RewriteRule ^en/terms-and-conditions-of-sale$ law.php?lang=en&pages=law&full=cgv [L]
+	RewriteRule ^en/dmca$ law.php?lang=en&pages=law&full=dmca [L]
+	RewriteRule ^en/legal$ law.php?lang=en&pages=law&full=legal [L]
+	RewriteRule ^en/privacy-policy$ law.php?lang=en&pages=law&full=policy-privacy [L]
+	RewriteRule ^en/grpd$ law.php?lang=en&pages=law&full=rgpd [L]
+	RewriteRule ^en/cookies-policy$ law.php?lang=en&pages=law&full=cookies [L]
 
 
 ########## SPONSOR - English ##########
@@ -1463,15 +1465,16 @@ RewriteRule ^security/csp-violate$ email.php?security=csp [L]
 
 
 <IfModule mod_rewrite.c>
-RewriteEngine on
-#law
-RewriteRule ^rules$ index.php?pages=law [L]
-RewriteRule ^cgu$ index.php?pages=law&full=cgu [L]
-RewriteRule ^cgv$ index.php?pages=law&full=cgv [L]
-RewriteRule ^dmca$ index.php?pages=law&full=dmca [L]
-RewriteRule ^legal$ index.php?pages=law&full=legal [L]
-RewriteRule ^policy-privacy$ index.php?pages=law&full=policy-privacy [L]
-RewriteRule ^grpd$ index.php?pages=law&full=rgpd [L]
+	RewriteEngine on
+	#law
+	RewriteRule ^rules$ index.php?pages=law [L]
+	RewriteRule ^cgu$ index.php?pages=law&full=cgu [L]
+	RewriteRule ^cgv$ index.php?pages=law&full=cgv [L]
+	RewriteRule ^dmca$ index.php?pages=law&full=dmca [L]
+	RewriteRule ^legal$ index.php?pages=law&full=legal [L]
+	RewriteRule ^policy-privacy$ index.php?pages=law&full=policy-privacy [L]
+	RewriteRule ^grpd$ index.php?pages=law&full=rgpd [L]
+	RewriteRule ^cookies$ index.php?pages=law&full=cookies [L]
 
 </IfModule>
 

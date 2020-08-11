@@ -15,6 +15,7 @@ $generator->addURL('/en/'.$law['dmca']['url']['en'], new DateTime(), 'weekly', 1
 $generator->addURL('/en/'.$law['legal']['url']['en'], new DateTime(), 'weekly', 1, null);
 $generator->addURL('/en/'.$law['policy-privacy']['url']['en'], new DateTime(), 'weekly', 1, null);
 $generator->addURL('/en/'.$law['rgpd']['url']['en'], new DateTime(), 'weekly', 1, null);
+$generator->addURL('/en/'.$law['cookies']['url']['en'], new DateTime(), 'weekly', 1, null);
 
 $generator->createSitemap();
 $generator->writeSitemap();
