@@ -1,6 +1,5 @@
 {
     "name": "alexonbstudio/website-project",
-	"version": "1.7.0",
     "type": "project",
     "description": "Website Project WP | No DB requirement",
     "keywords": [
@@ -17,10 +16,12 @@
 		"json-ld",
 		"seo",
 		"apache",
+		"site vitrine",
+		"création site internet",
 		"nginx",
 		"caddy",
 		"bootstrap",
-		"no databasse"
+		"without databasse"
 	],    
 	"config": {
         "optimize-autoloader": true,
@@ -111,10 +112,6 @@
         },
 		"exclude-from-classmap": [
 			"/.github/",
-			"/libs/libphonenumber-for-php/src/data/",
-			"/libs/libphonenumber-for-php/src/carrier/data/",
-			"/libs/libphonenumber-for-php/src/geocoding/data/",
-			"/libs/libphonenumber-for-php/src/timezone/data/"
 			"/testiing/",
 			"/apache/",
 			"/caddy/",
