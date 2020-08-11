@@ -71,7 +71,7 @@ use Icamys\SitemapGenerator\SitemapGenerator;
 
 $outputDir = getcwd();
 	
-$generator = new SitemapGenerator($domainTLD, $outputDir);
+$generator = new SitemapGenerator($protocols.'://'.$domainTLD, $outputDir);
 $generator->toggleGZipFileCreation();
 $generator->setMaxURLsPerSitemap(50000);
 

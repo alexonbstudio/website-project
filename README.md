@@ -1,6 +1,6 @@
 # Website Project WP
 
-Video want help for [french](https://dai.ly/x7vaz18) or [https://dai.ly/x7vaz14](https://dai.ly/x7vaz18)
+Video want help for [french](https://dai.ly/x7vaz18) or [english](https://dai.ly/x7vaz18)
 
 ## Documentation 
 
@@ -15,7 +15,19 @@ For more information on my website to [alexonbstudio.fr](https://www.alexonbstud
 
 GET data from website project wp with [Plugin System Shortcode](https://github.com/alexonbstudio/plg-shortcode-joomla/releases/) integrated, beginning with Joomla 3.9, Joomla 4.0 not supported you can download that now for free and then...
 
+## Auto generate sitemap access
 
+Access to the next url for generate your own sitemap | if you edit generate again
+
+	<your-site-dot-tld>/automate/generator/sitemap-index
+	<your-site-dot-tld>/automate/generator/sitemap-fr
+	<your-site-dot-tld>/automate/generator/sitemap-en
+
+will host on the intern directory site link <your-site-dot-tld>
+
+	<your-site-dot-tld>/sitemap-index.xml
+	<your-site-dot-tld>/sitemap-fr.xml
+	<your-site-dot-tld>/sitemap-en.xml
 
 ## install on linux exemple on ubuntu
 
@@ -39,7 +51,7 @@ GET data from website project wp with [Plugin System Shortcode](https://github.c
 
 # Duration 
 
-	2 month + 1day Totaly = every 4 hours on 12 days + 10min 1day 
+	2 month + 3day Totaly = every 4 hours on 12 days + 10min 1day + 6h 1day
 	Dev/Manage Structure/Imagine/Thinking to build simple
 	#No Frameworks & No CMS
 
