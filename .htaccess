@@ -1511,3 +1511,21 @@ RewriteRule ^grpd$ index.php?pages=law&full=rgpd [L]
 	RewriteRule ^fr/api/sponsor\.json$ debug.php?lang=fr&pages=debug&json=sponsor [L]
 	RewriteRule ^fr/api/credits\.json$ debug.php?lang=fr&pages=debug&json=credits [L]
 </IfModule>
+
+
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#genrator sitemap
+RewriteRule ^automate/generator/sitemap-index$ generator.php?sitemaps=index [L]
+RewriteRule ^automate/generator/sitemap-fr$ generator.php?sitemaps=fr [L]
+RewriteRule ^automate/generator/sitemap-en$ generator.php?sitemaps=en [L]
+
+</IfModule>
+
+
+
+
+
+
