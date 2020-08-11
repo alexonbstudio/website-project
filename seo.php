@@ -24,6 +24,7 @@ $hosting = json_decode($JE_hosting, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
 $business = json_decode($JE_business, true);
+$PhoneRegionCodeManualNumbers = json_decode($JE_PhoneRegionCodeManualNumbers, true);
 
 
 #Syslink
