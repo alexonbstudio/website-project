@@ -1369,12 +1369,12 @@ RewriteRule ^en/error$ block.php?lang=en&pages=error [L]
 	RewriteRule ^badge\.xml$ seo-others.php?index=badge [L]
 	RewriteRule ^browserconfig\.xml$ seo-others.php?index=badge [L]
 	RewriteRule ^BingSiteAuth\.xml$ seo-others.php?index=BingSiteAuth [L]
-	RewriteRule ^sitemap\.xml$ seo-others.php?index=sitemap [L]
+	#RewriteRule ^sitemap\.xml$ seo-others.php?index=sitemap [L]
 	##SITEMAP##
-	RewriteRule ^sitemap-full\.xml$ seo-others.php?sitemap=index [L]
-	RewriteRule ^sitemap-index\.xml$ seo-others.php?sitemap=default [L]
-	RewriteRule ^sitemap-en\.xml$ seo-others.php?sitemap=en [L]
-	RewriteRule ^sitemap-fr\.xml$ seo-others.php?sitemap=fr [L]
+	RewriteRule ^sitemap\.xml$ seo-others.php?sitemap=index [L]
+	#RewriteRule ^sitemap-index\.xml$ seo-others.php?sitemap=default [L]
+	#RewriteRule ^sitemap-en\.xml$ seo-others.php?sitemap=en [L]
+	#RewriteRule ^sitemap-fr\.xml$ seo-others.php?sitemap=fr [L]
 
 	###### JSON ###### 
 	RewriteRule ^manifest\.json$ seo.php?json=manifest [L]
@@ -1390,11 +1390,11 @@ RewriteRule ^en/error$ block.php?lang=en&pages=error [L]
 
 	###### HTML VERIFY ###### 
 
-	#RewriteRule ^dmyc73gogfqvf3a9p$ seo.php?html-verify=dailymotion [L]
-	#RewriteRule ^$var$ seo.php?html-verify=google [L]
-	#RewriteRule ^pinterest-$var$ seo.php?html-verify=pinterest [L]
+	#RewriteRule ^dmyc73gogfqvf3a9p\.html$ seo.php?html-verify=dailymotion [L]
+	#RewriteRule ^$var\.html$ seo.php?html-verify=google [L]
+	#RewriteRule ^pinterest-$var\.html$ seo.php?html-verify=pinterest [L]
 	#exemple: with pinterest
-	#RewriteRule ^pinterest-ccf5f$ seo.php?html-verify=pinterest [L]
+	#RewriteRule ^pinterest-ccf5f\.html$ seo.php?html-verify=pinterest [L]
 	#RewriteRule ^yandex_$var.html$ seo.php?html-verify=yandex [L]
 </IfModule>
 
