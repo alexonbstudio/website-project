@@ -2,7 +2,6 @@
 <?php if(!empty($private['name'])){ ?>
 /* OWNER */
 	<?php if(!empty($private['name'])){ ?>name: <?php echo $private['name']; } ?>
-	<?php if(!empty($private['mail']['public'])){ ?>Contact: <?php echo $private['mail']['public'].'@'.$sites['domain']; } ?> 
 	<?php if(!empty($sites['domain'])){ ?>Site: <?php echo $sites['domain']; } ?>
 	<?php if(!empty($social['twitter']['name'])){ ?>Twitter: @<?php echo $social['twitter']['name']; } ?>
 	<?php if(!empty($social['dailymotion']['name'])){ ?>Facebook: <?php echo $social['facebook']['name']; } ?>
@@ -44,11 +43,14 @@
 
 /* THANKS CONTRIBUTOR */
 	
-	Developper: <?php echo $credits['developper']['alexonbstudio']['name'].', '.$credits['developper']['PHPMailer']['name']; ?>
+	Developper: <?php echo $credits['developper']['alexonbstudio']['name'].', '.$credits['developper']['PHPMailer']['name'].', '.$credits['developper']['joomla']['name'].', '.$credits['developper']['icamys']['name'].', '.$credits['developper']['giggsey']['name']; ?>
+	
 	WebDesigner: <?php echo $credits['webdesigner']['startbootstrap']['name'].', '.$credits['webdesigner']['bootstrapmade']['name']; ?>
+	
 	Webmaster: <?php echo $credits['webmaster']['alexonbstudio']['name']; ?>
 	
 	Designer: <?php echo $credits['designer']['alexonbstudio']['name']; ?>
+	
 	Images: <?php 
 		echo $credits['images']['alexonbstudio']['name'].', '.
 		$credits['images']['pexels']['name'].', '.
@@ -58,6 +60,7 @@
 		
 	?>
 	Marketing: <?php echo $credits['marketing']['alexonbstudio']['name']; ?>
+	
 	Video: <?php 
 		echo $credits['video']['alexonbstudio']['name'].', '.
 		$credits['images']['pexels']['name'].', '.
@@ -73,7 +76,7 @@
 	Multi-Language: <?php echo $translate['manual']['backend']['english'].', '.$translate['manual']['backend']['french']; ?>
 	Doctype: HTML5
 	IDE Software: Notepad++
-	Technologie: Bootstrap, Fontawesome, PHP, jQuery, Txt, Xml, JSON, Apache, nginx, caddy, amp, html, css
+	Technologie: Bootstrap, Fontawesome, PHP, jQuery, Txt, Xml, JSON, Apache, nginx, caddy, html, css
 	Copyright &copy; AlexonbStudio (Website Project = WP) - Alexon Balangue - CC-BY-SA
 	Licenses: GPL v3.0
 	Version: <?php echo $credits['version']['stable'].' '.$credits['version']['actual']; ?>

@@ -11,6 +11,18 @@ $credits = array(
 			'name' => 'PHPMailer',
 			'url' => 'github.com/PHPMailer/PHPMailer'
 		),
+		'joomla' => array(
+			'name' => 'Joomla',
+			'url' => 'joomla.org'
+		),
+		'icamys' => array(
+			'name' => 'Prisacari Dmitrii',
+			'url' => 'github.com/icamys'
+		),
+		'giggsey' => array(
+			'name' => 'Joshua Gigg',
+			'url' => 'giggsey.com'
+		),
 		/* This part on libs not yet use */
 		'Minify' => array(
 			'name' => 'Minify',
@@ -27,10 +39,6 @@ $credits = array(
 		'adodb' => array(
 			'name' => 'AdoDB',
 			'url' => 'adodb.org'
-		),
-		'joomla' => array(
-			'name' => 'Joomla',
-			'url' => 'joomla.org'
 		)
 	),
 	'designer' => array(
@@ -54,7 +62,7 @@ $credits = array(
 		)
 	),
 	'photographer' => array(
-		'alexonbstudio' => array(
+		'other' => array(
 			'name' => 'AlexonbStudio',
 			'url' => 'alexonbstudio.fr'
 		)
@@ -117,11 +125,11 @@ $credits = array(
 	),
 	'version' => array(
 		'stable' => '2.0',
-		'rc' => '1.8',
+		'rc' => '1.9',
 		'beta' => '1.3',
 		'alpha' => '0.2',
 		'actual' => 'Stable',
-		'date' => '2020/07/27'
+		'date' => '2020/08/11'
 	)
 );
 

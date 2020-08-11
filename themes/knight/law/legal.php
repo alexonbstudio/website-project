@@ -70,19 +70,19 @@
 		   <?php } ?> 
            <h3><?php echo $law['legal']['content']['credits']['title']; ?></h3>
 		   <p>
-				<strong><?php echo $law['legal']['content']['credits']['developper']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['developper']['alexonbstudio']['url']; ?>"><?php echo $credits['developper']['alexonbstudio']['name'].'</a>, <a href="'.$protocols.'://'.$credits['developper']['PHPMailer']['url'].'">'.$credits['developper']['PHPMailer']['name']; ?></a><br />
+				<strong><?php echo $law['legal']['content']['credits']['developper']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['developper']['alexonbstudio']['url']; ?>" rel="dofollow"><?php echo $credits['developper']['alexonbstudio']['name']; ?></a> <a href="<?php echo $protocols.'://'.$credits['developper']['PHPMailer']['url']; ?>" rel="dofollow"><?php echo $credits['developper']['PHPMailer']['name']; ?></a> <a href="<?php echo $protocols.'://'.$credits['developper']['joomla']['url']; ?>" rel="dofollow"><?php echo $credits['developper']['joomla']['name']; ?></a> <a href="<?php echo $protocols.'://'.$credits['developper']['icamys']['url']; ?>" rel="dofollow"><?php echo $credits['developper']['icamys']['name']; ?></a> <a href="<?php echo $protocols.'://'.$credits['developper']['giggsey']['url']; ?>" rel="dofollow"><?php echo $credits['developper']['giggsey']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['credits']['designer']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['designer']['alexonbstudio']['url']; ?>"><?php echo $credits['designer']['alexonbstudio']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['credits']['webmaster']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['webmaster']['alexonbstudio']['url']; ?>"><?php echo $credits['webmaster']['alexonbstudio']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['credits']['marketing']; ?></strong> -<br />
 				<strong><?php echo $law['legal']['content']['credits']['image']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['images']['alexonbstudio']['url']; ?>"><?php echo $credits['images']['alexonbstudio']['name'].'</a>, <a href="'.$protocols.'://'.$credits['images']['pexels']['url'].'">'.$credits['images']['pexels']['name'].'</a>, <a href="'.$protocols.'://'.$credits['images']['pixabay']['url'].'">'.$credits['images']['pixabay']['name'].'</a>, <a href="'.$protocols.'://'.$credits['images']['wikimedia']['url'].'">'.$credits['images']['wikimedia']['name'].'</a>, <a href="'.$protocols.'://'.$credits['images']['unsplash']['url'].'">'.$credits['images']['unsplash']['name']; ?></a><br />
-				<strong><?php echo $law['legal']['content']['credits']['photographer']; ?></strong> -<br />
+				<!--<strong><?php echo $law['legal']['content']['credits']['photographer']; ?></strong> -<br />-->
 				<strong><?php echo $law['legal']['content']['credits']['video']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['video']['alexonbstudio']['url']; ?>"><?php echo $credits['video']['alexonbstudio']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['credits']['webdesigner']; ?></strong>  <a href="<?php echo $credits['webdesigner']['bootstrapmade']['url']; ?>"><?php echo $credits['webdesigner']['bootstrapmade']['name']; ?></a>
 				
 			</p>
            <h3><?php echo $law['legal']['content']['software']['title']; ?></h3>
 		   <p>
-			<strong><?php echo $law['legal']['content']['software']['title']; ?></strong> <?php echo $law['legal']['content']['software']['wp']; ?> - CC-BY-SA<br />
+			<strong><?php echo $law['legal']['content']['software']['title']; ?></strong> <?php echo $law['legal']['content']['software']['wp']; ?> - CC-BY-SA - Alexon Balangue<br />
 			License: GNU GPL V3.0
 		   </p>
 		   
