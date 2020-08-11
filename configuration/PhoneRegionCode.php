@@ -862,7 +862,7 @@ $PhoneRegionCodeManualNumbers = array(
  'pt' => array(
    'COUNTRY' => 'Portugal',
    'COUNTRY-CODE' => 'PT',
-   'ISO-CODES': 'PRT'
+   'ISO-CODES' => 'PRT'
  ),
  'pr' => array(
    'COUNTRY' => 'Puerto Rico',
@@ -1433,6 +1433,7 @@ $PhoneRegionCodeManualNumbers = array(
    'COUNTRY' => 'China',
    'COUNTRY-CODE' => 'CN',
    'ISO-CODES' => 'CHN'
+ ),
  'cx' => array(
    'COUNTRY' => 'Christmas Island',
    'COUNTRY-CODE' => 'CX',
@@ -1533,7 +1534,7 @@ $PhoneRegionCodeManualNumbers = array(
    'COUNTRY-CODE' => 'SV',
    'ISO-CODES' => 'SLV'
  ),
- gq'' => array(
+ 'gq' => array(
    'COUNTRY' => 'Equatorial Guinea',
    'COUNTRY-CODE' => 'GQ',
    'ISO-CODES' => 'GNQ'
@@ -2057,7 +2058,6 @@ $PhoneRegionCodeManualNumbers = array(
    'COUNTRY' => 'Poland',
    'COUNTRY-CODE' => 'PL',
    'ISO-CODES' => 'POL'
-   'GDP $USD' => ''
  ),
  'pt' => array(
    'COUNTRY' => 'Portugal',
