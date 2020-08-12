@@ -25,7 +25,18 @@ $sites = array(
 	'head' => array(
 		'robots' => 'index, follow' /*Only show on template header.php | robots meta*/
 	),
-	'default-timezone' => 'Etc/UTC' /*Docs PHP variable date_default_timezone_set() */
+	'default-timezone' => 'Etc/UTC', /*Docs PHP variable date_default_timezone_set() */
+	/*Pricing*/
+	'tarifs' => array(
+		'<services>' => array(
+			'<sector>1' => array(
+				'<purpose1>' => '1'
+			),
+			'<sector>2' => array(
+				'<proposition1>' => '10'
+			)  
+		)
+	)
 );
 
 $JE_sites = json_encode($sites);
