@@ -97,10 +97,11 @@ use libphonenumber\PhoneNumberFormat;
 
 $PhoneNumberUtil = PhoneNumberUtil::getInstance();
 $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
+$PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
 
 $SelectPhoneNumberRegionCode = 'CH';
-$SelectPhoneNumberRegionCode = $phone_langs;
+//$SelectPhoneNumberRegionCode = $phone_langs;getTimeZonesForNumber
 $DataPhoneNumberCheck = '798765432';
 
 echo '<br><br>DEFAULT CH<br><br>';
@@ -113,6 +114,68 @@ if($PhoneNumberUtil->isValidNumber($PhoneNumberData)){
 	echo 'false number not valid for '.$SelectPhoneNumberRegionCode.' phone';
 }
 echo '<br><br>';
+echo '################################################What USER is this number############################################################################';
+echo '<br><br>';
+//	echo $PhoneNumberUtil->getLengthOfGeographicalAreaCode($DataPhoneNumberCheck);
+
+switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
+	case '0':
+		echo 'FIXED_LINE';
+	break;
+	case '1':
+		echo 'MOBILE';
+	break;
+	case '2':
+		echo 'FIXED_LINE_OR_MOBILE';
+	break;
+	case '3':
+		echo 'TOLL_FREE';
+	break;
+	case '4':
+		echo 'PREMIUM_RATE';
+	break;
+	case '5':
+		echo 'SHARED_COST';
+	break;
+	case '6':
+		echo 'VOIP';
+	break;
+	case '7':
+		echo 'PERSONAL_NUMBER';
+	break;
+	case '8':
+		echo 'PAGER';
+	break;
+	case '9':
+		echo 'UAN';
+	break;
+	case '10':
+		echo 'UNKNOWN';
+	break;
+	case '27':
+		echo 'EMERGENCY';
+	break;
+	case '28':
+		echo 'VOICEMAIL';
+	break;
+	case '29':
+		echo 'SHORT_CODE';
+	break;
+	case '30':
+		echo 'STANDARD_RATE';
+	break;
+	default:
+		echo 'UNKNOWN';
+}
+
+echo '<br><br>Get type number<br>';
+
+$WPGeocoderNumbers = $PhoneNumberUtil->getNumberType($PhoneNumberData);
+#if($PhoneNumberUtil->getNumberType($PhoneNumberData)){}
+
+echo '<br><br>';
+echo '############################################################################################################################';
+echo '<br><br>';
 
 $WPRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion('FR'); # 33
 echo $PhoneNumberUtil->getCountryCodeForRegion($SelectPhoneNumberRegionCode); # 33
@@ -124,8 +187,8 @@ echo $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTransl
 
 echo '<br><br>';
 
-$WPGeocoderNumbers = $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, "fr_FR");
-echo $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, "fr_FR");
+$WPGeocoderNumbers = $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, $translate['meta']['lang']['FR']);
+echo $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, $translate['meta']['lang']['FR']);
 
 echo '<br><br>';
 
