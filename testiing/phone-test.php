@@ -108,11 +108,6 @@ echo '<br><br>DEFAULT CH<br><br>';
 #$PhoneNumberData = $PhoneNumberUtil->parse('7987654', 'FR');
 $PhoneNumberData = $PhoneNumberUtil->parse($DataPhoneNumberCheck, $SelectPhoneNumberRegionCode);//CH
 echo '<br><br>';
-if($PhoneNumberUtil->isValidNumber($PhoneNumberData)){
-	echo 'true number valid for '.$SelectPhoneNumberRegionCode.' phone';
-} else {
-	echo 'false number not valid for '.$SelectPhoneNumberRegionCode.' phone';
-}
 echo '<br><br>';
 echo '################################################What USER is this number############################################################################';
 echo '<br><br>';
@@ -120,52 +115,52 @@ echo '<br><br>';
 
 switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
 	case '0':
-		echo 'FIXED_LINE';
+		$PhoneGetType = 'FIXED LINE';
 	break;
 	case '1':
-		echo 'MOBILE';
+		$PhoneGetType = 'MOBILE';
 	break;
 	case '2':
-		echo 'FIXED_LINE_OR_MOBILE';
+		$PhoneGetType = 'FIXED LINE OR MOBILE';
 	break;
 	case '3':
-		echo 'TOLL_FREE';
+		$PhoneGetType = 'TOLL REE';
 	break;
 	case '4':
-		echo 'PREMIUM_RATE';
+		$PhoneGetType = 'PREMIUM RATE';
 	break;
 	case '5':
-		echo 'SHARED_COST';
+		$PhoneGetType = 'SHARED COST';
 	break;
 	case '6':
-		echo 'VOIP';
+		$PhoneGetType = 'VOIP';
 	break;
 	case '7':
-		echo 'PERSONAL_NUMBER';
+		$PhoneGetType = 'PERSONAL NUMBER';
 	break;
 	case '8':
-		echo 'PAGER';
+		$PhoneGetType = 'PAGER';
 	break;
 	case '9':
-		echo 'UAN';
+		$PhoneGetType = 'UAN';
 	break;
 	case '10':
-		echo 'UNKNOWN';
+		$PhoneGetType = 'UNKNOWN';
 	break;
 	case '27':
-		echo 'EMERGENCY';
+		$PhoneGetType = 'EMERGENCY';
 	break;
 	case '28':
-		echo 'VOICEMAIL';
+		$PhoneGetType = 'VOICEMAIL';
 	break;
 	case '29':
-		echo 'SHORT_CODE';
+		$PhoneGetType = 'SHORT CODE';
 	break;
 	case '30':
-		echo 'STANDARD_RATE';
+		$PhoneGetType = 'STANDARD RATE';
 	break;
 	default:
-		echo 'UNKNOWN';
+		$PhoneGetType = 'UNKNOWN';
 }
 
 echo '<br><br>Get type number<br>';
@@ -177,35 +172,45 @@ echo '<br><br>';
 echo '############################################################################################################################';
 echo '<br><br>';
 
-$WPRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion('FR'); # 33
-echo $PhoneNumberUtil->getCountryCodeForRegion($SelectPhoneNumberRegionCode); # 33
+
+$WPGeocoderNumbers = $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, $browser_lang);
+echo $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, $browser_lang);
 
 echo '<br><br>';
+$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($SelectPhoneNumberRegionCode); # 33
+$PhonecarrerNumbers = $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTranslateLang);
+$PhoneformatE164Numbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::E164);
+$PhoneformatNATIONALNumbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::NATIONAL);
+$PhoneformatINTERNATIONALNumbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::INTERNATIONAL);
+$PhoneformatRFC3966Numbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::RFC3966);
 
-$WPcarrerNumbers = $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTranslateLang);
-echo $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTranslateLang);
 
-echo '<br><br>';
-
-$WPGeocoderNumbers = $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, $translate['meta']['lang']['FR']);
-echo $PhoneNumberGeocoder->getDescriptionForNumber($PhoneNumberData, $translate['meta']['lang']['FR']);
-
-echo '<br><br>';
-
-$WPformatE164Numbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::E164);
 echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::E164);
 
 echo '<br><br>';
 
-$WPformatNATIONALNumbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::NATIONAL);
 echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::NATIONAL);
 
 echo '<br><br>';
 
-$WPformatINTERNATIONALNumbers = $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::INTERNATIONAL);
 echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::INTERNATIONAL);
 
 
+if($PhoneNumberUtil->isValidNumber($PhoneNumberData)){
+	echo 'true number valid for '.$SelectPhoneNumberRegionCode.' phone';
+} else {
+	echo 'false number not valid for '.$SelectPhoneNumberRegionCode.' phone';
+}
+
+
+echo $PhoneNumberUtil->getCountryCodeForRegion($SelectPhoneNumberRegionCode); # 33
+
+echo '<br><br>';
+
+
+echo $PhoneNumberCarrierMapper->getNameForNumber($PhoneNumberData, $DefineTranslateLang);
+
+echo '<br><br>';
 /************************************************************************************************************/		
 #frontend - https://numverify.com/documentation Verify number phone
 /*

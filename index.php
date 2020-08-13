@@ -112,6 +112,56 @@ $PhoneNumberUtil = PhoneNumberUtil::getInstance();
 $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
 
+switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
+	case '0':
+		$PhoneGetType = 'FIXED LINE';
+	break;
+	case '1':
+		$PhoneGetType = 'MOBILE';
+	break;
+	case '2':
+		$PhoneGetType = 'FIXED LINE OR MOBILE';
+	break;
+	case '3':
+		$PhoneGetType = 'TOLL REE';
+	break;
+	case '4':
+		$PhoneGetType = 'PREMIUM RATE';
+	break;
+	case '5':
+		$PhoneGetType = 'SHARED COST';
+	break;
+	case '6':
+		$PhoneGetType = 'VOIP';
+	break;
+	case '7':
+		$PhoneGetType = 'PERSONAL NUMBER';
+	break;
+	case '8':
+		$PhoneGetType = 'PAGER';
+	break;
+	case '9':
+		$PhoneGetType = 'UAN';
+	break;
+	case '10':
+		$PhoneGetType = 'UNKNOWN';
+	break;
+	case '27':
+		$PhoneGetType = 'EMERGENCY';
+	break;
+	case '28':
+		$PhoneGetType = 'VOICEMAIL';
+	break;
+	case '29':
+		$PhoneGetType = 'SHORT CODE';
+	break;
+	case '30':
+		$PhoneGetType = 'STANDARD RATE';
+	break;
+	default:
+		$PhoneGetType = 'UNKNOWN';
+}
+
 #frontend
 if(isset($_GET['pages'])){
 	if($_GET['pages'] == 'index'){
