@@ -193,6 +193,7 @@ echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::NATIONAL);
 
 echo '<br><br>';
 
+
 echo $PhoneNumberUtil->format($PhoneNumberData, PhoneNumberFormat::INTERNATIONAL);
 
 
@@ -236,6 +237,19 @@ $validationResult['valid'];
 $validationResult['country_code'];
 $validationResult['carrier'];
 
+output
+{
+  "valid":true,
+  "number":"33600000000",
+  "local_format":"0600000000",
+  "international_format":"+3300000000",
+  "country_prefix":"+33",
+  "country_code":"FR",
+  "country_name":"France",
+  "location":"",
+  "carrier":"Bouygues Telecom SA",
+  "line_type":"mobile"
+}
 */
 
 
