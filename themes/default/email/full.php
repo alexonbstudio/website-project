@@ -97,14 +97,14 @@
 		<?php if(!empty($business['local']['name'])){ ?>
         <p>
           <abbr title="<?php echo $email['index']['content']['default']['email']; ?>"><i class="far fa-envelope"></i></abbr>:
-		  <?php echo $business['local']['mail']['business'].' [AT] '.$sites['domain']; ?>
+		  <?php echo $business['local']['mail']['business'].' [AT] '.$domainTLD; ?>
         </p>
 		<?php } else { ?>
         <p>
           <abbr title="<?php echo $email['index']['content']['default']['email']; ?>"><i class="far fa-envelope"></i></abbr>:
 		  <?php 
 		  if(!empty($private['mail']['public'])){
-			echo $private['mail']['public'].' [AT] '.$sites['domain']; 
+			echo $private['mail']['public'].' [AT] '.$domainTLD; 
 		  } else {			  
 			echo $private['mail']['private'].' [AT] '.$private['mail']['private']['@']['external']; 
 		  }

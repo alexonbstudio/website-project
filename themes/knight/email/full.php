@@ -44,7 +44,7 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
-                <p><?php echo $business['local']['mail']['business'].' [AT] '.$sites['domain']; ?></p>
+                <p><?php echo $business['local']['mail']['business'].' [AT] '.$domainTLD; ?></p>
               </div>
 			<?php } else { ?>
               <div class="email">
@@ -52,7 +52,7 @@
                 <h4><?php echo $email['index']['content']['default']['email']; ?>:</h4>
                 <p> <?php 
 		  if(!empty($private['mail']['public'])){
-			echo $private['mail']['public'].' [AT] '.$sites['domain']; 
+			echo $private['mail']['public'].' [AT] '.$domainTLD; 
 		  } else {			  
 			echo $private['mail']['private'].' [AT] '.$private['mail']['private']['@']['external']; 
 		  }
