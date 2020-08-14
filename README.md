@@ -2,6 +2,13 @@
 
 Video want help for [french](https://dai.ly/x7vaz18) or [english](https://dai.ly/x7vaz18)
 
+## Are you interested to add compagny or non profit
+
+	Read the notice on https://github.com/alexonbstudio/wp-api
+	and then we i'll add your compagny name and non profit soon purpose
+	
+
+
 ## Documentation 
 
 Files [PDF need teorique French](docs/website-project-wp-documents-french.pdf)
