@@ -135,6 +135,15 @@ switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
 		$PhoneGetType = 'UNKNOWN';
 }*/
 
+
+use Icamys\SitemapGenerator\SitemapGenerator;	
+
+$outputDir = getcwd();
+	
+$generator = new SitemapGenerator($protocols.'://'.$domainTLD, $outputDir);
+$generator->toggleGZipFileCreation();
+$generator->setMaxURLsPerSitemap(50000);
+
 #frontend
 if(isset($_GET['sitemaps'])){
 	if($_GET['sitemaps'] == 'index'){
