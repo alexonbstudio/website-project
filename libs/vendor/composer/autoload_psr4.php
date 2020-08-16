@@ -10,6 +10,8 @@ return array(
     'alexonbstudio\\ssllabs-api\\' => array($vendorDir . '/alexonbstudio/ssllabs-api/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'Joomla\\Utilities\\' => array($vendorDir . '/joomla/utilities/src'),
+    'Joomla\\String\\' => array($vendorDir . '/joomla/string/src'),
     'Icamys\\SitemapGenerator\\' => array($vendorDir . '/icamys/php-sitemap-generator/src'),
     'Giggsey\\Locale\\' => array($vendorDir . '/giggsey/locale/src'),
 );
