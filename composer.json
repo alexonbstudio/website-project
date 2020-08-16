@@ -22,16 +22,16 @@
 		"caddy",
 		"bootstrap",
 		"without databasse"
-	],    
-	"config": {
+	], 
+    "config": {
         "optimize-autoloader": true,
         "platform": {
-            "php": "7.2.0"
+            "php": "7.2"
         },
         "vendor-dir": "libs"
     },
     "homepage": "https://github.com/alexonbstudio/website-project",
-    "license": "GPL-3.0",
+    "license": "GPL-3.0-only",
 	"support": {
 		"source": "https://github.com/alexonbstudio/website-project",
 		"issues": "https://github.com/alexonbstudio/website-project/issues"
@@ -44,7 +44,7 @@
         },
 		{
             "name": "Joshua Gigg",
-            "homepage": "https://giggsey.com/",
+            "homepage": "https://giggsey.com",
             "role": "contributor"
         },
 		{
@@ -77,68 +77,124 @@
             "type": "custom"
         }
     ],
-    "require": {
-        "php": ">=7.2.0",
-		"ext-SPL": "*",
-		"ext-dom": "*",
-		"ext-simplexml": "*",
-		"ext-mbstring": "*",
-		"ext-zlib": "*",
-		"ext-curl": "*",
-        "phpmailer/phpmailer": "^6.1.7",
-        "joomla/utilities": "^1.6",
-		"giggsey/locale": "^1.7",
-        "giggsey/libphonenumber-for-php": "^8.12.7",
-        "icamys/php-sitemap-generator": "^2.0.1"
-    },
-    "autoload": {
+	"autoload": {
 		"classmap": [
-			"libs/custom/", 
-			"libs/libphonenumber-for-php/", 
-			"libs/phpmailer/", 
-			"libs/sitemap-generator/"
-		],
-		"files": [
-			"libs/joomla/utilities/IpHelper.php",
-			"libs/Locale/src/Locale.php",
-			"libs/sitemap-generator/src/SitemapGenerator.php"
+			"libs/giggsey/locale/src/Locale.php", 
+			"libs/giggsey/libphonenumber-for-php/src/", 
+			"libs/phpmailer/phpmailer/src/", 
+			"libs/joomla/utilities/src/IpHelper.php", 
+			"libs/icamys/php-sitemap-generator/src/SitemapGenerator.php", 
+			"libs/alexonbstudio/ssllabs-api/src/ssllabsapi.php"
 		],
         "psr-4": {
-            "PHPMailer\\PHPMailer\\": "libs/phpmailer/src/",
-			"Giggsey\\Locale\\": "libs/Locale/src/",
-            "libphonenumber\\": "libs/libphonenumber-for-php/src/",
-            "Joomla\\Utilities\\": "libs/joomla/utilities/src/",
-			"Icamys\\SitemapGenerator\\": "libs/sitemap-generator/src/"
-        },
-		"exclude-from-classmap": [
-			"/.github/",
-			"/testiing/",
-			"/apache/",
-			"/caddy/",
-			"/docs/",
-			"/nginx/"
+            "alexonbstudio\\ssllabs-api\\": "src/",
+			"Giggsey\\Locale\\": "src/",
+			"libphonenumber\\": "src/",
+			"Icamys\\SitemapGenerator\\": "src/",
+			"Joomla\\Utilities\\": "src/",
+			"PHPMailer\\PHPMailer\\": "src/"
+		},			
+        "exclude-from-classmap": [
+			"/libs/giggsey/libphonenumber-for-php/src/data/",
+			"/libs/giggsey/libphonenumber-for-php/src/carrier/data/",
+			"/libs/giggsey/libphonenumber-for-php/src/geocoding/data/",
+			"/libs/giggsey/libphonenumber-for-php/src/timezone/data/",
+			"/libs/joomla/string/",
+			"/libs/joomla/utilities/src/ArrayHelper.php",
+			"/libs/alexonbstudio/ssllabs-api/test/",
+			"/libs/joomla/",
+			"/libs/libphonenumber-for-php/",
+			"/libs/Locale/",
+			"/libs/phpmailer/",
+			"/libs/sitemap-generator/"
 		]
+    },
+	"minimum-stability": "stable",
+	"optimize-autoloader": true,
+    "require": {
+        "php": ">=7.2",
+        "phpmailer/phpmailer": "^6.1",
+        "symfony/polyfill-mbstring": "^1.18",
+        "giggsey/locale": "^1.9",
+        "giggsey/libphonenumber-for-php": "^8.12",
+        "icamys/php-sitemap-generator": "^2.0",
+        "alexonbstudio/ssllabs-api": "^1.0",
+        "joomla/utilities": "^1.6"
     },
 	"archive": {
 		"exclude": [
+			"libs/alexonbstudio/ssllabs-api/test/",
+			"libs/alexonbstudio/ssllabs-api/README.md",
+			"libs/alexonbstudio/ssllabs-api/LICENSE",
+			"libs/alexonbstudio/ssllabs-api/composer.json",
+			"libs/joomla/string/",
+			"libs/joomla/utilities/.github/",
+			"libs/joomla/utilities/src/ArrayHelper.php",
+			"libs/joomla/utilities/Tests/",
+			"libs/joomla/utilities/LICENSE",
+			"libs/joomla/utilities/phpunit.xml.dist",
+			"libs/joomla/utilities/composer.json",
+			"libs/joomla/utilities/README.md",
+			"libs/icamys/php-sitemap-generator/test/",
+			"libs/icamys/php-sitemap-generator/.editorconfig",
+			"libs/icamys/php-sitemap-generator/.gitignore",
+			"libs/icamys/php-sitemap-generator/.travis.yml",
+			"libs/icamys/php-sitemap-generator/composer.json",
+			"libs/icamys/php-sitemap-generator/composer.lock",
+			"libs/icamys/php-sitemap-generator/phpunit.xml",
+			"libs/icamys/php-sitemap-generator/README.md",
+			"libs/giggsey/libphonenumber-for-php/build/",
+			"libs/giggsey/libphonenumber-for-php/docs/",
+			"libs/giggsey/libphonenumber-for-php/tests/",
+			"libs/giggsey/libphonenumber-for-php/.github/",
+			"libs/giggsey/libphonenumber-for-php/composer.json",
+			"libs/giggsey/libphonenumber-for-php/.editorconfig",
+			"libs/giggsey/libphonenumber-for-php/.gitattributes",
+			"libs/giggsey/libphonenumber-for-php/.gitignore",
+			"libs/giggsey/libphonenumber-for-php/.styleci.yml",
+			"libs/giggsey/libphonenumber-for-php/.travis.yml",
+			"libs/giggsey/libphonenumber-for-php/build.xml",
+			"libs/giggsey/libphonenumber-for-php/libphonenumber-for-php.spec",
+			"libs/giggsey/libphonenumber-for-php/phpunit.xml.dist",
+			"libs/giggsey/libphonenumber-for-php/README.md",
+			"libs/giggsey/local/build/",
+			"libs/giggsey/local/tests/",
+			"libs/giggsey/local/.gitattributes",
+			"libs/giggsey/local/.gitignore",
+			"libs/giggsey/local/.styleci.yml",
+			"libs/giggsey/local/CLDR-VERSION.txt",
+			"libs/giggsey/local/.travis.yml",
+			"libs/giggsey/local/README.md",
+			"libs/giggsey/local/composer.json",
+			"libs/giggsey/local/build.xml",
+			"libs/giggsey/local/phpunit.xml.dist",
+			"libs/icamys/php-sitemap-generator/test/",
+			"libs/icamys/php-sitemap-generator/.editorconfig",
+			"libs/icamys/php-sitemap-generator/.gitignore",
+			"libs/icamys/php-sitemap-generator/.travis.yml",
+			"libs/icamys/php-sitemap-generator/composer.json",
+			"libs/icamys/php-sitemap-generator/composer.lock",
+			"libs/icamys/php-sitemap-generator/phpunit.xml",
+			"libs/icamys/php-sitemap-generator/README.md",
+			"libs/joomla/",
+			"libs/libphonenumber-for-php/",
+			"libs/Locale/",
+			"libs/phpmailer/",
+			"libs/sitemap-generator/",
 			".github/",
-			"FUNDING.yml",
-			"docker-compose.yml",
-			"testiing/",
 			"apache/",
 			"caddy/",
 			"docs/",
 			"nginx/",
+			"testiing/",
+			"docker-compose.yml",
+			"FUNDING.yml",
+			"LICENSE",
+			"README.md",
 			"SECURITY.md"
 		]
 	},
-	"require-dev": {
-		"phpunit/phpunit": "^8.5",
-		"php-mock/php-mock-phpunit": "^2.5"
-	},
-    "suggest": {
-		"psr/log": "For optional PSR-3 debug logging",
-        "psr/cache-implementation": "Cache implementation to use with Minify::cache",
-        "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
-    }
+	"suggest": {
+		"symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+	}
 }
