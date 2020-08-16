@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+require 'libs/autoload.php';
 #require libs/custom/
 foreach (glob('libs/custom/*.php') as $GlobRequire) { include_once $GlobRequire; }
 
@@ -16,8 +17,8 @@ $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
 $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
-$videos = json_decode($JE_videos, true);
 $hosting = json_decode($JE_hosting, true);
+$videos = json_decode($JE_videos, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
 $business = json_decode($JE_business, true);
@@ -39,7 +40,6 @@ $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_S
 $Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 0,2) : $translate['manual']['frontend']['french'];
 $phone_langs = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 3,4) : $translate['manual']['backend']['french'];
 $meta_langs = $browser_lang;
-
 
 
 #Configuration
@@ -65,13 +65,8 @@ $sitemap = json_decode($JE_translate_sitemap, true);
 
 #Email contact form PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
-#use PHPMailer\PHPMailer\Exception; test
-
-require 'libs/phpmailer/src/PHPMailer.php';
 $mail = new PHPMailer(true);
 
-#Joomla utilities
-require 'libs/joomla/utilities/src/IpHelper.php';
 use Joomla\Utilities\IpHelper;
 
 # anti spam with HCAPTCHA
@@ -80,41 +75,16 @@ $hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret=
 $hcaptcha_RData = json_decode($hcaptcha_VResponse);
 */
 
-
 #LibPhoneNumber-for-php - check only
-require 'libs/Locale/src/Locale.php';
-require 'libs/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php';
-require 'libs/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php';
-require 'libs/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php';
-require 'libs/libphonenumber-for-php/src/PhoneNumberFormat.php';
-require 'libs/libphonenumber-for-php/src/PhoneNumberToCarrierMapper.php';
-require 'libs/libphonenumber-for-php/src/geocoding/PhoneNumberOfflineGeocoder.php';
-require 'libs/libphonenumber-for-php/src/ValidationResult.php';
-require 'libs/libphonenumber-for-php/src/PhoneNumberType.php';
-require 'libs/libphonenumber-for-php/src/NumberFormat.php';
-require 'libs/libphonenumber-for-php/src/PhoneNumberDesc.php';
-require 'libs/libphonenumber-for-php/src/PhoneMetadata.php';
-require 'libs/libphonenumber-for-php/src/Matcher.php';
-require 'libs/libphonenumber-for-php/src/CountryCodeSource.php';
-require 'libs/libphonenumber-for-php/src/PhoneNumber.php';
-require 'libs/libphonenumber-for-php/src/MatcherAPIInterface.php';
-require 'libs/libphonenumber-for-php/src/RegexBasedMatcher.php';
-require 'libs/libphonenumber-for-php/src/MetadataSourceInterface.php';
-require 'libs/libphonenumber-for-php/src/MultiFileMetadataSourceImpl.php';
-require 'libs/libphonenumber-for-php/src/MetadataLoaderInterface.php';
-require 'libs/libphonenumber-for-php/src/DefaultMetadataLoader.php';
-require 'libs/libphonenumber-for-php/src/CountryCodeToRegionCodeMap.php';
-require 'libs/libphonenumber-for-php/src/PhoneNumberUtil.php';
 use libphonenumber\PhoneNumberUtil;
 use libphonenumber\PhoneNumberToCarrierMapper;
 use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
 use libphonenumber\PhoneNumberFormat;
 
-
 $PhoneNumberUtil = PhoneNumberUtil::getInstance();
 $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
-
+/*
 switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
 	case '0':
 		$PhoneGetType = 'FIXED LINE';
@@ -163,7 +133,7 @@ switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
 	break;
 	default:
 		$PhoneGetType = 'UNKNOWN';
-}
+}*/
 
 #frontend
 if(isset($_GET['lang'])){

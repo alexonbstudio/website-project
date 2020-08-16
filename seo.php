@@ -1,30 +1,33 @@
 <?php
-
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+require 'libs/autoload.php';
 #require libs/custom/
 foreach (glob('libs/custom/*.php') as $GlobRequire) { include_once $GlobRequire; }
-
 
 #configuration
 foreach (glob('configuration/*.php') as $GlobConfig) { include_once $GlobConfig; }
 
 #Decode
 $sites = json_decode($JE_sites, true);
-$sponsor_config = json_decode($JE_sponsor_config, true);
-$partner_config = json_decode($JE_partner_config, true);
 $translate = json_decode($JE_translate, true);
 $credits = json_decode($JE_credits, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
-$videos = json_decode($JE_videos, true);
+$partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
+$videos = json_decode($JE_videos, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
 $business = json_decode($JE_business, true);
 $PhoneRegionCodeManualNumbers = json_decode($JE_PhoneRegionCodeManualNumbers, true);
+/*
+#Supplémentaire
+$markets = json_decode($JE_markets, true);
+$restaurant = json_decode($JE_restaurant, true);
+*/
 
 
 #Syslink
@@ -37,7 +40,6 @@ $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_S
 $Languages_translate = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 0,2) : $translate['manual']['frontend']['french'];
 $phone_langs = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 3,4) : $translate['manual']['backend']['french'];
 $meta_langs = $browser_lang;
-
 
 
 #Configuration
@@ -60,12 +62,78 @@ $law = json_decode($JE_translate_law, true);
 $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
-$about = json_decode($JE_translate_about, true);
-$pool = json_decode($JE_translate_pool, true);
-$pricing = json_decode($JE_translate_pricing, true);
-$faqs = json_decode($JE_translate_faqs, true);
-$others = json_decode($JE_translate_others, true);
-$debug = json_decode($JE_translate_debug, true);
+
+#Email contact form PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+$mail = new PHPMailer(true);
+
+use Joomla\Utilities\IpHelper;
+
+# anti spam with HCAPTCHA
+/*
+$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
+$hcaptcha_RData = json_decode($hcaptcha_VResponse);
+*/
+
+#LibPhoneNumber-for-php - check only
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\PhoneNumberToCarrierMapper;
+use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
+use libphonenumber\PhoneNumberFormat;
+
+$PhoneNumberUtil = PhoneNumberUtil::getInstance();
+$PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
+$PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
+/*
+switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
+	case '0':
+		$PhoneGetType = 'FIXED LINE';
+	break;
+	case '1':
+		$PhoneGetType = 'MOBILE';
+	break;
+	case '2':
+		$PhoneGetType = 'FIXED LINE OR MOBILE';
+	break;
+	case '3':
+		$PhoneGetType = 'TOLL REE';
+	break;
+	case '4':
+		$PhoneGetType = 'PREMIUM RATE';
+	break;
+	case '5':
+		$PhoneGetType = 'SHARED COST';
+	break;
+	case '6':
+		$PhoneGetType = 'VOIP';
+	break;
+	case '7':
+		$PhoneGetType = 'PERSONAL NUMBER';
+	break;
+	case '8':
+		$PhoneGetType = 'PAGER';
+	break;
+	case '9':
+		$PhoneGetType = 'UAN';
+	break;
+	case '10':
+		$PhoneGetType = 'UNKNOWN';
+	break;
+	case '27':
+		$PhoneGetType = 'EMERGENCY';
+	break;
+	case '28':
+		$PhoneGetType = 'VOICEMAIL';
+	break;
+	case '29':
+		$PhoneGetType = 'SHORT CODE';
+	break;
+	case '30':
+		$PhoneGetType = 'STANDARD RATE';
+	break;
+	default:
+		$PhoneGetType = 'UNKNOWN';
+}*/
 
 #frontend
 if(isset($_GET['html-verify'])){

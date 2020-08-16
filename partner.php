@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+require 'libs/autoload.php';
 #require libs/custom/
 foreach (glob('libs/custom/*.php') as $GlobRequire) { include_once $GlobRequire; }
 
@@ -15,9 +16,9 @@ $credits = json_decode($JE_credits, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
 $partner = json_decode($JE_partner, true);
-$videos = json_decode($JE_videos, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
+$videos = json_decode($JE_videos, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
 $business = json_decode($JE_business, true);
@@ -61,6 +62,78 @@ $law = json_decode($JE_translate_law, true);
 $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
+
+#Email contact form PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+$mail = new PHPMailer(true);
+
+use Joomla\Utilities\IpHelper;
+
+# anti spam with HCAPTCHA
+/*
+$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
+$hcaptcha_RData = json_decode($hcaptcha_VResponse);
+*/
+
+#LibPhoneNumber-for-php - check only
+use libphonenumber\PhoneNumberUtil;
+use libphonenumber\PhoneNumberToCarrierMapper;
+use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
+use libphonenumber\PhoneNumberFormat;
+
+$PhoneNumberUtil = PhoneNumberUtil::getInstance();
+$PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
+$PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
+/*
+switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
+	case '0':
+		$PhoneGetType = 'FIXED LINE';
+	break;
+	case '1':
+		$PhoneGetType = 'MOBILE';
+	break;
+	case '2':
+		$PhoneGetType = 'FIXED LINE OR MOBILE';
+	break;
+	case '3':
+		$PhoneGetType = 'TOLL REE';
+	break;
+	case '4':
+		$PhoneGetType = 'PREMIUM RATE';
+	break;
+	case '5':
+		$PhoneGetType = 'SHARED COST';
+	break;
+	case '6':
+		$PhoneGetType = 'VOIP';
+	break;
+	case '7':
+		$PhoneGetType = 'PERSONAL NUMBER';
+	break;
+	case '8':
+		$PhoneGetType = 'PAGER';
+	break;
+	case '9':
+		$PhoneGetType = 'UAN';
+	break;
+	case '10':
+		$PhoneGetType = 'UNKNOWN';
+	break;
+	case '27':
+		$PhoneGetType = 'EMERGENCY';
+	break;
+	case '28':
+		$PhoneGetType = 'VOICEMAIL';
+	break;
+	case '29':
+		$PhoneGetType = 'SHORT CODE';
+	break;
+	case '30':
+		$PhoneGetType = 'STANDARD RATE';
+	break;
+	default:
+		$PhoneGetType = 'UNKNOWN';
+}*/
 
 #frontend
 if(isset($_GET['lang'])){
