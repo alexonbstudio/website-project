@@ -38,6 +38,10 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
         ),
+        'R' => 
+        array (
+            'ReCaptcha\\' => 10,
+        ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
@@ -60,26 +64,31 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
     public static $prefixDirsPsr4 = array (
         'libphonenumber\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
             1 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
         'alexonbstudio\\ssllabs-api\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/alexonbstudio/ssllabs-api/src',
             1 => __DIR__ . '/..' . '/alexonbstudio/ssllabs-api/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+            1 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
             1 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Joomla\\Utilities\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/joomla/utilities/src',
             1 => __DIR__ . '/..' . '/joomla/utilities/src',
         ),
         'Joomla\\String\\' => 
@@ -88,12 +97,12 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         ),
         'Icamys\\SitemapGenerator\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src',
             1 => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src',
         ),
         'Giggsey\\Locale\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/..' . '/giggsey/locale/src',
             1 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
     );
@@ -105,6 +114,15 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'Icamys\\SitemapGenerator\\IRuntime' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
         'Icamys\\SitemapGenerator\\Runtime' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
         'Icamys\\SitemapGenerator\\SitemapGenerator' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
+        'ReCaptcha\\ReCaptcha' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/ReCaptcha.php',
+        'ReCaptcha\\RequestMethod' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod.php',
+        'ReCaptcha\\RequestMethod\\Curl' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php',
+        'ReCaptcha\\RequestMethod\\CurlPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/CurlPost.php',
+        'ReCaptcha\\RequestMethod\\Post' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php',
+        'ReCaptcha\\RequestMethod\\Socket' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Socket.php',
+        'ReCaptcha\\RequestMethod\\SocketPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php',
+        'ReCaptcha\\RequestParameters' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
+        'ReCaptcha\\Response' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/Response.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'libphonenumber\\AlternateFormatsCountryCodeSet' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/AlternateFormatsCountryCodeSet.php',
         'libphonenumber\\AsYouTypeFormatter' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/AsYouTypeFormatter.php',

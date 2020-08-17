@@ -16,6 +16,13 @@
 		"json-ld",
 		"seo",
 		"apache",
+		"référencement naturel",
+		"sans basse de donnée",
+		"Scan Ssl",
+		"Scan Ssllabs",
+		"composer",
+		"recaptcha",
+		"php",
 		"site vitrine",
 		"création site internet",
 		"nginx",
@@ -25,6 +32,7 @@
 	], 
     "config": {
         "optimize-autoloader": true,
+        "lock": false,
         "platform": {
             "php": "7.2"
         },
@@ -61,6 +69,11 @@
             "name": "Joomla",
             "homepage": "https://github.com/joomla-cms",
             "role": "contributor"
+        },
+		{
+            "name": "Google",
+            "homepage": "https://github.com/google",
+            "role": "contributor"
         }
     ],
     "funding": [
@@ -79,6 +92,7 @@
     ],
 	"autoload": {
 		"classmap": [
+			"libs/google/recaptcha/src/ReCaptcha/", 
 			"libs/giggsey/locale/src/Locale.php", 
 			"libs/giggsey/libphonenumber-for-php/src/", 
 			"libs/phpmailer/phpmailer/src/", 
@@ -87,14 +101,16 @@
 			"libs/alexonbstudio/ssllabs-api/src/ssllabsapi.php"
 		],
         "psr-4": {
-            "alexonbstudio\\ssllabs-api\\": "src/",
-			"Giggsey\\Locale\\": "src/",
-			"libphonenumber\\": "src/",
-			"Icamys\\SitemapGenerator\\": "src/",
-			"Joomla\\Utilities\\": "src/",
-			"PHPMailer\\PHPMailer\\": "src/"
+            "alexonbstudio\\ssllabs-api\\": "libs/alexonbstudio/ssllabs-api/src/",
+			"Giggsey\\Locale\\": "libs/giggsey/locale/src/",
+			"libphonenumber\\": "libs/giggsey/libphonenumber-for-php/src/",
+			"Icamys\\SitemapGenerator\\": "libs/icamys/php-sitemap-generator/src/",
+			"Joomla\\Utilities\\": "libs/joomla/utilities/src/",
+			"PHPMailer\\PHPMailer\\": "libs/phpmailer/phpmailer/src/",
+			"ReCaptcha\\": "libs/google/recaptcha/src/ReCaptcha/"
 		},			
         "exclude-from-classmap": [
+			"/libs/giggsey/libphonenumber-for-php/src/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/carrier/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/geocoding/data/",
@@ -119,10 +135,24 @@
         "giggsey/libphonenumber-for-php": "^8.12",
         "icamys/php-sitemap-generator": "^2.0",
         "alexonbstudio/ssllabs-api": "^1.0",
-        "joomla/utilities": "^1.6"
+        "joomla/utilities": "^1.6",
+		"google/recaptcha": "^1.2"
     },
 	"archive": {
 		"exclude": [
+			"libs/google/recaptcha/src/autoload.php",
+			"libs/google/recaptcha/.github/",
+			"libs/google/recaptcha/exemples/",
+			"libs/google/recaptcha/tests/",
+			"libs/google/recaptcha/.gitignore",
+			"libs/google/recaptcha/.travis.yml",
+			"libs/google/recaptcha/ARCHITECTURE.md",
+			"libs/google/recaptcha/CONTRIBUTING.md",
+			"libs/google/recaptcha/LICENSE",
+			"libs/google/recaptcha/README.md",
+			"libs/google/recaptcha/app.yaml",
+			"libs/google/recaptcha/phpunit.xml.dist",
+			"libs/google/recaptcha/composer.json",
 			"libs/alexonbstudio/ssllabs-api/test/",
 			"libs/alexonbstudio/ssllabs-api/README.md",
 			"libs/alexonbstudio/ssllabs-api/LICENSE",

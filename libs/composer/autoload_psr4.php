@@ -6,12 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'libphonenumber\\' => array($baseDir . '/src', $vendorDir . '/giggsey/libphonenumber-for-php/src'),
-    'alexonbstudio\\ssllabs-api\\' => array($baseDir . '/src', $vendorDir . '/alexonbstudio/ssllabs-api/src'),
+    'libphonenumber\\' => array($vendorDir . '/giggsey/libphonenumber-for-php/src', $vendorDir . '/giggsey/libphonenumber-for-php/src'),
+    'alexonbstudio\\ssllabs-api\\' => array($vendorDir . '/alexonbstudio/ssllabs-api/src', $vendorDir . '/alexonbstudio/ssllabs-api/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
-    'PHPMailer\\PHPMailer\\' => array($baseDir . '/src', $vendorDir . '/phpmailer/phpmailer/src'),
-    'Joomla\\Utilities\\' => array($baseDir . '/src', $vendorDir . '/joomla/utilities/src'),
+    'ReCaptcha\\' => array($vendorDir . '/google/recaptcha/src/ReCaptcha', $vendorDir . '/google/recaptcha/src/ReCaptcha'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src', $vendorDir . '/phpmailer/phpmailer/src'),
+    'Joomla\\Utilities\\' => array($vendorDir . '/joomla/utilities/src', $vendorDir . '/joomla/utilities/src'),
     'Joomla\\String\\' => array($vendorDir . '/joomla/string/src'),
-    'Icamys\\SitemapGenerator\\' => array($baseDir . '/src', $vendorDir . '/icamys/php-sitemap-generator/src'),
-    'Giggsey\\Locale\\' => array($baseDir . '/src', $vendorDir . '/giggsey/locale/src'),
+    'Icamys\\SitemapGenerator\\' => array($vendorDir . '/icamys/php-sitemap-generator/src', $vendorDir . '/icamys/php-sitemap-generator/src'),
+    'Giggsey\\Locale\\' => array($vendorDir . '/giggsey/locale/src', $vendorDir . '/giggsey/locale/src'),
 );
