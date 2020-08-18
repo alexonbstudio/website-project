@@ -23,6 +23,10 @@ $credits = array(
 			'name' => 'Joshua Gigg',
 			'url' => 'giggsey.com'
 		),
+		'google' => array(
+			'name' => 'Google',
+			'url' => 'github.com/google'
+		),
 		/* This part on libs not yet use */
 		'Minify' => array(
 			'name' => 'Minify',
