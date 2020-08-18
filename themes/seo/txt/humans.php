@@ -43,7 +43,7 @@
 
 /* THANKS CONTRIBUTOR */
 	
-	Developper: <?php echo $credits['developper']['alexonbstudio']['name'].', '.$credits['developper']['PHPMailer']['name'].', '.$credits['developper']['joomla']['name'].', '.$credits['developper']['icamys']['name'].', '.$credits['developper']['giggsey']['name']; ?>
+	Developper: <?php echo $credits['developper']['alexonbstudio']['name'].', '.$credits['developper']['PHPMailer']['name'].', '.$credits['developper']['joomla']['name'].', '.$credits['developper']['icamys']['name'].', '.$credits['developper']['giggsey']['name'].', '.$credits['developper']['google']['name']; ?>
 	
 	WebDesigner: <?php echo $credits['webdesigner']['startbootstrap']['name'].', '.$credits['webdesigner']['bootstrapmade']['name']; ?>
 	

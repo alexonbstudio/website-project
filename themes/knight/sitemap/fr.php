@@ -42,6 +42,7 @@
 						<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$translate['manual']['frontend']['french'].'/'.$law['dmca']['url']['default'];?>"><?php echo $law['dmca']['title'];?></a> </li>
 						<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$translate['manual']['frontend']['french'].'/'.$law['cgv']['url']['default'];?>"><?php echo $law['cgv']['title'];?></a> </li>
 						<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$translate['manual']['frontend']['french'].'/'.$law['cgu']['url']['default'];?>"><?php echo $law['cgu']['title'];?></a> </li>
+						<li><a href="<?php echo $protocols.'://'.$domainTLD.'/'.$translate['manual']['frontend']['french'].'/'.$law['cookies']['url']['default'];?>"><?php echo $law['cookies']['title'];?></a> </li>
 					</ul>
 				</li>
 			<!-- partner -->

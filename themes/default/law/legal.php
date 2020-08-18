@@ -62,7 +62,9 @@
 		   <?php } ?> 
            <h3><?php echo $law['legal']['content']['credits']['title']; ?></h3>
 		   <p>
-				<strong><?php echo $law['legal']['content']['credits']['developper']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['developper']['alexonbstudio']['url']; ?>"><?php echo $credits['developper']['alexonbstudio']['name'].'</a>, <a href="'.$protocols.'://'.$credits['developper']['PHPMailer']['url'].'">'.$credits['developper']['PHPMailer']['name']; ?></a><br />
+				<strong><?php echo $law['legal']['content']['credits']['developper']; ?></strong> <?php 
+					echo '<a href="'.$protocols.'://'.$credits['developper']['alexonbstudio']['url'].'">'.$credits['developper']['alexonbstudio']['name'].'</a> <a href="'.$protocols.'://'.$credits['developper']['PHPMailer']['url'].'">'.$credits['developper']['PHPMailer']['name'].'</a> <a href="'.$protocols.'://'.$credits['developper']['joomla']['url'].'">'.$credits['developper']['joomla']['name'].'</a> <a href="'.$protocols.'://'.$credits['developper']['icamys']['url'].'">'.$credits['developper']['icamys']['name'].'</a> <a href="'.$protocols.'://'.$credits['developper']['giggsey']['url'].'">'.$credits['developper']['giggsey']['name'].'</a> <a href="'.$protocols.'://'.$credits['developper']['google']['url'].'">'.$credits['developper']['google']['name'].'</a>'; 
+					?><br>
 				<strong><?php echo $law['legal']['content']['credits']['designer']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['designer']['alexonbstudio']['url']; ?>"><?php echo $credits['designer']['alexonbstudio']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['credits']['webmaster']; ?></strong> <a href="<?php echo $protocols.'://'.$credits['webmaster']['alexonbstudio']['url']; ?>"><?php echo $credits['webmaster']['alexonbstudio']['name']; ?></a><br />
 				<strong><?php echo $law['legal']['content']['credits']['marketing']; ?></strong> -<br />
