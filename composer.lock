@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ae46c76d674183bc3ae02055012d847",
+    "content-hash": "431b3a784a877b462c2dbe71895dc3bd",
     "packages": [
         {
             "name": "alexonbstudio/ssllabs-api",
