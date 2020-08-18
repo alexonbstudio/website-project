@@ -84,56 +84,6 @@ use libphonenumber\PhoneNumberFormat;
 $PhoneNumberUtil = PhoneNumberUtil::getInstance();
 $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
-/*
-switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
-	case '0':
-		$PhoneGetType = 'FIXED LINE';
-	break;
-	case '1':
-		$PhoneGetType = 'MOBILE';
-	break;
-	case '2':
-		$PhoneGetType = 'FIXED LINE OR MOBILE';
-	break;
-	case '3':
-		$PhoneGetType = 'TOLL REE';
-	break;
-	case '4':
-		$PhoneGetType = 'PREMIUM RATE';
-	break;
-	case '5':
-		$PhoneGetType = 'SHARED COST';
-	break;
-	case '6':
-		$PhoneGetType = 'VOIP';
-	break;
-	case '7':
-		$PhoneGetType = 'PERSONAL NUMBER';
-	break;
-	case '8':
-		$PhoneGetType = 'PAGER';
-	break;
-	case '9':
-		$PhoneGetType = 'UAN';
-	break;
-	case '10':
-		$PhoneGetType = 'UNKNOWN';
-	break;
-	case '27':
-		$PhoneGetType = 'EMERGENCY';
-	break;
-	case '28':
-		$PhoneGetType = 'VOICEMAIL';
-	break;
-	case '29':
-		$PhoneGetType = 'SHORT CODE';
-	break;
-	case '30':
-		$PhoneGetType = 'STANDARD RATE';
-	break;
-	default:
-		$PhoneGetType = 'UNKNOWN';
-}*/
 
 #frontend
 if(isset($_GET['pages'])){
@@ -195,118 +145,95 @@ if(isset($_GET['pages'])){
 		$urls = $email['index']['url']['default'];
 		$imgs = $email['index']['sitemap']['images'];
 		$vdos = $email['index']['sitemap']['video'];
-		//$pattern_out = '/^\+[0-9]{1,3}\.[0-9]{4,14}(?:x.+)?$/';
-		if(!empty($business['local']['name'])){		
-		
-			if (array_key_exists('teams', $_POST)) {
-				$err_email = false;
-				$msg_email = '';
-				$email_email = '';
-				//Apply some basic validation and filtering teams the subject
-				if (array_key_exists('subject', $_POST)) {
-					$subject_email = substr(strip_tags($_POST['subject']), 0, 255);
-				} else {
-					$subject_email = $email['index']['content']['placeholder']['subject'];
-				}
-				//Apply some basic validation and filtering teams the message
-				if (array_key_exists('message', $_POST)) {
-					//Limit length and strip HTML tags
-					$message_email = substr(strip_tags($_POST['message']), 0, 16384);
-				} else {
-					$message_email = '';
-					$msg_email = $email['index']['content']['placeholder']['message'];
-					$err_email = true;
-				}
-				//Apply some basic validation and filtering teams the name
-				if (array_key_exists('name', $_POST)) {
-					//Limit length and strip HTML tags
-					$name_email = substr(strip_tags($_POST['name']), 0, 255);
-				} else {
-					$name_email = '';
-					$msg_email .= $email['index']['content']['placeholder']['name'];
-					$err_email = true;
-				}
-				//Validate teams address
-				//Never allow arbitrary input for the 'teams' address as it will turn your form inteams a spam gateway!
-				//Substitute appropriate addresses from your own domain, or simply use a single, fixed address
-				if (array_key_exists('teams', $_POST) && in_array($_POST['teams'], [$business['local']['mail']['contact'], $business['local']['mail']['support'], $business['local']['mail']['commercial'], $business['local']['mail']['sponsor'], $business['local']['mail']['partner'], $business['local']['mail']['business']], true)) {
-					$teams = $_POST['teams'].'@'.$domainTLD;
-				} else {
-					$teams = $business['local']['mail']['contact'].'@'.$domainTLD;
-				}
-				//Make sure the address they provided is valid before trying teams use it
-				if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])/* && preg_match($pattern_out, $_POST['phone'] */) {
-					date_default_timezone_set($sites['default-timezone']);
-					$email_email = $_POST['email'];
-				} else {
-					$msg_email .= $email['index']['content']['placeholder']['email'];
-					$err_email = true;
-				}
-				if (!$err_email) {
-					$mail->setFrom($business['local']['mail']['contact'].'@'.$domainTLD, (empty($name_email) ? '<Anonymous>' : $name_email));
-					$mail->addAddress($teams, $domainTLD);
-					$mail->addReplyteams($email_email, $name_email);
-					
-					if ($mail->addReplyTo($email_email, $name_email)) {
-						$mail->isHTML(true);
-						$mail->Subject = $subject_email.' ('.$email['index']['title'].') - '.$domainTLD.'.';
-						/*
-						#Solution 1
-						ob_start("ob_html_compress");
-						include 'themes/email/backend.php';
-						$body = ob_get_clean();
-						$mail->msgHTML($body, dirname(__FILE__));
-						*/
-						#Solution 2
-						/*$vars = array(
-							'subject' => $_POST['subject'],
-							'email' => $_POST['email'],
-							'name' => $_POST['name'],
-							'phone' => $_POST['phone'],
-							'message' => $_POST['message'],
-						);
-						$body = file_get_contents('themes/email/public.php');
 
-						if(isset($vars)){
-							foreach($email_vars as $k=>$v){
-								$body = str_replace('{'.strtoupper($k).'}', $v, $body);
-							}
-						}
-						$mail->msgHTML($body, dirname(__FILE__));
-						#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
-						# Solution 3
-						$mail->Body = '<h2>'.$email['index']['title'].': '.$domainTLD.'</h2>
-							<h4>'.$email['index']['default']['content']['default']['subject'].':</h4> '.$subject_email.'<br /><br />
-							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$email_email.'<br /><br />
-							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$name_email.'<br /><br />
-							<strong>'.$email['index']['content']['default']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
-							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$message_email;
-							
-							
-						if (!$mail->send()) {
-							header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
-						} else {
-							header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['success']['url']['default']);
-						}
-					} else {
-						header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
-					}
-				}
-			} 
-		} else {		
-			# $msg = '';
+
 			if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
 				date_default_timezone_set($sites['default-timezone']);
 				
 				$mail->setFrom($_POST['email'], $_POST['name']);
+				
 				if(!empty($private['mail']['public'])){
 					$mail->addAddress($private['mail']['public'].'@'.$domainTLD, $domainTLD);
 				} else {
 					$mail->addAddress($private['mail']['private'].'@'.$private['mail']['@']['external'], $domainTLD);
 				}
+
+				# Verify Number libphonenumber-for-php		
+				if(!empty($_POST['phone'])){
+					$phone = $PhoneNumberUtil->parse(substr(strip_tags($_POST['phone']), 0, 255), $_POST['phone-crountry-code']); # Default FR
+				} else {
+					$phone = $PhoneNumberUtil->parse('000000000', $_POST['phone-crountry-code']); # Default FR
+				}
+				if ($PhoneNumberUtil->isValidNumber($phone)){
+					$PhoneVerify = 'TRUE';
+					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-crountry-code']); # 33
+					$PhonecarrerNumbers = $PhoneNumberCarrierMapper->getNameForNumber($phone, $DefineTranslateLang);
+					$PhoneformatE164Numbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::E164);
+					$PhoneformatNATIONALNumbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::NATIONAL);
+					$PhoneformatINTERNATIONALNumbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::INTERNATIONAL);
+					$PhoneformatRFC3966Numbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::RFC3966);
+				} else {
+					$PhoneVerify = 'FAKE';
+					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-crountry-code']); # 33
+					$PhonecarrerNumbers = '';
+					$PhoneformatE164Numbers = '#';
+					$PhoneformatNATIONALNumbers = '000000000';
+					$PhoneformatINTERNATIONALNumbers = '000000000';
+					$PhoneformatRFC3966Numbers = '#';
+				}
+				
+				switch ($PhoneNumberUtil->getNumberType($phone)) {
+					case '0':
+						$PhoneGetType = 'FIXED LINE';
+					break;
+					case '1':
+						$PhoneGetType = 'MOBILE';
+					break;
+					case '2':
+						$PhoneGetType = 'FIXED LINE OR MOBILE';
+					break;
+					case '3':
+						$PhoneGetType = 'TOLL REE';
+					break;
+					case '4':
+						$PhoneGetType = 'PREMIUM RATE';
+					break;
+					case '5':
+						$PhoneGetType = 'SHARED COST';
+					break;
+					case '6':
+						$PhoneGetType = 'VOIP';
+					break;
+					case '7':
+						$PhoneGetType = 'PERSONAL NUMBER';
+					break;
+					case '8':
+						$PhoneGetType = 'PAGER';
+					break;
+					case '9':
+						$PhoneGetType = 'UAN';
+					break;
+					case '10':
+						$PhoneGetType = 'UNKNOWN';
+					break;
+					case '27':
+						$PhoneGetType = 'EMERGENCY';
+					break;
+					case '28':
+						$PhoneGetType = 'VOICEMAIL';
+					break;
+					case '29':
+						$PhoneGetType = 'SHORT CODE';
+					break;
+					case '30':
+						$PhoneGetType = 'STANDARD RATE';
+					break;
+					default:
+						$PhoneGetType = 'UNKNOWN';
+				}
 						
 				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-					$mail->Subject = $email['index']['title'].' - '.$domainTLD.'.';
+					$mail->Subject = $_POST['subject'].' ('.$email['index']['title'].') - '.$domainTLD.'.';
 					$mail->isHTML(true);
 							/*
 							#Solution 1
@@ -316,29 +243,30 @@ if(isset($_GET['pages'])){
 							$mail->msgHTML($body, dirname(__FILE__));
 							*/
 							#Solution 2
-							/*$vars = array(
+							/*$email_vars_tpl = array(
 								'subject' => $_POST['subject'],
 								'email' => $_POST['email'],
 								'name' => $_POST['name'],
-								'phone' => $_POST['phone'],
+								'phone' =>  '(Type:'.$PhoneGetType.'/'.$PhoneVerify.')='.$phone.' | +('.$PhoneRegionCodeNumbers.') <a href="'.$PhoneformatE164Numbers.'">'.$PhoneformatINTERNATIONALNumbers.'</a> <strong>(info: '.$PhonecarrerNumbers.')',
 								'message' => $_POST['message'],
 							);
-							$body = file_get_contents('themes/email/public.php');
+							$body_tpl = file_get_contents('themes/email/public.php');
 
-							if(isset($vars)){
-								foreach($email_vars as $k=>$v){
-									$body = str_replace('{'.strtoupper($k).'}', $v, $body);
+							if(isset($vars_tpl)){
+								foreach($email_vars_tpl as $code_tpl=>$value){
+									$body_tpl = str_replace('{'.strtoupper($code_tpl).'}', $value, $body_tpl);
 								}
 							}
-							$mail->msgHTML($body, dirname(__FILE__));
-							#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
+							$mail->msgHTML($body_tpl, dirname(__FILE__));
 							#Solution 3
+							#$mail->msgHTML(file_get_contents('contents.html'), __DIR__);*/
+							#Solution 0 = basic
 							$mail->Body = '
 							<h2>'.$email['index']['title'].': '.$domainTLD.'</h2>
-							<h4>'.$email['index']['content']['default']['subject'].':</h4> '.$_POST['subject'].'<br /><br />
-							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br /><br />
-							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br /><br />
-							<strong>'.$email['index']['content']['default']['phone'].':</strong> '.$_POST['phone'].'<br /><br />
+							<h4>'.$email['index']['content']['default']['subject'].' - '.$_POST['subject'].'</h4>
+							<strong>'.$email['index']['content']['default']['email'].':</strong> '.$_POST['email'].'<br />
+							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br />
+							<strong>'.$email['index']['content']['default']['phone'].':</strong> (Type:'.$PhoneGetType.'/'.$PhoneVerify.')='.$phone.' | +('.$PhoneRegionCodeNumbers.') <a href="'.$PhoneformatE164Numbers.'">'.$PhoneformatINTERNATIONALNumbers.'</a> <strong>(info: '.$PhonecarrerNumbers.')</strong><br /><br />
 							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
 					
 					if (!$mail->send()) {
@@ -353,8 +281,8 @@ if(isset($_GET['pages'])){
 					exit();
 
 				}
-			}
-		}		
+			}		
+
 		define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
 		define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
 		include('themes/'.$sites['template'].'/header.php');

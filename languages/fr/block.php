@@ -15,7 +15,8 @@ $block = array(
 			/*custom your own*/
 		),
 		'sitemap' => array(
-			'images' => 'block/success.jpg'  /*directory images from <exemple.tld>/assets */
+			'images' => 'block/success.jpg'  /*directory images from <exemple.tld>/assets */,
+			'video' => 'www.youtube.com/watch?v=pzXxTTyxFNA'  /*directory images from <exemple.tld>/assets */
 		)
 	),
 	'error' => array(

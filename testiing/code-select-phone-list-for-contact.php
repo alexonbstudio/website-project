@@ -1,4 +1,4 @@
-<select class="" name="">
+<select name="phone-crountry-code" id="select">
 	<option value="<?php echo $PhoneRegionCodeManualNumbers[strtolower('AF')]['COUNTRY-CODE']; ?>">Afghanistan (AF)</option>
 	<option value="<?php echo $PhoneRegionCodeManualNumbers[strtolower('AL')]['COUNTRY-CODE']; ?>">Albania (AL)</option>
 	<option value="<?php echo $PhoneRegionCodeManualNumbers[strtolower('DZ')]['COUNTRY-CODE']; ?>">Algeria (DZ)</option>

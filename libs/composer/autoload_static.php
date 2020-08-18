@@ -65,12 +65,10 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'libphonenumber\\' => 
         array (
             0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
-            1 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
         'alexonbstudio\\ssllabs-api\\' => 
         array (
             0 => __DIR__ . '/..' . '/alexonbstudio/ssllabs-api/src',
-            1 => __DIR__ . '/..' . '/alexonbstudio/ssllabs-api/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -79,17 +77,14 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'ReCaptcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
-            1 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
-            1 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Joomla\\Utilities\\' => 
         array (
             0 => __DIR__ . '/..' . '/joomla/utilities/src',
-            1 => __DIR__ . '/..' . '/joomla/utilities/src',
         ),
         'Joomla\\String\\' => 
         array (
@@ -98,12 +93,10 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'Icamys\\SitemapGenerator\\' => 
         array (
             0 => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src',
-            1 => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src',
         ),
         'Giggsey\\Locale\\' => 
         array (
             0 => __DIR__ . '/..' . '/giggsey/locale/src',
-            1 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
     );
 
@@ -114,6 +107,12 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'Icamys\\SitemapGenerator\\IRuntime' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
         'Icamys\\SitemapGenerator\\Runtime' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
         'Icamys\\SitemapGenerator\\SitemapGenerator' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
+        'Joomla\\Utilities\\IpHelper' => __DIR__ . '/..' . '/joomla/utilities/src/IpHelper.php',
+        'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
+        'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
+        'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
+        'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
         'ReCaptcha\\ReCaptcha' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/ReCaptcha.php',
         'ReCaptcha\\RequestMethod' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod.php',
         'ReCaptcha\\RequestMethod\\Curl' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php',

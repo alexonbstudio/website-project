@@ -1,8 +1,10 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 require 'libs/autoload.php';
+
 #require libs/custom/
 foreach (glob('libs/custom/*.php') as $GlobRequire) { include_once $GlobRequire; }
 
@@ -11,23 +13,20 @@ foreach (glob('configuration/*.php') as $GlobConfig) { include_once $GlobConfig;
 
 #Decode
 $sites = json_decode($JE_sites, true);
+$sponsor_config = json_decode($JE_sponsor_config, true);
+$partner_config = json_decode($JE_partner_config, true);
 $translate = json_decode($JE_translate, true);
 $credits = json_decode($JE_credits, true);
 $private = json_decode($JE_private, true);
 $seo = json_decode($JE_seo, true);
-$partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
-$videos = json_decode($JE_videos, true);
+$downloader = json_decode($JE_downloader, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
+$videos = json_decode($JE_videos, true);
 $business = json_decode($JE_business, true);
 $PhoneRegionCodeManualNumbers = json_decode($JE_PhoneRegionCodeManualNumbers, true);
-/*
-#Supplémentaire
-$markets = json_decode($JE_markets, true);
-$restaurant = json_decode($JE_restaurant, true);
-*/
 
 
 #Syslink
@@ -42,6 +41,7 @@ $phone_langs = isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? substr($browser_lang, 3
 $meta_langs = $browser_lang;
 
 
+
 #Configuration
 $lang_finales = 'languages/'.$Languages_translate.'/general.php';
 if (file_exists($lang_finales)) {
@@ -54,6 +54,7 @@ if (file_exists($lang_finales)) {
 	$DefineTranslateLang = $translate['manual']['frontend']['french'];
 }
 
+
 #Translate
 $general = json_decode($JE_translate_general, true);
 $partner = json_decode($JE_translate_partner, true);
@@ -62,20 +63,17 @@ $law = json_decode($JE_translate_law, true);
 $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
+$about = json_decode($JE_translate_about, true);
+$pool = json_decode($JE_translate_pool, true);
+$pricing = json_decode($JE_translate_pricing, true);
+$faqs = json_decode($JE_translate_faqs, true);
+$others = json_decode($JE_translate_others, true);
+$debug = json_decode($JE_translate_debug, true);
 
 #Email contact form PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 $mail = new PHPMailer(true);
-
 use Joomla\Utilities\IpHelper;
-
-# anti spam with HCAPTCHA
-/*
-$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
-$hcaptcha_RData = json_decode($hcaptcha_VResponse);
-*/
-
-#LibPhoneNumber-for-php - check only
 use libphonenumber\PhoneNumberUtil;
 use libphonenumber\PhoneNumberToCarrierMapper;
 use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
@@ -86,16 +84,15 @@ $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
 
 #frontend
-if(isset($_GET['lang'])){
-	if($_GET['lang'] == $DefineTranslateLang){
-		if(isset($_GET['pages'])){
-			if($_GET['pages'] == 'index'){
+
 				$title = $email['index']['title'];
 				$description = $email['index']['description'];
 				$keyword = $email['index']['keyword'];
 				$urls = $email['index']['url']['default'];
 				$imgs = $email['index']['sitemap']['images'];
 				$vdos = $email['index']['sitemap']['video'];
+
+
 
 
 			if (array_key_exists('email', $_POST) && $mail->validateAddress($_POST['email'])) {
@@ -234,68 +231,11 @@ if(isset($_GET['lang'])){
 				}
 			}
 
+
 				define('__WP_FR_URL__', $translate['manual']['frontend']['french'].'/'.$email['index']['url']['fr']);
 				define('__WP_EN_URL__', $translate['manual']['frontend']['english'].'/'.$email['index']['url']['en']);
 				include('themes/'.$sites['template'].'/header.php');
 				include_once('themes/'.$sites['template'].'/email/full.php');
-				include('themes/'.$sites['template'].'/footer.php');	
-			} else {
-				header('Location: '.$protocols.'://'.$domainTLD);
-				exit();
-			}
-		} else {
-			header('Location: '.$protocols.'://'.$domainTLD);
-			exit();
-		}
-	} else {
-		header('Location: '.$protocols.'://'.$domainTLD);
-		exit();
-	}
-} else if(isset($_GET['security'])){
-	if($_GET['security'] == 'csp'){
-		if(!empty($business['local']['name'])){
-			$SecurityCSP_emailTo=$business['local']['mail']['contact'].'@'.$domainTLD;
-		} else {
-			$SecurityCSP_emailTo=$private['mail']['public'].'@'.$domainTLD;
-		}
-
-		http_response_code(204);
-
-		// Only run if proper input data received
-		if ($SecurityCSP_data=json_decode(file_get_contents('php://input'), true)){
-			if (!isset($SecurityCSP_data['csp-report'])){ return; }
-				
-			$SecurityCSP_data=$SecurityCSP_data['csp-report'];
-			ksort($SecurityCSP_data);
-			
-			if ($SecurityCSP_data['blocked-uri']==''){ return; }
-			
-			// Filter out junk reports
-			$blockedUris=array('127.0.0.1', 'blur://', 'mbinit://', 'ms-appx-web:', 'mx:', 'opera://', 'safari-extension:', 'self');
-			
-			foreach($blockedUris as $uri){
-				if (strpos($SecurityCSP_data['blocked-uri'], $uri)!==FALSE){
-					return;
-				}
-			}
-			
-			// Prettify the JSON-formatted data
-			$SecurityCSP_email=json_encode($SecurityCSP_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)."\r\n\r\n";
-
-			$SecurityCSP_email.=sprintf("%s (%s)\r\n", $_SERVER['REMOTE_ADDR'], gethostbyaddr($_SERVER['REMOTE_ADDR']));
-			$SecurityCSP_email.=sprintf("%s\r\n\r\n", $_SERVER['HTTP_USER_AGENT']);
-			
-			// Mail the CSP violation report
-			mail($ecurityCSP_emailTo, 'CSP Violation - '.$domainTLD, $SecurityCSP_email, 'Content-Type: text/plain;charset=utf-8');
-		}	
-
-	} else {
-		header('Location: '.$protocols.'://'.$domainTLD);
-		exit();
-	}
-} else {
-	header('Location: '.$protocols.'://'.$domainTLD);
-	exit();
-}
+				include('themes/'.$sites['template'].'/footer.php');
 
 ?>

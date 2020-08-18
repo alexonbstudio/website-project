@@ -32,7 +32,6 @@
 	], 
     "config": {
         "optimize-autoloader": true,
-        "lock": false,
         "platform": {
             "php": "7.2"
         },
@@ -92,41 +91,29 @@
     ],
 	"autoload": {
 		"classmap": [
-			"libs/google/recaptcha/src/ReCaptcha/", 
 			"libs/giggsey/locale/src/Locale.php", 
 			"libs/giggsey/libphonenumber-for-php/src/", 
 			"libs/phpmailer/phpmailer/src/", 
 			"libs/joomla/utilities/src/IpHelper.php", 
 			"libs/icamys/php-sitemap-generator/src/SitemapGenerator.php", 
+			"libs/google/recaptcha/src/ReCaptcha/", 
 			"libs/alexonbstudio/ssllabs-api/src/ssllabsapi.php"
-		],
-        "psr-4": {
-            "alexonbstudio\\ssllabs-api\\": "libs/alexonbstudio/ssllabs-api/src/",
-			"Giggsey\\Locale\\": "libs/giggsey/locale/src/",
-			"libphonenumber\\": "libs/giggsey/libphonenumber-for-php/src/",
-			"Icamys\\SitemapGenerator\\": "libs/icamys/php-sitemap-generator/src/",
-			"Joomla\\Utilities\\": "libs/joomla/utilities/src/",
-			"PHPMailer\\PHPMailer\\": "libs/phpmailer/phpmailer/src/",
-			"ReCaptcha\\": "libs/google/recaptcha/src/ReCaptcha/"
-		},			
+		],		
         "exclude-from-classmap": [
 			"/libs/giggsey/libphonenumber-for-php/src/data/",
+			"libs/google/recaptcha/src/autoload.php", 
+			"/libs/google/recaptcha/exemples/",
+			"/libs/google/recaptcha/tests/",
 			"/libs/giggsey/libphonenumber-for-php/src/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/carrier/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/geocoding/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/timezone/data/",
 			"/libs/joomla/string/",
 			"/libs/joomla/utilities/src/ArrayHelper.php",
-			"/libs/alexonbstudio/ssllabs-api/test/",
-			"/libs/joomla/",
-			"/libs/libphonenumber-for-php/",
-			"/libs/Locale/",
-			"/libs/phpmailer/",
-			"/libs/sitemap-generator/"
+			"/libs/alexonbstudio/ssllabs-api/test/"
 		]
     },
 	"minimum-stability": "stable",
-	"optimize-autoloader": true,
     "require": {
         "php": ">=7.2",
         "phpmailer/phpmailer": "^6.1",
@@ -140,7 +127,6 @@
     },
 	"archive": {
 		"exclude": [
-			"libs/google/recaptcha/src/autoload.php",
 			"libs/google/recaptcha/.github/",
 			"libs/google/recaptcha/exemples/",
 			"libs/google/recaptcha/tests/",

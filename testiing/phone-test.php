@@ -113,7 +113,7 @@ echo '################################################What USER is this number##
 echo '<br><br>';
 //	echo $PhoneNumberUtil->getLengthOfGeographicalAreaCode($DataPhoneNumberCheck);
 
-switch ($PhoneNumberUtil->getNumberType($PhoneNumberData)) {
+switch ($PhoneNumberUtil->getNumberType($phone_email)) {
 	case '0':
 		$PhoneGetType = 'FIXED LINE';
 	break;
