@@ -2,6 +2,12 @@
 
 Video want help for [french](https://dai.ly/x7vaz18) or [english](https://dai.ly/x7vaz18)
 
+## Information
+
+![Packagist Stars](https://img.shields.io/packagist/stars/alexonbstudio/website-project) ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Falexonbstudio%2Fwebsite-project) ![GitHub followers](https://img.shields.io/github/followers/alexonbstudio?style=social)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/alexonbstudio/website-project) ![Packagist Version (custom server)](https://img.shields.io/packagist/v/alexonbstudio/website-project) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alexonbstudio/website-project)
+![Discord](https://img.shields.io/discord/663448682049306641) [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Falexonbstudio%2Fwebsite-project)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Falexonbstudio%2Fwebsite-project) [![GitHub license](https://img.shields.io/github/license/alexonbstudio/website-project)](https://github.com/alexonbstudio/website-project/blob/master/LICENSE)
+
 ## Are you interested to add compagny or non profit
 
 	Read the notice on https://github.com/alexonbstudio/wp-api
@@ -78,9 +84,16 @@ will host on the intern directory site link <your-site-dot-tld>
 
 + https://github.com/alexonbstudio/website-project
 	
+
+#### Donation
+
+![Keybase BTC](https://img.shields.io/keybase/btc/alexonbstudio) ![Keybase ZEC](https://img.shields.io/keybase/zec/alexonbstudio) ![Keybase XLM](https://img.shields.io/keybase/xlm/alexonbstudio) ![Keybase PGP](https://img.shields.io/keybase/pgp/alexonbstudio)
+
 # Copyright
 
 #### @alexonbstudio 2020
 
 (c) CC-BY-SA - Website Project (WP)
+
+
 
