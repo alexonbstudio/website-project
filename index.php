@@ -62,6 +62,7 @@ $law = json_decode($JE_translate_law, true);
 $email = json_decode($JE_translate_email, true);
 $block = json_decode($JE_translate_block, true);
 $sitemap = json_decode($JE_translate_sitemap, true);
+$phone_results = json_decode($JE_translate_phone_results, true);
 
 #Email contact form PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
@@ -84,6 +85,10 @@ use libphonenumber\PhoneNumberFormat;
 $PhoneNumberUtil = PhoneNumberUtil::getInstance();
 $PhoneNumberCarrierMapper = PhoneNumberToCarrierMapper::getInstance();
 $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
+
+use VisualAppeal\SslLabs;
+$api = new SslLabs(true);
+$JE_DSslLabsOut = $api->analyze($protocols.'://'.$domainTLD);
 
 #frontend
 if(isset($_GET['pages'])){
@@ -165,7 +170,7 @@ if(isset($_GET['pages'])){
 					$phone = $PhoneNumberUtil->parse('000000000', $_POST['phone-crountry-code']); # Default FR
 				}
 				if ($PhoneNumberUtil->isValidNumber($phone)){
-					$PhoneVerify = 'TRUE';
+					$PhoneVerify = $phone_results['true'][$sites['email']['receive']];
 					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-crountry-code']); # 33
 					$PhonecarrerNumbers = $PhoneNumberCarrierMapper->getNameForNumber($phone, $DefineTranslateLang);
 					$PhoneformatE164Numbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::E164);
@@ -173,7 +178,7 @@ if(isset($_GET['pages'])){
 					$PhoneformatINTERNATIONALNumbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::INTERNATIONAL);
 					$PhoneformatRFC3966Numbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::RFC3966);
 				} else {
-					$PhoneVerify = 'FAKE';
+					$PhoneVerify = $phone_results['false'][$sites['email']['receive']];
 					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-crountry-code']); # 33
 					$PhonecarrerNumbers = '';
 					$PhoneformatE164Numbers = '#';
@@ -184,52 +189,52 @@ if(isset($_GET['pages'])){
 				
 				switch ($PhoneNumberUtil->getNumberType($phone)) {
 					case '0':
-						$PhoneGetType = 'FIXED LINE';
+						$PhoneGetType = $phone_results['switch']['FIXED-LINE'];
 					break;
 					case '1':
-						$PhoneGetType = 'MOBILE';
+						$PhoneGetType = $phone_results['switch']['MOBILE'];
 					break;
 					case '2':
-						$PhoneGetType = 'FIXED LINE OR MOBILE';
+						$PhoneGetType = $phone_results['switch']['FIXED-LINE-OR-MOBILE'];
 					break;
 					case '3':
-						$PhoneGetType = 'TOLL REE';
+						$PhoneGetType = $phone_results['switch']['TOLL-REE'];
 					break;
 					case '4':
-						$PhoneGetType = 'PREMIUM RATE';
+						$PhoneGetType = $phone_results['switch']['PREMIUM-RATE'];
 					break;
 					case '5':
-						$PhoneGetType = 'SHARED COST';
+						$PhoneGetType = $phone_results['switch']['SHARED-COST'];
 					break;
 					case '6':
-						$PhoneGetType = 'VOIP';
+						$PhoneGetType = $phone_results['switch']['VOIP'];
 					break;
 					case '7':
-						$PhoneGetType = 'PERSONAL NUMBER';
+						$PhoneGetType = $phone_results['switch']['PERSONAL-NUMBER'];
 					break;
 					case '8':
-						$PhoneGetType = 'PAGER';
+						$PhoneGetType = $phone_results['switch']['PAGER'];
 					break;
 					case '9':
-						$PhoneGetType = 'UAN';
+						$PhoneGetType = $phone_results['switch']['UAN'];
 					break;
 					case '10':
-						$PhoneGetType = 'UNKNOWN';
+						$PhoneGetType = $phone_results['switch']['UNKNOWN'];
 					break;
 					case '27':
-						$PhoneGetType = 'EMERGENCY';
+						$PhoneGetType = $phone_results['switch']['EMERGENCY'];
 					break;
 					case '28':
-						$PhoneGetType = 'VOICEMAIL';
+						$PhoneGetType = $phone_results['switch']['VOICEMAIL'];
 					break;
 					case '29':
-						$PhoneGetType = 'SHORT CODE';
+						$PhoneGetType = $phone_results['switch']['SHORT-CODE'];
 					break;
 					case '30':
-						$PhoneGetType = 'STANDARD RATE';
+						$PhoneGetType = $phone_results['switch']['STANDARD-RATE'];
 					break;
 					default:
-						$PhoneGetType = 'UNKNOWN';
+						$PhoneGetType = $phone_results['switch']['UNKNOWN'];
 				}
 						
 				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {

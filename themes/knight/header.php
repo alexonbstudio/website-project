@@ -498,9 +498,10 @@ if(!empty($seo['shareaholic']['key'])){
 <!--Template-->
   <link href="<?php echo $version['external']['bootstrap']['css']; ?>" rel="stylesheet">
   <link href="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['fontawesome']['css']; ?>" rel="stylesheet">
-  <script defer src="<?php echo $protocols.'://'.$dCDNomainTLD.'/'.$version['internal']['fontawesome']['js']; ?>"></script>
+  <script defer src="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['fontawesome']['js']; ?>"></script>
   <link href="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['production']['css']['knight']; ?>" rel="stylesheet">
   <link href="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['production']['css']['langs']; ?>" rel="stylesheet">
+  <link href="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['production']['css']['tpl']; ?>" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 

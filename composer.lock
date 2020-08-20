@@ -4,46 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "431b3a784a877b462c2dbe71895dc3bd",
+    "content-hash": "c3df6a0d804e5a36f987c23b245c9ca2",
     "packages": [
-        {
-            "name": "alexonbstudio/ssllabs-api",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/alexonbstudio/ssllabs-api.git",
-                "reference": "43dc6ef7befb42c2889f243ad9f2759807c5177b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/alexonbstudio/ssllabs-api/zipball/43dc6ef7befb42c2889f243ad9f2759807c5177b",
-                "reference": "43dc6ef7befb42c2889f243ad9f2759807c5177b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "alexonbstudio\\ssllabs-api\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Alexon Balangue"
-                },
-                {
-                    "name": "Björn Roland"
-                }
-            ],
-            "description": "API V3 for ssllabs.com",
-            "time": "2020-08-15T20:13:18+00:00"
-        },
         {
             "name": "giggsey/libphonenumber-for-php",
             "version": "8.12.8",
@@ -530,6 +492,49 @@
                 }
             ],
             "time": "2020-07-14T12:35:20+00:00"
+        },
+        {
+            "name": "visualappeal/php-ssllabs-api",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VisualAppeal/php-ssllabs-api.git",
+                "reference": "51d5d6fab1613620ca7f5c3f88ce4d9936716435"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VisualAppeal/php-ssllabs-api/zipball/51d5d6fab1613620ca7f5c3f88ce4d9936716435",
+                "reference": "51d5d6fab1613620ca7f5c3f88ce4d9936716435",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VisualAppeal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Helfensdörfer",
+                    "email": "tim@visualappeal.de"
+                },
+                {
+                    "name": "Björn Roland",
+                    "email": "bjoern.roland@gmail.com"
+                }
+            ],
+            "description": "API for ssllabs.com",
+            "time": "2018-11-10T17:14:22+00:00"
         }
     ],
     "packages-dev": [],

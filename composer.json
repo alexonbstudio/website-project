@@ -1,8 +1,8 @@
 {
     "name": "alexonbstudio/website-project",
     "type": "project",
-    "version": "1.9.0",
-    "time": "2020-08-18 16:16:00",
+    "version": "1.9.1",
+    "time": "2020-08-20 03:10:00",
     "description": "Website Project WP | No DB requirement",
     "keywords": [
 		"website project", 
@@ -76,6 +76,11 @@
             "name": "Google",
             "homepage": "https://github.com/google",
             "role": "contributor"
+        },
+		{
+            "name": "Visualappeal",
+            "homepage": "https://github.com/visualappeal",
+            "role": "contributor"
         }
     ],
     "funding": [
@@ -94,17 +99,18 @@
     ],
 	"autoload": {
 		"classmap": [
+			"libs/visualappeal/php-ssllabs-api/src/SslLabs.php", 
 			"libs/giggsey/locale/src/Locale.php", 
 			"libs/giggsey/libphonenumber-for-php/src/", 
 			"libs/phpmailer/phpmailer/src/", 
 			"libs/joomla/utilities/src/IpHelper.php", 
 			"libs/icamys/php-sitemap-generator/src/SitemapGenerator.php", 
-			"libs/google/recaptcha/src/ReCaptcha/", 
-			"libs/alexonbstudio/ssllabs-api/src/ssllabsapi.php"
+			"libs/google/recaptcha/src/ReCaptcha/"
 		],		
         "exclude-from-classmap": [
-			"/libs/giggsey/libphonenumber-for-php/src/data/",
-			"libs/google/recaptcha/src/autoload.php", 
+			"/libs/visualappeal/php-ssllabs-api/data/",
+			"/libs/giggsey/libphonenumber-for-php/src/tests/",
+			"/libs/google/recaptcha/src/autoload.php", 
 			"/libs/google/recaptcha/exemples/",
 			"/libs/google/recaptcha/tests/",
 			"/libs/giggsey/libphonenumber-for-php/src/data/",
@@ -112,8 +118,7 @@
 			"/libs/giggsey/libphonenumber-for-php/src/geocoding/data/",
 			"/libs/giggsey/libphonenumber-for-php/src/timezone/data/",
 			"/libs/joomla/string/",
-			"/libs/joomla/utilities/src/ArrayHelper.php",
-			"/libs/alexonbstudio/ssllabs-api/test/"
+			"/libs/joomla/utilities/src/ArrayHelper.php"
 		]
     },
 	"minimum-stability": "stable",
@@ -124,15 +129,28 @@
         "giggsey/locale": "^1.9",
         "giggsey/libphonenumber-for-php": "^8.12",
         "icamys/php-sitemap-generator": "^2.0",
-        "alexonbstudio/ssllabs-api": "^1.0",
         "joomla/utilities": "^1.6",
-		"google/recaptcha": "^1.2"
+		"google/recaptcha": "^1.2",
+        "visualappeal/php-ssllabs-api": "^1.0"
     },
 	"archive": {
 		"name": "Website-Project-WP-V1.9.0-alexonbstudio",
 		"exclude": [
+			"libs/symfony/polyfill-mbstring/composer.json",
+			"libs/symfony/polyfill-mbstring/LICENSE",
+			"libs/symfony/polyfill-mbstring/README.md",
+			"libs/giggsey/libphonenumber-for-php/METADATA-VERSION.txt",
+			"libs/giggsey/libphonenumber-for-php/LICENSE",
+			"libs/visualappeal/php-ssllabs-api/tests/",
+			"libs/visualappeal/php-ssllabs-api/.gitignore",
+			"libs/visualappeal/php-ssllabs-api/composer.json",
+			"libs/visualappeal/php-ssllabs-api/CONTRIBUTORS",
+			"libs/visualappeal/php-ssllabs-api/LICENSE",
+			"libs/visualappeal/php-ssllabs-api/phpunit.xml",
+			"libs/visualappeal/php-ssllabs-api/README.md",
 			"libs/google/recaptcha/.github/",
-			"libs/google/recaptcha/exemples/",
+			"libs/google/recaptcha/src/autoload.php",
+			"libs/google/recaptcha/examples/",
 			"libs/google/recaptcha/tests/",
 			"libs/google/recaptcha/.gitignore",
 			"libs/google/recaptcha/.travis.yml",
@@ -143,10 +161,6 @@
 			"libs/google/recaptcha/app.yaml",
 			"libs/google/recaptcha/phpunit.xml.dist",
 			"libs/google/recaptcha/composer.json",
-			"libs/alexonbstudio/ssllabs-api/test/",
-			"libs/alexonbstudio/ssllabs-api/README.md",
-			"libs/alexonbstudio/ssllabs-api/LICENSE",
-			"libs/alexonbstudio/ssllabs-api/composer.json",
 			"libs/joomla/string/",
 			"libs/joomla/utilities/.github/",
 			"libs/joomla/utilities/src/ArrayHelper.php",
@@ -155,6 +169,7 @@
 			"libs/joomla/utilities/phpunit.xml.dist",
 			"libs/joomla/utilities/composer.json",
 			"libs/joomla/utilities/README.md",
+			"libs/composer/LICENSE",
 			"libs/icamys/php-sitemap-generator/test/",
 			"libs/icamys/php-sitemap-generator/.editorconfig",
 			"libs/icamys/php-sitemap-generator/.gitignore",
@@ -173,7 +188,9 @@
 			"libs/giggsey/libphonenumber-for-php/.gitignore",
 			"libs/giggsey/libphonenumber-for-php/.styleci.yml",
 			"libs/giggsey/libphonenumber-for-php/.travis.yml",
+			"libs/giggsey/libphonenumber-for-php/LICENSE",
 			"libs/giggsey/libphonenumber-for-php/build.xml",
+			"libs/giggsey/libphonenumber-for-php/METADATA-VERSION.txt",
 			"libs/giggsey/libphonenumber-for-php/libphonenumber-for-php.spec",
 			"libs/giggsey/libphonenumber-for-php/phpunit.xml.dist",
 			"libs/giggsey/libphonenumber-for-php/README.md",
@@ -196,11 +213,12 @@
 			"libs/icamys/php-sitemap-generator/composer.lock",
 			"libs/icamys/php-sitemap-generator/phpunit.xml",
 			"libs/icamys/php-sitemap-generator/README.md",
-			"libs/joomla/",
-			"libs/libphonenumber-for-php/",
-			"libs/Locale/",
-			"libs/phpmailer/",
-			"libs/sitemap-generator/",
+			"libs/phpmailer/COMMITMENT",
+			"libs/phpmailer/composer.json",
+			"libs/phpmailer/LICENSE",
+			"libs/phpmailer/README.md",
+			"libs/phpmailer/SECURITY.md",
+			"libs/phpmailer/VERSION",
 			".github/",
 			"apache/",
 			"caddy/",
@@ -209,6 +227,7 @@
 			"testiing/",
 			"docker-compose.yml",
 			"FUNDING.yml",
+			"composer.lock",
 			"SECURITY.md"
 		]
 	},

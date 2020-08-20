@@ -30,9 +30,9 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         array (
             'libphonenumber\\' => 15,
         ),
-        'a' => 
+        'V' => 
         array (
-            'alexonbstudio\\ssllabs-api\\' => 26,
+            'VisualAppeal\\' => 13,
         ),
         'S' => 
         array (
@@ -66,9 +66,9 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         array (
             0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
-        'alexonbstudio\\ssllabs-api\\' => 
+        'VisualAppeal\\' => 
         array (
-            0 => __DIR__ . '/..' . '/alexonbstudio/ssllabs-api/src',
+            0 => __DIR__ . '/..' . '/visualappeal/php-ssllabs-api/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -123,6 +123,7 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'ReCaptcha\\RequestParameters' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
         'ReCaptcha\\Response' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/Response.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
+        'VisualAppeal\\SslLabs' => __DIR__ . '/..' . '/visualappeal/php-ssllabs-api/src/SslLabs.php',
         'libphonenumber\\AlternateFormatsCountryCodeSet' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/AlternateFormatsCountryCodeSet.php',
         'libphonenumber\\AsYouTypeFormatter' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/AsYouTypeFormatter.php',
         'libphonenumber\\CountryCodeSource' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/CountryCodeSource.php',
@@ -164,7 +165,6 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
         'libphonenumber\\prefixmapper\\PhonePrefixMap' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php',
         'libphonenumber\\prefixmapper\\PrefixFileReader' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php',
         'libphonenumber\\prefixmapper\\PrefixTimeZonesMap' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/PrefixTimeZonesMap.php',
-        'sslLabsApi' => __DIR__ . '/..' . '/alexonbstudio/ssllabs-api/src/ssllabsapi.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

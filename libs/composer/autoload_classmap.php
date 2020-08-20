@@ -28,6 +28,7 @@ return array(
     'ReCaptcha\\RequestParameters' => $vendorDir . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
     'ReCaptcha\\Response' => $vendorDir . '/google/recaptcha/src/ReCaptcha/Response.php',
     'Symfony\\Polyfill\\Mbstring\\Mbstring' => $vendorDir . '/symfony/polyfill-mbstring/Mbstring.php',
+    'VisualAppeal\\SslLabs' => $vendorDir . '/visualappeal/php-ssllabs-api/src/SslLabs.php',
     'libphonenumber\\AlternateFormatsCountryCodeSet' => $vendorDir . '/giggsey/libphonenumber-for-php/src/AlternateFormatsCountryCodeSet.php',
     'libphonenumber\\AsYouTypeFormatter' => $vendorDir . '/giggsey/libphonenumber-for-php/src/AsYouTypeFormatter.php',
     'libphonenumber\\CountryCodeSource' => $vendorDir . '/giggsey/libphonenumber-for-php/src/CountryCodeSource.php',
@@ -69,5 +70,4 @@ return array(
     'libphonenumber\\prefixmapper\\PhonePrefixMap' => $vendorDir . '/giggsey/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php',
     'libphonenumber\\prefixmapper\\PrefixFileReader' => $vendorDir . '/giggsey/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php',
     'libphonenumber\\prefixmapper\\PrefixTimeZonesMap' => $vendorDir . '/giggsey/libphonenumber-for-php/src/prefixmapper/PrefixTimeZonesMap.php',
-    'sslLabsApi' => $vendorDir . '/alexonbstudio/ssllabs-api/src/ssllabsapi.php',
 );

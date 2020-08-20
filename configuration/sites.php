@@ -11,6 +11,9 @@ $sites = array(
 	'auto' => array(
 		'domain' => preg_replace('/www./i', '', $_SERVER['SERVER_NAME']) /*Automate domain.tld no put*/
 	),
+	'email' => array(
+		'receive' => 'text' /* [text or icon] (icon: need to use template mailing - contact form you'll receive */
+	),
 	'sub-domain' => '',  /*domain: cdexemple.tld*/
 	'protocol' => isset($_SERVER["HTTPS"]) ? 'https' : 'http',
 	'template' => 'default',
