@@ -2,6 +2,12 @@
 
 Video want help for [french](https://dai.ly/x7vaz18) or [english](https://dai.ly/x7vaz18)
 
+## (Sorry FR witten this part) - Si vous souhaitiez un site site vitrine simple et complet 
+
+Une prestation de service les frais d'hononaire déjà effectuer sont inclus pour vos activités et futur activité, pour n'importe qu'elle domaine activité  et sans besoin un fichier de contact merci de découvrir sur [alexonbstudio.fr](https://www.alexonbstudio.fr) par exemple: - les artistes, - les DJ, - etc....  
+Pour vos page marketing à donnée les informations à vos futurs clients..
+
+
 ## Information
 
 ![Packagist Stars](https://img.shields.io/packagist/stars/alexonbstudio/website-project) ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Falexonbstudio%2Fwebsite-project) ![GitHub followers](https://img.shields.io/github/followers/alexonbstudio?style=social)
