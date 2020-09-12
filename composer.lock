@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3df6a0d804e5a36f987c23b245c9ca2",
+    "content-hash": "8c3db5dab7cae8857db4480634879939",
     "packages": [
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.12.8",
+            "version": "8.12.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "5a6e4e730de52f55882d2db27016e2916f8791e9"
+                "reference": "674b79ae3362409d08e550cb196d982485a76225"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/5a6e4e730de52f55882d2db27016e2916f8791e9",
-                "reference": "5a6e4e730de52f55882d2db27016e2916f8791e9",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/674b79ae3362409d08e550cb196d982485a76225",
+                "reference": "674b79ae3362409d08e550cb196d982485a76225",
                 "shasum": ""
             },
             "require": {
@@ -72,7 +72,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2020-08-13T17:48:08+00:00"
+            "time": "2020-08-31T09:51:44+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -172,16 +172,16 @@
         },
         {
             "name": "icamys/php-sitemap-generator",
-            "version": "2.0.1",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/icamys/php-sitemap-generator.git",
-                "reference": "022fe40af04df825c192f75568106ef8ca5dd6c3"
+                "reference": "37321c460b23081e9e21ff0ec67d28e45c2b1108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/icamys/php-sitemap-generator/zipball/022fe40af04df825c192f75568106ef8ca5dd6c3",
-                "reference": "022fe40af04df825c192f75568106ef8ca5dd6c3",
+                "url": "https://api.github.com/repos/icamys/php-sitemap-generator/zipball/37321c460b23081e9e21ff0ec67d28e45c2b1108",
+                "reference": "37321c460b23081e9e21ff0ec67d28e45c2b1108",
                 "shasum": ""
             },
             "require": {
@@ -224,7 +224,7 @@
                 "generator",
                 "php"
             ],
-            "time": "2020-02-11T19:00:23+00:00"
+            "time": "2020-09-09T19:31:52+00:00"
         },
         {
             "name": "joomla/string",

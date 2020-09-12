@@ -1,17 +1,17 @@
 [
     {
         "name": "giggsey/libphonenumber-for-php",
-        "version": "8.12.8",
-        "version_normalized": "8.12.8.0",
+        "version": "8.12.9",
+        "version_normalized": "8.12.9.0",
         "source": {
             "type": "git",
             "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-            "reference": "5a6e4e730de52f55882d2db27016e2916f8791e9"
+            "reference": "674b79ae3362409d08e550cb196d982485a76225"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/5a6e4e730de52f55882d2db27016e2916f8791e9",
-            "reference": "5a6e4e730de52f55882d2db27016e2916f8791e9",
+            "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/674b79ae3362409d08e550cb196d982485a76225",
+            "reference": "674b79ae3362409d08e550cb196d982485a76225",
             "shasum": ""
         },
         "require": {
@@ -28,7 +28,7 @@
             "phpunit/phpunit": "^4.8.36|^5.0",
             "symfony/console": "^2.8|^3.0"
         },
-        "time": "2020-08-13T17:48:08+00:00",
+        "time": "2020-08-31T09:51:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -171,17 +171,17 @@
     },
     {
         "name": "icamys/php-sitemap-generator",
-        "version": "2.0.1",
-        "version_normalized": "2.0.1.0",
+        "version": "2.0.3",
+        "version_normalized": "2.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/icamys/php-sitemap-generator.git",
-            "reference": "022fe40af04df825c192f75568106ef8ca5dd6c3"
+            "reference": "37321c460b23081e9e21ff0ec67d28e45c2b1108"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/icamys/php-sitemap-generator/zipball/022fe40af04df825c192f75568106ef8ca5dd6c3",
-            "reference": "022fe40af04df825c192f75568106ef8ca5dd6c3",
+            "url": "https://api.github.com/repos/icamys/php-sitemap-generator/zipball/37321c460b23081e9e21ff0ec67d28e45c2b1108",
+            "reference": "37321c460b23081e9e21ff0ec67d28e45c2b1108",
             "shasum": ""
         },
         "require": {
@@ -197,7 +197,7 @@
             "php-mock/php-mock-phpunit": "^2.5",
             "phpunit/phpunit": "^8.5"
         },
-        "time": "2020-02-11T19:00:23+00:00",
+        "time": "2020-09-09T19:31:52+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

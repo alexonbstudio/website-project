@@ -129,7 +129,7 @@ class SitemapGenerator
      * @var string
      * @access private
      */
-    private $classVersion = "2.0.0";
+    private $classVersion = "2.0.3";
     /**
      * Search engines URLs
      * @var array of strings
@@ -143,6 +143,7 @@ class SitemapGenerator
         "http://www.google.com/ping?sitemap=",
         "http://submissions.ask.com/ping?sitemap=",
         "http://www.bing.com/ping?sitemap=",
+        "http://www.webmaster.yandex.ru/ping?sitemap=",
     ];
     /**
      * Array with urls
@@ -185,7 +186,7 @@ class SitemapGenerator
         "Allow: /",
     ];
     /**
-     * @var array list of valid changefreq values according to spec
+     * @var array list of valid changefreq values according to the spec
      */
     private $validChangefreqValues = [
         'always',
@@ -195,6 +196,22 @@ class SitemapGenerator
         'monthly',
         'yearly',
         'never',
+    ];
+    /**
+     * @var float[] list of valid priority values according to the spec
+     */
+    private $validPriorities = [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
     ];
     /**
      * @var IFileSystem object used to communicate with file system
@@ -350,8 +367,12 @@ class SitemapGenerator
         }
 
         if (isset($priority)) {
+            if (!$this->isValidPriorityValue($priority)) {
+                throw new InvalidArgumentException("priority should be a float number in the range [0.0..1.0]");
+            }
+
             $tmp->setSize(4);
-            $tmp[self::ATTR_KEY_PRIORITY] = $priority;
+            $tmp[self::ATTR_KEY_PRIORITY] = number_format($priority, 1, ".", "");
         }
 
         if (isset($alternates)) {
@@ -376,6 +397,11 @@ class SitemapGenerator
     public function isValidChangefreqValue($value)
     {
         return in_array($value, $this->validChangefreqValues);
+    }
+
+    public function isValidPriorityValue(float $value): bool
+    {
+        return in_array($value, $this->validPriorities);
     }
 
     /**
