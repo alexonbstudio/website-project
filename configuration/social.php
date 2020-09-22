@@ -19,6 +19,11 @@ $social = array(
 		'name' => 'alexonbstudio',
 		'url' => 'https://instagram.com/alexonbstudio'
 	),
+	'soundcloud' => array(
+		'sites' => 'soundcloud',
+		'name' => 'alexonbstudiofr',
+		'url' => $social_http_sites.'://soundcloud.com/alexonbstudiofr'
+	),
 	'linkedin' => array(
 		'sites' => 'linkedin',
 		'name' => 'alexonbalangue',

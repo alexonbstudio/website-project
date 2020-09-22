@@ -288,9 +288,9 @@
               <textarea rows="10" cols="100" class="form-control" id="message" required placeholder="<?php echo $email['index']['content']['placeholder']['message']; ?>" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>	
-              <?php if(!empty($seo['hcaptcha']['public-key'])){ ?>
+              <?php if(!empty($apiexternal['captcha']['hcaptcha']['public'])){ ?>
 			  <div class="control-group form-group">
-                <div class="h-captcha" data-sitekey="<?php echo $seo['hcaptcha']['public-key']; ?>" data-theme="dark"></div>
+                <div class="h-captcha" data-sitekey="<?php echo $apiexternal['captcha']['hcaptcha']['public']; ?>" data-theme="dark"></div>
               </div>
 				<?php } ?>
           <div id="success"></div>
@@ -347,3 +347,15 @@
 
   </div>
   <!-- /.container -->
+
+  
+<script>
+$("form").submit(function(event) {
+
+   var hcaptchaVal = $('[name=h-captcha-response]').value;
+   if (hcaptchaVal === "") {
+      event.preventDefault();
+      alert("Please complete the hCaptcha");
+   }
+});
+</script>

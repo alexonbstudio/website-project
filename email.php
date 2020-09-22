@@ -18,6 +18,7 @@ $seo = json_decode($JE_seo, true);
 $partner = json_decode($JE_partner, true);
 $social = json_decode($JE_social, true);
 $hosting = json_decode($JE_hosting, true);
+$apiexternal = json_decode($JE_apiexternal, true);
 $videos = json_decode($JE_videos, true);
 $marketing = json_decode($JE_marketing, true);
 $images = json_decode($JE_images, true);
@@ -70,12 +71,6 @@ $mail = new PHPMailer(true);
 
 use Joomla\Utilities\IpHelper;
 
-# anti spam with HCAPTCHA
-/*
-$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$seo['hcaptcha']['private-key'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
-$hcaptcha_RData = json_decode($hcaptcha_VResponse);
-*/
-
 #LibPhoneNumber-for-php - check only
 use libphonenumber\PhoneNumberUtil;
 use libphonenumber\PhoneNumberToCarrierMapper;
@@ -89,6 +84,37 @@ $PhoneNumberGeocoder = PhoneNumberOfflineGeocoder::getInstance();
 use VisualAppeal\SslLabs;
 $api = new SslLabs(true);
 $JE_DSslLabsOut = $api->analyze($protocols.'://'.$domainTLD);
+
+#Google Captcha:
+//$GRecaptcha = new \ReCaptcha\ReCaptcha($apiexternal['captcha']['google']['secret']);
+//$Gresponse = $GRecaptcha->setExpectedHostname($domainTLD)->verify($GRecaptchaResponse, IpHelper::getIp());
+
+# anti spam with HCAPTCHA
+//$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$apiexternal['captcha']['hcaptcha']['private'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
+//$hcaptcha_RData = json_decode($hcaptcha_VResponse);
+
+
+/*
+$data = array(
+            'secret' => $apiexternal['captcha']['hcaptcha']['secret'],
+            'response' => $_POST['h-captcha-response']
+        );
+$verify = curl_init();
+curl_setopt($verify, CURLOPT_URL, "https://hcaptcha.com/siteverify");
+curl_setopt($verify, CURLOPT_POST, true);
+curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($verify);
+
+// var_dump($response);
+$responseData = json_decode($response);
+if($responseData->success) {
+    // your success code goes here
+} 
+else {
+   // return error to user; they did not pass
+}
+*/
 
 #frontend
 if(isset($_GET['lang'])){
@@ -188,7 +214,7 @@ if(isset($_GET['lang'])){
 						$PhoneGetType = $phone_results['switch']['UNKNOWN'];
 				}
 						
-				if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
+				if ($mail->addReplyTo($_POST['email'], $_POST['name']) && isset($_POST['h-captcha-response']) && !empty($_POST['h-captcha-response'])) {
 					$mail->Subject = $_POST['subject'].' ('.$email['index']['title'].') - '.$domainTLD.'.';
 					$mail->isHTML(true);
 							/*
@@ -224,8 +250,13 @@ if(isset($_GET['lang'])){
 							<strong>'.$email['index']['content']['default']['name'].':</strong> '.$_POST['name'].'<br />
 							<strong>'.$email['index']['content']['default']['phone'].':</strong> (Type:'.$PhoneGetType.'/'.$PhoneVerify.')='.$phone.' | +('.$PhoneRegionCodeNumbers.') <a href="'.$PhoneformatE164Numbers.'">'.$PhoneformatINTERNATIONALNumbers.'</a> <strong>(info: '.$PhonecarrerNumbers.')</strong><br /><br />
 							<strong>'.$email['index']['content']['default']['message'].':</strong> '.$_POST['message'];
-					
-					if (!$mail->send()) {
+					//$Gresponse = $GRecaptcha->setExpectedHostname($domainTLD)->verify($GRecaptchaResponse, IpHelper::getIp());
+
+					# anti spam with HCAPTCHA
+					$hcaptcha_VResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$apiexternal['captcha']['hcaptcha']['secret'].'&response='.$_POST['h-captcha-response'].'&remoteip='.IpHelper::getIp());
+					$hcaptcha_RData = json_decode($hcaptcha_VResponse);
+
+					if (!$mail->send() AND $hcaptcha_RData->success) {
 					   header('Location: '.$protocols.'://'.$domainTLD.'/'.$block['error']['url']['default']);
 					   exit();
 					} else {
