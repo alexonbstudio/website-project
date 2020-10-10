@@ -1,17 +1,17 @@
 [
     {
         "name": "giggsey/libphonenumber-for-php",
-        "version": "8.12.10",
-        "version_normalized": "8.12.10.0",
+        "version": "8.12.11",
+        "version_normalized": "8.12.11.0",
         "source": {
             "type": "git",
             "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-            "reference": "befffd590d1e2333bbb6d712541ccccf5fc08f1f"
+            "reference": "a3e8c9c832b3c40d69b477b2a96b252d03fbf274"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/befffd590d1e2333bbb6d712541ccccf5fc08f1f",
-            "reference": "befffd590d1e2333bbb6d712541ccccf5fc08f1f",
+            "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/a3e8c9c832b3c40d69b477b2a96b252d03fbf274",
+            "reference": "a3e8c9c832b3c40d69b477b2a96b252d03fbf274",
             "shasum": ""
         },
         "require": {
@@ -28,7 +28,7 @@
             "phpunit/phpunit": "^4.8.36|^5.0",
             "symfony/console": "^2.8|^3.0"
         },
-        "time": "2020-09-22T07:23:22+00:00",
+        "time": "2020-10-09T15:01:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -355,22 +355,23 @@
     },
     {
         "name": "phpmailer/phpmailer",
-        "version": "v6.1.7",
-        "version_normalized": "6.1.7.0",
+        "version": "v6.1.8",
+        "version_normalized": "6.1.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0"
+            "reference": "917ab212fa00dc6eacbb26e8bc387ebe40993bc1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
-            "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/917ab212fa00dc6eacbb26e8bc387ebe40993bc1",
+            "reference": "917ab212fa00dc6eacbb26e8bc387ebe40993bc1",
             "shasum": ""
         },
         "require": {
             "ext-ctype": "*",
             "ext-filter": "*",
+            "ext-hash": "*",
             "php": ">=5.5.0"
         },
         "require-dev": {
@@ -386,7 +387,7 @@
             "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
             "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
         },
-        "time": "2020-07-14T18:50:27+00:00",
+        "time": "2020-10-09T14:55:58+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
