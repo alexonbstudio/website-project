@@ -1,8 +1,8 @@
 {
     "name": "alexonbstudio/website-project",
     "type": "project",
-    "version": "2.0.0",
-    "time": "2020-09-22 21:38:00",
+    "version": "2.0.1",
+    "time": "2020-09-10 14:23:00",
     "description": "Website Project WP | No DB requirement",
     "keywords": [
 		"website project", 
@@ -134,7 +134,7 @@
         "visualappeal/php-ssllabs-api": "^1.0"
     },
 	"archive": {
-		"name": "Website-Project-WP-V1.9.0-alexonbstudio",
+		"name": "Website-Project-WP-V1.2.1-alexonbstudio",
 		"exclude": [
 			"libs/symfony/polyfill-mbstring/composer.json",
 			"libs/symfony/polyfill-mbstring/LICENSE",
