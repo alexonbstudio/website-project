@@ -128,12 +128,12 @@ $credits = array(
 		)
 	),
 	'version' => array(
-		'stable' => '2.0',
+		'stable' => '2.0.1',
 		'rc' => '1.9',
 		'beta' => '1.3',
 		'alpha' => '0.2',
 		'actual' => 'Stable',
-		'date' => '2020/09/22'
+		'date' => '2020/10/10'
 	)
 );
 
