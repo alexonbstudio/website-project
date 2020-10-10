@@ -142,13 +142,13 @@ if(isset($_GET['lang'])){
 
 				# Verify Number libphonenumber-for-php		
 				if(!empty($_POST['phone'])){
-					$phone = $PhoneNumberUtil->parse(substr(strip_tags($_POST['phone']), 0, 255), $_POST['phone-crountry-code']); # Default FR
+					$phone = $PhoneNumberUtil->parse(substr(strip_tags($_POST['phone']), 0, 255), $_POST['phone-country-code']); # Default FR
 				} else {
-					$phone = $PhoneNumberUtil->parse('000000000', $_POST['phone-crountry-code']); # Default FR
+					$phone = $PhoneNumberUtil->parse('000000000', $_POST['phone-country-code']); # Default FR
 				}
 				if ($PhoneNumberUtil->isValidNumber($phone)){
 					$PhoneVerify = $phone_results['true'][$sites['email']['receive']];
-					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-crountry-code']); # 33
+					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-country-code']); # 33
 					$PhonecarrerNumbers = $PhoneNumberCarrierMapper->getNameForNumber($phone, $DefineTranslateLang);
 					$PhoneformatE164Numbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::E164);
 					$PhoneformatNATIONALNumbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::NATIONAL);
@@ -156,7 +156,7 @@ if(isset($_GET['lang'])){
 					$PhoneformatRFC3966Numbers = $PhoneNumberUtil->format($phone, PhoneNumberFormat::RFC3966);
 				} else {
 					$PhoneVerify = $phone_results['false'][$sites['email']['receive']];
-					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-crountry-code']); # 33
+					$PhoneRegionCodeNumbers = $PhoneNumberUtil->getCountryCodeForRegion($_POST['phone-country-code']); # 33
 					$PhonecarrerNumbers = '';
 					$PhoneformatE164Numbers = '#';
 					$PhoneformatNATIONALNumbers = '000000000';
