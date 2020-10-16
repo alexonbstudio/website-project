@@ -143,11 +143,6 @@ $social = array(
 		'name' => 'alexonbstudio',
 		'url' => $social_http_sites.'://twitch.com/alexonbstudio'
 	),
-	'youtube' => array(
-		'sites' => 'youtube',
-		'name' => 'alexonbstudio',
-		'url' => $social_http_sites.'://www.youtube.com/channel/UCerEqBJT8YAgTWb9bCaNC4A'
-	),
 	'bigo' => array(
 		'sites' => 'bigo',
 		'name' => 'alexonbstudio',
