@@ -16,6 +16,11 @@ $social = array(
 		'name' => 'alexonbstudio',
 		'url' => $social_http_sites.'://twitter.com/alexonbstudio'
 	),
+	'blogger' => array(
+		'sites' => 'blogger',
+		'name' => 'alexonbstudio',
+		'url' => $social_http_sites.'://draft.blogger.com/profile/12116612549748477496'
+	),
 	'spotify' => array(
 		'sites' => 'spotify',
 		'name' => 'alexonbstudio',
