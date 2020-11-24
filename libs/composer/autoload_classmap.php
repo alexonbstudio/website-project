@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Giggsey\\Locale\\Locale' => $vendorDir . '/giggsey/locale/src/Locale.php',
     'Icamys\\SitemapGenerator\\FileSystem' => $vendorDir . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
     'Icamys\\SitemapGenerator\\IFileSystem' => $vendorDir . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',

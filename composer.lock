@@ -72,6 +72,11 @@
                 "phonenumber",
                 "validation"
             ],
+            "support": {
+                "irc": "irc://irc.appliedirc.com/lobby",
+                "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
+                "source": "https://github.com/giggsey/libphonenumber-for-php"
+            },
             "time": "2020-11-12T14:42:30+00:00"
         },
         {
@@ -121,6 +126,10 @@
                 }
             ],
             "description": "Locale functions required by libphonenumber-for-php",
+            "support": {
+                "issues": "https://github.com/giggsey/Locale/issues",
+                "source": "https://github.com/giggsey/Locale/tree/master"
+            },
             "time": "2020-07-07T11:16:24+00:00"
         },
         {
@@ -168,6 +177,11 @@
                 "recaptcha",
                 "spam"
             ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
+                "issues": "https://github.com/google/recaptcha/issues",
+                "source": "https://github.com/google/recaptcha"
+            },
             "time": "2020-03-31T17:50:54+00:00"
         },
         {
@@ -224,20 +238,24 @@
                 "generator",
                 "php"
             ],
+            "support": {
+                "issues": "https://github.com/icamys/php-sitemap-generator/issues",
+                "source": "https://github.com/icamys/php-sitemap-generator/tree/2.0.3"
+            },
             "time": "2020-09-09T19:31:52+00:00"
         },
         {
             "name": "joomla/string",
-            "version": "1.4.4",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joomla-framework/string.git",
-                "reference": "5fc1f6fbd588c4b50e97a019be8e9a2b4b3683fc"
+                "reference": "21269bfcddef4e676c6a1a49b7d959f896522a96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joomla-framework/string/zipball/5fc1f6fbd588c4b50e97a019be8e9a2b4b3683fc",
-                "reference": "5fc1f6fbd588c4b50e97a019be8e9a2b4b3683fc",
+                "url": "https://api.github.com/repos/joomla-framework/string/zipball/21269bfcddef4e676c6a1a49b7d959f896522a96",
+                "reference": "21269bfcddef4e676c6a1a49b7d959f896522a96",
                 "shasum": ""
             },
             "require": {
@@ -290,6 +308,10 @@
                 "joomla",
                 "string"
             ],
+            "support": {
+                "issues": "https://github.com/joomla-framework/string/issues",
+                "source": "https://github.com/joomla-framework/string/tree/1.4.5"
+            },
             "funding": [
                 {
                     "url": "https://community.joomla.org/sponsorship-campaigns.html",
@@ -300,7 +322,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-04T10:09:53+00:00"
+            "time": "2020-10-07T08:01:44+00:00"
         },
         {
             "name": "joomla/utilities",
@@ -346,6 +368,10 @@
                 "joomla",
                 "utilities"
             ],
+            "support": {
+                "issues": "https://github.com/joomla-framework/utilities/issues",
+                "source": "https://github.com/joomla-framework/utilities/tree/1.6.1"
+            },
             "time": "2019-07-17T01:48:57+00:00"
         },
         {
@@ -409,6 +435,10 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "support": {
+                "issues": "https://github.com/PHPMailer/PHPMailer/issues",
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.1.8"
+            },
             "funding": [
                 {
                     "url": "https://github.com/synchro",
@@ -478,6 +508,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -535,6 +568,9 @@
                 }
             ],
             "description": "API for ssllabs.com",
+            "support": {
+                "source": "https://github.com/VisualAppeal/php-ssllabs-api/tree/master"
+            },
             "time": "2018-11-10T17:14:22+00:00"
         }
     ],
@@ -554,5 +590,5 @@
     "platform-overrides": {
         "php": "7.2"
     },
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

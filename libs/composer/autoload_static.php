@@ -101,6 +101,7 @@ class ComposerStaticInit2a4e2e3a172702c04b238b978432fc1a
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Giggsey\\Locale\\Locale' => __DIR__ . '/..' . '/giggsey/locale/src/Locale.php',
         'Icamys\\SitemapGenerator\\FileSystem' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
         'Icamys\\SitemapGenerator\\IFileSystem' => __DIR__ . '/..' . '/icamys/php-sitemap-generator/src/SitemapGenerator.php',
