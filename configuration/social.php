@@ -16,6 +16,11 @@ $social = array(
 		'name' => 'alexonbstudio',
 		'url' => $social_http_sites.'://twitter.com/alexonbstudio'
 	),
+	'tiktok' => array(
+		'sites' => 'tiktok',
+		'name' => 'alexonbstudio',
+		'url' => $social_http_sites.'://tiktok.com/@alexonbstudio'
+	),
 	'blogger' => array(
 		'sites' => 'blogger',
 		'name' => 'alexonbstudio',
