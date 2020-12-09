@@ -26,7 +26,7 @@ A PHP library for parsing, formatting, storing and validating international phon
 
 ## Installation
 
-PHP versions 5.3 up to PHP 7.4 are currently supported.
+PHP versions 5.3 up to PHP 8.0 are currently supported.
 
 The PECL [mbstring](http://php.net/mbstring) extension is required.
 
@@ -241,6 +241,12 @@ $ vendor/bin/phing compile
 ```
 
 This compile process clones the [libphonenumber](https://github.com/google/libphonenumber) project at the version specified in [METADATA-VERSION.txt](METADATA-VERSION.txt).
+
+### Running tests
+
+This project uses [PHPUnit Bridge](https://symfony.com/doc/current/components/phpunit_bridge.html) to maintain compatibility for the supported PHP versions.
+
+To run the tests locally, run the `./phpunit` script.
 
 ## Integration with frameworks
 

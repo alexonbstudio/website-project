@@ -35,12 +35,12 @@ private static $installed = array (
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.13',
-      'version' => '8.12.13.0',
+      'pretty_version' => '8.12.14',
+      'version' => '8.12.14.0',
       'aliases' => 
       array (
       ),
-      'reference' => '571bbbabdab5b1cf16550cb257005bb527fa0899',
+      'reference' => 'c42a963110b08b8a4a419c35566bf9d3456ba479',
     ),
     'giggsey/locale' => 
     array (
@@ -89,12 +89,12 @@ private static $installed = array (
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.1.8',
-      'version' => '6.1.8.0',
+      'pretty_version' => 'v6.2.0',
+      'version' => '6.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '917ab212fa00dc6eacbb26e8bc387ebe40993bc1',
+      'reference' => 'e38888a75c070304ca5514197d4847a59a5c853f',
     ),
     'symfony/polyfill-mbstring' => 
     array (
