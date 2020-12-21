@@ -1525,6 +1525,10 @@ RewriteRule ^automate/generator/sitemap-index$ generator.php?sitemaps=index [L]
 RewriteRule ^automate/generator/sitemap-fr$ generator.php?sitemaps=fr [L]
 RewriteRule ^automate/generator/sitemap-en$ generator.php?sitemaps=en [L]
 
+RewriteRule ^automate/minify/css$ generator.php?minify=css [L]
+RewriteRule ^automate/minify/js$ generator.php?minify=js [L]
+
+
 </IfModule>
 
 
