@@ -86,7 +86,6 @@
   <script src="<?php echo $version['external']['jquery']['js']; ?>"></script>
   <script src="<?php echo $version['external']['bootstrap']['js']; ?>"></script>
   <script src="<?php echo $version['external']['jquery.easing']['js']; ?>"></script>
-  <!-- <script src="<?php echo $protocols.'://'.$CDNdomainTLD.'/'.$version['internal']['php-email-form']['js']; ?>"></script> -->
   <script src="<?php echo $version['external']['jquery-sticky']['js']; ?>"></script>
   <script src="<?php echo $version['external']['venobox']['js']; ?>"></script>
   <script src="<?php echo $version['external']['isotope-layout']['js']; ?>"></script>

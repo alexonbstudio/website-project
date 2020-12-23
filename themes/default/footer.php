@@ -41,9 +41,8 @@
 
   <script src="<?php echo $version['external']['jquery']['js']; ?>"></script>
   <script src="<?php echo $version['external']['bootstrap']['js']; ?>"></script>
-  <!--<script src="<?php echo $version['external']['intl-tel-input']['js']; ?>"></script>
   
-  
+ <!-- 
 	<script>
 
 		var input = document.querySelector("#phone");
