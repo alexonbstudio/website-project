@@ -11,6 +11,9 @@ $cdn_exvendor = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/vendor/'; #H
 $local_vendor = 'assets/vendor/';
 $local_custom = 'assets/custom/';
 $local_production = 'assets/production/';
+$local_combined = 'assets/combined/';
+
+
 $version = array(
 	'internal' => array(
 		'fontawesome' => array(
@@ -38,6 +41,14 @@ $version = array(
 			'js' => array(
 				'knight' => $local_production.'js/knight.min.js',
 				'tpl' => $local_production.'js/tpl.min.js'
+			)
+		),
+		'combined' => array(
+			'css' => array(
+				'all' => $local_combined.'css/main.css'
+			),
+			'js' => array(
+				'all' => $local_combined.'js/main.js'
 			)
 		)
 	),
