@@ -1,11 +1,11 @@
 <?php
-# $credits['webdesigner']['bootstrapmade']['name'].' '.$credits['webdesigner']['startbootstrap']['name'].' '.$credits['developper']['PHPMailer']['name'].' '.$credits['developper']['joomla']['name']
+# $credits['developper']['alexonbstudio']['url'].' '.$credits['webdesigner']['startbootstrap']['name'].' '.$credits['developper']['PHPMailer']['name'].' '.$credits['developper']['joomla']['name']
 
 $credits = array(
 	'developper' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		),
 		'PHPMailer' => array(
 			'name' => 'PHPMailer',
@@ -48,7 +48,7 @@ $credits = array(
 	'designer' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		),
 		'flaticon' => array(
 			'name' => 'Flaticon',
@@ -68,13 +68,13 @@ $credits = array(
 	'photographer' => array(
 		'other' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		)
 	),
 	'images' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		),
 		'pexels' => array(
 			'name' => 'Pexels',
@@ -96,19 +96,19 @@ $credits = array(
 	'marketing' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		)
 	),
 	'webmaster' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		)	
 	),
 	'video' => array(
 		'alexonbstudio' => array(
 			'name' => 'AlexonbStudio',
-			'url' => 'alexonbstudio.fr'
+			'url' => 'alexonb.studio'
 		),
 		'pexels' => array(
 			'name' => 'Pexels',
@@ -128,12 +128,12 @@ $credits = array(
 		)
 	),
 	'version' => array(
-		'stable' => '2.0.1',
+		'stable' => '2.0.5',
 		'rc' => '1.9',
 		'beta' => '1.3',
 		'alpha' => '0.2',
 		'actual' => 'Stable',
-		'date' => '2020/10/10'
+		'date' => '2021/01/08'
 	)
 );
 

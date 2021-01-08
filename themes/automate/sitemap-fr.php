@@ -46,7 +46,7 @@ $generator->submitSitemap();
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">Copyright &copy; <a href="https://alexonbstudio.fr">AlexonbStudio</a> - Website Project WP <?php date(); ?></span>
+        <span class="text-muted">Copyright &copy; <a href="<?php echo $protocols.'://'.$credits['developper']['alexonbstudio']['url']; ?>"><?php echo $credits['developper']['alexonbstudio']['url']; ?></a> - Website Project WP <?php date(); ?></span>
       </div>
     </footer>
 		<script src="<?php echo $version['external']['jquery']['js']; ?>"></script>

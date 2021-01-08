@@ -4,7 +4,7 @@ Video want help for [french](https://dai.ly/x7vaz18) or [english](https://dai.ly
 
 ## (Sorry FR witten this part) - Si vous souhaitiez un site site vitrine simple et complet 
 
-Une prestation de service les frais d'hononaire déjà effectuer sont inclus pour vos activités et futur activité, pour n'importe qu'elle domaine activité  et sans besoin un fichier de contact merci de découvrir sur [alexonbstudio.fr](https://www.alexonbstudio.fr) par exemple: - les artistes, - les DJ, - etc....  
+Une prestation de service les frais d'hononaire déjà effectuer sont inclus pour vos activités et futur activité, pour n'importe qu'elle domaine activité  et sans besoin un fichier de contact merci de découvrir sur [alexonb.studio](https://www.alexonb.studio) par exemple: - les artistes, - les DJ, - etc....  
 Pour vos page marketing à donnée les informations à vos futurs clients..
 
 
@@ -24,25 +24,29 @@ Pour vos page marketing à donnée les informations à vos futurs clients..
 Files [PDF need theorie French](https://github.com/alexonbstudio/website-project/docs/website-project-wp-documents-french.pdf) OR [PDF need theorie english](https://github.com/alexonbstudio/website-project/docs/website-project-wp-documents-english.pdf)
 
 
-For more information on my website to [alexonbstudio.fr](https://www.alexonbstudio.fr) 
+For more information on my website to [alexonb.studio](https://www.alexonb.studio) 
 
 ## News Possible 
 
 GET data from website project wp with [Plugin System Shortcode](https://github.com/alexonbstudio/plg-shortcode-joomla/releases/) integrated, beginning with Joomla 3.9, Joomla 4.0 not supported you can download that now for free and then...
 
-## Auto generate sitemap access
+## Auto generate sitemap access & minify CSS/JS
 
 Access to the next url for generate your own sitemap | if you edit generate again
 
 	<your-site-dot-tld>/automate/generator/sitemap-index
 	<your-site-dot-tld>/automate/generator/sitemap-fr
 	<your-site-dot-tld>/automate/generator/sitemap-en
+	<your-site-dot-tld>/automate/minify/css
+	<your-site-dot-tld>/automate/minify/js
 
 will host on the intern directory site link <your-site-dot-tld>
 
 	<your-site-dot-tld>/sitemap-index.xml
 	<your-site-dot-tld>/sitemap-fr.xml
 	<your-site-dot-tld>/sitemap-en.xml
+	<your-site-dot-tld>/assets/combined/main.css
+	<your-site-dot-tld>/assets/combined/main.js
 
 ## install on linux exemple on ubuntu
 
