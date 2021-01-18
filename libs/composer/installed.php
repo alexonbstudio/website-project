@@ -22,12 +22,12 @@
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.15',
-      'version' => '8.12.15.0',
+      'pretty_version' => '8.12.16',
+      'version' => '8.12.16.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c1f328bface2745ff1a292639dd68cafc673a456',
+      'reference' => 'd3d4ed9466249747249f3032717c4aebaaa8363e',
     ),
     'giggsey/locale' => 
     array (
