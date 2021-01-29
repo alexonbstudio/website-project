@@ -45,12 +45,12 @@ private static $installed = array (
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.16',
-      'version' => '8.12.16.0',
+      'pretty_version' => '8.12.17',
+      'version' => '8.12.17.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd3d4ed9466249747249f3032717c4aebaaa8363e',
+      'reference' => 'd914436bd646e9d645e7f8ac6644bf7e33a023d4',
     ),
     'giggsey/locale' => 
     array (
