@@ -7,28 +7,32 @@ $cdn_vendor = $protocols_v.'://cdnjs.cloudflare.com/ajax/libs/'; #cdnjs by Cloud
 #host external
 
 # IF USING CDN (sub-domain on configuration/site) take out assets/
-$cdn_exvendor = $protocols_v.'://'.$_SERVER['SERVER_NAME'].'/assets/vendor/'; #HTTPS/HTTPS TESTING
 $local_vendor = 'assets/vendor/';
 $local_custom = 'assets/custom/';
-$local_production = 'assets/production/';
-$local_combined = 'assets/combined/';
+$local_production = 'production/';
+$local_combined = 'combined/';
 
 
 $version = array(
 	'internal' => array(
 		'fontawesome' => array(
-			'css' => $local_vendor.'fontawesome/css/all.min.css',
-			'js' => $local_vendor.'fontawesome/js/all.min.js'
+			'css' => 'vendor/fontawesome/css/all.min.css',
+			'js' => 'vendor/fontawesome/js/all.min.js'
 		),
 		'custom' => array(
 			'css' => array(
 				'knight' => $local_custom.'css/knight.css',
 				'langs' => $local_custom.'css/langs.css',
+				'mamba' => $local_custom.'css/mamba.css',
+				'urgence' => $local_custom.'css/urgence.css',
+				'tplsgen' => $local_custom.'css/tplsgen.css',
 				'tpl' => $local_custom.'css/tpl.css'
 			),
 			'js' => array(
 				/*'default' => $local_custom.'js/default.js',*/
 				'knight' => $local_custom.'js/knight.js',
+				'mamba' => $local_custom.'js/mamba.js',
+				'urgence' => $local_custom.'js/urgence.js',
 				'tpl' => $local_custom.'js/tpl.js'
 			)
 		),
@@ -36,10 +40,15 @@ $version = array(
 			'css' => array(
 				'knight' => $local_production.'css/knight.min.css',
 				'langs' => $local_production.'css/langs.min.css',
+				'mamba' => $local_production.'css/mamba.min.css',
+				'urgence' => $local_production.'css/urgence.min.css',
+				'tplsgen' => $local_production.'css/tplsgen.min.css',
 				'tpl' => $local_production.'css/tpl.min.css'
 			),
 			'js' => array(
 				'knight' => $local_production.'js/knight.min.js',
+				'mamba' => $local_production.'js/mamba.min.js',
+				'urgence' => $local_production.'js/urgence.min.js',
 				'tpl' => $local_production.'js/tpl.min.js'
 			)
 		),
@@ -74,10 +83,10 @@ $version = array(
 			'js' => $local_vendor.'intl-tel-input/17.0.3/js/intlTelInput.min.js'
 		),
 		'boxicons' => array(
-			'css' => $cdn_exvendor.'boxicons/css/boxicons.min.css'
+			'css' => $local_vendor.'boxicons/css/boxicons.min.css'
 		),
 		'icofont' => array(
-			'css' => $cdn_exvendor.'icofont/icofont.min.css'
+			'css' => $local_vendor.'icofont/icofont.min.css'
 		),
 		'isotope-layout' => array(
 			'js' => $cdn_vendor.'jquery.isotope/3.0.6/isotope.pkgd.min.js'
@@ -93,7 +102,7 @@ $version = array(
 			'js' => $cdn_vendor.'OwlCarousel2/2.3.4/owl.carousel.min.js'
 		),
 		'php-email-form' => array(
-			'js' => $cdn_exvendor.'php-email-form/validate.js'
+			'js' => $local_vendor.'php-email-form/validate.js'
 		),
 		'venobox' => array(
 			'css' => $cdn_vendor.'venobox/1.9.0/venobox.min.css',
