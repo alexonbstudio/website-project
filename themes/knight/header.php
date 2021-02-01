@@ -1,4 +1,4 @@
-<?php ob_start("ob_html_compress"); ?>
+<?php ob_start("native_html_output"); ?>
 <!doctype html>
 <html lang="<?php echo $DefineTranslateLang; ?>">
 <head>
