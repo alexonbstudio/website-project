@@ -68,6 +68,14 @@
 				
 			</p>
 		   <?php } ?> 
+		   <?php if(!empty($hosting['server']['external']['cdn']['cloudflare']['name'])){ ?>
+           <h3><?php echo $law['legal']['content']['server']['title']; ?></h3>
+		   <p>
+				<strong><?php echo $law['legal']['content']['server']['name']; ?></strong> <a href="<?php echo $protocols.'://'.$hosting['server']['external']['cdn']['cloudflare']['site']; ?>"><?php echo $hosting['server']['external']['cdn']['cloudflare']['name']; ?></a><br />
+				<strong><?php echo $law['legal']['content']['server']['address']; ?></strong> <?php echo $hosting['server']['external']['cdn']['cloudflare']['address'].' '.$hosting['server']['external']['cdn']['cloudflare']['postal'].' '.$hosting['server']['external']['cdn']['cloudflare']['city'].' '.$hosting['server']['external']['cdn']['cloudflare']['contry']; ?>
+				
+			</p>
+		   <?php } ?> 
            <h3><?php echo $law['legal']['content']['credits']['title']; ?></h3>
 		   <p>
 				<strong><?php echo $law['legal']['content']['credits']['developper']; ?></strong> <?php 
