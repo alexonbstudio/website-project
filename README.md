@@ -7,6 +7,10 @@ Video want help for [french](https://dai.ly/x7vaz18) or [english](https://dai.ly
 Une prestation de service les frais d'hononaire déjà effectuer sont inclus pour vos activités et futur activité, pour n'importe qu'elle domaine activité  et sans besoin un fichier de contact merci de découvrir sur [alexonb.studio](https://www.alexonb.studio) par exemple: - les artistes, - les DJ, - etc....  
 Pour vos page marketing à donnée les informations à vos futurs clients..
 
+### ADD Automate Updata Linux/Mac Unix with crontab -e or -l
+
++ @monthly cd /Users/alexonbstudio/Documents/GitHub/website-project && composer update --no-interaction --quiet && composer dump-autoload -o -a --no-interaction --quiet 
+
 
 ## Information
 
@@ -32,7 +36,7 @@ GET data from website project wp with [Plugin System Shortcode](https://github.c
 
 ## Auto generate sitemap access & minify CSS/JS
 
-Access to the next url for generate your own sitemap | if you edit generate again
+### Access to the next url for generate your own sitemap | if you edit generate again
 
 	<your-site-dot-tld>/automate/generator/sitemap-index
 	<your-site-dot-tld>/automate/generator/sitemap-fr
@@ -40,13 +44,15 @@ Access to the next url for generate your own sitemap | if you edit generate agai
 	<your-site-dot-tld>/automate/minify/css
 	<your-site-dot-tld>/automate/minify/js
 
-will host on the intern directory site link <your-site-dot-tld>
+### will host on the intern directory site link <your-site-dot-tld>
 
 	<your-site-dot-tld>/sitemap-index.xml
 	<your-site-dot-tld>/sitemap-fr.xml
 	<your-site-dot-tld>/sitemap-en.xml
 	<your-site-dot-tld>/assets/combined/main.css
 	<your-site-dot-tld>/assets/combined/main.js
+
+
 
 ## install on linux exemple on ubuntu
 
@@ -94,11 +100,6 @@ will host on the intern directory site link <your-site-dot-tld>
 
 + https://github.com/alexonbstudio/website-project
 	
-
-#### Donation
-
-![Keybase BTC](https://img.shields.io/keybase/btc/alexonbstudio) ![Keybase ZEC](https://img.shields.io/keybase/zec/alexonbstudio) ![Keybase XLM](https://img.shields.io/keybase/xlm/alexonbstudio) ![Keybase PGP](https://img.shields.io/keybase/pgp/alexonbstudio)
-
 # Copyright
 
 #### @alexonbstudio 2020
