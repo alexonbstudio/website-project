@@ -1,8 +1,8 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '2.0.6',
-    'version' => '2.0.6.0',
+    'pretty_version' => '2.0.7',
+    'version' => '2.0.7.0',
     'aliases' => 
     array (
     ),
@@ -13,8 +13,8 @@
   array (
     'alexonbstudio/website-project' => 
     array (
-      'pretty_version' => '2.0.6',
-      'version' => '2.0.6.0',
+      'pretty_version' => '2.0.7',
+      'version' => '2.0.7.0',
       'aliases' => 
       array (
       ),
