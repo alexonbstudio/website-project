@@ -22,12 +22,12 @@
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.20',
-      'version' => '8.12.20.0',
+      'pretty_version' => '8.12.21',
+      'version' => '8.12.21.0',
       'aliases' => 
       array (
       ),
-      'reference' => '743585979ef96f2be123518c0a58083cf678bd47',
+      'reference' => '272b8123ba7f1b7975620c6389e7206281b4a3ce',
     ),
     'giggsey/locale' => 
     array (
@@ -94,12 +94,12 @@
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.3.0',
-      'version' => '6.3.0.0',
+      'pretty_version' => 'v6.4.0',
+      'version' => '6.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4a08cf4cdd2c38d12ee2b9fa69e5d235f37a6dcb',
+      'reference' => '050d430203105c27c30efd1dce7aa421ad882d01',
     ),
     'symfony/polyfill-mbstring' => 
     array (

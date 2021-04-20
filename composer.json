@@ -134,7 +134,7 @@
 		"ext-curl": "*",
 		"ext-json": "*",
 		"ext-mbstring": "*",
-        "phpmailer/phpmailer": "^6.2",
+        "phpmailer/phpmailer": "^6.4",
         "symfony/polyfill-mbstring": "^1.18",
         "giggsey/locale": "^1.9",
         "giggsey/libphonenumber-for-php": "^8.12",
