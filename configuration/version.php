@@ -68,8 +68,8 @@ $version = array(
 			'js' => $cdn_vendor.'twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js'
 		),
 		'fontawesome' => array(
-			'css' => $cdn_vendor.'font-awesome/5.15.1/css/all.min.css',
-			'js' => $cdn_vendor.'font-awesome/5.15.1/js/all.min.js'
+			'css' => $cdn_vendor.'font-awesome/5.15.3/css/all.min.css',
+			'js' => $cdn_vendor.'font-awesome/5.15.3/js/all.min.js'
 		),
 		'jquery' => array(
 			'js' => $cdn_vendor.'jquery/3.5.1/jquery.min.js'
