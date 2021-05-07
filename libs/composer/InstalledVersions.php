@@ -24,8 +24,8 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '2.0.7',
-    'version' => '2.0.7.0',
+    'pretty_version' => '2.0.8',
+    'version' => '2.0.8.0',
     'aliases' => 
     array (
     ),
@@ -36,8 +36,8 @@ private static $installed = array (
   array (
     'alexonbstudio/website-project' => 
     array (
-      'pretty_version' => '2.0.7',
-      'version' => '2.0.7.0',
+      'pretty_version' => '2.0.8',
+      'version' => '2.0.8.0',
       'aliases' => 
       array (
       ),
@@ -45,12 +45,12 @@ private static $installed = array (
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.21',
-      'version' => '8.12.21.0',
+      'pretty_version' => '8.12.22',
+      'version' => '8.12.22.0',
       'aliases' => 
       array (
       ),
-      'reference' => '272b8123ba7f1b7975620c6389e7206281b4a3ce',
+      'reference' => 'dc9992c35e52235c36241ebb5ddc280ceebe3c09',
     ),
     'giggsey/locale' => 
     array (
@@ -117,12 +117,12 @@ private static $installed = array (
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.4.0',
-      'version' => '6.4.0.0',
+      'pretty_version' => 'v6.4.1',
+      'version' => '6.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '050d430203105c27c30efd1dce7aa421ad882d01',
+      'reference' => '9256f12d8fb0cd0500f93b19e18c356906cbed3d',
     ),
     'symfony/polyfill-mbstring' => 
     array (
