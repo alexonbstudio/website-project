@@ -45,12 +45,12 @@ private static $installed = array (
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.22',
-      'version' => '8.12.22.0',
+      'pretty_version' => '8.12.24',
+      'version' => '8.12.24.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dc9992c35e52235c36241ebb5ddc280ceebe3c09',
+      'reference' => 'bbefdd7ff0bae7bf5a62fc9e8c939fb40dd6d638',
     ),
     'giggsey/locale' => 
     array (
@@ -126,12 +126,12 @@ private static $installed = array (
     ),
     'symfony/polyfill-mbstring' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5232de97ee3b75b0360528dae24e73db49566ab1',
+      'reference' => '2df51500adbaebdc4c38dea4c89a2e131c45c8a1',
     ),
     'visualappeal/php-ssllabs-api' => 
     array (
