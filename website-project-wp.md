@@ -72,5 +72,54 @@ To build a viable structure and for simple management. For all modification requ
 
 ### POOL WEBMASTER/POOL DESIGNER
 
+You intend to create a Template or images and or improve the design:
+
+The design location
+
+1. Take the example in the file /themes/default/\*
+2. Paste in the folder /themes//\*
+3. If you are using 
+4. Access and modify in the file configuration/sites.php
+5. Replace on 'template' =&gt; 'default' by 'template' =&gt; ''
+
+All Images & CSS & JS Son Host
+
+1. \(_.png/_.jpg/_.svg\) on the folder assets/images/_
+2. \(_.js\) dans le dossier assets/vendor/_ & assets/production/js/ _& assets/custom/js/_
+3. \(_.css\) dans le dossier assets/vendor/_ & assets/production/css/ _& assets/custom/css/_
+
+For the management of your images
+
+1. Are on file configuration/images.php
+2. Use the following variables: url of an image \(Step 3 for example\)
+3. &lt;?php echo $protocols.’://’.$CDNdomainTLD.’/’.$images\[‘dir’\].’/’.$images\[‘variable’\]; ?&gt;
+
+Please do not create the following files for your SEO
+
+* From /robots.txt
+* From /ads.txt
+* From /humans.txt
+* From /sitemap.xml
+* From /.well-known/brave-rewards-verification.txt
+* From /manifest.json or /site.webmanifest
+* From /bingSiteAuth.xml
+* From /browserconfig.xml ou /badge.xml
+* From /bingSiteAuth.xml
+
+You want to make changes are placed in the folder « themes/seo/\* »
+
+* XML
+* TXT
+* HTML
+
+Example $var = DMYC73GOGFQVF3A9P FOR PINTEREST $VAR = 5 CHARACTERS:
+
+* REWRITERULE ^DMYC73GOGFQVF3A9P.HTML$ SEO.PHP?HTML-VERIFY=DAILYMOTION \[L\]
+* **REWRITERULE ^$VAR.HTML$ SEO.PHP?HTML-VERIFY=GOOGLE \[L\]**
+* **REWRITERULE ^PINTEREST-$VAR.HTML$ SEO.PHP?HTML-VERIFY=PINTEREST \[L\]**
+* **REWRITERULE ^PINTEREST-CCF5F.HTML$ SEO.PHP?HTML-VERIFY=PINTEREST \[L\]**
+* **REWRITERULE ^YANDEX\_$VAR.HTML$ SEO.PHP?HTML-VERIFY=YANDEX \[L\]**
+* REMOVE THE \# FOR APACHE SUPPORT REWRITING, TO MODIFY THE FILE .HTACCESS.
+
 ### POOL DEVELOPPER
 
