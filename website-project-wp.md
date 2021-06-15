@@ -10,8 +10,6 @@ Website Project WP is a compatible script from PHP version &gt;= 7.2, to stop re
 
 The more website grew over the years, the energy consumption on the hardware and computer software would have to be increased for a simple showcase site whether under wordpress, joomla, wix and etc ... necessarily need a database and added additional plugins for natural referencing in SEO, SERP, SEM, the “frontend + backend = full stack” site design and especially each time you to login.
 
-Why
-
 #### Most web development frameworks or CMS you use \(4 points\):
 
 * 1 out of 2 unused variable functionalities maintained by a third party of a different person's team which leaves and joins in a septic organization to a technological one
@@ -122,4 +120,51 @@ Example $var = DMYC73GOGFQVF3A9P FOR PINTEREST $VAR = 5 CHARACTERS:
 * REMOVE THE \# FOR APACHE SUPPORT REWRITING, TO MODIFY THE FILE .HTACCESS.
 
 ### POOL DEVELOPPER
+
+The development method is in Json as PHP&gt; = 7.2, very easy to understand and without data base without risk of being hacked its SQL, because there is no SQL.
+
+So
+
+* Configure the variables if necessary /\*
+* On folder « configuration » variable in Json PHP array
+* Then add Json\_decode\(\) in one of the files /\*.php
+* You can add functionality on /libs/custom/\*.php
+
+Multi-language part
+
+* For « French » language/fr/\*.php Json PHP array
+* For « English \(US/GB\) » language/en/\*.php en Json PHP array
+* Then add Json\_decode\(\) in one of the files /\*.php
+
+Install libs \(command line\) with git & composer
+
+* Git clone [https://github.com/alexonbstudio/website-project.git](https://github.com/alexonbstudio/website-project.git)
+* Cd /go/to/path/
+* Composer install or composer update
+* Composer autoload -o -a
+* Composer cc & then exit
+* Configure SEO that automatically generate an xml sitemap in /\*
+
+Before launching \(configure\)
+
+1. The files /themes/automate/\*
+2. Access with your web browser /automate/generator/sitemap-index
+3. Access with your web browser /automate/generator/sitemap-en
+4. Access with your web browser /automate/generator/sitemap-fr
+5. your /sitemap-index.xml is ready !
+6. your /sitemap-en.xml is ready !
+7. your /sitemap-fr.xml is ready !
+
+For CSP security, receive by email:
+
+The « uri-report » of the link is /security/csp-violate
+
+Internal Json debugging of your website
+
+* /api/sites.json « info sites »
+* / api/social.json « social network »
+* /api/private.json « site owner info or company manager name »
+* /api/business.json « company info »
+* /api/images.json « manager tape images »
+* /api/credits.json « credits »
 
