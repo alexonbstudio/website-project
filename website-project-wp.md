@@ -168,3 +168,8 @@ Internal Json debugging of your website
 * /api/images.json « manager tape images »
 * /api/credits.json « credits »
 
+### Exemple website build
+
+* https://atelier-carpentier.com
+* https://alexonb.studio
+
