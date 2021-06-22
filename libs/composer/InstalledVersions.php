@@ -45,12 +45,12 @@ private static $installed = array (
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.24',
-      'version' => '8.12.24.0',
+      'pretty_version' => '8.12.25',
+      'version' => '8.12.25.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bbefdd7ff0bae7bf5a62fc9e8c939fb40dd6d638',
+      'reference' => '7d397cbd2e01e78cf79ff347e40a403dbc4c22fa',
     ),
     'giggsey/locale' => 
     array (
@@ -90,12 +90,12 @@ private static $installed = array (
     ),
     'joomla/utilities' => 
     array (
-      'pretty_version' => '1.6.1',
-      'version' => '1.6.1.0',
+      'pretty_version' => '1.6.2',
+      'version' => '1.6.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b54beb07ddf2d8074f6f8f43c365f84ddf714c8f',
+      'reference' => '9f7d9fda537ca005f7467de68f92506d48f348f5',
     ),
     'matthiasmullie/minify' => 
     array (
@@ -117,12 +117,12 @@ private static $installed = array (
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.4.1',
-      'version' => '6.4.1.0',
+      'pretty_version' => 'v6.5.0',
+      'version' => '6.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9256f12d8fb0cd0500f93b19e18c356906cbed3d',
+      'reference' => 'a5b5c43e50b7fba655f793ad27303cd74c57363c',
     ),
     'symfony/polyfill-mbstring' => 
     array (
